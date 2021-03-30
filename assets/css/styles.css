@@ -1,8 +1,12 @@
+* { margin: 0; padding: 0; }
+
 .container-fluid { margin: 0; padding: 0; }
 
-a { color: inherit; text-decoration: none; }
+a { color: inherit !important; text-decoration: none; }
 
-a a:hover { color: inherit; text-decoration: underline; }
+a a:hover { color: inherit !important; text-decoration: underline; }
+
+ul { margin-bottom: 0; }
 
 ul li { list-style-type: none; }
 
@@ -31,16 +35,16 @@ html { scroll-behavior: smooth; }
 body { font-family: Montserrat; background-color: #f3f3f3; }
 
 /* Header Contents */
-header { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); color: #fff; text-align: center; border-radius: 0; }
+header { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); color: #fff; text-align: center; border-radius: 0 !important; }
 
 header h1 { color: #fff; }
 
-header h1 small.lead { margin-top: 5px; font-size: 15px; display: block; }
+header h1 small.lead { margin-top: 5px; font-size: 22px; display: block; }
 
 /*-- Header Contents --*/
-nav.navbar { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); font-size: 16px; }
+nav.navbar { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); font-size: 16px; color: #fff; }
 
-nav.navbar .navbar-toggler { background-image: linear-gradient(45deg, #ff3c00, #fab31b); border-radius: 0; }
+nav.navbar .navbar-toggler { background-image: linear-gradient(45deg, #ff3c00, #fab31b); }
 
 nav.navbar .navbar-collapse { justify-content: space-between; }
 
@@ -51,7 +55,7 @@ nav.navbar .navbar-collapse .current, nav.navbar .navbar-collapse .current:hover
 /* Social-Media Button */
 .social-btn { display: flex; flex-direction: column; position: fixed; left: 0; z-index: 10; }
 
-.social-btn a { flex-grow: 1; text-align: center; padding: 10px; color: #fff; background-image: linear-gradient(45deg, #ff3c00, #fab31b); font-size: 20px; }
+.social-btn a { flex-grow: 1; text-align: center; padding: 10px; color: #fff !important; background-image: linear-gradient(45deg, #ff3c00, #fab31b); font-size: 20px; }
 
 /*-- Social-Media Button --*/
 /* Article Contents */
@@ -60,24 +64,34 @@ article { position: relative; background-color: #f3f3f3; }
 /* Realtime Datetime dan Caption */
 #date-time p { padding: 5px 10px; background-image: linear-gradient(45deg, #ff3c00, #fab31b); font-size: 13px; color: #fff; font-weight: bolder; text-align: center; }
 
-#attention { line-height: 25px; }
+/*-- Realtime Datetime dan Caption --*/
+/* Blockquote Style */
+#attention, .card-body { line-height: 25px; }
 
-#attention blockquote { border-radius: 40px; background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); margin: 20px; padding: 20px; text-align: center; color: #fff; position: relative; font-weight: bold; }
+#attention blockquote, .card-body blockquote { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); color: #fff; position: relative; }
 
-#attention blockquote::before, #attention blockquote::after { position: absolute; font-size: 50px; text-shadow: 0 0 2px #013557; }
+#attention blockquote::before, #attention blockquote::after, .card-body blockquote::before, .card-body blockquote::after { position: absolute; text-shadow: 0 0 2px #013557; font-size: 50px; }
+
+#attention blockquote { border-radius: 40px; margin: 20px; padding: 20px; text-align: center; }
 
 #attention blockquote::before { content: open-quote; top: 5px; left: 10px; }
 
 #attention blockquote::after { content: close-quote; bottom: -20px; right: 10px; }
 
-/*-- Realtime Datetime dan Caption --*/
+.card-body blockquote { margin: 10px 0; padding: 10px; padding-left: 35px; font-weight: 500; text-shadow: 0 0 3px #013557; font-style: oblique; font-size: 14px; border-radius: 10px; }
+
+.card-body blockquote::before { content: open-quote; top: 50%; left: 5px; }
+
+/*-- Blockquote Style --*/
 /* Breadcrumb */
 .breadcrumb { font-size: 13px; line-height: 20px; background-color: #f3f3f3; }
 
-.breadcrumb a { color: #fff; background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); border-radius: 10px; padding: 2px 10px; }
+.breadcrumb a { color: #fff !important; background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); border-radius: 10px; padding: 2px 10px; margin: 0 5px; }
 
 /*-- Breadcrumb --*/
-#post .card { border: none; /* Post Label */ /*-- Post Label --*/ }
+#post .card { border: none; /* Post Label/Tag */ /*-- Post Label/Tag --*/ }
+
+#post .card .card-img-top { width: 50%; }
 
 #post .card .badge { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); border-radius: 15px; padding: 5px 10px; font-weight: normal; }
 
@@ -94,10 +108,6 @@ article { position: relative; background-color: #f3f3f3; }
 #author h3 { font-size: 16px; }
 
 /* Postingan */
-.card-body blockquote { line-height: 25px; background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); margin: 10px 0; padding: 10px; padding-left: 35px; color: #fff; position: relative; font-weight: 500; text-shadow: 0 0 3px #013557; font-style: oblique; font-size: 14px; border-radius: 10px; }
-
-.card-body blockquote::before { position: absolute; font-size: 50px; text-shadow: 0 0 3px #013557; content: open-quote; top: 50%; left: 5px; font-family: Arial; }
-
 .card-body p, .card-body ol { line-height: 30px; text-align: justify; font-size: 15px; }
 
 .card-body ol { list-style: none; counter-reset: list; }
@@ -108,7 +118,7 @@ article { position: relative; background-color: #f3f3f3; }
 
 .card-body p.featured-link { margin: 10px 0; padding-left: 10px; font-size: 14px; border-left: 5px solid #999; }
 
-.card-body p.featured-link a { color: #fff; background-image: linear-gradient(45deg, #ff3c00, #fab31b); padding: 2px 10px; border-radius: 5px; }
+.card-body p.featured-link a { color: #fff !important; background-image: linear-gradient(45deg, #ff3c00, #fab31b); padding: 2px 10px; border-radius: 5px; }
 
 /* Nama Penulis dan Tanggal Posting */
 .post-attribute { margin-bottom: 10px; font-size: 13px; align-items: center; }
@@ -119,49 +129,67 @@ article { position: relative; background-color: #f3f3f3; }
 
 .date-post { margin-right: 10px; }
 
-#post .post-attribute > img { width: 30px; border-radius: 50%; margin-right: 10px; }
+#post .post-attribute img { width: 30px; border-radius: 50%; margin-right: 10px; }
 
 /*-- Nama Penulis dan Tanggal Posting --*/
 /* Share on Social Media */
-.share a { line-height: 10px; margin: 0 3px; padding: 10px; width: 35px; border-radius: 50%; display: inline-block; background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); color: #fff; }
+.share a { line-height: 10px; margin: 0 3px; padding: 10px; width: 35px; border-radius: 50%; display: inline-block; background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); color: #fff !important; }
 
 /*-- Share on Social Media --*/
-/* Author Page */
-#author { display: flex; align-items: center; justify-content: space-between; }
+/* Post Tags */
+.tag { margin: 20px; padding: 20px; background-color: #fff; border-radius: 5px; line-height: 30px; }
 
-#author .author-desc { width: 30%; }
+.tag h2 { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); border-radius: 5px; text-align: center; color: #fff; padding: 10px; margin-bottom: 20px; }
 
-#author .author-desc > img { width: 70%; border-radius: 50%; }
+.tag li { counter-increment: list; }
 
-#author .author-about { width: 70%; text-align: left; line-height: 30px; }
+.tag li::before { content: counter(list); background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); padding: 0 5px; border-radius: 5px; color: #fff; font-weight: bold; margin-right: 5px; }
 
-#author h3 { color: #999; }
+/*-- Post Tags --*/
+/* Pages Style */
+#page { display: flex; align-items: center; justify-content: space-between; }
 
-#author p { margin-bottom: 10px; }
+#page .page-desc { width: 30%; }
 
-/*-- Author Page --*/
+#page .page-desc h2 { font-size: 22px; }
+
+#page .page-desc h3 { font-size: 18px; }
+
+#page .page-desc > img { width: 70%; border-radius: 50%; }
+
+#page .page-about { width: 70%; text-align: left; line-height: 30px; }
+
+#page h3 { color: #999; }
+
+#page p { margin-bottom: 10px; }
+
+/*-- Pages Style --*/
 /*-- Postingan --*/
 /* Pagination */
-.page-link { background-image: linear-gradient(45deg, #ff3c00, #fab31b); margin: 0 2px; padding: 10px 15px; color: #fff; font-size: 15px; }
+.page-link { background-image: linear-gradient(45deg, #ff3c00, #fab31b); margin: 0 2px; padding: 10px 15px; color: #fff !important; font-size: 15px; }
 
-.page-link:hover { box-shadow: 0 0 5px #fff; color: #fff; }
+.page-link:hover { box-shadow: 0 0 5px #fff; color: #fff; background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); }
+
+.current-link { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); }
 
 /*-- Pagination --*/
 /*-- Article Contents --*/
 /* Footer Contents */
 footer { background-color: #fff; text-align: center; }
 
-footer li, footer a { display: inline-block; }
+footer li { display: inline-flex; }
 
-footer li { font-size: 14px; }
+footer li a { color: #013557; }
 
-footer a { color: #013557; padding: 20px; }
+footer li, footer .credit { font-size: 15px; }
 
-footer .credit { font-size: 13px; padding: 20px; }
+footer li a, footer .credit a { padding: 20px; }
 
-footer .credit a { padding: 0; }
+footer .credit { padding: 20px; background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); color: #fff; font-weight: bold; }
 
 /*-- Footer Contents --*/
-@media screen and (max-width: 990px) { /* Mobile Navigation */ nav { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); z-index: 10; position: sticky; font-size: 20px; top: 0; } /*-- Mobile Navigation --*/ /* Social-Media Button */ .social-btn { display: flex; flex-direction: row; justify-content: space-between; position: fixed; bottom: 0; width: 100%; z-index: 10; } .social-btn a { flex-grow: 1; text-align: center; padding: 10px; color: #fff; background-image: linear-gradient(45deg, #ff3c00, #fab31b); font-size: 20px; } /*-- Social-Media Button --*/ /* Article Contents */ article { position: relative; } /*-- Article Contents --*/ #author { flex-direction: column; } #author .author-desc, #author .author-about { width: 100%; } #author .author-about { text-align: center; margin-top: 20px; } }
+@media screen and (max-width: 990px) { /* Mobile Navigation */ nav { background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); z-index: 10; position: sticky; font-size: 20px; top: 0; } /*-- Mobile Navigation --*/ /* Social-Media Button */ .social-btn { display: flex; flex-direction: row; justify-content: space-between; position: fixed; bottom: 0; width: 100%; z-index: 10; } .social-btn a { flex-grow: 1; text-align: center; padding: 10px; color: #fff !important; background-image: linear-gradient(45deg, #ff3c00, #fab31b); font-size: 20px; } /*-- Social-Media Button --*/ #post .card .card-img-top { width: 100%; } /* Article Contents */ article { position: relative; } /*-- Article Contents --*/ #page { flex-direction: column; } #page .page-desc, #page .page-about { width: 100%; } #page .page-about { text-align: center; margin-top: 20px; } }
+
+@media screen and (max-width: 576px) { header h1 { font-size: 40px !important; } nav.navbar { font-size: 16px; } nav.navbar .navbar-brand, nav.navbar button, nav.navbar input { font-size: inherit; } .card-body { text-align: center; } footer li a { padding: 20px 10px; } footer li, footer .credit { font-size: 13px; } }
 
 /*# sourceMappingURL=styles.css.map */
