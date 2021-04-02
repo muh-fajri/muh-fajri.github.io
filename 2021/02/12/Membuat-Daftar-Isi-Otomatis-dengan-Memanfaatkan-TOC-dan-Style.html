@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <title>Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style</title>
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style</title>
     <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style</title>
+<title>Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style" />
+<meta property="og:title" content="Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style" />
 <meta name="author" content="Muhammad Fajri" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Bismillahirahmanirrahim. Di artikel kali ini akan saya berikan pemahaman mengenai penerapan daftar isi pada dokumen. Pembuatan daftar isi dimaksudkan untuk menampilkan ringkasan keseluruhan isi pada suatu karya tulis yang dibuat. Mungkin masih banyak yang belum memahami jika pembuatan daftar isi dapat dilakukan secara otomatis. Tentunya dengan cara ini akan mengefisienkan waktu yang digunakan dibandingkan dengan membuat daftar isi secara manual. Untuk tujuan tersebut kita gunakan file yang sudah dibuat sebelumnya. Baca Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section" />
@@ -20,9 +21,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-12T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style" />
+<meta property="twitter:title" content="Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html","headline":"Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style","dateModified":"2021-02-12T00:00:00+08:00","datePublished":"2021-02-12T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirahmanirrahim. Di artikel kali ini akan saya berikan pemahaman mengenai penerapan daftar isi pada dokumen. Pembuatan daftar isi dimaksudkan untuk menampilkan ringkasan keseluruhan isi pada suatu karya tulis yang dibuat. Mungkin masih banyak yang belum memahami jika pembuatan daftar isi dapat dilakukan secara otomatis. Tentunya dengan cara ini akan mengefisienkan waktu yang digunakan dibandingkan dengan membuat daftar isi secara manual. Untuk tujuan tersebut kita gunakan file yang sudah dibuat sebelumnya. Baca Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section","mainEntityOfPage":{"@type":"WebPage","@id":"/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html"},"@context":"https://schema.org"}</script>
+{"url":"/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirahmanirrahim. Di artikel kali ini akan saya berikan pemahaman mengenai penerapan daftar isi pada dokumen. Pembuatan daftar isi dimaksudkan untuk menampilkan ringkasan keseluruhan isi pada suatu karya tulis yang dibuat. Mungkin masih banyak yang belum memahami jika pembuatan daftar isi dapat dilakukan secara otomatis. Tentunya dengan cara ini akan mengefisienkan waktu yang digunakan dibandingkan dengan membuat daftar isi secara manual. Untuk tujuan tersebut kita gunakan file yang sudah dibuat sebelumnya. Baca Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section","headline":"Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style","dateModified":"2021-02-12T00:00:00+08:00","datePublished":"2021-02-12T00:00:00+08:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -39,7 +40,7 @@
         <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
 
         <header class="jumbotron p-sm-3 mb-0">
-    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead">Learn Basic Technology</small></a></h1>
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
 </header>
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <span class="navbar-brand d-lg-none">Menu</span>
@@ -50,25 +51,29 @@
         <ul class="navbar-nav">
             
             <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
-                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> Home <span class="sr-only">(current)</span></a>
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
             </li>
             
             <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
-                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> Blog <span class="sr-only">(current)</span></a>
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
             </li>
             
             <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
-                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> Contact <span class="sr-only">(current)</span></a>
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
             </li>
             
             <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
-                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> About <span class="sr-only">(current)</span></a>
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
             </li>
             
         </ul>
         <form class="d-flex mt-2">
             <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn" type="submit">Search</button>
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
         </form>
     </div>
 </nav>
@@ -87,24 +92,24 @@
             <section aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
-        <li class="breadcrumb-item"><a href="/blog/">Blog</a></li>
-        <li class="text-dark breadcrumb-item active" aria-current="page">Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style</li>
+        <li class="breadcrumb-item"><a href="/blog/"><span class="fas fa-book-reader"></span> Blog</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style</li>
     </ol>
 </section>
 <section id="post">
     <div class="card">
         <div class="card-body">
-            <h2>Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style</h2>
+            <h2>Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style</h2>
             <div class="mb-3">
               
                 
-                    <a href="/tag/Word" class="text-white badge">Word</a>
+                    <a href="/tag/Word" class="text-white badge"><span class="fas fa-tag"></span> Word</a>
 <!--                    <a href="/tag/Word" class="text-white badge"><code class="highligher-rouge"><nobr>Word</nobr></code></a>-->
               
             </div>
             <div class="post-attribute d-sm-flex">
                 <div class="author-post">
-                    <img src="/assets/images/author.jpg" alt="author.jpg">
+                    <img src="/assets/images/author.jpg" alt="author">
                     <span class="fas fa-user"></span>
                     <a href="/author.html">Muhammad Fajri</a>
                 </div>
@@ -185,9 +190,9 @@
                     Share on : <br>
                     <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html"><span class="fab fa-facebook"></span></a>
                     <a href="http://twitter.com/share?url=https://muh-fajri.github.io/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html"><span class="fab fa-twitter"></span></a>
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html&title=Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style&summary="><span class="fab fa-linkedin"></span></a>
-                    <a href="https://api.whatsapp.com/send?text=Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style%20%2D%20https://muh-fajri.github.io/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html"><span class="fab fa-whatsapp"></span></a>
-                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html&text=Membuat Daftar Isi Otomatis Dengan Memanfaatkan Toc Dan Style"><span class="fab fa-telegram"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html&title=Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style%20%2D%20https://muh-fajri.github.io/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html&text=Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style"><span class="fab fa-telegram"></span></a>
                 </p>
             </div>
             <hr>

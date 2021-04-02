@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Instalasi Composer dan Laravel</title>
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Instalasi Composer dan Laravel</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Instalasi Composer dan Laravel" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-02T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Instalasi Composer dan Laravel" />
+<script type="application/ld+json">
+{"url":"/books/Laravel-05-Instalasi-Composer-dan-Laravel.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-05-Instalasi-Composer-dan-Laravel.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Instalasi Composer dan Laravel","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form class="d-flex mt-2">
+            <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Instalasi Composer dan Laravel</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="card">
+        <div class="card-body">
+            <h2>Instalasi Composer dan Laravel</h2>
+            <div class="post-attribute d-sm-flex">
+                <div class="author-post">
+                    <img src="/assets/images/author.jpg" alt="author">
+                    <span class="fas fa-user"></span>
+                    <a href="/author.html">Muhammad Fajri</a>
+                </div>
+                <div class="date-post">
+                    <span class="fas fa-calendar-alt"></span>
+                    <span>Friday, 02 April 2021</span>
+                </div>
+            </div>
+
+            <p>Bismillahirrahmanirrahim.</p>
+
+<blockquote>
+  <p>Composer adalah aplikasi manajer paket untuk bahasa pemrograman PHP yang menyediakan format standar untuk mengelola dependensi PHP dan pustaka-pustaka yang diperlukan. (<a href="https://id.wikipedia.org/wiki/Composer">Wikipedia</a>)</p>
+</blockquote>
+
+<p>Dengan demikian, Composer ini dapat digunakan untuk menghemat waktu pengembangan aplikasi berbasis PHP karena kemudahan menginstal paket-paket yang dibutuhkan.</p>
+
+<h3 id="instal-composer">Instal Composer</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-S</span> composer
+</code></pre></div></div>
+
+<p>Paket yang diinstal:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resolving dependencies...
+looking <span class="k">for </span>conflicting packages...
+
+Packages <span class="o">(</span>2<span class="o">)</span> unzip-6.0-14  composer-2.0.11-1
+
+Total Download Size:   0.56 MiB
+Total Installed Size:  2.42 MiB
+
+:: Proceed with installation? <span class="o">[</span>Y/n] <span class="c">#Press enter</span>
+</code></pre></div></div>
+
+<p>Periksa hasil instalasi dengan perintah <code class="language-plaintext highlighter-rouge">composer --version</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer <span class="nt">--version</span>
+Composer version 2.0.11 2021-02-24 14:57:23 <span class="c">#Output</span>
+</code></pre></div></div>
+
+<h3 id="menglobalkan-direktori-composer">Menglobalkan Direktori Composer</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer global require <span class="s2">"laravel/installer"</span>
+</code></pre></div></div>
+
+<p>Dengan perintah ini akan menampilkan proses kurang lebih seperti berikut:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Changed current directory to /home/fajri/.config/composer
+Using version ^4.2 <span class="k">for </span>laravel/installer
+./composer.json has been created
+Running composer update laravel/installer
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 12 installs, 0 updates, 0 removals
+  - Locking laravel/installer <span class="o">(</span>v4.2.4<span class="o">)</span>
+  - Locking psr/container <span class="o">(</span>1.1.1<span class="o">)</span>
+  - Locking symfony/console <span class="o">(</span>v5.2.6<span class="o">)</span>
+  - Locking symfony/polyfill-ctype <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Locking symfony/polyfill-intl-grapheme <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Locking symfony/polyfill-intl-normalizer <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Locking symfony/polyfill-mbstring <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Locking symfony/polyfill-php73 <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Locking symfony/polyfill-php80 <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Locking symfony/process <span class="o">(</span>v5.2.4<span class="o">)</span>
+  - Locking symfony/service-contracts <span class="o">(</span>v2.2.0<span class="o">)</span>
+  - Locking symfony/string <span class="o">(</span>v5.2.6<span class="o">)</span>
+Writing lock file
+Installing dependencies from lock file <span class="o">(</span>including require-dev<span class="o">)</span>
+Package operations: 12 installs, 0 updates, 0 removals
+  - Downloading symfony/polyfill-php80 <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Downloading symfony/process <span class="o">(</span>v5.2.4<span class="o">)</span>
+  - Downloading symfony/polyfill-mbstring <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Downloading symfony/polyfill-intl-normalizer <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Downloading symfony/polyfill-intl-grapheme <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Downloading symfony/polyfill-ctype <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Downloading symfony/string <span class="o">(</span>v5.2.6<span class="o">)</span>
+  - Downloading psr/container <span class="o">(</span>1.1.1<span class="o">)</span>
+  - Downloading symfony/service-contracts <span class="o">(</span>v2.2.0<span class="o">)</span>
+  - Downloading symfony/polyfill-php73 <span class="o">(</span>v1.22.1<span class="o">)</span>
+  - Downloading symfony/console <span class="o">(</span>v5.2.6<span class="o">)</span>
+  - Downloading laravel/installer <span class="o">(</span>v4.2.4<span class="o">)</span>
+  - Installing symfony/polyfill-php80 <span class="o">(</span>v1.22.1<span class="o">)</span>: Extracting archive
+  - Installing symfony/process <span class="o">(</span>v5.2.4<span class="o">)</span>: Extracting archive
+  - Installing symfony/polyfill-mbstring <span class="o">(</span>v1.22.1<span class="o">)</span>: Extracting archive
+  - Installing symfony/polyfill-intl-normalizer <span class="o">(</span>v1.22.1<span class="o">)</span>: Extracting archive
+  - Installing symfony/polyfill-intl-grapheme <span class="o">(</span>v1.22.1<span class="o">)</span>: Extracting archive
+  - Installing symfony/polyfill-ctype <span class="o">(</span>v1.22.1<span class="o">)</span>: Extracting archive
+  - Installing symfony/string <span class="o">(</span>v5.2.6<span class="o">)</span>: Extracting archive
+  - Installing psr/container <span class="o">(</span>1.1.1<span class="o">)</span>: Extracting archive
+  - Installing symfony/service-contracts <span class="o">(</span>v2.2.0<span class="o">)</span>: Extracting archive
+  - Installing symfony/polyfill-php73 <span class="o">(</span>v1.22.1<span class="o">)</span>: Extracting archive
+  - Installing symfony/console <span class="o">(</span>v5.2.6<span class="o">)</span>: Extracting archive
+  - Installing laravel/installer <span class="o">(</span>v4.2.4<span class="o">)</span>: Extracting archive
+6 package suggestions were added by new dependencies, use <span class="sb">`</span>composer suggest<span class="sb">`</span> to see details.                                                          
+Generating autoload files
+10 packages you are using are looking <span class="k">for </span>funding.
+Use the <span class="sb">`</span>composer fund<span class="sb">`</span> <span class="nb">command </span>to find out more!
+</code></pre></div></div>
+
+<p>Jadikan direktori <code class="language-plaintext highlighter-rouge">~/.composer/vendor/bin/</code> menjadi direktori global dengan mengedit file <code class="language-plaintext highlighter-rouge">~/.bashrc</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano ~/.bashrc
+</code></pre></div></div>
+
+<p>Lalu tambahkan dua baris di bawah ini di bagian akhir file:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/.config/composer/vendor/bin
+</code></pre></div></div>
+
+<p>Simpan dan tutup file. Tutup terminal dan buka kembali.</p>
+
+<h3 id="instal-laravel-menggunakan-laravel-installer-atau-composer">Instal Laravel Menggunakan Laravel Installer atau Composer</h3>
+
+<p>Setelah <code class="language-plaintext highlighter-rouge">composer/vendor/bin</code> menjadi folder global, Laravel pun sudah dapat diinstal. Gunakan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>laravel new blog
+</code></pre></div></div>
+
+<p>Akan ditampilkan output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ _                               _
+| |                             | |
+| |     __ _ _ __ __ ___   _____| |
+| |    / _<span class="sb">`</span> | <span class="s1">'__/ _` \ \ / / _ \ |
+| |___| (_| | | | (_| |\ V /  __/ |
+|______\__,_|_|  \__,_| \_/ \___|_|                                        
+
+Creating a "laravel/laravel" project at "./blog"
+Installing laravel/laravel (v8.5.15)
+  - Downloading laravel/laravel (v8.5.15)
+  - Installing laravel/laravel (v8.5.15): Extracting archive
+Created project in /home/fajri/blog
+&gt; @php -r "file_exists('</span>.env<span class="s1">') || copy('</span>.env.example<span class="s1">', '</span>.env<span class="s1">');"
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 105 installs, 0 updates, 0 removals
+  - Locking asm89/stack-cors (v2.0.3)
+  - Locking brick/math (0.9.2)
+  - Locking dnoegel/php-xdg-base-dir (v0.1.1)
+  - Locking doctrine/inflector (2.0.3)
+  - Locking doctrine/instantiator (1.4.0)
+  - Locking doctrine/lexer (1.2.1)
+  - Locking dragonmantank/cron-expression (v3.1.0)
+  - Locking egulias/email-validator (2.1.25)
+  - Locking facade/flare-client-php (1.5.0)
+  - Locking facade/ignition (2.7.0)
+  - Locking facade/ignition-contracts (1.0.2)
+  - Locking fakerphp/faker (v1.14.1)
+  - Locking fideloper/proxy (4.4.1)
+  - Locking filp/whoops (2.12.0)
+  - Locking fruitcake/laravel-cors (v2.0.3)
+  - Locking graham-campbell/result-type (v1.0.1)
+  - Locking guzzlehttp/guzzle (7.3.0)
+  - Locking guzzlehttp/promises (1.4.1)
+  - Locking guzzlehttp/psr7 (1.8.1)
+  - Locking hamcrest/hamcrest-php (v2.0.1)
+  - Locking laravel/framework (v8.35.1)
+  - Locking laravel/sail (v1.4.10)
+  - Locking laravel/tinker (v2.6.1)
+  - Locking league/commonmark (1.5.8)
+  - Locking league/flysystem (1.1.3)
+  - Locking league/mime-type-detection (1.7.0)
+  - Locking mockery/mockery (1.4.3)
+  - Locking monolog/monolog (2.2.0)
+  - Locking myclabs/deep-copy (1.10.2)
+  - Locking nesbot/carbon (2.46.0)
+  - Locking nikic/php-parser (v4.10.4)
+  - Locking nunomaduro/collision (v5.3.0)
+  - Locking opis/closure (3.6.1)
+  - Locking phar-io/manifest (2.0.1)
+  - Locking phar-io/version (3.1.0)
+  - Locking phpdocumentor/reflection-common (2.2.0)
+  - Locking phpdocumentor/reflection-docblock (5.2.2)
+  - Locking phpdocumentor/type-resolver (1.4.0)
+  - Locking phpoption/phpoption (1.7.5)
+  - Locking phpspec/prophecy (1.13.0)
+  - Locking phpunit/php-code-coverage (9.2.6)
+  - Locking phpunit/php-file-iterator (3.0.5)
+  - Locking phpunit/php-invoker (3.1.1)
+  - Locking phpunit/php-text-template (2.0.4)
+  - Locking phpunit/php-timer (5.0.3)
+  - Locking phpunit/phpunit (9.5.4)
+  - Locking psr/container (1.1.1)
+  - Locking psr/event-dispatcher (1.0.0)
+  - Locking psr/http-client (1.0.1)
+  - Locking psr/http-message (1.0.1)
+  - Locking psr/log (1.1.3)
+  - Locking psr/simple-cache (1.0.1)
+  - Locking psy/psysh (v0.10.7)
+  - Locking ralouphie/getallheaders (3.0.3)
+  - Locking ramsey/collection (1.1.3)
+  - Locking ramsey/uuid (4.1.1)
+  - Locking sebastian/cli-parser (1.0.1)
+  - Locking sebastian/code-unit (1.0.8)
+  - Locking sebastian/code-unit-reverse-lookup (2.0.3)
+  - Locking sebastian/comparator (4.0.6)
+  - Locking sebastian/complexity (2.0.2)
+  - Locking sebastian/diff (4.0.4)
+  - Locking sebastian/environment (5.1.3)
+  - Locking sebastian/exporter (4.0.3)
+  - Locking sebastian/global-state (5.0.2)
+  - Locking sebastian/lines-of-code (1.0.3)
+  - Locking sebastian/object-enumerator (4.0.4)
+  - Locking sebastian/object-reflector (2.0.4)
+  - Locking sebastian/recursion-context (4.0.4)
+  - Locking sebastian/resource-operations (3.0.3)
+  - Locking sebastian/type (2.3.1)
+  - Locking sebastian/version (3.0.2)
+  - Locking swiftmailer/swiftmailer (v6.2.7)
+  - Locking symfony/console (v5.2.6)
+  - Locking symfony/css-selector (v5.2.4)
+  - Locking symfony/deprecation-contracts (v2.2.0)
+  - Locking symfony/error-handler (v5.2.6)
+  - Locking symfony/event-dispatcher (v5.2.4)
+  - Locking symfony/event-dispatcher-contracts (v2.2.0)
+  - Locking symfony/finder (v5.2.4)
+  - Locking symfony/http-client-contracts (v2.3.1)
+  - Locking symfony/http-foundation (v5.2.4)
+  - Locking symfony/http-kernel (v5.2.6)
+  - Locking symfony/mime (v5.2.6)
+  - Locking symfony/polyfill-ctype (v1.22.1)
+  - Locking symfony/polyfill-iconv (v1.22.1)
+  - Locking symfony/polyfill-intl-grapheme (v1.22.1)
+  - Locking symfony/polyfill-intl-idn (v1.22.1)
+  - Locking symfony/polyfill-intl-normalizer (v1.22.1)
+  - Locking symfony/polyfill-mbstring (v1.22.1)
+  - Locking symfony/polyfill-php72 (v1.22.1)
+  - Locking symfony/polyfill-php73 (v1.22.1)
+  - Locking symfony/polyfill-php80 (v1.22.1)
+  - Locking symfony/process (v5.2.4)
+  - Locking symfony/routing (v5.2.6)
+  - Locking symfony/service-contracts (v2.2.0)
+  - Locking symfony/string (v5.2.6)
+  - Locking symfony/translation (v5.2.6)
+  - Locking symfony/translation-contracts (v2.3.0)
+  - Locking symfony/var-dumper (v5.2.6)
+  - Locking theseer/tokenizer (1.2.0)
+  - Locking tijsverkoyen/css-to-inline-styles (2.2.3)
+  - Locking vlucas/phpdotenv (v5.3.0)
+  - Locking voku/portable-ascii (1.5.6)
+  - Locking webmozart/assert (1.10.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 105 installs, 0 updates, 0 removals
+  - Downloading doctrine/inflector (2.0.3)
+  - Downloading doctrine/lexer (1.2.1)
+  - Downloading webmozart/assert (1.10.0)
+  - Downloading dragonmantank/cron-expression (v3.1.0)
+  - Downloading symfony/var-dumper (v5.2.6)
+  - Downloading psr/log (1.1.3)
+  - Downloading monolog/monolog (2.2.0)
+  - Downloading voku/portable-ascii (1.5.6)
+  - Downloading phpoption/phpoption (1.7.5)
+  - Downloading graham-campbell/result-type (v1.0.1)
+  - Downloading vlucas/phpdotenv (v5.3.0)
+  - Downloading symfony/css-selector (v5.2.4)
+  - Downloading tijsverkoyen/css-to-inline-styles (2.2.3)
+  - Downloading symfony/deprecation-contracts (v2.2.0)
+  - Downloading symfony/routing (v5.2.6)
+  - Downloading symfony/polyfill-php72 (v1.22.1)
+  - Downloading symfony/polyfill-intl-idn (v1.22.1)
+  - Downloading symfony/mime (v5.2.6)
+  - Downloading symfony/http-foundation (v5.2.4)
+  - Downloading symfony/http-client-contracts (v2.3.1)
+  - Downloading psr/event-dispatcher (1.0.0)
+  - Downloading symfony/event-dispatcher-contracts (v2.2.0)
+  - Downloading symfony/event-dispatcher (v5.2.4)
+  - Downloading symfony/error-handler (v5.2.6)
+  - Downloading symfony/http-kernel (v5.2.6)
+  - Downloading symfony/finder (v5.2.4)
+  - Downloading symfony/polyfill-iconv (v1.22.1)
+  - Downloading egulias/email-validator (2.1.25)
+  - Downloading swiftmailer/swiftmailer (v6.2.7)
+  - Downloading ramsey/collection (1.1.3)
+  - Downloading brick/math (0.9.2)
+  - Downloading ramsey/uuid (4.1.1)
+  - Downloading psr/simple-cache (1.0.1)
+  - Downloading opis/closure (3.6.1)
+  - Downloading symfony/translation-contracts (v2.3.0)
+  - Downloading symfony/translation (v5.2.6)
+  - Downloading nesbot/carbon (2.46.0)
+  - Downloading league/mime-type-detection (1.7.0)
+  - Downloading league/flysystem (1.1.3)
+  - Downloading league/commonmark (1.5.8)
+  - Downloading laravel/framework (v8.35.1)
+  - Downloading filp/whoops (2.12.0)
+  - Downloading facade/ignition-contracts (1.0.2)
+  - Downloading facade/flare-client-php (1.5.0)
+  - Downloading facade/ignition (2.7.0)
+  - Downloading fakerphp/faker (v1.14.1)
+  - Downloading fideloper/proxy (4.4.1)
+  - Downloading asm89/stack-cors (v2.0.3)
+  - Downloading fruitcake/laravel-cors (v2.0.3)
+  - Downloading psr/http-message (1.0.1)
+  - Downloading psr/http-client (1.0.1)
+  - Downloading ralouphie/getallheaders (3.0.3)
+  - Downloading guzzlehttp/psr7 (1.8.1)
+  - Downloading guzzlehttp/promises (1.4.1)
+  - Downloading guzzlehttp/guzzle (7.3.0)
+  - Downloading laravel/sail (v1.4.10)
+  - Downloading nikic/php-parser (v4.10.4)
+  - Downloading dnoegel/php-xdg-base-dir (v0.1.1)
+  - Downloading psy/psysh (v0.10.7)
+  - Downloading laravel/tinker (v2.6.1)
+  - Downloading hamcrest/hamcrest-php (v2.0.1)
+  - Downloading mockery/mockery (1.4.3)
+  - Downloading nunomaduro/collision (v5.3.0)
+  - Downloading phpdocumentor/reflection-common (2.2.0)
+  - Downloading phpdocumentor/type-resolver (1.4.0)
+  - Downloading phpdocumentor/reflection-docblock (5.2.2)
+  - Downloading sebastian/version (3.0.2)
+  - Downloading sebastian/type (2.3.1)
+  - Downloading sebastian/resource-operations (3.0.3)
+  - Downloading sebastian/recursion-context (4.0.4)
+  - Downloading sebastian/object-reflector (2.0.4)
+  - Downloading sebastian/object-enumerator (4.0.4)
+  - Downloading sebastian/global-state (5.0.2)
+  - Downloading sebastian/exporter (4.0.3)
+  - Downloading sebastian/environment (5.1.3)
+  - Downloading sebastian/diff (4.0.4)
+  - Downloading sebastian/comparator (4.0.6)
+  - Downloading sebastian/code-unit (1.0.8)
+  - Downloading sebastian/cli-parser (1.0.1)
+  - Downloading phpunit/php-timer (5.0.3)
+  - Downloading phpunit/php-text-template (2.0.4)
+  - Downloading phpunit/php-invoker (3.1.1)
+  - Downloading phpunit/php-file-iterator (3.0.5)
+  - Downloading theseer/tokenizer (1.2.0)
+  - Downloading sebastian/lines-of-code (1.0.3)
+  - Downloading sebastian/complexity (2.0.2)
+  - Downloading sebastian/code-unit-reverse-lookup (2.0.3)
+  - Downloading phpunit/php-code-coverage (9.2.6)
+  - Downloading doctrine/instantiator (1.4.0)
+  - Downloading phpspec/prophecy (1.13.0)
+  - Downloading phar-io/version (3.1.0)
+  - Downloading phar-io/manifest (2.0.1)
+  - Downloading myclabs/deep-copy (1.10.2)
+  - Downloading phpunit/phpunit (9.5.4)
+  - Installing doctrine/inflector (2.0.3): Extracting archive
+  - Installing doctrine/lexer (1.2.1): Extracting archive
+  - Installing symfony/polyfill-ctype (v1.22.1): Extracting archive
+  - Installing webmozart/assert (1.10.0): Extracting archive
+  - Installing dragonmantank/cron-expression (v3.1.0): Extracting archive
+  - Installing symfony/polyfill-php80 (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-mbstring (v1.22.1): Extracting archive
+  - Installing symfony/var-dumper (v5.2.6): Extracting archive
+  - Installing symfony/polyfill-intl-normalizer (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-intl-grapheme (v1.22.1): Extracting archive
+  - Installing symfony/string (v5.2.6): Extracting archive
+  - Installing psr/container (1.1.1): Extracting archive
+  - Installing symfony/service-contracts (v2.2.0): Extracting archive
+  - Installing symfony/polyfill-php73 (v1.22.1): Extracting archive
+  - Installing symfony/console (v5.2.6): Extracting archive
+  - Installing psr/log (1.1.3): Extracting archive
+  - Installing monolog/monolog (2.2.0): Extracting archive
+  - Installing voku/portable-ascii (1.5.6): Extracting archive
+  - Installing phpoption/phpoption (1.7.5): Extracting archive
+  - Installing graham-campbell/result-type (v1.0.1): Extracting archive
+  - Installing vlucas/phpdotenv (v5.3.0): Extracting archive
+  - Installing symfony/css-selector (v5.2.4): Extracting archive
+  - Installing tijsverkoyen/css-to-inline-styles (2.2.3): Extracting archive
+  - Installing symfony/deprecation-contracts (v2.2.0): Extracting archive
+  - Installing symfony/routing (v5.2.6): Extracting archive
+  - Installing symfony/process (v5.2.4): Extracting archive
+  - Installing symfony/polyfill-php72 (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-intl-idn (v1.22.1): Extracting archive
+  - Installing symfony/mime (v5.2.6): Extracting archive
+  - Installing symfony/http-foundation (v5.2.4): Extracting archive
+  - Installing symfony/http-client-contracts (v2.3.1): Extracting archive
+  - Installing psr/event-dispatcher (1.0.0): Extracting archive
+  - Installing symfony/event-dispatcher-contracts (v2.2.0): Extracting archive
+  - Installing symfony/event-dispatcher (v5.2.4): Extracting archive
+  - Installing symfony/error-handler (v5.2.6): Extracting archive
+  - Installing symfony/http-kernel (v5.2.6): Extracting archive
+  - Installing symfony/finder (v5.2.4): Extracting archive
+  - Installing symfony/polyfill-iconv (v1.22.1): Extracting archive
+  - Installing egulias/email-validator (2.1.25): Extracting archive
+  - Installing swiftmailer/swiftmailer (v6.2.7): Extracting archive
+  - Installing ramsey/collection (1.1.3): Extracting archive
+  - Installing brick/math (0.9.2): Extracting archive
+  - Installing ramsey/uuid (4.1.1): Extracting archive
+  - Installing psr/simple-cache (1.0.1): Extracting archive
+  - Installing opis/closure (3.6.1): Extracting archive
+  - Installing symfony/translation-contracts (v2.3.0): Extracting archive
+  - Installing symfony/translation (v5.2.6): Extracting archive
+  - Installing nesbot/carbon (2.46.0): Extracting archive
+  - Installing league/mime-type-detection (1.7.0): Extracting archive
+  - Installing league/flysystem (1.1.3): Extracting archive
+  - Installing league/commonmark (1.5.8): Extracting archive
+  - Installing laravel/framework (v8.35.1): Extracting archive
+  - Installing filp/whoops (2.12.0): Extracting archive
+  - Installing facade/ignition-contracts (1.0.2): Extracting archive
+  - Installing facade/flare-client-php (1.5.0): Extracting archive
+  - Installing facade/ignition (2.7.0): Extracting archive
+  - Installing fakerphp/faker (v1.14.1): Extracting archive
+  - Installing fideloper/proxy (4.4.1): Extracting archive
+  - Installing asm89/stack-cors (v2.0.3): Extracting archive
+  - Installing fruitcake/laravel-cors (v2.0.3): Extracting archive
+  - Installing psr/http-message (1.0.1): Extracting archive
+  - Installing psr/http-client (1.0.1): Extracting archive
+  - Installing ralouphie/getallheaders (3.0.3): Extracting archive
+  - Installing guzzlehttp/psr7 (1.8.1): Extracting archive
+  - Installing guzzlehttp/promises (1.4.1): Extracting archive
+  - Installing guzzlehttp/guzzle (7.3.0): Extracting archive
+  - Installing laravel/sail (v1.4.10): Extracting archive
+  - Installing nikic/php-parser (v4.10.4): Extracting archive
+  - Installing dnoegel/php-xdg-base-dir (v0.1.1): Extracting archive
+  - Installing psy/psysh (v0.10.7): Extracting archive
+  - Installing laravel/tinker (v2.6.1): Extracting archive
+  - Installing hamcrest/hamcrest-php (v2.0.1): Extracting archive
+  - Installing mockery/mockery (1.4.3): Extracting archive
+  - Installing nunomaduro/collision (v5.3.0): Extracting archive
+  - Installing phpdocumentor/reflection-common (2.2.0): Extracting archive
+  - Installing phpdocumentor/type-resolver (1.4.0): Extracting archive
+  - Installing phpdocumentor/reflection-docblock (5.2.2): Extracting archive
+  - Installing sebastian/version (3.0.2): Extracting archive
+  - Installing sebastian/type (2.3.1): Extracting archive
+  - Installing sebastian/resource-operations (3.0.3): Extracting archive
+  - Installing sebastian/recursion-context (4.0.4): Extracting archive
+  - Installing sebastian/object-reflector (2.0.4): Extracting archive
+  - Installing sebastian/object-enumerator (4.0.4): Extracting archive
+  - Installing sebastian/global-state (5.0.2): Extracting archive
+  - Installing sebastian/exporter (4.0.3): Extracting archive
+  - Installing sebastian/environment (5.1.3): Extracting archive
+  - Installing sebastian/diff (4.0.4): Extracting archive
+  - Installing sebastian/comparator (4.0.6): Extracting archive
+  - Installing sebastian/code-unit (1.0.8): Extracting archive
+  - Installing sebastian/cli-parser (1.0.1): Extracting archive
+  - Installing phpunit/php-timer (5.0.3): Extracting archive
+  - Installing phpunit/php-text-template (2.0.4): Extracting archive
+  - Installing phpunit/php-invoker (3.1.1): Extracting archive
+  - Installing phpunit/php-file-iterator (3.0.5): Extracting archive
+  - Installing theseer/tokenizer (1.2.0): Extracting archive
+  - Installing sebastian/lines-of-code (1.0.3): Extracting archive
+  - Installing sebastian/complexity (2.0.2): Extracting archive
+  - Installing sebastian/code-unit-reverse-lookup (2.0.3): Extracting archive
+  - Installing phpunit/php-code-coverage (9.2.6): Extracting archive
+  - Installing doctrine/instantiator (1.4.0): Extracting archive
+  - Installing phpspec/prophecy (1.13.0): Extracting archive
+  - Installing phar-io/version (3.1.0): Extracting archive
+  - Installing phar-io/manifest (2.0.1): Extracting archive
+  - Installing myclabs/deep-copy (1.10.2): Extracting archive
+  - Installing phpunit/phpunit (9.5.4): Extracting archive
+79 package suggestions were added by new dependencies, use `composer suggest` to see details.                                                         
+Generating optimized autoload files
+&gt; Illuminate\Foundation\ComposerScripts::postAutoloadDump
+&gt; @php artisan package:discover --ansi
+Discovered Package: facade/ignition
+Discovered Package: fideloper/proxy
+Discovered Package: fruitcake/laravel-cors
+Discovered Package: laravel/sail
+Discovered Package: laravel/tinker
+Discovered Package: nesbot/carbon
+Discovered Package: nunomaduro/collision
+Package manifest generated successfully.
+74 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+&gt; @php artisan key:generate --ansi
+Application key set successfully.
+
+Application ready! Build something amazing.
+</span></code></pre></div></div>
+
+<p>Untuk instalasi menggunakan composer, gunakan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer create-project <span class="nt">--prefer-dist</span> laravel/laravel blog
+</code></pre></div></div>
+
+<p>Dengan demikian, project baru dengan nama <code class="language-plaintext highlighter-rouge">blog</code> terinstal pada direktori yang sedang aktif.</p>
+
+<h3 id="tes-laravel">Tes Laravel</h3>
+
+<p>Jika proses instalasi tidak terjadi error maka laravel sudah berhasil terinstal.</p>
+
+<p>Untuk melakukan tes pada project yang telah dibuat, masuk ke direktori tersebut dan jalankan <code class="language-plaintext highlighter-rouge">php artisan serve</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>blog
+php artisan serve
+</code></pre></div></div>
+
+<p>Output yang dihasilkan:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Starting Laravel development server: http://127.0.0.1:8000
+<span class="o">[</span>Fri Apr  2 15:25:48 2021] PHP 8.0.3 Development Server <span class="o">(</span>http://127.0.0.1:8000<span class="o">)</span> started
+</code></pre></div></div>
+
+<p>Jika sudah <code class="language-plaintext highlighter-rouge">started</code>, silahkan buka browser dan arahkan ke URL <code class="language-plaintext highlighter-rouge">http://127.0.0.1:8000</code> (8000 adalah port yang digunakan).</p>
+
+<p>Berikut tampilan yang berhasil dijalankan.</p>
+
+<p><img src="/assets/images/books/laravel_test.png" alt="laravel_test" /></p>
+
+<h3 id="referensi">Referensi</h3>
+
+<ul>
+  <li><a href="https://jagongoding.com/web/laravel/cara-install-laravel-di-linux/#sebelum-instalasi">Cara Install Laravel di Linux [Semua Distro]</a></li>
+</ul>
+
+
+            <hr>
+            <div class="share">
+                <p class="text-center">
+                    Share on : <br>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Laravel-05-Instalasi-Composer-dan-Laravel.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Laravel-05-Instalasi-Composer-dan-Laravel.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Laravel-05-Instalasi-Composer-dan-Laravel.html&title=Instalasi Composer dan Laravel&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Instalasi Composer dan Laravel%20%2D%20https://muh-fajri.github.io/books/Laravel-05-Instalasi-Composer-dan-Laravel.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Laravel-05-Instalasi-Composer-dan-Laravel.html&text=Instalasi Composer dan Laravel"><span class="fab fa-telegram"></span></a>
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

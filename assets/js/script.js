@@ -18,15 +18,15 @@ const gotoTop = () => {
 
 /* Show User Current Date */
 let fullDate = new String();
-let dayName = ("Minggu,Senin,Selasa,Rabu,Kamis,Jumat,Sabtu");
+let dayName = ("Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday");
 dayName = dayName.split(",");
-let monthName = ("Januari,Februari,Maret,April,Mei,Juni,Juli,Agustus,September,Oktober,November,Desember");
+let monthName = ("January,February,March,April,May,June,July,August,September,October,November,December");
 monthName = monthName.split(",");
 let _date = new Date();
 let day = _date.getDay();
 let date = _date.getDate();
 let month = _date.getMonth();
 let year = _date.getFullYear();
-fullDate = dayName[day] + ", " + date + " " + monthName[month] + " " + year;
+fullDate = "Today: " + dayName[day] + ", " + date + " " + monthName[month] + " " + year;
 document.querySelector("#date-time > p").innerHTML = fullDate;
 /*-- Show User Current Date --*/
