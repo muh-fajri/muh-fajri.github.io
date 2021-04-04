@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Mengarahkan Request dengan Router" />
 <script type="application/ld+json">
-{"url":"/books/Laravel-10-Mengarahkan-Request-dengan-Router.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-10-Mengarahkan-Request-dengan-Router.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Mengarahkan Request dengan Router","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Laravel-10-Mengarahkan-Request-dengan-Router.html","headline":"Mengarahkan Request dengan Router","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-10-Mengarahkan-Request-dengan-Router.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -71,8 +71,8 @@
             </li>
             
         </ul>
-        <form class="d-flex mt-2">
-            <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
             <button class="btn" type="submit"><span class="fas fa-search"></span></button>
         </form>
     </div>
@@ -156,11 +156,156 @@ Route::delete('/students', function () {
 });
 ```
 
-Untuk melihat perubahan yang dilakukan, silahkan akses browser dan arahkan ke localhost dengan port 8000.
+Bagian yang harus diperhatikan:
+- `Route`, kelas Router yang digunakan untuk mendaftarkan *router* pada aplikasi.
+- `::get`, *static method* yang akan menentukan *HTTP Verbs* apa yang akan digunakan. *Method* yang lain seperti `::post`, `::put`, dan `::delete`.
+- `/`, *path* yang akan dieksekusi oleh program saat mendapatkan *response*.
+- `function () {}`, *closure function* yang bersifat anonim, akan dieksekusi ketika terdapat *request* yang memiliki kesamaan *path* dengan *router* yang didaftarkan.
+
+Untuk melihat perubahan yang dilakukan, jalankan `php artisan serve` terlebih dahulu lalu akses browser dan arahkan ke `localhost` dengan port `8000`.
 
 Berikut tampilan pada *router* `/`.
 
-![Router Test](/assets/images/books/router_test.png) -->
+![Router Test](/assets/images/books/router_test.png)
+
+Dan ini untuk *path* `/students`.
+
+![Router Test 2](/assets/images/books/router_test2.png)
+
+Saat menjalankan *request* ke *server* melalui browser, hanya *HTTP Verbs* GET saja yang bisa digunakan. Saat mengakses *path* `/students` pada URL Bar secara otomatis hanya method GET yang dapat dilakukan. Agar dapat melakukan *request* dengan *HTTP Verbs* yang lain dapat diakses menggunakan Postman.
+
+Silahkan buka aplikasi Postman dan jalankan *request* dengan *path* `/students` menggunakan *method* POST. Dapat dilihat bahwa *request* yang dilakukan mengembalikan *error* seperti berikut.
+
+![Postman Request](/assets/images/books/postman_request.png)
+
+*HTTP error* yang ditampilkan menunjukkan kode ***419 Page Expired*** ini disebabkan oleh aplikasi Laravel yang tidak menyertakan CSRF Token pada *request*. CSRF Token merupakan string acak yang digunakan untuk mengamankan aplikasi dari serangan yang bertipe CSRF.
+
+CSRF Token harus disertakan pada aplikasi Laravel jika ingin melakukan *request* selain metode GET. CSRF Token ini di-*generate* oleh `view` secara otomatis.
+
+> Men-*disable* CSRF Token tidak disarankan karena akan membahayakan aplikasi yang dibuat. Ini hanya untuk memudahkan proses dalam melakukan *request* melalui aplikasi Postman.
+
+Untuk men-*disable* CSRF Token pada Laravel, jadikan komentar VerifyCsrfToken *middleware* pada file `app\Http\Kernel.php` seperti di bawah ini.
+
+```php
+<?php
+
+namespace App\Http;
+
+use Illuminate\Foundation\Http\Kernel as HttpKernel;
+
+class Kernel extends HttpKernel
+{
+
+    ...
+
+    protected $middlewareGroups = [
+        'web' => [
+            \App\Http\Middleware\EncryptCookies::class,
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            // \Illuminate\Session\Middleware\AuthenticateSession::class,
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            //\App\Http\Middleware\VerifyCsrfToken::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        ],
+
+        'api' => [
+            'throttle:api',
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        ],
+    ];
+    ...
+}
+```
+
+Setelah selesai, lakukan *request* kembali pada aplikasi Postman. Seharusnya *error* tidak ditampilkan lagi.
+
+![Postman Request2](/assets/images/books/postman_request2.png)
+
+### Path Parameter pada Router
+
+Pada pendaftaran *router*, kita bisa menyertakan parameter melalui *path*. Hal ini akan sangat berguna saat ingin mengakses data tertentu pada server. Contoh penggunaannya adalah ketika ingin mengakses data yaitu menggunakan *id*. Misalnya, ketika ingin mengakses data mahasiswa dengan *id* 1 maka pada *path* akan menjadi `/students/1`.
+
+Untuk implementasinya, dapat dilihat pada kode program berikut. Ubah isi file `routes\web.php`.
+
+```php
+<?php
+
+use Illuminate\Http\Request;
+
+Route::get('/', function () {
+    return "Respon yang diterima di path / untuk method GET";
+});
+
+Route::get('/students', function (Request $request) {
+    return "Menampilkan seluruh daftar data mahasiswa";
+});
+
+Route::post('/students', function () {
+    return "Menambah data mahasiswa baru";
+});
+
+Route::get('/students/{id}', function ($id) {
+    return "Mengambil data mahasiswa dengan id=".$id;
+});
+
+Route::put('/students/{id}', function ($id) {
+    return "Melakukan perubahan data pada mahasiswa dengan id=".$id;
+});
+
+Route::delete('/students/{id}', function ($id) {
+    return "Menghapus data mahasiswa dengan id=".$id;
+});<?php
+
+use Illuminate\Http\Request;
+
+Route::get('/', function () {
+    return "Respon yang diterima di path / untuk method GET";
+});
+
+Route::get('/students', function (Request $request) {
+    return "Menampilkan seluruh daftar data mahasiswa";
+});
+
+Route::post('/students', function () {
+    return "Menambah data mahasiswa baru";
+});
+
+Route::get('/students/{id}', function ($id) {
+    return "Mengambil data mahasiswa dengan id=".$id;
+});
+
+Route::put('/students/{id}', function ($id) {
+    return "Melakukan perubahan data pada mahasiswa dengan id=".$id;
+});
+
+Route::delete('/students/{id}', function ($id) {
+    return "Menghapus data mahasiswa dengan id=".$id;
+});
+```
+
+- `/students/{id}`, *path* yang memuat satu *id*.
+- `function({$id})`, *closure method* yang akan dijalankan ketika *path* `/students/{id}` dipanggil. Penamaan variabel di sini bebas/tidak dibatasi namun disarankan untuk memberikan penamaan yang jelas dan mudah dipahami.
+
+### Query Parameter pada Router
+
+Penerapan Query Parameter tidak perlu didefinisikan pada *router*. Kita hanya perlu menambahkan query pada bagian akhir URL yang dikirimkan. Seperti:
+```bash
+localhost:8000/students?id=1
+```
+
+`?id=1` merupakan *query* parameter yang dikirimkan. `id` merupakan nama variabel yang diberikan dan `1` merupakan nilai variabel tersebut.
+
+Dalam melakukan *request* dapat digunakan beberapa *query* parameter seperti:
+```bash
+localhost:8000/students?id=1&nama=AhmadYani&nim=20212305
+```
+Pada URL ini terdapat tiga parameter yang dikirimkan dengan masing-masing nilainya. Setiap parameter dipisahkan dengan simbol *ampersand* (&).
+
+Untuk mengakses parameter yang sudah dikirimkan, kita lihat kembali *router* dengan *path* `/students` denan *method* GET.
+- `/students`, merupakan *path*-nya.
+- `function(Request $request)`, merupakan *closure method* yang menerima satu parameter `$request` yang merupakan instansiasi *class* `Request`. Untuk itu harus ditambahkan *class* `Request` pada file `web.php` yaitu dengan menambahkan baris `use Illuminate\Http\Request;` setelah tag pembuka PHP.
+- Untuk dapat mengakses parameter yang dikirimkan, digunakan *object operator* yaitu `->`. Jadi, untuk mengakses parameter *id* yaitu `$request->id`. -->
 
 <p>Dilanjutkan kemudian…</p>
 
@@ -190,8 +335,8 @@ Berikut tampilan pada *router* `/`.
     <ul>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
     </ul>
     <div class="credit">
         <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>

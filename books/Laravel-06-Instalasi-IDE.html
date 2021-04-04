@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Instalasi IDE" />
 <script type="application/ld+json">
-{"url":"/books/Laravel-06-Instalasi-IDE.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-06-Instalasi-IDE.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Instalasi IDE","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Laravel-06-Instalasi-IDE.html","headline":"Instalasi IDE","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-06-Instalasi-IDE.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -71,8 +71,8 @@
             </li>
             
         </ul>
-        <form class="d-flex mt-2">
-            <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
             <button class="btn" type="submit"><span class="fas fa-search"></span></button>
         </form>
     </div>
@@ -114,9 +114,9 @@
 
             <p>Bismillahirrahmanirrahim.</p>
 
-<p>IDE (Integrated Development Environment) digunakan sebagai utilitas dalam pengembangan aplikasi baik berbasis desktop, mobile, atau web.</p>
+<p>IDE (<em>Integrated Development Environment</em>) digunakan sebagai utilitas dalam pengembangan aplikasi baik berbasis desktop, mobile, atau web.</p>
 
-<p>Ada banyak pilihan IDE yang dapat digunakan akan tetapi tetap memperhatikan fungsi dan kesesuaiannya dengan bahasa pemrograman yang digunakan. Ada beberapa IDE yang dikhususkan untuk bahasa pemrograman tertentu seperti Lazarus IDE untuk pengembangan aplikasi berbasis GUI untuk bahasa Pascal. Qt Designer dan Qt Creator sebagai IDE untuk bahasa C++.</p>
+<p>Ada banyak pilihan IDE yang dapat digunakan akan tetapi tetap memperhatikan fungsi dan kesesuaiannya dengan bahasa pemrograman yang digunakan. Ada beberapa IDE yang dikhususkan untuk bahasa pemrograman tertentu seperti <strong>Lazarus IDE</strong> untuk pengembangan aplikasi berbasis GUI untuk bahasa <strong>Pascal</strong>. <strong>Qt Designer</strong> dan <strong>Qt Creator</strong> sebagai IDE untuk bahasa <strong>C++</strong>.</p>
 
 <p>IDE yang paling umum digunakan yang mendukung banyak bahasa pemrograman seperti Visual Studio Code (VSCode), Atom, dan VSCodium. VSCodium merupakan IDE yang memiliki <em>source code</em> berbasis VSCode sehingga kedua IDE ini  memiliki tampilan yang kurang lebih sama.</p>
 
@@ -134,7 +134,7 @@
 
 <p>Setelah berhasil diunduh, ekstrak file dengan perintah <code class="language-plaintext highlighter-rouge">unzip</code> karena berekstensi <code class="language-plaintext highlighter-rouge">.zip</code> dan salin (perintah <code class="language-plaintext highlighter-rouge">cp</code>) atau pindahkan (perintah <code class="language-plaintext highlighter-rouge">mv</code>) ke folder <code class="language-plaintext highlighter-rouge">/opt</code>.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar </span>unzip ~/Downloads/VSCodium-darwin-x64-1.55.0.zip
-<span class="nb">sudo mv</span> <span class="nt">-r</span> ~/Downloads/VSCodium-darwin-x64-1.55.0 /opt
+<span class="nb">sudo mv</span> ~/Downloads/VSCodium-darwin-x64-1.55.0 /opt
 </code></pre></div></div>
 
 <p>Ubah nama (perintah <code class="language-plaintext highlighter-rouge">mv</code>) foldernya menjadi <code class="language-plaintext highlighter-rouge">vscodium</code> agar menjadi lebih sederhana.</p>
@@ -149,20 +149,20 @@
 
 <p>Menjalankan aplikasi VSCodium seperti tadi tentunya tidak efisien. Untuk menanganinya, buatkan ikon pintas melalui direktori <code class="language-plaintext highlighter-rouge">home</code> agar program dapat diakses melalui daftar aplikasi yang ada di menu Start/Launcher.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">touch</span> /home/fajri/.local/share/applications/vscode.desktop
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">touch</span> /home/fajri/.local/share/applications/vscodium.desktop
 </code></pre></div></div>
 
-<p>Buka file <code class="language-plaintext highlighter-rouge">vscode.desktop</code> dan isikan seperti berikut:</p>
+<p>Buka file <code class="language-plaintext highlighter-rouge">vscodium.desktop</code> dan isikan seperti berikut:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Desktop Entry]
-<span class="nv">Name</span><span class="o">=</span>VS Codium
+<span class="nv">Name</span><span class="o">=</span>VSCodium
 <span class="nv">Comment</span><span class="o">=</span>Code Editing. Redefined.
 <span class="nv">GenericName</span><span class="o">=</span>Text Editor
 <span class="nv">Exec</span><span class="o">=</span>/opt/vscodium/bin/codium <span class="nt">--no-sandbox</span> <span class="nt">--unity-launch</span> %F
-<span class="nv">Icon</span><span class="o">=</span>/opt/vscodium/resources/app/resources/linux/code.png
+<span class="nv">Icon</span><span class="o">=</span>vscodium
 <span class="nv">Type</span><span class="o">=</span>Application
-<span class="nv">StartupNotify</span><span class="o">=</span><span class="nb">false
-</span><span class="nv">StartupWMClass</span><span class="o">=</span>Code
-<span class="nv">Categories</span><span class="o">=</span>Development<span class="p">;</span>IDE<span class="p">;</span>Utility<span class="p">;</span>TextEditor<span class="p">;</span>
+<span class="nv">StartupNotify</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">StartupWMClass</span><span class="o">=</span>VSCodium
+<span class="nv">Categories</span><span class="o">=</span>Development<span class="p">;</span>IDE<span class="p">;</span>Utility<span class="p">;</span>
 <span class="nv">MimeType</span><span class="o">=</span>text/plain<span class="p">;</span>inode/directory<span class="p">;</span>application/x-code-workspace<span class="p">;</span>
 <span class="nv">Actions</span><span class="o">=</span>new-empty-window<span class="p">;</span>
 <span class="nv">Keywords</span><span class="o">=</span>vscodium<span class="p">;</span>
@@ -170,10 +170,10 @@
 <span class="o">[</span>Desktop Action new-empty-window]
 <span class="nv">Name</span><span class="o">=</span>New Empty Window
 <span class="nv">Exec</span><span class="o">=</span>/opt/vscodium/bin/codium <span class="nt">--no-sandbox</span> <span class="nt">--new-window</span> %F
-<span class="nv">Icon</span><span class="o">=</span>/opt/vscodium/resources/app/resources/linux/code.png
+<span class="nv">Icon</span><span class="o">=</span>vscodium
 </code></pre></div></div>
 
-<p>Perlu diperhatikan pada bagian <code class="language-plaintext highlighter-rouge">Exec</code> dan <code class="language-plaintext highlighter-rouge">Icon</code> harus sesuai dengan yang ada dalam direktori <code class="language-plaintext highlighter-rouge">/opt</code>, jadi silahkan disesuaikan.</p>
+<p>Perlu diperhatikan pada bagian <code class="language-plaintext highlighter-rouge">Exec</code> file <em>binary</em> yang dieksekusi harus sesuai dengan yang ada dalam direktori <code class="language-plaintext highlighter-rouge">/opt</code>, jadi silahkan disesuaikan.</p>
 
 <p>Setelah selesai, simpan dan tutup file. Setelah mengikuti langkah-langkah ini, icon program VSCode akan tampil di daftar menu aplikasi.</p>
 
@@ -199,8 +199,8 @@
     <ul>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
     </ul>
     <div class="credit">
         <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>

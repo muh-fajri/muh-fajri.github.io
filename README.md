@@ -8,9 +8,13 @@ But, whoever of you if the contents served here are found useful, I'm personally
 
 I'm express my thanks you free your time to visit this page. Hope, this website would be continues growing in order to provide light reading which could be accessed more easily.
 
-## Accumulated Features - March 30, 2021
+## Accumulated Features - 30 March 2021
 - Contact Button
 - Share Link
 - Tags
 - Pagination
 - Breadcrumbs (Manual)
+
+## Added Features - 05 April 2021
+- Searching 
+- Privacy and Disclaimer

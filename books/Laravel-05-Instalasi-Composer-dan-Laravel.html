@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Instalasi Composer dan Laravel" />
 <script type="application/ld+json">
-{"url":"/books/Laravel-05-Instalasi-Composer-dan-Laravel.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-05-Instalasi-Composer-dan-Laravel.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Instalasi Composer dan Laravel","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Laravel-05-Instalasi-Composer-dan-Laravel.html","headline":"Instalasi Composer dan Laravel","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-05-Instalasi-Composer-dan-Laravel.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -71,8 +71,8 @@
             </li>
             
         </ul>
-        <form class="d-flex mt-2">
-            <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
             <button class="btn" type="submit"><span class="fas fa-search"></span></button>
         </form>
     </div>
@@ -118,10 +118,11 @@
   <p>Composer adalah aplikasi manajer paket untuk bahasa pemrograman PHP yang menyediakan format standar untuk mengelola dependensi PHP dan pustaka-pustaka yang diperlukan. (<a href="https://id.wikipedia.org/wiki/Composer">Wikipedia</a>)</p>
 </blockquote>
 
-<p>Dengan demikian, Composer ini dapat digunakan untuk menghemat waktu pengembangan aplikasi berbasis PHP karena kemudahan menginstal paket-paket yang dibutuhkan.</p>
+<p>Dengan demikian, composer ini dapat digunakan untuk menghemat waktu pengembangan aplikasi berbasis PHP karena kemudahan menginstal paket-paket yang dibutuhkan.</p>
 
 <h3 id="instal-composer">Instal Composer</h3>
 
+<p>Jalankan perintah berikut melalui terminal untuk menginstal composer.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-S</span> composer
 </code></pre></div></div>
 
@@ -144,10 +145,11 @@ Composer version 2.0.11 2021-02-24 14:57:23 <span class="c">#Output</span>
 
 <h3 id="menglobalkan-direktori-composer">Menglobalkan Direktori Composer</h3>
 
+<p>Jalankan perintah:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer global require <span class="s2">"laravel/installer"</span>
 </code></pre></div></div>
 
-<p>Dengan perintah ini akan menampilkan proses kurang lebih seperti berikut:</p>
+<p>Dengan perintah ini akan menampilkan proses yang kurang lebih seperti berikut:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Changed current directory to /home/fajri/.config/composer
 Using version ^4.2 <span class="k">for </span>laravel/installer
 ./composer.json has been created
@@ -212,7 +214,7 @@ Use the <span class="sb">`</span>composer fund<span class="sb">`</span> <span cl
 
 <h3 id="instal-laravel-menggunakan-laravel-installer-atau-composer">Instal Laravel Menggunakan Laravel Installer atau Composer</h3>
 
-<p>Setelah <code class="language-plaintext highlighter-rouge">composer/vendor/bin</code> menjadi folder global, Laravel pun sudah dapat diinstal. Gunakan perintah:</p>
+<p>Setelah <code class="language-plaintext highlighter-rouge">composer/vendor/bin</code> menjadi folder global, laravel pun sudah dapat diinstal. Sebelum menginstal laravel, pastikan letak direktori yang diinginkan misalnya di direktori <code class="language-plaintext highlighter-rouge">~/</code> yang menunjukkan direktori <code class="language-plaintext highlighter-rouge">home</code>. Setelah selesai, instal laravel dengan perintah:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>laravel new blog
 </code></pre></div></div>
 
@@ -581,11 +583,13 @@ php artisan serve
 <span class="o">[</span>Fri Apr  2 15:25:48 2021] PHP 8.0.3 Development Server <span class="o">(</span>http://127.0.0.1:8000<span class="o">)</span> started
 </code></pre></div></div>
 
-<p>Jika sudah <code class="language-plaintext highlighter-rouge">started</code>, silahkan buka browser dan arahkan ke URL <code class="language-plaintext highlighter-rouge">http://127.0.0.1:8000</code> (8000 adalah port yang digunakan).</p>
+<p>Jika statusnya sudah <code class="language-plaintext highlighter-rouge">started</code>, silahkan buka browser dan arahkan ke URL <code class="language-plaintext highlighter-rouge">http://127.0.0.1:8000</code> dimana <code class="language-plaintext highlighter-rouge">8000</code> adalah port yang digunakan oleh laravel.</p>
 
 <p>Berikut tampilan yang berhasil dijalankan.</p>
 
 <p><img src="/assets/images/books/laravel_test.png" alt="laravel_test" /></p>
+
+<p>Demikian langkah-langkah instalasi composer dan laravel semoga langkah-langkah yang ada mudah dipahami dan diikuti. Terima kasih.</p>
 
 <h3 id="referensi">Referensi</h3>
 
@@ -615,8 +619,8 @@ php artisan serve
     <ul>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
     </ul>
     <div class="credit">
         <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>

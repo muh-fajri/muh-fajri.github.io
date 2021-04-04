@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Perintah Dasar Kotlin</title>
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Perintah Dasar Kotlin</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Perintah Dasar Kotlin" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-04T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Perintah Dasar Kotlin" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Kotlin-04-Perintah-Dasar-Kotlin.html","headline":"Perintah Dasar Kotlin","dateModified":"2021-04-04T00:00:00+08:00","datePublished":"2021-04-04T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-04-Perintah-Dasar-Kotlin.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Perintah Dasar Kotlin</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="card">
+        <div class="card-body">
+            <h2>Perintah Dasar Kotlin</h2>
+            <div class="post-attribute d-sm-flex">
+                <div class="author-post">
+                    <img src="/assets/images/author.jpg" alt="author">
+                    <span class="fas fa-user"></span>
+                    <a href="/author.html">Muhammad Fajri</a>
+                </div>
+                <div class="date-post">
+                    <span class="fas fa-calendar-alt"></span>
+                    <span>Sunday, 04 April 2021</span>
+                </div>
+            </div>
+
+            <p>Bismillahirrahmanirrahim.</p>
+
+<h3 id="struktur-dasar">Struktur Dasar</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="standar-output">Standar Output</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// print: menampilkan output tanpa penambahan baris baru</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"Hello "</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"world!"</span><span class="p">)</span>
+
+<span class="c1">// println: menampilkan output dengan penambahan baris baru</span>
+<span class="nf">println</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
+<span class="nf">println</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="struktur-program">Struktur Program</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">hello</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Keterangan program:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">package hello</code> artinya kita membuat sebuah paket bernama <code class="language-plaintext highlighter-rouge">hello</code>. Paket dalam kotlin bersifat opsional(boleh ditulis boleh tidak).</li>
+  <li><code class="language-plaintext highlighter-rouge">fun main(){...}</code> adalah fungsi utama program.</li>
+  <li><code class="language-plaintext highlighter-rouge">args: Array&lt;String&gt;</code> adalah variabel yang menyimpan argumen.</li>
+  <li><code class="language-plaintext highlighter-rouge">println()</code> <em>statement</em> atau fungsi untuk menampilkan teks ke layar</li>
+  <li><em>semicolon</em> (<code class="language-plaintext highlighter-rouge">;</code>) pada kotlin bersifat opsional.</li>
+</ul>
+
+<h3 id="variabel-dan-tipe-data">Variabel dan Tipe Data</h3>
+
+<p><strong>Variabel</strong> merupakan simbol yang digunaan untuk menyimpan sebuah nilai. <strong>Tipe data</strong> adalah jenis nilai yang akan disimpan.</p>
+
+<p>Kotlin mendukung 2 jenis variabel yaitu:</p>
+<ul>
+  <li><em>Mutable</em>, variabel yang dapat diubah (diberikan ulang nilai). Kata kunci yang digunakan adalah <code class="language-plaintext highlighter-rouge">var</code>.</li>
+  <li>Immutable, variabel yang tidak dapat diubah (nilainya tidak dapat diganti). Kata kunci yang digunakan adalah <code class="language-plaintext highlighter-rouge">val</code>.</li>
+</ul>
+
+<p>Deklarasi variabel:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span><span class="p">/</span><span class="kd">val</span> <span class="py">namaVariabel</span> <span class="p">:</span> <span class="nc">TipeData</span> <span class="p">=</span> <span class="nc">Nilai</span>
+</code></pre></div></div>
+
+<p>Contoh</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1. Mmebuat variabel kosong (tipe data harus dituliskan)</span>
+<span class="kd">var</span> <span class="py">namaLengkap</span><span class="p">:</span> <span class="nc">String</span>
+
+<span class="c1">// 2. Membuat variabel dan langsung diberikan nilai</span>
+<span class="c1">//    (tipe data tidak wajib dituliskan karena sudah memiliki nilai)</span>
+<span class="kd">var</span> <span class="py">alamat</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">"Makassar"</span>
+<span class="kd">var</span> <span class="py">tanggalLahir</span> <span class="p">=</span> <span class="s">"01-01-2021"</span> <span class="k">as</span> <span class="n">string</span>
+
+<span class="c1">// 3. Membuat variabel tanpa menuliskan tipe data</span>
+<span class="kd">var</span> <span class="py">nabaBarang</span> <span class="p">=</span> <span class="s">"Smartphone"</span>
+<span class="kd">var</span> <span class="py">harga</span> <span class="p">=</span> <span class="mi">2500000</span>
+<span class="kd">var</span> <span class="py">berat</span> <span class="p">=</span> <span class="mf">0.8</span>
+
+</code></pre></div></div>
+
+<h3 id="tipe-data">Tipe Data</h3>
+
+<ul>
+  <li>Int (Integer): bilangan bulat, contoh: 12,1_000</li>
+  <li>String (teks), contoh: “belajar kotlin asik”</li>
+  <li>Float (bilangan pecahan), contoh 21.23, 1.3</li>
+  <li>Double (bilangan pecahan), tapi punya ukuran penyimpanan yang lebih besar dari Float.</li>
+  <li>Boolean, tipe data yang hanya bernilai <em>true</em> dan <em>false</em></li>
+  <li>Char (karakter), contoh: ‘A’</li>
+  <li>Unit, tipe data yang hanya punya satu nilai, yaitu: objekUnit. Tipe data ini mirip seperti <code class="language-plaintext highlighter-rouge">void</code> pada Java.</li>
+</ul>
+
+<h3 id="tipe-konversi-data">Tipe Konversi Data</h3>
+
+<p>Konversi tipe data dilakuka untuk mendapatkan nilai yang akurat.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">a</span> <span class="p">=</span> <span class="mi">14</span>
+<span class="kd">var</span> <span class="py">b</span> <span class="p">=</span> <span class="mi">3</span>
+<span class="n">varc</span> <span class="p">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">toFloat</span><span class="p">()</span> <span class="p">/</span> <span class="n">b</span><span class="p">.</span><span class="nf">toFloat</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">// output 4.66666</span>
+</code></pre></div></div>
+
+<p>Konversi tipe data yang lain:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">toInt()</code> untuk mengubah ke integer.</li>
+  <li><code class="language-plaintext highlighter-rouge">toString()</code> untuk mengubah ke String.</li>
+  <li><code class="language-plaintext highlighter-rouge">toDouble()</code> untuk mengubah ke Double.</li>
+  <li><code class="language-plaintext highlighter-rouge">toLong()</code> untuk mengubah ke long integer.</li>
+  <li><code class="language-plaintext highlighter-rouge">toShort()</code> untuk mengubah ke short integer.</li>
+  <li><code class="language-plaintext highlighter-rouge">toChar()</code> untuk mengubah ke Char (karakter).</li>
+</ul>
+
+<h3 id="referensi">Referensi</h3>
+<ul>
+  <li>Modul Pemrograman Mobile (Mobile Programming).</li>
+</ul>
+
+
+            <hr>
+            <div class="share">
+                <p class="text-center">
+                    Share on : <br>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html&title=Perintah Dasar Kotlin&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Perintah Dasar Kotlin%20%2D%20https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html&text=Perintah Dasar Kotlin"><span class="fab fa-telegram"></span></a>
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Instalasi Database Server" />
 <script type="application/ld+json">
-{"url":"/books/Laravel-02-Instalasi-Database-Server.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-02-Instalasi-Database-Server.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Instalasi Database Server","dateModified":"2021-04-01T00:00:00+08:00","datePublished":"2021-04-01T00:00:00+08:00","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Laravel-02-Instalasi-Database-Server.html","headline":"Instalasi Database Server","dateModified":"2021-04-01T00:00:00+08:00","datePublished":"2021-04-01T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-02-Instalasi-Database-Server.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -71,8 +71,8 @@
             </li>
             
         </ul>
-        <form class="d-flex mt-2">
-            <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
             <button class="btn" type="submit"><span class="fas fa-search"></span></button>
         </form>
     </div>
@@ -120,11 +120,11 @@
 
 <h3 id="instal-mariadb">Instal MariaDB</h3>
 
-<p>Jalankan perintah:</p>
+<p>Untuk menginstal MariaDB, jalankan perintah:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-S</span> mysql
 </code></pre></div></div>
 
-<p>Seperti yang diketahui, saat ini MariaDB tersedia secara resmi sebagai implementasi default dari MySQL di Arch Linux sejak tahun 2013. Saat dimintad untuk memilih menginstal MariaDB atau Percona server, langsung saja tekan tombol <code class="language-plaintext highlighter-rouge">enter</code> dan ketikkan <code class="language-plaintext highlighter-rouge">y</code> dan tekan <code class="language-plaintext highlighter-rouge">enter</code> lagi. Pilihan default yaitu MariaDB akan diinstal pada sistem.</p>
+<p>Seperti yang diketahui, saat ini MariaDB tersedia secara resmi sebagai implementasi default dari MySQL di Arch Linux sejak tahun 2013. Saat dimintai untuk memilih menginstal MariaDB atau Percona server, langsung saja tekan tombol <code class="language-plaintext highlighter-rouge">enter</code> dan ketikkan <code class="language-plaintext highlighter-rouge">y</code> dan tekan <code class="language-plaintext highlighter-rouge">enter</code> lagi. Pilihan default yaitu MariaDB akan diinstal pada sistem.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>fajri@mfajri FajriCodeOS]<span class="nv">$ </span><span class="nb">sudo </span>pacman <span class="nt">-S</span> mysql
 <span class="o">[</span><span class="nb">sudo</span><span class="o">]</span> password <span class="k">for </span>fajri: <span class="c">##Enter user password</span>
@@ -225,6 +225,8 @@ Apr 01 22:30:28 mfajri mariadbd[27173]: Version: <span class="s1">'10.5.9-MariaD
 Apr 01 22:30:28 mfajri systemd[1]: Started MariaDB 10.5.9 database server.
 lines 1-25/25 <span class="o">(</span>END<span class="o">)</span>
 </code></pre></div></div>
+
+<p>Status <code class="language-plaintext highlighter-rouge">Active: active (running)</code> pada keterangan di atas menunjukkan <em>service</em> <code class="language-plaintext highlighter-rouge">mysqld</code> telah berhasil berjalan dengan baik.</p>
 
 <h3 id="atur-password-user-root-mysqlmariadb">Atur Password User Root MySQL/MariaDB</h3>
 
@@ -349,8 +351,8 @@ MariaDB <span class="o">[(</span>none<span class="o">)]&gt;</span>
     <ul>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
     </ul>
     <div class="credit">
         <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>

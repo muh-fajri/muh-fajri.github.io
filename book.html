@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Book FajriCodeOS" />
 <script type="application/ld+json">
-{"url":"/book.html","@type":"WebPage","headline":"Book FajriCodeOS","@context":"https://schema.org"}</script>
+{"url":"/book.html","headline":"Book FajriCodeOS","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -66,8 +66,8 @@
             </li>
             
         </ul>
-        <form class="d-flex mt-2">
-            <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
             <button class="btn" type="submit"><span class="fas fa-search"></span></button>
         </form>
     </div>
@@ -88,34 +88,12 @@
     
     <div class="book-desc mb-3 ml-lg-3 p-3 rounded col-sm-12 col-lg-5 d-flex flex-column flex-sm-row align-items-center">
         <div class="col-6 col-sm-4">
-            <img src="/assets/images/git-alt.svg" alt="git-alt"/>
-        </div>
-        <div class="col-sm-8">
-            <h2 class="mb-3">Belajar Git</h2>
-            <p>Panduan yang dibuat untuk memudahkan mempelajari Git dalam satu referensi tanpa perlu mencari referensi-referensi lain satu per satu.</p>
-            <a class="py-2 px-3 d-inline-flex align-items-center" href="/books/Belajar-Git.html">Lanjut Baca&nbsp;&nbsp;<span class="fas fa-angle-right"></span></a>
-        </div>
-    </div>
-    
-    <div class="book-desc mb-3 ml-lg-3 p-3 rounded col-sm-12 col-lg-5 d-flex flex-column flex-sm-row align-items-center">
-        <div class="col-6 col-sm-4">
             <img src="/assets/images/laravel.svg" alt="laravel"/>
         </div>
         <div class="col-sm-8">
             <h2 class="mb-3">Belajar Laravel</h2>
             <p>Belajar framework untuk pengembangan web apps modern menjadi lebih efisien dengan disediakannya banyak library-library PHP untuk kebutuhan proses pengembangan web berbasis <em>Server Side</em>.</p>
             <a class="py-2 px-3 d-inline-flex align-items-center" href="/books/Belajar-Laravel.html">Lanjut Baca&nbsp;&nbsp;<span class="fas fa-angle-right"></span></a>
-        </div>
-    </div>
-    
-    <div class="book-desc mb-3 ml-lg-3 p-3 rounded col-sm-12 col-lg-5 d-flex flex-column flex-sm-row align-items-center">
-        <div class="col-6 col-sm-4">
-            <img src="/assets/images/shopify.svg" alt="shopify"/>
-        </div>
-        <div class="col-sm-8">
-            <h2 class="mb-3">Belajar Liquid</h2>
-            <p>Membuat dan me-<em>manage</em> halaman web statis menjadi lebih efisien dalam skala menengah ke atas dengan memanfaatkan fitur <strong>Jekyll Liquid</strong> dan <strong>Shopify Liquid</strong>.</p>
-            <a class="py-2 px-3 d-inline-flex align-items-center" href="/books/Belajar-Liquid.html">Lanjut Baca&nbsp;&nbsp;<span class="fas fa-angle-right"></span></a>
         </div>
     </div>
     
@@ -130,17 +108,6 @@
         </div>
     </div>
     
-    <div class="book-desc mb-3 ml-lg-3 p-3 rounded col-sm-12 col-lg-5 d-flex flex-column flex-sm-row align-items-center">
-        <div class="col-6 col-sm-4">
-            <img src="/assets/images/linux.svg" alt="linux"/>
-        </div>
-        <div class="col-sm-8">
-            <h2 class="mb-3">Instalasi Arch</h2>
-            <p>Panduan instalasi yang dibuat sebagai referensi untuk instalasi Arch jika sewaktu-waktu melakukan instal ulang agar waktu yang digunakan menjadi lebih efisien.</p>
-            <a class="py-2 px-3 d-inline-flex align-items-center" href="/books/Instalasi-Arch.html">Lanjut Baca&nbsp;&nbsp;<span class="fas fa-angle-right"></span></a>
-        </div>
-    </div>
-    
 </section>
         </article>
 
@@ -148,8 +115,8 @@
     <ul>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
     </ul>
     <div class="credit">
         <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>

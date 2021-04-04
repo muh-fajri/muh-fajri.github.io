@@ -1,4 +1,248 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-04-02T23:58:07+08:00</updated><id>/feed.xml</id><entry><title type="html">Mail Merge untuk Pembuatan Surat Massal</title><link href="/2021/02/23/Mail-Merge-untuk-Pembuatan-Surat-Massal.html" rel="alternate" type="text/html" title="Mail Merge untuk Pembuatan Surat Massal" /><published>2021-02-23T00:00:00+08:00</published><updated>2021-02-23T00:00:00+08:00</updated><id>/2021/02/23/Mail-Merge-untuk-Pembuatan-Surat-Massal</id><content type="html" xml:base="/2021/02/23/Mail-Merge-untuk-Pembuatan-Surat-Massal.html">&lt;p&gt;Bismillahirahmanirrahim.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-04-05T02:08:00+08:00</updated><id>/feed.xml</id><entry><title type="html">Memeriksa Integritas File dengan Checksum</title><link href="/2021/04/04/Memeriksa-Integritas-File-dengan-Checksum.html" rel="alternate" type="text/html" title="Memeriksa Integritas File dengan Checksum" /><published>2021-04-04T00:00:00+08:00</published><updated>2021-04-04T00:00:00+08:00</updated><id>/2021/04/04/Memeriksa-Integritas-File-dengan-Checksum</id><content type="html" xml:base="/2021/04/04/Memeriksa-Integritas-File-dengan-Checksum.html">&lt;p&gt;&lt;img src=&quot;/assets/images/linux/checksums.png&quot; alt=&quot;Checksums&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A checksum is a small-sized block of data derived from another block of digital data for the purpose of detecting errors that may have been introduced during its transmission or storage. By themselves, checksums are often used to verify data integrity but are not relied upon to verify data authenticity. (Wikipedia)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dikutip dari Wikipedia yang dari pernyataan di atas jika diterjemahkan bebas dinyatakan bahwa &lt;em&gt;checksum&lt;/em&gt; merupakan satu blok data berukuran kecil yang berasal dari blok data digital yang lain dengan tujuan untuk mendeteksi kesalahan yang mungkin terjadi selama proses transmisi atau penyimpanan. Dari data itu sendiri, &lt;em&gt;checksum&lt;/em&gt; seringkali digunakan untuk melakukan verifikasi integritas data akan tetapi tidak diandalkan untuk memverifikasi autentikasi data.&lt;/p&gt;
+
+&lt;h3 id=&quot;mengenal-checksum&quot;&gt;Mengenal Checksum&lt;/h3&gt;
+
+&lt;p&gt;Dari pernyataan di atas dapat diketahui bahwa &lt;em&gt;checksum&lt;/em&gt; dihasilkan dari sebuah proses pengecekan data menggunakan algoritma pengecekan integritas. Algoritma yang umum digunakan yaitu MD5, SHA1SUM, SHA256SUM, dan beberapa variasi algoritma lain.&lt;/p&gt;
+
+&lt;p&gt;Checksum digunakan untuk mengecek integritas atau keutuhan sebuah data baik yang dalam proses transmisi (pertukaran) data yang dengan kata lain tidak mengalami &lt;em&gt;corrupted&lt;/em&gt;/korup. Selain itu, checksum ini berguna untuk memastikan bahwa data yang diperoleh tidak mengalami perubahan dari terminal asal hingga sampai ke terminal tujuan sebagai anggapan bahwa tidak ada pihak ketiga yang sedang memantau data yang ditransmisikan melalui jaringan internet.&lt;/p&gt;
+
+&lt;p&gt;Dalam proses penyimpanan, digunakan untuk mengamankan file/data dari orang/pengguna yang tidak berhak untuk membuka, membaca atau bahkan mengubah isi file tersebut. Karena sedikit saja perubahan yang dilakukan, jika diperiksa menggunakan utilitas/kalkulator perhitungan checksum akan sangat jauh berbeda.&lt;/p&gt;
+
+&lt;p&gt;Pernyataan lain yang disebutkan yaitu checksum tidak dapat diandalkan untuk memeriksa bagaimana data itu telah diakses oleh pengguna yang tidak berhak. Karena checksum ini hanya memeriksa perubahan yang terjadi pada file yang bersangkutan.&lt;/p&gt;
+
+&lt;h3 id=&quot;melakukan-kalkulasi-checksum&quot;&gt;Melakukan kalkulasi Checksum&lt;/h3&gt;
+
+&lt;p&gt;Setelah memahami definisi checksum dan bagaimana ia dapat digunakan untuk memeriksa integritas sebuah data, maka sekarang kita lanjutkan untuk melakukan pemeriksaan checksum dari sebuah file. Sebagai contoh file yang digunakan adalah program aplikasi IntellijIDEA dengan nama file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ideaIC-2020.3.3.tar.gz&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Satu hal lagi yang mesti diketahui bahwa hasil kalkulasi checksum ini tidak bergantung pada nama sebuah file tetapi hanya melakukan perhitungan dari isi file tersebut.&lt;/p&gt;
+
+&lt;p&gt;Sebelum melakukan perhitungan, periksa terlebih dahulu algoritma apa yang digunakan pada file tersebut. Dalam hal ini, lakukan pengecekan di website di mana file tersebut diunduh biasanya website tersebut menyediakan hasil checksum yang disertakan pada file.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linux/checksums2.png&quot; alt=&quot;Checksums from Official Website&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dapat dilihat pada website tersebut menunjukkan &lt;strong&gt;SHA-256 checksum&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Silahkan akses terminal Linux dan jalankan perintah:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sha256sum&lt;/span&gt; ~/Downloads/ideaIC-2020.3.3.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Bagian &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sha256sum&lt;/code&gt; merupakan algoritma yang digunakan untuk kalkulasi checksum agar dapat dibandingkan dengan yang ada di website-nya. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Downloads&lt;/code&gt; menunjukkan letak direktori/folder Downloads dari file yang diunduh.&lt;/p&gt;
+
+&lt;p&gt;Setelah beberapa saat, hasil perhitungannya pun ditampilkan. Berikut outputnya:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;60cabbab7e7f427c2b91e29f5c135ab99a043cc8e3dca835f1aa298031a24ed7  ideaIC-2020.3.3.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linux/checksums.png&quot; alt=&quot;Checksums&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Output tersebut jika dibandingkan dengan yang ada di website ternyata hasilnya sama. Dalam hal ini, integritas data tersebut terjamin artinya tidak mengalami &lt;em&gt;corrupt&lt;/em&gt; selama proses pengunduhan.&lt;/p&gt;
+
+&lt;p&gt;Untuk OS lain, silahkan dicari referensi-referensi &lt;em&gt;tool&lt;/em&gt; yang dapat digunakan untuk keperluan ini. Jika ingin memeriksanya secara online, ada beberapa situs web yang menyediakannya salah satunya &lt;a href=&quot;https://emn178.github.io/online-tools/&quot;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Demikian sedikit pemaparan mengenai &lt;em&gt;checksum&lt;/em&gt; dan bagaimana cara mengecek integritas data dengan &lt;em&gt;checksum&lt;/em&gt; tersebut. Semoga bermanfaat. Jangan lupa di-&lt;em&gt;share&lt;/em&gt;. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><category term="Security" /><category term="Tips" /><summary type="html"></summary></entry><entry><title type="html">Mount Otomatis Drive Saat Booting (Dualboot)</title><link href="/2021/04/04/Mount-Otomatis-Drive-Saat-Booting-Dualboot.html" rel="alternate" type="text/html" title="Mount Otomatis Drive Saat Booting (Dualboot)" /><published>2021-04-04T00:00:00+08:00</published><updated>2021-04-04T00:00:00+08:00</updated><id>/2021/04/04/Mount-Otomatis-Drive-Saat-Booting-Dualboot</id><content type="html" xml:base="/2021/04/04/Mount-Otomatis-Drive-Saat-Booting-Dualboot.html">&lt;p&gt;&lt;img src=&quot;/assets/images/linux/automount-drive.png&quot; alt=&quot;Automount Drive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;p&gt;Saat selesai melakukan instalasi sistem operasi Linux dan instalasi berhasil, pada dasarnya sistem sudah dapat berjalan dengan lancar. Ini biasanya ditemui pada OS yang &lt;em&gt;singleboot&lt;/em&gt; yaitu OS tunggal yang terpasang pada PC.&lt;/p&gt;
+
+&lt;p&gt;Lain halnya dengan sistem yang berjalan berdampingan dengan OS lain yang biasa dikenal dengan &lt;em&gt;dualboot&lt;/em&gt; yaitu dua OS yang berjalan berdampingan atau &lt;em&gt;multiboot&lt;/em&gt; yaitu lebih dari dua OS yang terinstal pada PC yang berjalan berdampingan, tentunya akan ada kendala-kendala yang ditemui baik pada saat proses &lt;em&gt;booting&lt;/em&gt; hingga dihadapkan pada tampilan desktop.&lt;/p&gt;
+
+&lt;p&gt;Salah satu kendala yang saya temui yaitu pada saat mencoba untuk mengakses &lt;em&gt;drive&lt;/em&gt;/partisi yang merupakan partisi dari OS lain. Sebagai contoh, di kendala yang dipaparkan di artikel ini yaitu mencoba untuk mengakses partisi Windows melalui OS Linux. Saat diakses pertama kali (setelah booting), maka &lt;em&gt;user&lt;/em&gt; akan diminta untuk memasukkan &lt;em&gt;password&lt;/em&gt; sebelum mengakses partisi tersebut. Setelah memasukkan &lt;em&gt;password&lt;/em&gt; maka partisi yang dimaksud pun akan dapat diakses.&lt;/p&gt;
+
+&lt;p&gt;Lalu, apakah hal tersebut adalah sebuah kendala? Kalau saja hal ini dilakukan sekali mungkin tidak masalah tentunya. Tapi bagaimana jika di saat setiap selesai &lt;em&gt;booting&lt;/em&gt; untuk mengakses partisi yang sama akan diminta untuk memasukkan &lt;em&gt;password&lt;/em&gt; lagi. Tentu sedikit mengganggu, &lt;em&gt;bukan&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;Untuk itu di artikel ini akan dipaparkan langkah-langkah yang dilakukan agar partisi yang berasal dari OS lain dapat ter-&lt;em&gt;mount&lt;/em&gt; secara otomatis saat proses booting. Langsung saja kita mulai dengan terlebih dahulu kita buka terminal karena kendala ini akan diselesaikan di sana.&lt;/p&gt;
+
+&lt;h3 id=&quot;memeriksa-partisi-sistem&quot;&gt;Memeriksa Partisi Sistem&lt;/h3&gt;
+
+&lt;p&gt;Pertama yang harus dilakukan adalah dengan memeriksa partisi apa saja yang ada pada mesin / PC yang digunakan. Pada terminal, jalankan perintah berikut.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;cfdisk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Jika diminta memasukkan &lt;em&gt;password&lt;/em&gt;, silahkan masukkan &lt;em&gt;password&lt;/em&gt; user yang sedang &lt;em&gt;login&lt;/em&gt; saat ini.&lt;/p&gt;
+
+&lt;p&gt;Berikut tampilan hirarki partisi yang ada pada sistem saya.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;                                                                    Disk: /dev/sda
+                                                Size: 465.76 GiB, 500107862016 bytes, 976773168 sectors
+                                                          Label: dos, identifier: 0xd5e63976
+
+    Device                Boot                       Start                End            Sectors           Size         Id Type
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;  /dev/sda1             &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;                           2048          204802047          204800000          97.7G          7 HPFS/NTFS/exFAT             
+    /dev/sda2                                    204802048          573442047          368640000         175.8G          7 HPFS/NTFS/exFAT
+    /dev/sda3                                    573442110          960116735          386674626         184.4G          f W95 Ext&lt;span class=&quot;s1&quot;&gt;'d (LBA)
+    ├─/dev/sda5                                  573442112          788025343          214583232         102.3G          7 HPFS/NTFS/exFAT
+    ├─/dev/sda6                                  870111232          874303487            4192256             2G         82 Linux swap / Solaris
+    ├─/dev/sda7                                  874305536          875300863             995328           486M         83 Linux
+    ├─/dev/sda8                                  875302912          906756095           31453184            15G         83 Linux
+    ├─/dev/sda9                                  788027392          870096895           82069504          39.1G         83 Linux
+    ├─Free space                                 870098944          870111232              12289             6M                                        
+    └─/dev/sda10                                 906758144          960116735           53358592          25.4G         83 Linux
+    /dev/sda4                                    960116736          976773167           16656432           7.9G         83 Linux
+
+
+
+
+
+
+ ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+ │  Partition type: HPFS/NTFS/exFAT (7)                                                                                                              │
+ │      Attributes: 80                                                                                                                               │
+ │ Filesystem UUID: 01D62821532A20F0                                                                                                                 │
+ │Filesystem LABEL: Windows_8.1                                                                                                                      │
+ │      Filesystem: ntfs                                                                                                                             │
+ └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+                      [Bootable]  [ Delete ]  [ Resize ]  [  Quit  ]  [  Type  ]  [  Help  ]  [  Sort  ]  [  Write ]  [  Dump  ]
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Informasi yang dibutuhkan di sini adalah &lt;strong&gt;&lt;em&gt;Filesystem UUID&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;Filesystem&lt;/em&gt;&lt;/strong&gt; dan &lt;strong&gt;&lt;em&gt;Filesystem LABEL&lt;/em&gt;&lt;/strong&gt; yang ada di bagian bawah jendela terminal.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Filesystem LABEL hanya akan ditemui jika pada saat pembuatan partisinya, label untuk partisi tersebut telah diatur. Jika tidak, hal ini akan menyulitkan mengenali partisi-partisi yang ada berasal dari sistem operasi yang mana.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Di tampilan terminal ini juga terdapat kolom-kolom yang memberikan keterangan pada setiap partisi. Terdapat kolom &lt;strong&gt;&lt;em&gt;Device, Boot, Start, End, Sectors, Size&lt;/em&gt;&lt;/strong&gt; dan &lt;strong&gt;&lt;em&gt;Id Type&lt;/em&gt;&lt;/strong&gt;. Tidak semua informasi tersebut dibutuhkan dan bahkan hanya satu kolom informasi yang dibutuhkan yaitu pada kolom &lt;strong&gt;&lt;em&gt;Device&lt;/em&gt;&lt;/strong&gt;. Di bagian &lt;strong&gt;&lt;em&gt;Device&lt;/em&gt;&lt;/strong&gt;, terdapat beberapa partisi yang ada.&lt;/p&gt;
+
+&lt;p&gt;Sebelumnya, saya katakan bahwa skema partisi yang saya gunakan adalah MBR (Master Boot Record) yang secara sederhana yaitu skema partisi yang hanya mampu memuat maksimal 3 partisi primer dan untuk menambah partisi baru, salah satu partisi primer tersebut harus dijadikan &lt;em&gt;extended&lt;/em&gt; (partisi yang diperluas), dan di dalam partisi extended ini dapat dibuat berapa pun partisi &lt;em&gt;logical&lt;/em&gt;/logik.&lt;/p&gt;
+
+&lt;p&gt;Nah, pada tampilan di atas, pada kolom &lt;strong&gt;&lt;em&gt;Device&lt;/em&gt;&lt;/strong&gt; terdapat partisi dengan nama &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda1&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda2&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda4&lt;/code&gt;, yang merupakan partisi primer. Sedangkan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda3&lt;/code&gt; merupakan partisi &lt;em&gt;extended&lt;/em&gt; dengan beberapa partisi &lt;em&gt;logical&lt;/em&gt; di dalamnya.&lt;/p&gt;
+
+&lt;p&gt;Sekarang kita lanjutkan, silahkan lakukan navigasi dengan menekan tombol arrow atas atau bawah untuk berpindah partisi. Saat dilakukan navigasi perhatikan perubahan keterangan yang ada di bagian bawah terminal.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Beberapa kemungkinan yang akan dilihat adalah keterangan &lt;strong&gt;&lt;em&gt;Mountpoint&lt;/em&gt;&lt;/strong&gt; yang merupakan titik kait partisi terhadap sistem OS yang sedang berjalan saat ini yaitu &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/boot&lt;/code&gt;, dan jika pada saat instalasi memisahkan partisi &lt;strong&gt;home&lt;/strong&gt; pada satu partisi maka &lt;strong&gt;&lt;em&gt;Mountpoint&lt;/em&gt;&lt;/strong&gt;-nya pun akan ada pada &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/home&lt;/code&gt;. Untuk partisi yang lain tidak akan ada keterangan tersebut.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;mengenali-filesystem-uuid&quot;&gt;Mengenali Filesystem UUID&lt;/h3&gt;
+
+&lt;p&gt;Kembali pada tampilan di terminal tadi.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;                                                                    Disk: /dev/sda
+                                                Size: 465.76 GiB, 500107862016 bytes, 976773168 sectors
+                                                          Label: dos, identifier: 0xd5e63976
+
+    Device                Boot                       Start                End            Sectors           Size         Id Type
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;  /dev/sda1             &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;                           2048          204802047          204800000          97.7G          7 HPFS/NTFS/exFAT             
+    /dev/sda2                                    204802048          573442047          368640000         175.8G          7 HPFS/NTFS/exFAT
+    /dev/sda3                                    573442110          960116735          386674626         184.4G          f W95 Ext&lt;span class=&quot;s1&quot;&gt;'d (LBA)
+    ├─/dev/sda5                                  573442112          788025343          214583232         102.3G          7 HPFS/NTFS/exFAT
+    ├─/dev/sda6                                  870111232          874303487            4192256             2G         82 Linux swap / Solaris
+    ├─/dev/sda7                                  874305536          875300863             995328           486M         83 Linux
+    ├─/dev/sda8                                  875302912          906756095           31453184            15G         83 Linux
+    ├─/dev/sda9                                  788027392          870096895           82069504          39.1G         83 Linux
+    ├─Free space                                 870098944          870111232              12289             6M                                        
+    └─/dev/sda10                                 906758144          960116735           53358592          25.4G         83 Linux
+    /dev/sda4                                    960116736          976773167           16656432           7.9G         83 Linux
+
+
+
+
+
+
+ ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+ │  Partition type: HPFS/NTFS/exFAT (7)                                                                                                              │
+ │      Attributes: 80                                                                                                                               │
+ │ Filesystem UUID: 01D62821532A20F0                                                                                                                 │
+ │Filesystem LABEL: Windows_8.1                                                                                                                      │
+ │      Filesystem: ntfs                                                                                                                             │
+ └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+                      [Bootable]  [ Delete ]  [ Resize ]  [  Quit  ]  [  Type  ]  [  Help  ]  [  Sort  ]  [  Write ]  [  Dump  ]
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Di sini saya menemui beberapa partisi yang belum memiliki &lt;em&gt;mountpoint&lt;/em&gt; yaitu:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda1&lt;/code&gt;, Label: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows_8.1&lt;/code&gt;, UUID: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;01D62821532A20F0&lt;/code&gt;, Filesystem: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ntfs&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda2&lt;/code&gt;, Label: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATA&lt;/code&gt;, UUID: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EA244B27244AF5DB&lt;/code&gt;, Filesystem: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ntfs&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda5&lt;/code&gt;, Label: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MEDIA&lt;/code&gt;, UUID: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;01D5EB9D51E45910&lt;/code&gt;, Filesystem: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ntfs&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda8&lt;/code&gt;, Label: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Kali_Home&lt;/code&gt;, UUID: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;89c1c91a-456a-4ea5-8d1a-e930d437e02e&lt;/code&gt;, Filesystem: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ext4&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda9&lt;/code&gt;, Label: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Kali_Root&lt;/code&gt;, UUID: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f5ba5d8f-2bd2-4b1e-afa3-5db44b885f1e&lt;/code&gt;, Filesystem: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ext4&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk memudahkan silahkan disalin ke sebuah &lt;em&gt;text editor&lt;/em&gt; dengan memblok UUID masing-masing partisi menggunakan kursor &lt;em&gt;mouse&lt;/em&gt; dan menekan tombol &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+Shift+C&lt;/code&gt; untuk menyalin file melalui terminal.&lt;/p&gt;
+
+&lt;p&gt;Tutup tampilan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cfdisk&lt;/code&gt; dengan melakukan navigasi tombol kiri atau kanan ke bagian &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Quit&lt;/code&gt; dan menekan tombol Enter pada keyboard.&lt;/p&gt;
+
+&lt;h3 id=&quot;membuat-direktori-baru&quot;&gt;Membuat Direktori Baru&lt;/h3&gt;
+
+&lt;p&gt;Setelah mencatat hal-hal yang dibutuhkan sekarang kita buat direktori baru sebagai titik kait dari partisi yang ingin di-&lt;em&gt;mount&lt;/em&gt; pada OS yang digunakan.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; /media/Windows_8.1 /media/DATA /media/MEDIA
+&lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; /media/Kali_Root /media/Kali_Home
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;mengedit-file-etcfstab&quot;&gt;Mengedit File /etc/fstab&lt;/h3&gt;
+
+&lt;p&gt;Berikutnya silahkan buka dan edit file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/fstab&lt;/code&gt; dengan perintah:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nano /etc/fstab
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Masukkan &lt;em&gt;password&lt;/em&gt; user jika diminta.&lt;/p&gt;
+
+&lt;p&gt;Berikut adalah isi file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fstab&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# /dev/sda10 UUID=cef2cff4-b6ce-4291-a5f1-78fc62229204&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;LABEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Arch_Root         /               ext4            rw,relatime     0 1
+
+&lt;span class=&quot;c&quot;&gt;# /dev/sda7 UUID=2b23a15b-5f25-44ad-9852-c82daf8f90d5&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;LABEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Arch_Boot         /boot           ext4            rw,relatime,stripe&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4    0 2
+
+&lt;span class=&quot;c&quot;&gt;# /dev/sda4 UUID=6d54794f-8420-4e35-bae3-e28c2242a6b8&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;LABEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Arch_Home         /home           ext4            rw,relatime     0 2
+
+&lt;span class=&quot;c&quot;&gt;# /dev/sda6 UUID=63b8c1af-460b-4c21-8123-b458f9919a1a&lt;/span&gt;
+/dev/sda6               none            swap            defaults        0 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ubah menjadi seperti ini:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# /dev/sda10 UUID=cef2cff4-b6ce-4291-a5f1-78fc62229204&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;LABEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Arch_Root         /               ext4            rw,relatime     0 1
+
+&lt;span class=&quot;c&quot;&gt;# /dev/sda7 UUID=2b23a15b-5f25-44ad-9852-c82daf8f90d5&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;LABEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Arch_Boot         /boot           ext4            rw,relatime,stripe&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4    0 2
+
+&lt;span class=&quot;c&quot;&gt;# /dev/sda4 UUID=6d54794f-8420-4e35-bae3-e28c2242a6b8&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;LABEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Arch_Home         /home           ext4            rw,relatime     0 2
+
+&lt;span class=&quot;c&quot;&gt;# /dev/sda6 UUID=63b8c1af-460b-4c21-8123-b458f9919a1a&lt;/span&gt;
+/dev/sda6               none            swap            defaults        0 0
+
+
+&lt;span class=&quot;c&quot;&gt;# Windows_8.1 (/dev/sda1)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;01D62821532A20F0   /media/Windows_8.1      ntfs    defaults        0  0
+
+&lt;span class=&quot;c&quot;&gt;# DATA (/dev/sda2)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;EA244B27244AF5DB   /media/DATA     ntfs    defaults        0  0
+
+&lt;span class=&quot;c&quot;&gt;# MEDIA (/dev/sda5)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;01D5EB9D51E45910   /media/MEDIA    ntfs    defaults        0  0
+
+&lt;span class=&quot;c&quot;&gt;# Kali_Root (/dev/sda9)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;f5ba5d8f-2bd2-4b1e-afa3-5db44b885f1e       /media/Kali_Root        ext4    defaults        0  0
+
+&lt;span class=&quot;c&quot;&gt;# Kali_Home (/dev/sda8)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;89c1c91a-456a-4ea5-8d1a-e930d437e02e       /media/Kali_Home        ext4    defaults        0  0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Setelah selesai silahkan simpan dan tutup file dengan cara menekan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+X&lt;/code&gt; kemudian tekan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; lalu &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enter&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;mengetes-mountpoint&quot;&gt;Mengetes Mountpoint&lt;/h3&gt;
+
+&lt;p&gt;Setelah selesai silahkan cek &lt;em&gt;mountpoint&lt;/em&gt; yang telah dibuat. Jalankan perintah:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mount &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Jika tidak ada &lt;em&gt;error&lt;/em&gt; yang ditampilkan, itu artinya titik kait yang telah dibuat sudah sesuai dengan partisi yang di-&lt;em&gt;mount&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah ini, pada &lt;em&gt;booting&lt;/em&gt; berikutnya partisi akan ter-&lt;em&gt;mount&lt;/em&gt; secara otomatis dan partisi yang akan diakses tidak membutuhkan &lt;em&gt;privilege&lt;/em&gt; lagi.&lt;/p&gt;
+
+&lt;p&gt;Berikut tampilan partisi yang di-&lt;em&gt;mount&lt;/em&gt; yang ada pada File Explorer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linux/automount-drive-result.png&quot; alt=&quot;Automount Drive Result&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sampai di sini artikel yang dibuat kali ini. Smeoga memberikan manfaat. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><summary type="html"></summary></entry><entry><title type="html">Mail Merge untuk Pembuatan Surat Massal</title><link href="/2021/02/23/Mail-Merge-untuk-Pembuatan-Surat-Massal.html" rel="alternate" type="text/html" title="Mail Merge untuk Pembuatan Surat Massal" /><published>2021-02-23T00:00:00+08:00</published><updated>2021-02-23T00:00:00+08:00</updated><id>/2021/02/23/Mail-Merge-untuk-Pembuatan-Surat-Massal</id><content type="html" xml:base="/2021/02/23/Mail-Merge-untuk-Pembuatan-Surat-Massal.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
 &lt;p&gt;Hal pertama yang harus diketahui pertama kali adalah mail merge itu sendiri. &lt;em&gt;Mail merge&lt;/em&gt; atau dalam bahasa Indonesia dikenal sebagai surat massal merupakan fasilitas yang disediakan &lt;em&gt;word processor&lt;/em&gt; untuk membuat surat massal di mana format dokumen yang dibuat hanya sekali, dan untuk pengisian bagian tertentu dalam surat seperti nama penerima dan alamatnya diisi menggunakan bantuan database yang dapat dibuat menggunakan &lt;em&gt;spreadsheets&lt;/em&gt; atau dalam Ms. Office dapat menggunakan Ms. Excel atau Ms. Access.&lt;/p&gt;
 &lt;p&gt;Dokumen surat biasa ditemui baik di instansi pendidikan, pemerintahan, maupun di perusahaan. Contoh surat seperti &lt;strong&gt;Surat Undangan&lt;/strong&gt; dapat memanfaatkan fasilitas &lt;em&gt;mail merge&lt;/em&gt; dalam pembuatannya. &lt;em&gt;Kenapa?&lt;/em&gt; Karena surat seperti itu ditujukan ke banyak orang dengan alamat yang berbeda-beda.&lt;/p&gt;
 &lt;p&gt;Membuat surat dengan &lt;em&gt;mail merge&lt;/em&gt;, maka akan ada dua buah jenis file yang dibutuhkan, [1] Dokumen &lt;em&gt;word&lt;/em&gt; untuk pembuatan format surat, dan [2] dokumen &lt;em&gt;spreadsheets&lt;/em&gt; atau &lt;em&gt;access&lt;/em&gt; untuk menampung data penerima surat. Jika menggunakan WPS Office, maka dokumen yang dibuat yaitu &lt;em&gt;word&lt;/em&gt; dan &lt;em&gt;spreadsheets&lt;/em&gt;.&lt;/p&gt;
@@ -46,7 +290,7 @@
     &lt;img src=&quot;/assets/images/Post3/Post3_13.png&quot; alt=&quot;&quot; /&gt;
     &lt;p&gt;Simpan dokumen tersebut agar dapat dilakukan pencetakan pada suatu waktu.&lt;/p&gt;
     &lt;p&gt;Akhirnya kita telah berada pada bagian akhir artikel pembuatan data &lt;em&gt;mail merge&lt;/em&gt; (surat massal), cara yang sama dapat dilakukan untuk pembuatan label seperti label undangan. Jika bermanfaat, silahkan share artikel ini. Terima kasih.&lt;/p&gt;
-&lt;/section&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><summary type="html">Bismillahirahmanirrahim. Hal pertama yang harus diketahui pertama kali adalah mail merge itu sendiri. Mail merge atau dalam bahasa Indonesia dikenal sebagai surat massal merupakan fasilitas yang disediakan word processor untuk membuat surat massal di mana format dokumen yang dibuat hanya sekali, dan untuk pengisian bagian tertentu dalam surat seperti nama penerima dan alamatnya diisi menggunakan bantuan database yang dapat dibuat menggunakan spreadsheets atau dalam Ms. Office dapat menggunakan Ms. Excel atau Ms. Access. Dokumen surat biasa ditemui baik di instansi pendidikan, pemerintahan, maupun di perusahaan. Contoh surat seperti Surat Undangan dapat memanfaatkan fasilitas mail merge dalam pembuatannya. Kenapa? Karena surat seperti itu ditujukan ke banyak orang dengan alamat yang berbeda-beda. Membuat surat dengan mail merge, maka akan ada dua buah jenis file yang dibutuhkan, [1] Dokumen word untuk pembuatan format surat, dan [2] dokumen spreadsheets atau access untuk menampung data penerima surat. Jika menggunakan WPS Office, maka dokumen yang dibuat yaitu word dan spreadsheets. Membuat Format dan Data Mail Merge Berikut ini contoh format surat undangan, untuk bagian yang di-highlight atau yang ditandai merupakan bagian yang akan dibuatkan mail merge : Berikutnya dibuatkan data mail merge melalui program spreadsheets, dalam hal ini menggunakan WPS Spreadsheets. Data yang dibuat yaitu nama dan alamat penerima surat. Berikut contoh datanya : Membuat Mail Merge Untuk membuat mail merge, pilih menu References - Mail Merge. Setelah itu, akan muncul menu baru dengan nama Mailings. Lanjutkan untuk memilih data dengan mengklik bagian Open Data Source. Setelah data source terbuka menu-menu yang ada akan aktif. Melakukan Insert Merge Field Untuk memasukkan data yang ada pada data source ke format surat yang telah dibuat, posisikan kursor pada bagian yang ingin diisikan data lalu pilih Insert Merge Field seperti berikut. Akan tampil kotak dialog seperti berikut. Pada bagian Insert, pilih Database fields dan pada bagian Fields pilih data mail merge yang sesuai. Pada contoh pilih field untuk nama penerima. Lalu klik Insert dan Close. Lakukan langkah yang sama untuk bagian alamat penerima. Berikut hasil dari insert merge field. Contoh akhir seperti tampilan di bawah ini. Mengaktifkan Data Mail Merge Untuk mengaktifkan data dan menampilkan data yang ada dalam database, pada menu Mailings pilih View Merged Data. Hasilnya akan seperti berikut. * Warna kuning yang ada sebagai highlight dapat dihilangkan pada menu Home - Text Highlight Color. Ini dibuat sebelumnya untuk menandai bagian mail merge. Untuk melakukan navigasi dan melihat-lihat hasil dari mail merge, di menu Mailings terdapat First Record, Previous Record, Next Record dan Last Record. Dapat juga melakukan inputan langsung data yang ke berapa yang ingin dilihat. Mencetak Mail Merge Untuk memudahkan pengelolaan surat massal, lakukan Merge to New Document seperti pilihan pada gambar berikut. Pada pilihan berikut, pilih All untuk menggabungkan surat massal yang telah dibuat pada sebuah dokumen baru. Berikut tampilan surat massal pada dokumen baru pada tampilan Print Preview. Simpan dokumen tersebut agar dapat dilakukan pencetakan pada suatu waktu. Akhirnya kita telah berada pada bagian akhir artikel pembuatan data mail merge (surat massal), cara yang sama dapat dilakukan untuk pembuatan label seperti label undangan. Jika bermanfaat, silahkan share artikel ini. Terima kasih.</summary></entry><entry><title type="html">Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style</title><link href="/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html" rel="alternate" type="text/html" title="Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style" /><published>2021-02-12T00:00:00+08:00</published><updated>2021-02-12T00:00:00+08:00</updated><id>/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style</id><content type="html" xml:base="/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html">&lt;p&gt;Bismillahirahmanirrahim.&lt;/p&gt;
+&lt;/section&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><summary type="html">Bismillahirrahmanirrahim. Hal pertama yang harus diketahui pertama kali adalah mail merge itu sendiri. Mail merge atau dalam bahasa Indonesia dikenal sebagai surat massal merupakan fasilitas yang disediakan word processor untuk membuat surat massal di mana format dokumen yang dibuat hanya sekali, dan untuk pengisian bagian tertentu dalam surat seperti nama penerima dan alamatnya diisi menggunakan bantuan database yang dapat dibuat menggunakan spreadsheets atau dalam Ms. Office dapat menggunakan Ms. Excel atau Ms. Access. Dokumen surat biasa ditemui baik di instansi pendidikan, pemerintahan, maupun di perusahaan. Contoh surat seperti Surat Undangan dapat memanfaatkan fasilitas mail merge dalam pembuatannya. Kenapa? Karena surat seperti itu ditujukan ke banyak orang dengan alamat yang berbeda-beda. Membuat surat dengan mail merge, maka akan ada dua buah jenis file yang dibutuhkan, [1] Dokumen word untuk pembuatan format surat, dan [2] dokumen spreadsheets atau access untuk menampung data penerima surat. Jika menggunakan WPS Office, maka dokumen yang dibuat yaitu word dan spreadsheets. Membuat Format dan Data Mail Merge Berikut ini contoh format surat undangan, untuk bagian yang di-highlight atau yang ditandai merupakan bagian yang akan dibuatkan mail merge : Berikutnya dibuatkan data mail merge melalui program spreadsheets, dalam hal ini menggunakan WPS Spreadsheets. Data yang dibuat yaitu nama dan alamat penerima surat. Berikut contoh datanya : Membuat Mail Merge Untuk membuat mail merge, pilih menu References - Mail Merge. Setelah itu, akan muncul menu baru dengan nama Mailings. Lanjutkan untuk memilih data dengan mengklik bagian Open Data Source. Setelah data source terbuka menu-menu yang ada akan aktif. Melakukan Insert Merge Field Untuk memasukkan data yang ada pada data source ke format surat yang telah dibuat, posisikan kursor pada bagian yang ingin diisikan data lalu pilih Insert Merge Field seperti berikut. Akan tampil kotak dialog seperti berikut. Pada bagian Insert, pilih Database fields dan pada bagian Fields pilih data mail merge yang sesuai. Pada contoh pilih field untuk nama penerima. Lalu klik Insert dan Close. Lakukan langkah yang sama untuk bagian alamat penerima. Berikut hasil dari insert merge field. Contoh akhir seperti tampilan di bawah ini. Mengaktifkan Data Mail Merge Untuk mengaktifkan data dan menampilkan data yang ada dalam database, pada menu Mailings pilih View Merged Data. Hasilnya akan seperti berikut. * Warna kuning yang ada sebagai highlight dapat dihilangkan pada menu Home - Text Highlight Color. Ini dibuat sebelumnya untuk menandai bagian mail merge. Untuk melakukan navigasi dan melihat-lihat hasil dari mail merge, di menu Mailings terdapat First Record, Previous Record, Next Record dan Last Record. Dapat juga melakukan inputan langsung data yang ke berapa yang ingin dilihat. Mencetak Mail Merge Untuk memudahkan pengelolaan surat massal, lakukan Merge to New Document seperti pilihan pada gambar berikut. Pada pilihan berikut, pilih All untuk menggabungkan surat massal yang telah dibuat pada sebuah dokumen baru. Berikut tampilan surat massal pada dokumen baru pada tampilan Print Preview. Simpan dokumen tersebut agar dapat dilakukan pencetakan pada suatu waktu. Akhirnya kita telah berada pada bagian akhir artikel pembuatan data mail merge (surat massal), cara yang sama dapat dilakukan untuk pembuatan label seperti label undangan. Jika bermanfaat, silahkan share artikel ini. Terima kasih.</summary></entry><entry><title type="html">Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style</title><link href="/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html" rel="alternate" type="text/html" title="Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style" /><published>2021-02-12T00:00:00+08:00</published><updated>2021-02-12T00:00:00+08:00</updated><id>/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style</id><content type="html" xml:base="/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
 &lt;p&gt;Di artikel kali ini akan saya berikan pemahaman mengenai penerapan daftar isi pada dokumen. Pembuatan daftar isi dimaksudkan untuk menampilkan ringkasan keseluruhan isi pada suatu karya tulis yang dibuat. Mungkin masih banyak yang belum memahami jika pembuatan daftar isi dapat dilakukan secara otomatis. Tentunya dengan cara ini akan mengefisienkan waktu yang digunakan dibandingkan dengan membuat daftar isi secara manual.&lt;/p&gt;
 &lt;p&gt;Untuk tujuan tersebut kita gunakan file yang sudah dibuat sebelumnya.&lt;/p&gt;
 &lt;p class=&quot;featured-link&quot;&gt;Baca &lt;a href=&quot;../../../2021/01/15/Membuat-Penomoran-Halaman-yang-Berbeda-dengan-Menggunakan-Section.html&quot;&gt;Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section&lt;/a&gt;&lt;/p&gt;
@@ -108,7 +352,7 @@
     &lt;p&gt;Pembuatan daftar isi secara manual boleh saja dilakukan, tetapi bayangkan jika jumlah halaman yang ada hingga memasuki angka ratusan tentu dengan cara ini menjadi tidak efisien, bukan? Nah, dengan langkah-langkah yang dilakukan sebelumnya yaitu membuat daftar isi secara otomatis akan memudahkan bagi penyusun suatu karya ilmiah termasuk di dalamnya efisiensi waktu yang digunakan. Dengan cara yang seperti ini pula akan menghadirkan makna semantik pada dokumen dan juga dokumen yang dibuat akan semakin rapi tentunya.&lt;/p&gt;
     &lt;p&gt;Langkah-langkah pembuatan daftar isi ini tidak hanya dapat diterapkan pada &lt;em&gt;word processing&lt;/em&gt; &lt;strong&gt;Microsoft Word&lt;/strong&gt; atau &lt;strong&gt;WPS Writer&lt;/strong&gt; tetapi juga pada &lt;em&gt;word processing&lt;/em&gt; lain seperti &lt;strong&gt;LibreOffice&lt;/strong&gt; atau bahkan &lt;strong&gt;Google Document&lt;/strong&gt; yang berbasis online. Bagaimana, menarik bukan?&lt;/p&gt;
     &lt;p&gt;Akhirnya, demikian artikel mengenai pembuatan daftar isi otomatis ini semoga memberikan manfaat. Silahkan share dengan yang lainnya supaya sama-sama mengetahui. Terima kasih.&lt;/p&gt;
-&lt;/section&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><summary type="html">Bismillahirahmanirrahim. Di artikel kali ini akan saya berikan pemahaman mengenai penerapan daftar isi pada dokumen. Pembuatan daftar isi dimaksudkan untuk menampilkan ringkasan keseluruhan isi pada suatu karya tulis yang dibuat. Mungkin masih banyak yang belum memahami jika pembuatan daftar isi dapat dilakukan secara otomatis. Tentunya dengan cara ini akan mengefisienkan waktu yang digunakan dibandingkan dengan membuat daftar isi secara manual. Untuk tujuan tersebut kita gunakan file yang sudah dibuat sebelumnya. Baca Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section</summary></entry><entry><title type="html">Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section</title><link href="/2021/01/15/Membuat-Penomoran-Halaman-yang-Berbeda-dengan-Menggunakan-Section.html" rel="alternate" type="text/html" title="Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section" /><published>2021-01-15T00:00:00+08:00</published><updated>2021-01-15T00:00:00+08:00</updated><id>/2021/01/15/Membuat-Penomoran-Halaman-yang-Berbeda-dengan-Menggunakan-Section</id><content type="html" xml:base="/2021/01/15/Membuat-Penomoran-Halaman-yang-Berbeda-dengan-Menggunakan-Section.html">&lt;p&gt;Bismillahirahmanirrahim.&lt;/p&gt;
+&lt;/section&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><summary type="html">Bismillahirrahmanirrahim. Di artikel kali ini akan saya berikan pemahaman mengenai penerapan daftar isi pada dokumen. Pembuatan daftar isi dimaksudkan untuk menampilkan ringkasan keseluruhan isi pada suatu karya tulis yang dibuat. Mungkin masih banyak yang belum memahami jika pembuatan daftar isi dapat dilakukan secara otomatis. Tentunya dengan cara ini akan mengefisienkan waktu yang digunakan dibandingkan dengan membuat daftar isi secara manual. Untuk tujuan tersebut kita gunakan file yang sudah dibuat sebelumnya. Baca Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section</summary></entry><entry><title type="html">Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section</title><link href="/2021/01/15/Membuat-Penomoran-Halaman-yang-Berbeda-dengan-Menggunakan-Section.html" rel="alternate" type="text/html" title="Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section" /><published>2021-01-15T00:00:00+08:00</published><updated>2021-01-15T00:00:00+08:00</updated><id>/2021/01/15/Membuat-Penomoran-Halaman-yang-Berbeda-dengan-Menggunakan-Section</id><content type="html" xml:base="/2021/01/15/Membuat-Penomoran-Halaman-yang-Berbeda-dengan-Menggunakan-Section.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
 
 &lt;p&gt;Sebelumnya saya jelaskan dulu &lt;em&gt;kenapa&lt;/em&gt; kita mesti membuat halaman yang berbeda untuk dokumen yang dibuat dalam satu file. Biasanya, banyak yang membuat filenya dalam beberapa file entah itu dengan alasan penomoran halaman yang berbeda atau dokumen tersebut memiliki orientasi yang berbeda ada yang portrait dan ada yang landscape. Dengan cara seperti itu tentunya tidak efisien untuk membuat satu buah dokumen dengan pemisahan beberapa file. Dokumen yang biasa dibuat seperti paper/makalah, skripsi, tesis atau bahkan dokumen cetak lainnya seperti modul pembelajaran misalnya.&lt;/p&gt;
 
@@ -187,4 +431,4 @@
     &lt;h3&gt;Kesimpulan&lt;/h3&gt;
     &lt;p&gt;Pembuatan penomoran halaman yang berbeda pada dokumen yang sama tentunya menjadi hal yang perlu diperhatikan. Dengan cara seperti ini, kita dapat menghemat pembuatan beberapa file namun hanya untuk satu tugas yang sama. Dengan cara ini pula kita dapat membaca keseluruhan dokumen secara leluasa dengan tidak membuka file pada tab-tab yang berbeda. Manfaat lain yg dapat diperoleh yaitu membuat orientasi halaman yang berbeda, ukuran kertas yang berbeda, membuat bingkai halaman yang berbeda, dan sebagainya.&lt;/p&gt;
     &lt;p&gt;Demikian artikel yang dibuat ini semoga dapat memberikan manfaat. Terima kasih sudah membaca artikel ini hingga akhir. Sampai jumpa di artikel berikutnya.&lt;/p&gt;
-&lt;/section&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><summary type="html">Bismillahirahmanirrahim.</summary></entry></feed>
+&lt;/section&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry></feed>
