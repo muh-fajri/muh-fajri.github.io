@@ -19,11 +19,11 @@
 <meta name="description" content="Bismillahirrahmanirrahim." />
 <meta property="og:description" content="Bismillahirrahmanirrahim." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-02T00:00:00+08:00" />
+<meta property="article:published_time" content="2021-04-05T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Struktur File Laravel" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Laravel-07-Struktur-File-Laravel.html","headline":"Struktur File Laravel","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-07-Struktur-File-Laravel.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Laravel-07-Struktur-File-Laravel.html","headline":"Struktur File Laravel","dateModified":"2021-04-05T00:00:00+08:00","datePublished":"2021-04-05T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-07-Struktur-File-Laravel.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -33,6 +33,8 @@
 
 
 
+    
+    
     
 </head>
 <body>
@@ -108,17 +110,90 @@
                 </div>
                 <div class="date-post">
                     <span class="fas fa-calendar-alt"></span>
-                    <span>Friday, 02 April 2021</span>
+                    <span>Monday, 05 April 2021</span>
                 </div>
             </div>
 
             <p>Bismillahirrahmanirrahim.</p>
 
-<p>Dilengkapi kemudian…..</p>
+<p><img src="/assets/images/webtech/laravel-directory.png" alt="Direktori Laravel" /></p>
 
-<!-- ### Referensi
+<h3 id="pengenalan-struktur-file">Pengenalan Struktur File</h3>
 
-- [...](https://medium.com/easyread/apa-itu-artisan-cli-pada-laravel-62a94232a29a) -->
+<p>Struktur default aplikasi Laravel dimaksudkan untuk menyediakan langkah awal yang bagus baik untuk aplikasi yang kecil maupun yang besar. Akan tetapi aplikasi yang kita buat dapat diatur sendiri sesuai keinginan. Laravel hampir tidak memberikan batasan pada sebuah <em>class</em> di mana pun ditempatkan sepanjang Composer dapat melakukan <em>autoload</em>/memuat otomatis <em>class</em> tersebut.</p>
+
+<h3 id="direktori-root">Direktori Root</h3>
+
+<ul>
+  <li><strong>Direktori App</strong>, memuat kode dasar dari aplikasi. Hampil semua <em>class</em> yang ada pada aplikasi ditempatkan di folder ini.</li>
+  <li><strong>Direktori Bootstrap</strong>, memuat file <code class="language-plaintext highlighter-rouge">app.php</code> yang merupakan <em>bootstrap framework</em>. Di direktori ini juga terdapat direktori <code class="language-plaintext highlighter-rouge">cache</code> yang memuat <em>framework</em> file yang ter-<em>generate</em> untuk optimasi kinerja seperti file <em>route</em> dan layanan <em>cache</em>. Kita seharusnya tidak perlu mengubah file apapun di dalam direktori ini.</li>
+  <li><strong>Direkotori Config</strong>, seperti namanya, memuat file konfigurasi dari aplikasi. Merupakan ide bagus untuk membaca keseluruhan isi file dan membiasakan diri pilihan apa saja yang tersedia.</li>
+  <li><strong>Direktori Database</strong>, memuat seluruh database <em>migration</em>, <em>model factory</em>, dan <em>seed</em>. Jika diperlukan, database SQLite juga dapat ditampung di sini.</li>
+  <li><strong>Direkroti Public</strong>, memuat file <code class="language-plaintext highlighter-rouge">index.php</code>, yang merupakan pintu masuk dari semua <em>request</em> terhadap aplikasi dan mengonfigurasi <em>autoloading</em>. Direktori ini juga memuat semua <em>assets</em> seperti gambar, JavaScript, dan CSS.</li>
+  <li><strong>Direktori Resources</strong>, memuat semua view dan <em>raw</em>, <em>assets</em> yang tidak dikompilasi seperti CSS atau JavaScript. Direktori ini juga menampung semua file bahasa.</li>
+  <li><strong>Direktori Routes</strong>, memuat semua definisi <em>route</em> dari aplikasi kita. Secara default, beberapa file <em>route</em> yang disertakan dengan Laravel seperti <code class="language-plaintext highlighter-rouge">web.php</code>, <code class="language-plaintext highlighter-rouge">api.php</code>, <code class="language-plaintext highlighter-rouge">console.php</code>, dan <code class="language-plaintext highlighter-rouge">channels.php</code>.</li>
+  <li><strong>Direktori Storage</strong>, memuat <em>log-log</em>, <em>template</em> Blade yang dikompilasi, file <em>session</em>, file <em>cache</em>, dan file yang lainnya yang di-<em>generate</em> oleh <em>framework</em>. Direktori ini terbagi ke dalam direktori <code class="language-plaintext highlighter-rouge">app</code>, <code class="language-plaintext highlighter-rouge">framework</code>, dan <code class="language-plaintext highlighter-rouge">logs</code>.</li>
+  <li><strong>Direktori Test</strong>, memuat tes otomatis kita. Sebagai contoh unit tes <code class="language-plaintext highlighter-rouge">PHPUnit</code> dan fitur tes disediakan. Setiap <em>class</em> tes harus diakhiri dengan kata <code class="language-plaintext highlighter-rouge">Test</code>. Tes dapat dijalankan dengan perintah <code class="language-plaintext highlighter-rouge">phpunit</code> atau <code class="language-plaintext highlighter-rouge">php vendor/bin/phpunit</code>. Jika menginginkan tampilan yang lebih rinci dan tampilan yang baik dari hasil tes, gunakan perintah Artisan <code class="language-plaintext highlighter-rouge">php artisan test</code>.</li>
+  <li><strong>Direktori Vendor</strong>, memuat dependensi dari Composer kita.</li>
+</ul>
+
+<h3 id="direktori-app">Direktori App</h3>
+
+<p>Sebagian besar dari aplikasi kita berada di direktori <code class="language-plaintext highlighter-rouge">app</code>. Secara default, direktori ini memiliki <em>namespace</em> di bawah <code class="language-plaintext highlighter-rouge">App</code> dan dimuat otomatis oleh Composer menggunakan <strong>standar autoloading PSR-4</strong>.</p>
+
+<p>Direktori <code class="language-plaintext highlighter-rouge">app</code> memuat beragam direktori tambahan seperti <code class="language-plaintext highlighter-rouge">Console</code>, <code class="language-plaintext highlighter-rouge">Http</code> dan <code class="language-plaintext highlighter-rouge">Providers</code>. Bayangkan direktori <code class="language-plaintext highlighter-rouge">Console</code> dan <code class="language-plaintext highlighter-rouge">Http</code> sebagai penyedia API ke dalam <em>core</em>/inti dari aplikasi. Protokol HTTP dan CLI keduanya memiliki mekanisme untuk berinteraksi dengan aplikasi kita, tetapi tidak benar-benar memuat logika aplikasi. Dengan kata lain, ada dua cara melakukan <em>command</em> pada aplikasi. Direktori <code class="language-plaintext highlighter-rouge">Console</code> memuat semua perintah Artisan, sementara direktori <code class="language-plaintext highlighter-rouge">Http</code> memuat semua <em>controller</em>, <em>middleware</em>, dan <em>request</em>.</p>
+
+<p>Beragam direktori lain akan di-<em>generate</em> ke dalam direktori <code class="language-plaintext highlighter-rouge">app</code> sesaat menggunakan perintah Artisan <code class="language-plaintext highlighter-rouge">make</code> untuk men-<em>generate</em> <em>class</em>. Jadi, sebagai contoh, direktori <code class="language-plaintext highlighter-rouge">app/Jobs</code> tidak akan ada sampai kita mengeksekusi perintah Artisan <code class="language-plaintext highlighter-rouge">make:job</code> untuk men-<em>generate</em> <em>class</em> job.</p>
+
+<blockquote>
+  <p>Ada banyak <em>class</em> yang terdapat di dalam direktori <code class="language-plaintext highlighter-rouge">app</code> yang dapat di-<em>generate</em> oleh Artisan melalui <em>command</em>/perintah. Untuk melihat perintah yang tersedia, jalankan perintah <code class="language-plaintext highlighter-rouge">php artisan list make</code> melalui terminal.</p>
+</blockquote>
+
+<h3 id="direktori-routes">Direktori Routes</h3>
+
+<p>Di dalam direktori routes yang secara default memuat file <code class="language-plaintext highlighter-rouge">web.php</code>, <code class="language-plaintext highlighter-rouge">api.php</code>, <code class="language-plaintext highlighter-rouge">console.php</code>, dan <code class="language-plaintext highlighter-rouge">channels.php</code>.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">web.php</code>, memuat <em>route</em> dimana <code class="language-plaintext highlighter-rouge">RouteServiceProvider</code> ditempatkan di grup <em>middleware</em> <code class="language-plaintext highlighter-rouge">web</code>, yang menyediakan <em>session</em>, proteksi CSRF, dan enkripsi <em>cookie</em>. Jika aplikasi yang kita buat tidak menawarkan <em>stateless</em>, RESTful API akan seperti bahwa semua <em>route</em> hampir semuanya didefinisikan di dalam file <code class="language-plaintext highlighter-rouge">web.php</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">api.php</code>, memuat <em>route</em> dimana <code class="language-plaintext highlighter-rouge">RouteServiceProvider</code> ditempatkan di grup <em>middleware</em> <code class="language-plaintext highlighter-rouge">app</code>. <em>Route</em> ini dimaksudkan menjadi <em>stateless</em>, jadi <em>request</em> yang masuk ke aplikasi melalui <em>route</em> ini dimaksudkan untuk diautentikasi melalui token dan tidak akan memiliki akses pada <em>session</em>.</li>
+  <li><code class="language-plaintext highlighter-rouge">console.php</code>, file yang dimana kita dapat mendefinisikan semua <em>closure</em> dengan basis perintah <em>console</em>. Semua <em>closure</em> yang diikat pada <em>command</em> selanjutnya mengizinkan pendekatan yang sederhana untuk berinteraksi dengan setiap <em>method</em> perintah I/O. Meskipun <em>route</em> ini tidak mendefinisikan <em>route</em> HTTP, ia mendefinisikan <em>console</em> berdasarkan pintu masuk ke dalam aplikasi.</li>
+  <li><code class="language-plaintext highlighter-rouge">channels.php</code>, file dimana kita dapat mendaftarkan semua <em>channels</em> <code class="language-plaintext highlighter-rouge">event broadcasting</code> yang didukung oleh aplikasi.</li>
+</ul>
+
+<h3 id="direktori-storage">Direktori Storage</h3>
+
+<p>Direktori yang ada di dalam direktori ini yaitu:</p>
+<ul>
+  <li>Direktori <code class="language-plaintext highlighter-rouge">app</code>, digunakan untuk menyimpan file-file yang di-<em>generate</em> oleh aplikasi.</li>
+  <li>Direktori <code class="language-plaintext highlighter-rouge">framework</code>, digunakan untuk menyimpan <em>framework</em> yang men-<em>generate</em> file dan <em>cache</em>.</li>
+  <li>Direktori <code class="language-plaintext highlighter-rouge">logs</code>, memuat file log dari aplikasi kita.</li>
+  <li>Direktori <code class="language-plaintext highlighter-rouge">storage/app/public</code>, dapat digunakan untuk menyimpan file yang di-<em>generate</em> oleh <em>user</em>, seperti foto profil, yang dapat diakses secara publik. Kita harus membuat <em>symbolic link</em> di <code class="language-plaintext highlighter-rouge">public/storage</code> yang mengarah ke direktori ini. Kita dapat membuat link itu menggunakan <em>command</em> Artisan <code class="language-plaintext highlighter-rouge">php artisan storage:link</code>.</li>
+</ul>
+
+<h3 id="direktori-penting-lainnya">Direktori Penting Lainnya</h3>
+
+<ul>
+  <li><strong>Direktori Broadcasting</strong>, direktori <code class="language-plaintext highlighter-rouge">broadcasting</code> memuat semua <em>class</em> channel broadcast dari aplikasi kita. <em>Class-class</em> ini di-<em>generate</em> menggunakan perintah <code class="language-plaintext highlighter-rouge">make:channel</code>. Direktori ini tidak ada secara default, tetapi akan dibuat setelah kita membuat channel untuk pertama kali.</li>
+  <li><strong>Direktori Console</strong>, direktori <code class="language-plaintext highlighter-rouge">console</code> memuat semua perintah <em>custom</em> Artisan untuk aplikasi kita. Perintah ini di-<em>generate</em> menggunakan perintah <code class="language-plaintext highlighter-rouge">make:command</code>. Direktori ini juga memuat kernel console, dimana custom command Artisan didaftarkan dan tugas-tugas terjadwal didefinisikan.</li>
+  <li><strong>Direktori Event</strong>, direktori ini tidak ada secara default, tetapi akan dibuatkan dengan mengeksekusi perintah Artisan <code class="language-plaintext highlighter-rouge">event:generate</code> dan <code class="language-plaintext highlighter-rouge">make:event</code>. Direktori <code class="language-plaintext highlighter-rouge">Events</code> memuat <em>class-class</em> event. Event dapat digunakan untuk memberikan alarm bagian-bagian aplikasi kita bahwa perintah yang diberikan telah dilaksanakan.</li>
+  <li><strong>Direktori Exception</strong>, direktori <code class="language-plaintext highlighter-rouge">Exceptions</code> memuat <em>exception handler</em> dan juga merupakan tempat yang bagus untuk menempatkan <em>exception</em> apapun yang dihasilkan oleh aplikasi. Jika kita ingin men-<em>customize</em> bagaimana <em>exception</em> di-<em>log</em> dan di-<em>render</em>, kita harus mengedit class <code class="language-plaintext highlighter-rouge">Handler</code> di dalam direktori ini</li>
+  <li><strong>Direktori Http</strong>, direktori <code class="language-plaintext highlighter-rouge">Http</code> memuat <em>controller</em>, <em>middleware</em>, dan formulir <em>request</em>. Hampir semua logika yang mengendalikan <em>request</em> ke dalam aplikasi kita akan ditempatkan di direktori ini.</li>
+  <li><strong>Direktori Jobs</strong>, direktori ini tidak ada secara default, tetapi akan dibuat ketika kita mengeksekusi perintah Artisan <code class="language-plaintext highlighter-rouge">make:job</code>. Direktori <code class="language-plaintext highlighter-rouge">Jobs</code> memuat semua antrian <em>job</em> untuk aplikasi kita. <em>Job</em> dibuatkan antrian oleh aplikasi atau berjalan secara sinkron dalam daur hidup <em>job</em> dari <em>request</em> saat ini. <em>Job-job</em> yang berjalan secara sinkron selama <em>request</em> saat ini kadang-kadang mengacu sebagai “command” sejak mereka merupakan implementasi dari pola <em>command</em>.</li>
+  <li><strong>Direktori Listeners</strong>, direktori ini tidak ada secara default, tetapi akan dibuat ketika kita mengeksekusi perintah Artisan <code class="language-plaintext highlighter-rouge">event:generate</code> atau <code class="language-plaintext highlighter-rouge">make:listener</code>. Direktori <code class="language-plaintext highlighter-rouge">Listeners</code> memuat <em>class</em> yang meng-<em>handle</em> <em>event</em> kita. <em>Event listeners</em> menerima <em>event instance</em> dan melakukan logika dalam merespon <em>event</em> yang terjadi. Sebagai contoh, event <code class="language-plaintext highlighter-rouge">UserRegistered</code> akan di-<em>handle</em> oleh <em>listener</em> <code class="language-plaintext highlighter-rouge">SendWelcomeEmail</code>.</li>
+  <li><strong>Direktori Mail</strong>, direktori ini tidak ada secara default, tetapi akan dibuat ketika kita mengeksekusi perintah Artisan <code class="language-plaintext highlighter-rouge">make:mail</code>. Direktori <code class="language-plaintext highlighter-rouge">Mail</code> memuat semua <em>class</em> yang menampilkan email yang dikirim oleh aplikasi kita. <em>Object</em> mail mengizinkan kita untuk mengenkapsulasi semua logika dari sebuah email yang dibangun menjadi satu, <em>class</em> sederhana yang mungkin dikirimkan menggunakan <em>method</em> <code class="language-plaintext highlighter-rouge">Mail::send</code>.</li>
+  <li><strong>Direktori Models</strong>, direktori <code class="language-plaintext highlighter-rouge">Models</code> memuat semua <em>class</em> model eloquent. Eloquent ORM yang disertakan dengan Laravel menyediakan implementasi ActiveRecord yang bagus, sederhana untuk bekerja dengan <em>database</em>. Setiap tabel <em>database</em> memiliki “Model” yang sesuai yang digunakan untuk berinteraksi dengan tabel tersebut. Models mengizinkan kita untuk melakukan queri data pada tabel.</li>
+  <li><strong>Direktori Notifications</strong>, direktori ini tidak ada secara default, tetapi akan dibuat ketika kita mengeksekusi perintah Artisan <code class="language-plaintext highlighter-rouge">make:notification</code>. Direktori <code class="language-plaintext highlighter-rouge">Notifications</code> memuat semua notifikasi “transaksi” yang dikirim oleh aplikasi  kita. Fitur abstrak notifikasi dari Laravel mengirim notifikasi dari beragam <em>driver</em> seperti email, Slack, SMS, atau disimpan di dalam database.</li>
+  <li><strong>Direktori Policies</strong>, direktori ini tidak ada secara default, tetapi akan dibuat ketika kita mengeksekusi perintah Artisan <code class="language-plaintext highlighter-rouge">make:policy</code>. Direktori <code class="language-plaintext highlighter-rouge">Policies</code> memuat <em>class</em> otorisasi <em>policy</em> untuk aplikasi kita. <em>Policy</em> digunakan untuk menentukan apakah <em>user</em> dapat melakukan aksi yang diberikan terhadap <em>database</em>.</li>
+  <li><strong>Direktori Providers</strong>, direktori <code class="language-plaintext highlighter-rouge">Providers</code> memuat semua <em>service provider</em> (penyedia layanan) untuk aplikasi kita. Penyedia layanan mem-<em>bootstrap</em> aplikasi kita dengan menyatukan kontainer layanan, mendaftarkan <em>event</em>, atau pun melakukan tugas-tugas lain untuk menyediakan aplikasi untuk <em>request</em> berikutnya.
+Aplikasi Laravel yang baru, direktori ini akan memuat beberapa <em>provider</em> yang sudah ada. Kita bebas menambahkan <em>provider</em> kita sendiri ke dalam direktori ini sesuai kebutuhan.</li>
+  <li><strong>Direktori Rules</strong>, direktori ini tidak ada secara default, tetapi akan dibuat ketika kita mengeksekusi perintah Artisan <code class="language-plaintext highlighter-rouge">make:rule</code>. Direktori <code class="language-plaintext highlighter-rouge">Rules</code> memuat aturan <em>custom validation</em> untuk aplikasi kita. Rules digunakan untuk mengenkapsulasi logika validasi yang rumit menjadi <em>object</em> yang sederhana.</li>
+</ul>
+
+<h3 id="referensi">Referensi</h3>
+
+<ul>
+  <li><a href="https://laravel.com/docs/8.x/structure">Directory Structure - Laravel</a></li>
+</ul>
 
 
             <hr>
@@ -139,6 +214,9 @@
         </article>
 
         <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Jika saat membaca artikel di web ini, ditemukan konten yang <em>tidak tepat</em> dan <em>perlu dibenarkan</em>, segera sampaikan melalui kontak yang disediakan dan dengan senang hati akan dikoreksi demi kebaikan bersama. <br/> Terima kasih.</p>
+    </div>
     <ul>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>

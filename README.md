@@ -18,3 +18,5 @@ I'm express my thanks you free your time to visit this page. Hope, this website 
 ## Added Features - 05 April 2021
 - Searching 
 - Privacy and Disclaimer
+- Google Analytics
+- Correction Message

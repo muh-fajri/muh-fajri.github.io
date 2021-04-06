@@ -56,6 +56,10 @@ html { scroll-behavior: smooth; }
 .search section a { display: inline-block; background-image: linear-gradient(-45deg, #00ffbf, #1b8efa); padding: 3px 10px; font-size: 15px; border-radius: 5px; color: #fff !important; }
 
 /*-- Search Style --*/
+/* Attention Footer */
+.attention { color: #fff; background-image: linear-gradient(45deg, #ff3c00, #fab31b); padding: 10px 20px 0 20px; font-size: 13px; font-weight: bold; }
+
+/*-- Attention Footer --*/
 @media screen and (max-width: 990px) { #toTop { bottom: 70px; right: 20px; } }
 
 body { font-family: Montserrat; background-color: #f3f3f3; }

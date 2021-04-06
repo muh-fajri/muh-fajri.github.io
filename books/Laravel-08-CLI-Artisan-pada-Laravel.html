@@ -19,11 +19,11 @@
 <meta name="description" content="Bismillahirrahmanirrahim." />
 <meta property="og:description" content="Bismillahirrahmanirrahim." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-02T00:00:00+08:00" />
+<meta property="article:published_time" content="2021-04-05T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="CLI Artisan Laravel" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Laravel-08-CLI-Artisan-Laravel.html","headline":"CLI Artisan Laravel","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-08-CLI-Artisan-Laravel.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Laravel-08-CLI-Artisan-pada-Laravel.html","headline":"CLI Artisan Laravel","dateModified":"2021-04-05T00:00:00+08:00","datePublished":"2021-04-05T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Laravel-08-CLI-Artisan-pada-Laravel.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -33,6 +33,8 @@
 
 
 
+    
+    
     
 </head>
 <body>
@@ -108,47 +110,49 @@
                 </div>
                 <div class="date-post">
                     <span class="fas fa-calendar-alt"></span>
-                    <span>Friday, 02 April 2021</span>
+                    <span>Monday, 05 April 2021</span>
                 </div>
             </div>
 
             <p>Bismillahirrahmanirrahim.</p>
 
-<p>Dilanjutkan kemudian…</p>
+<p>Artisan merupakan perintah berbasis <em>console</em> / Command Line Interface (CLI) yang disertakan dengan Laravel. Artisan berada di direktori <em>root</em> dari aplikasi sebagai skrip <code class="language-plaintext highlighter-rouge">artisan</code> dan menyediakan sejumlah perintah yang sangat membantu dalam proses pengembangan aplikasi.</p>
 
-<!-- ```bash
-php artisan list
-```
+<p>Untuk melihat semua daftar perintah <code class="language-plaintext highlighter-rouge">artisan</code> jalankan perintah:</p>
 
-Berikut daftar perintah yang ada dalam penggunaan CLI.
-```bash
-Laravel Framework 8.35.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php artisan list
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">php</code> sendiri untuk memanggil PHP karena artisan berbasiskan PHP, <code class="language-plaintext highlighter-rouge">artisan</code> perintah untuk memanggil artisan itu sendiri, dan <code class="language-plaintext highlighter-rouge">list</code> untuk melihat daftar perintah dari artisan CLI.</p>
+
+<p>Berikut daftar perintah yang ada dalam penggunaan CLI.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Laravel Framework 8.35.1
 
 Usage:
-  command [options] [arguments]
+  <span class="nb">command</span> <span class="o">[</span>options] <span class="o">[</span>arguments]
 
 Options:
-  -h, --help            Display help for the given command. When no command is given display help for the list command
-  -q, --quiet           Do not output any message
-  -V, --version         Display this application version
-      --ansi            Force ANSI output
-      --no-ansi         Disable ANSI output
-  -n, --no-interaction  Do not ask any interactive question
-      --env[=ENV]       The environment the command should run under
-  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+  <span class="nt">-h</span>, <span class="nt">--help</span>            Display <span class="nb">help </span><span class="k">for </span>the given command. When no <span class="nb">command </span>is given display <span class="nb">help </span><span class="k">for </span>the list <span class="nb">command</span>
+  <span class="nt">-q</span>, <span class="nt">--quiet</span>           Do not output any message
+  <span class="nt">-V</span>, <span class="nt">--version</span>         Display this application version
+      <span class="nt">--ansi</span>            Force ANSI output
+      <span class="nt">--no-ansi</span>         Disable ANSI output
+  <span class="nt">-n</span>, <span class="nt">--no-interaction</span>  Do not ask any interactive question
+      <span class="nt">--env</span><span class="o">[=</span>ENV]       The environment the <span class="nb">command </span>should run under
+  <span class="nt">-v</span>|vv|vvv, <span class="nt">--verbose</span>  Increase the verbosity of messages: 1 <span class="k">for </span>normal output, 2 <span class="k">for </span>more verbose output and 3 <span class="k">for </span>debug
 
 Available commands:
   clear-compiled       Remove the compiled class file
   db                   Start a new database CLI session
   down                 Put the application into maintenance / demo mode
-  env                  Display the current framework environment
-  help                 Display help for a command
-  inspire              Display an inspiring quote
+  <span class="nb">env                  </span>Display the current framework environment
+  <span class="nb">help                 </span>Display <span class="nb">help </span><span class="k">for </span>a <span class="nb">command
+  </span>inspire              Display an inspiring quote
   list                 List commands
   migrate              Run the database migrations
   optimize             Cache the framework bootstrap files
   serve                Serve the application on the PHP development server
-  test                 Run the application tests
+  <span class="nb">test                 </span>Run the application tests
   tinker               Interact with your application
   up                   Bring the application out of maintenance mode
  auth
@@ -156,25 +160,25 @@ Available commands:
  cache
   cache:clear          Flush the application cache
   cache:forget         Remove an item from the cache
-  cache:table          Create a migration for the cache database table
+  cache:table          Create a migration <span class="k">for </span>the cache database table
  config
-  config:cache         Create a cache file for faster configuration loading
+  config:cache         Create a cache file <span class="k">for </span>faster configuration loading
   config:clear         Remove the configuration cache file
  db
   db:seed              Seed the database with records
   db:wipe              Drop all tables, views, and types
  event
-  event:cache          Discover and cache the application's events and listeners
+  event:cache          Discover and cache the application<span class="s1">'s events and listeners
   event:clear          Clear all cached events and listeners
   event:generate       Generate the missing events and listeners based on registration
-  event:list           List the application's events and listeners
+  event:list           List the application'</span>s events and listeners
  key
   key:generate         Set the application key
  make
   make:cast            Create a new custom Eloquent cast class
   make:channel         Create a new channel class
-  make:command         Create a new Artisan command
-  make:component       Create a new view component class
+  make:command         Create a new Artisan <span class="nb">command
+  </span>make:component       Create a new view component class
   make:controller      Create a new controller class
   make:event           Create a new event class
   make:exception       Create a new custom exception class
@@ -193,7 +197,7 @@ Available commands:
   make:resource        Create a new resource
   make:rule            Create a new validation rule
   make:seeder          Create a new seeder class
-  make:test            Create a new test class
+  make:test            Create a new <span class="nb">test </span>class
  migrate
   migrate:fresh        Drop all tables and re-run all migrations
   migrate:install      Create the migration repository
@@ -202,31 +206,31 @@ Available commands:
   migrate:rollback     Rollback the last database migration
   migrate:status       Show the status of each migration
  notifications
-  notifications:table  Create a migration for the notifications table
+  notifications:table  Create a migration <span class="k">for </span>the notifications table
  optimize
   optimize:clear       Remove the cached bootstrap files
  package
   package:discover     Rebuild the cached package manifest
  queue
-  queue:batches-table  Create a migration for the batches database table
-  queue:clear          Delete all of the jobs from the specified queue
-  queue:failed         List all of the failed queue jobs
-  queue:failed-table   Create a migration for the failed queue jobs database table
-  queue:flush          Flush all of the failed queue jobs
-  queue:forget         Delete a failed queue job
+  queue:batches-table  Create a migration <span class="k">for </span>the batches database table
+  queue:clear          Delete all of the <span class="nb">jobs </span>from the specified queue
+  queue:failed         List all of the failed queue <span class="nb">jobs
+  </span>queue:failed-table   Create a migration <span class="k">for </span>the failed queue <span class="nb">jobs </span>database table
+  queue:flush          Flush all of the failed queue <span class="nb">jobs
+  </span>queue:forget         Delete a failed queue job
   queue:listen         Listen to a given queue
   queue:prune-batches  Prune stale entries from the batches database
   queue:restart        Restart queue worker daemons after their current job
   queue:retry          Retry a failed queue job
-  queue:retry-batch    Retry the failed jobs for a batch
-  queue:table          Create a migration for the queue jobs database table
-  queue:work           Start processing jobs on the queue as a daemon
+  queue:retry-batch    Retry the failed <span class="nb">jobs </span><span class="k">for </span>a batch
+  queue:table          Create a migration <span class="k">for </span>the queue <span class="nb">jobs </span>database table
+  queue:work           Start processing <span class="nb">jobs </span>on the queue as a daemon
  route
-  route:cache          Create a route cache file for faster route registration
+  route:cache          Create a route cache file <span class="k">for </span>faster route registration
   route:clear          Remove the route cache file
   route:list           List all registered routes
  sail
-  sail:install         Install Laravel Sail's default Docker Compose file
+  sail:install         Install Laravel Sail<span class="s1">'s default Docker Compose file
   sail:publish         Publish the Laravel Sail Docker files
  schedule
   schedule:list        List the scheduled commands
@@ -244,34 +248,50 @@ Available commands:
  vendor
   vendor:publish       Publish any publishable assets from vendor packages
  view
-  view:cache           Compile all of the application's Blade templates
+  view:cache           Compile all of the application'</span>s Blade templates
   view:clear           Clear all compiled view files
-```
+</code></pre></div></div>
 
-### Perintah yang Sangat Berguna
+<p>Setiap perintah Artisan memiliki juga memiliki layar bantuan untuk melihat detail penggunaan lengkapnya. Untuk melihat bantuan, tambahkan perintah <code class="language-plaintext highlighter-rouge">help</code>, seperti:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php artisan <span class="nb">help </span>migrate
+</code></pre></div></div>
 
-- `php artisan serve`, menjalankan aplikasi localhost.
-- `php artisan key:generate`, perintah untuk men-*generate* string random yang digunakan untuk *encrypt-decrypt* pada aplikasi. Misal proses *session, CSRF Token, sign url,* dsb.
-- `php artisan make:controller <ControllerName>`, perintah untuk men-*generate* file `controller` yang akan ditempatkan di folder `Http/controller`.
-- `php artisan make:model <ModelName>`, perintah untuk men-*generate* file `model` yang akan ditempatkan di folder `App`.
-- `php artisan make:migration <MigrationName>`, perintah untuk men-*generate* file `migration` yang akan ditempatkan di folder `database\migrations`.
+<h3 id="perintah-yang-sangat-berguna">Perintah yang Sangat Berguna</h3>
 
-Dilanjutkan kemudian ...
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">php artisan serve</code>, perintah yang digunakan untuk menjalankan aplikasi pada localhost.</li>
+  <li><code class="language-plaintext highlighter-rouge">php artisan key:generate</code>, perintah untuk men-<em>generate</em> string random yang digunakan untuk <em>encrypt-decrypt</em> pada aplikasi. Misal proses <em>session, CSRF Token, sign url,</em> dsb. Untuk melihat perubahan dari sebagai hasil dari perintah ini yaitu pada file <code class="language-plaintext highlighter-rouge">.env</code> di bagian <code class="language-plaintext highlighter-rouge">APP_KEY</code>. Contoh isinya seperti:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">APP_NAME</span><span class="o">=</span>Laravel
+<span class="nv">APP_ENV</span><span class="o">=</span><span class="nb">local
+</span><span class="nv">APP_KEY</span><span class="o">=</span><span class="nb">base64</span>:oc9NFz16WwSvdrtzHDVt7fyObm0JxnZML3ZSoVHVep0<span class="o">=</span>
+<span class="nv">APP_DEBUG</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">APP_URL</span><span class="o">=</span>http://blog.test
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">php artisan make:controller &lt;ControllerName&gt;</code>, perintah untuk men-<em>generate</em> file <code class="language-plaintext highlighter-rouge">controller</code> yang akan ditempatkan di folder <code class="language-plaintext highlighter-rouge">Http/controller</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">php artisan make:model &lt;ModelName&gt;</code>, perintah untuk men-<em>generate</em> file <code class="language-plaintext highlighter-rouge">model</code> yang akan ditempatkan di folder <code class="language-plaintext highlighter-rouge">App</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">php artisan make:migration &lt;MigrationName&gt;</code>, perintah untuk men-<em>generate</em> file <code class="language-plaintext highlighter-rouge">migration</code> yang akan ditempatkan di folder <code class="language-plaintext highlighter-rouge">database\migrations</code>.</li>
+</ul>
 
-### Referensi
+<p>Itulah pengenalan mengenai Artisan CLI, perintah-perintah yang ada dan juga diberikan paparan singkat mengenai perintah Artisan CLI yang sangat berguna dalam proses pengembangan aplikasi berbasis Laravel.</p>
 
-- [...](https://medium.com/easyread/apa-itu-artisan-cli-pada-laravel-62a94232a29a) -->
+<h3 id="referensi">Referensi</h3>
+
+<ul>
+  <li><a href="https://laravel.com/docs/8.x/artisan">Artisan - Laravel</a></li>
+  <li><a href="https://medium.com/easyread/apa-itu-artisan-cli-pada-laravel-62a94232a29a">Apa itu Artisan CLI pada Laravel?</a></li>
+</ul>
 
 
             <hr>
             <div class="share">
                 <p class="text-center">
                     Share on : <br>
-                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-Laravel.html"><span class="fab fa-facebook"></span></a>
-                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-Laravel.html"><span class="fab fa-twitter"></span></a>
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-Laravel.html&title=CLI Artisan Laravel&summary="><span class="fab fa-linkedin"></span></a>
-                    <a href="https://api.whatsapp.com/send?text=CLI Artisan Laravel%20%2D%20https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-Laravel.html"><span class="fab fa-whatsapp"></span></a>
-                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-Laravel.html&text=CLI Artisan Laravel"><span class="fab fa-telegram"></span></a>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-pada-Laravel.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-pada-Laravel.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-pada-Laravel.html&title=CLI Artisan Laravel&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=CLI Artisan Laravel%20%2D%20https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-pada-Laravel.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Laravel-08-CLI-Artisan-pada-Laravel.html&text=CLI Artisan Laravel"><span class="fab fa-telegram"></span></a>
                 </p>
             </div>
             <hr>
@@ -281,6 +301,9 @@ Dilanjutkan kemudian ...
         </article>
 
         <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Jika saat membaca artikel di web ini, ditemukan konten yang <em>tidak tepat</em> dan <em>perlu dibenarkan</em>, segera sampaikan melalui kontak yang disediakan dan dengan senang hati akan dikoreksi demi kebaikan bersama. <br/> Terima kasih.</p>
+    </div>
     <ul>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>

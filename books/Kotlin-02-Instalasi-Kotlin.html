@@ -34,6 +34,8 @@
 
 
     
+    
+    
 </head>
 <body>
     <div class="container-fluid">
@@ -113,6 +115,8 @@
             </div>
 
             <p>Bismillahirrahmanirrahim.</p>
+
+<p>Kotlin merupakan bahasa pemrograman modern yang banyak digunakan oleh Android developer profesional. Kotlin saat ini secara resmi digunakan dalam pengembangan aplikasi Android yang menggantikan Java sebagai pendahulunya. Namun, hingga saat ini Java pun masih banyak digunakan dalam pengembangan aplikasi termasuk desktop dan mobile.</p>
 
 <h3 id="instal-sdk-man">Instal SDK Man</h3>
 
@@ -201,7 +205,9 @@ Then issue the following <span class="nb">command</span>:
 </span>Enjoy!!!
 </code></pre></div></div>
 
-<p>Setelah selesai, buka terminal baru dan jalankan perintah:</p>
+<p>Dari tampilan di atas, dapat dilihat bahwa instalasi SDK Man terlah berhasil.</p>
+
+<p>Setelah selesai terinstal, buka terminal baru dan jalankan perintah:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash ~/.sdkman/bin/sdkman-init.sh
 </code></pre></div></div>
 
@@ -235,18 +241,23 @@ SDKMAN 5.11.0+644
 SDKMAN 5.11.0+644
 </code></pre></div></div>
 
+<p>Hal ini menunjukkan bahwa SDK harus terkoneksi ke internet saat dioperasikan. Sebagai contoh saat instalasi kotlin. Untuk itu, sebelum memulai instalasi kotlin ada baiknya untuk memastikan koneksi internet tetap stabil.</p>
+
 <h3 id="instal-kotlin">Instal Kotlin</h3>
 
 <p>Setelah SDK Man terinstal, kotlin pun sudah dapat diinstal dengan SDK Man.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sdk <span class="nb">install </span>kotlin
 </code></pre></div></div>
 
+<p><code class="language-plaintext highlighter-rouge">sdk</code>, perintah untuk menajalankan SDK Man. <code class="language-plaintext highlighter-rouge">install</code> perintah yang digunakan untuk menginstal paket. <code class="language-plaintext highlighter-rouge">kotlin</code> merupakan paket yang akan diinstal melalui SDK Man.</p>
+
 <p>Berikut output yang ditampilkan:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Downloading: kotlin 1.4.31
 
 In progress...
 
-<span class="c">#################################################################### 100.0%#################################################################### 100.0%</span>
+<span class="c">#################################################################### 100.0%</span>
+<span class="c">#################################################################### 100.0%</span>
 
 Installing: kotlin 1.4.31
 Done installing!
@@ -255,7 +266,7 @@ Done installing!
 Setting kotlin 1.4.31 as default.
 </code></pre></div></div>
 
-<p>Setelah terinstal, ketikkan perintah berikut untuk memeriksa versi kotlin yan terinstal.</p>
+<p>Setelah instalasi berhasil, ketikkan perintah berikut untuk memeriksa versi kotlin yang terinstal.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kotlin <span class="nt">-version</span>
 kotlinc <span class="nt">-version</span>
 </code></pre></div></div>
@@ -278,7 +289,39 @@ WARNING: All illegal access operations will be denied <span class="k">in </span>
 
 <p>Ekstensi yang dimaksudkan di sini adalah ekstensi untuk IDE VSCode. Ekstensi yang dibutuhkan oleh kotlin adalah <a href="https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.Kotlin"><strong>Kotlin Language</strong></a> dan <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner"><strong>Code Runner</strong></a>.</p>
 
+<p>Silahkan buka kode editor VS Code dan masuk ke bagian <strong>Extensions</strong> yang berada di sebelah kiri jendela VSCode. Ketikkan ekstensi yang akan diinstal. Untuk menginstal Kotlin Language, ketikkan pada inputan pencarian ekstensi. Kemudian instal untuk memasang ekstensi tersebut pada VSCode. Tampilan Berikut menunjukkan langkah instalasi ekstensi <strong>Kotlin Language</strong>.</p>
+
+<p><img src="/assets/images/webtech/instal-vscode-extension.png" alt="Install Kotlin Language" /></p>
+
+<p>Langkah yang dilakukan untuk menginstal <strong>Code Runner</strong>.</p>
+
+<p><img src="/assets/images/webtech/install-vscode-extension2.png" alt="Install Code Runner" /></p>
+
 <h3 id="konfigurasi-code-runner">Konfigurasi Code Runner</h3>
+
+<p><strong>Code Runner</strong> harus dikonfigurasi terlebih dahulu agar dapat menjalankan kode pemrograman Kotlin yang telah dibuat melalui VSCode.</p>
+
+<p>Untuk mengonfigurasinya, masuk ke <strong>Extensions</strong> dan ketikkan <strong>Code Runner</strong>. Di bagian gambar <em>gear</em> (tombol <em>Manage</em>), pilih <strong>Extension Settings</strong>.</p>
+
+<p><img src="/assets/images/webtech/configure-code-runner.png" alt="Konfigurasi Code Runner" /></p>
+
+<p>Setelah <strong>Settings</strong> terbuka, <em>scroll</em> ke bawah hingga bagian <strong>Code Runner: Executor Map</strong> lalu buka <strong>Edit in settings.json</strong>.</p>
+
+<p><img src="/assets/images/webtech/configure-code-runner2.png" alt="Code Runner Settings" /></p>
+
+<p>Tambahkan baris berikut di bagian <code class="language-plaintext highlighter-rouge">"code-runner.executorMap": { ... },</code>.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"kotlin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cd $dir &amp;&amp; kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar &amp;&amp; kotlin $fileNameWithoutExt.jar"</span><span class="err">,</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Simpan dan tutup file <code class="language-plaintext highlighter-rouge">settings.json</code>.</p>
+
+<p>Selanjutnya, lakukan pengaturan agar setiap melakukan eksekusi program Koltin berjalan melalui terminal. Hal ini berguna agar kita dapat melakukan <em>entry</em>/ penginputan data.</p>
+
+<p>Masih di <strong>Settings</strong>, <em>scroll</em> lagi ke bawah hingga pada bagian <strong>Code Runner: Run In Terminal</strong>. Centang pada <em>checkbox</em> yang ada di bawahnya.</p>
+
+<p><img src="/assets/images/webtech/configure-code-runner3.png" alt="Code Runner run in Terminal" /></p>
+
+<p>Jika semua langkah-langkah diikuti dengan benar, maka ekstensi Kotlin telah terpasang dengan baik di VSCode dan kita pun sudah dapat mulai melakukan pemrograman dengan bahasa Kotlin ini.</p>
 
 <h3 id="referensi">Referensi</h3>
 
@@ -305,6 +348,9 @@ WARNING: All illegal access operations will be denied <span class="k">in </span>
         </article>
 
         <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Jika saat membaca artikel di web ini, ditemukan konten yang <em>tidak tepat</em> dan <em>perlu dibenarkan</em>, segera sampaikan melalui kontak yang disediakan dan dengan senang hati akan dikoreksi demi kebaikan bersama. <br/> Terima kasih.</p>
+    </div>
     <ul>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>

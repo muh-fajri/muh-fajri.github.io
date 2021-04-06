@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/tango.css">
-    <title>Perintah Dasar Kotlin</title>
+    <title>Variabel dan Tipe Data Kotlin</title>
     <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Perintah Dasar Kotlin</title>
+<title>Variabel dan Tipe Data Kotlin</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Perintah Dasar Kotlin" />
+<meta property="og:title" content="Variabel dan Tipe Data Kotlin" />
 <meta name="author" content="Muhammad Fajri" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Bismillahirrahmanirrahim." />
 <meta property="og:description" content="Bismillahirrahmanirrahim." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-04T00:00:00+08:00" />
+<meta property="article:published_time" content="2021-04-05T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Perintah Dasar Kotlin" />
+<meta property="twitter:title" content="Variabel dan Tipe Data Kotlin" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Kotlin-04-Perintah-Dasar-Kotlin.html","headline":"Perintah Dasar Kotlin","dateModified":"2021-04-04T00:00:00+08:00","datePublished":"2021-04-04T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-04-Perintah-Dasar-Kotlin.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Kotlin-04-Variabel-dan-Tipe-Data-Kotlin.html","headline":"Variabel dan Tipe Data Kotlin","dateModified":"2021-04-05T00:00:00+08:00","datePublished":"2021-04-05T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-04-Variabel-dan-Tipe-Data-Kotlin.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -33,6 +33,8 @@
 
 
 
+    
+    
     
 </head>
 <body>
@@ -93,13 +95,13 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
         <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
-        <li class="text-dark breadcrumb-item active" aria-current="page">Perintah Dasar Kotlin</li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Variabel dan Tipe Data Kotlin</li>
     </ol>
 </section>
 <section id="post">
     <div class="card">
         <div class="card-body">
-            <h2>Perintah Dasar Kotlin</h2>
+            <h2>Variabel dan Tipe Data Kotlin</h2>
             <div class="post-attribute d-sm-flex">
                 <div class="author-post">
                     <img src="/assets/images/author.jpg" alt="author">
@@ -108,45 +110,11 @@
                 </div>
                 <div class="date-post">
                     <span class="fas fa-calendar-alt"></span>
-                    <span>Sunday, 04 April 2021</span>
+                    <span>Monday, 05 April 2021</span>
                 </div>
             </div>
 
             <p>Bismillahirrahmanirrahim.</p>
-
-<h3 id="struktur-dasar">Struktur Dasar</h3>
-
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3 id="standar-output">Standar Output</h3>
-
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// print: menampilkan output tanpa penambahan baris baru</span>
-<span class="nf">print</span><span class="p">(</span><span class="s">"Hello "</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="s">"world!"</span><span class="p">)</span>
-
-<span class="c1">// println: menampilkan output dengan penambahan baris baru</span>
-<span class="nf">println</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
-<span class="nf">println</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="struktur-program">Struktur Program</h3>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">hello</span>
-
-<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> <span class="p">{</span>
-    <span class="nf">println</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<p>Keterangan program:</p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">package hello</code> artinya kita membuat sebuah paket bernama <code class="language-plaintext highlighter-rouge">hello</code>. Paket dalam kotlin bersifat opsional(boleh ditulis boleh tidak).</li>
-  <li><code class="language-plaintext highlighter-rouge">fun main(){...}</code> adalah fungsi utama program.</li>
-  <li><code class="language-plaintext highlighter-rouge">args: Array&lt;String&gt;</code> adalah variabel yang menyimpan argumen.</li>
-  <li><code class="language-plaintext highlighter-rouge">println()</code> <em>statement</em> atau fungsi untuk menampilkan teks ke layar</li>
-  <li><em>semicolon</em> (<code class="language-plaintext highlighter-rouge">;</code>) pada kotlin bersifat opsional.</li>
-</ul>
 
 <h3 id="variabel-dan-tipe-data">Variabel dan Tipe Data</h3>
 
@@ -219,11 +187,11 @@
             <div class="share">
                 <p class="text-center">
                     Share on : <br>
-                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html"><span class="fab fa-facebook"></span></a>
-                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html"><span class="fab fa-twitter"></span></a>
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html&title=Perintah Dasar Kotlin&summary="><span class="fab fa-linkedin"></span></a>
-                    <a href="https://api.whatsapp.com/send?text=Perintah Dasar Kotlin%20%2D%20https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html"><span class="fab fa-whatsapp"></span></a>
-                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-04-Perintah-Dasar-Kotlin.html&text=Perintah Dasar Kotlin"><span class="fab fa-telegram"></span></a>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-04-Variabel-dan-Tipe-Data-Kotlin.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-04-Variabel-dan-Tipe-Data-Kotlin.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-04-Variabel-dan-Tipe-Data-Kotlin.html&title=Variabel dan Tipe Data Kotlin&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Variabel dan Tipe Data Kotlin%20%2D%20https://muh-fajri.github.io/books/Kotlin-04-Variabel-dan-Tipe-Data-Kotlin.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-04-Variabel-dan-Tipe-Data-Kotlin.html&text=Variabel dan Tipe Data Kotlin"><span class="fab fa-telegram"></span></a>
                 </p>
             </div>
             <hr>
@@ -233,6 +201,9 @@
         </article>
 
         <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Jika saat membaca artikel di web ini, ditemukan konten yang <em>tidak tepat</em> dan <em>perlu dibenarkan</em>, segera sampaikan melalui kontak yang disediakan dan dengan senang hati akan dikoreksi demi kebaikan bersama. <br/> Terima kasih.</p>
+    </div>
     <ul>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>
