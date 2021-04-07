@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Mengenal Ekstensi Paket di Linux</title>
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Mengenal Ekstensi Paket di Linux</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Mengenal Ekstensi Paket di Linux" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-06T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mengenal Ekstensi Paket di Linux" />
+<script type="application/ld+json">
+{"datePublished":"2021-04-06T00:00:00+08:00","dateModified":"2021-04-06T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux.html","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Mengenal Ekstensi Paket di Linux","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+    
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/blog/"><span class="fas fa-book-reader"></span> Blog</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Mengenal Ekstensi Paket di Linux</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="card">
+        <div class="card-body">
+            <h2>Mengenal Ekstensi Paket di Linux</h2>
+            <div class="mb-3">
+              
+                
+                    <a href="/tag/Linux" class="text-white badge"><span class="fas fa-tag"></span> Linux</a>
+<!--                    <a href="/tag/Linux" class="text-white badge"><code class="highligher-rouge"><nobr>Linux</nobr></code></a>-->
+              
+                
+                    <a href="/tag/Terminal" class="text-white badge"><span class="fas fa-tag"></span> Terminal</a>
+<!--                    <a href="/tag/Terminal" class="text-white badge"><code class="highligher-rouge"><nobr>Terminal</nobr></code></a>-->
+              
+            </div>
+            <div class="post-attribute d-sm-flex">
+                <div class="author-post">
+                    <img src="/assets/images/author.jpg" alt="author">
+                    <span class="fas fa-user"></span>
+                    <a href="/author.html">Muhammad Fajri</a>
+                </div>
+                <div class="date-post">
+                    <span class="fas fa-calendar-alt"></span>
+                    <span>Tuesday, 06 April 2021</span>
+                </div>
+            </div>
+
+            <p>Bismillahirrahmanirrahim.</p>
+
+<p>Seiring penggunaan sebuah sistem operasi baik untuk keperluan akademik maupun pekerjaan kita akan sering menjumpai beragam jenis ekstensi file. Ekstensi-ekstensi tersebut tentunya memiliki tujuan masing-masing. Dan, pada umumnya ekstensi file tersebut menunjukkan perusahaan pembuatnya.</p>
+
+<p>Ekstensi file yang sering dijumpai seperti <code class="language-plaintext highlighter-rouge">.doc</code> atau <code class="language-plaintext highlighter-rouge">.docx</code> menunjukkan ekstensi file Microsoft Word (buatan Microsoft). File <code class="language-plaintext highlighter-rouge">.pdf</code> akronim dari Portable Document Format (buatan Adobe), file yang paling umum yang digunakan dalam transmisi/ pertukaran data. Ekstensi file <code class="language-plaintext highlighter-rouge">.xls</code> atau <code class="language-plaintext highlighter-rouge">.xlsx</code> menunjukkan file Microsoft Excel (buatan Microsoft). Dan ekstensi-ekstensi file yang lainnya.</p>
+
+<p>Lalu, bagaimana dengan ekstensi file ini <code class="language-plaintext highlighter-rouge">.deb</code>, <code class="language-plaintext highlighter-rouge">.rpm</code>, <code class="language-plaintext highlighter-rouge">.tar.xz</code> atau <code class="language-plaintext highlighter-rouge">.tar.zst</code>, <code class="language-plaintext highlighter-rouge">.bin</code>, <code class="language-plaintext highlighter-rouge">.sh</code>, <code class="language-plaintext highlighter-rouge">.run</code>, <code class="language-plaintext highlighter-rouge">.AppImage</code>, dan <code class="language-plaintext highlighter-rouge">.zip</code> atau <code class="language-plaintext highlighter-rouge">.tar.gz</code>?</p>
+
+<p>File tersebut akan kita ulas satu per satu secara singkat di artikel ini. File itu menunjukkan paket yang ada pada sistem operasi Linux. Kita menyebutkan paket di Linux yang mengacu pada aplikasi. Padanannya seperti file <code class="language-plaintext highlighter-rouge">.exe</code> dan <code class="language-plaintext highlighter-rouge">.msi</code> pada sistem operasi Windows. Untuk <code class="language-plaintext highlighter-rouge">.zip</code> dan <code class="language-plaintext highlighter-rouge">.tar.gz</code> sendiri pada dasarnya bukan sebuah paket namun ia memuat file-file binary yang dapat dipasang/ diinstal pada OS Linux dimana OS tersebut tidak tersedia format defaultnya untuk paket yang akan diinstal. Bagaimana, apa sudah ada yang bisa dipahami?</p>
+
+<p>Baiklah, mari kita lanjutkan untuk mengenali satu per satu ekstensi paket tersebut.</p>
+
+<h3 id="ekstensi-paket-di-linux">Ekstensi Paket di Linux</h3>
+
+<p>Terdapat ekstensi paket tertentu untuk dapat diinstal di OS yang digunakan tergantung dari distro/ variannya. Tidak seperti di Windows yang umumnya memiliki format ekstensi <code class="language-plaintext highlighter-rouge">.exe</code> sehingga lebih mudah dikenali.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.deb</code>, ekstensi file yang ditujukan untuk OS Linux Debian dan derivasi/ turunannya seperti Ubuntu. Semua varian yang berbasis Debian menggunakan ekstensi file ini untuk memasang paket.</li>
+  <li><code class="language-plaintext highlighter-rouge">.rpm</code>, ekstensi file untuk Red Hat dan turunannya seperti Fedora.</li>
+  <li><code class="language-plaintext highlighter-rouge">.tar.xz</code> dan <code class="language-plaintext highlighter-rouge">.tar.zst</code>, ekstensi file paket untuk Arch dan turunannya seperti Manjaro. <code class="language-plaintext highlighter-rouge">.tar.xz</code> bisa saja bukan merupakan file paket yang dikhususkan untuk OS ini, akan tetapi merupakan sebuah file arsip yang dibuat dengan ekstensi <code class="language-plaintext highlighter-rouge">.tar.xz</code>. Dan, <code class="language-plaintext highlighter-rouge">.tar.zst</code> merupakan ekstensi paket yang lebih baru dari <code class="language-plaintext highlighter-rouge">.tar.xz</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">.bin</code>, (file <em>binary</em>), <code class="language-plaintext highlighter-rouge">.sh</code> (file <em>shell</em>), <code class="language-plaintext highlighter-rouge">.run</code> (file <em>executable</em> Linux), ketiga ekstensi paket ini dapat dijalankan/ diinstal di seluruh OS Linux (seperti yang disebutkan di tiga poin di atas). File ini dapat diinstal melalui terminal.</li>
+  <li><code class="language-plaintext highlighter-rouge">.AppImage</code>, ekstensi paket yang dapat di-<em>run</em>/ dijalankan secara langsung tanpa memerlukan instalasi atau biasa dikenal sebagai aplikasi portabel. Inilah formatnya untuk OS Linux dan dapat berjalan di semua varian.</li>
+  <li><code class="language-plaintext highlighter-rouge">.zip</code> dan <code class="language-plaintext highlighter-rouge">.tar.gz</code>, merupakan ekstensi file yang dikenal sebagai file <em>archive</em>/ arsip. File ini bukanlah sebuah paket namun di dalamnya terdapat <em>source file</em> atau <em>binary file</em> yang dapat digunakan untuk menginstal paket pada OS Linux. Dengan demikian file ini harus diekstrak terlebih dahulu dan kita harus melakukan instalasi secara manual.</li>
+</ul>
+
+<p>Sampai di sini mungkin kita sudah memiliki pemahaman mengenai paket-paket yang ada di Linux. Jadi, paket dengan format tertentu tidak dapat digunakan untuk semua OS Linux karena masing-masing memiliki ekstensi paketnya tersendiri.</p>
+
+<h3 id="instalasi-paket-di-linux">Instalasi Paket di Linux</h3>
+
+<p>Saat memiliki paket dari aplikasi yang sudah diunduh, tentu akan memudahkan kita dalam melakukan instalasi. Sama seperti di Windows, kita dapat melakukan klik dua kali pada file (dalam tampilan GUI melalui File Manager) lalu kita menekan beberapa tombol <strong>Next</strong> dan kemudian kita biarkan OS menyelesaikan instalasinya dan aplikasi pun telah terinstal pada sistem.</p>
+
+<p>Untuk cara yang berikut ini, kita lakukan proses instalasi melalui terminal (mode CLI).</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">.deb</code>, untuk menginstalnya melalui terminal Debian/Ubuntu, jalankan perintah:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dpkg <span class="nt">-i</span> ~/Downloads/&lt;nama-paket&gt;.deb
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.rpm</code>, instal dengan perintah:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install</span> ~/Downloads/&lt;nama-paket&gt;.rpm
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.tar.xz</code> dan <code class="language-plaintext highlighter-rouge">.tar.zst</code> instal dengan mengeksekusi perintah:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-U</span> ~/Downloads/&lt;nama-paket&gt;.tar.xz
+// atau
+<span class="nb">sudo </span>pacman <span class="nt">-U</span> ~/Downloads/&lt;nama-paket&gt;.tar.zst
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Selain file paket untuk Arch dan turunannya, terdapat juga file <code class="language-plaintext highlighter-rouge">.tar.xz</code> yang berupa file arsip. Untuk perlakuannya akan sama dengan file <code class="language-plaintext highlighter-rouge">.zip</code> dan <code class="language-plaintext highlighter-rouge">.tar.gz</code>. Atau, jika terdapat file <em>executable</em> di dalamnya, silahkan jalankan saja instalasinya. Contoh berikut file arsip <code class="language-plaintext highlighter-rouge">.tar.xz</code> dari <strong>XDM Download Manager</strong>.</p>
+
+<p><img src="/assets/images/linux/xdm-archive.png" alt="XDM Archive" /></p>
+
+<p>Di dalam arsip tersebut, terdapat file <em>executable</em> dengan esktensi <code class="language-plaintext highlighter-rouge">.sh</code>. Jadi ia bisa diekstrak terlebih dahulu lalu menjalankan file <em>executable</em>-nya.</p>
+
+<ol>
+  <li>File <code class="language-plaintext highlighter-rouge">.bin</code>, <code class="language-plaintext highlighter-rouge">.sh</code>, dan <code class="language-plaintext highlighter-rouge">.run</code> memiliki cara yang sama yaitu dengan melakukan <code class="language-plaintext highlighter-rouge">chmod +x</code> terlebih dahulu. Contoh untuk file <code class="language-plaintext highlighter-rouge">.run</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown</span> +x ~/Downloads/&lt;nama-file&gt;.run
+<span class="nb">cd</span> ~/Downloads
+<span class="nb">sudo</span> ./&lt;nama-file&gt;.run
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Langkah yang sama dapat dilakukan untuk file <code class="language-plaintext highlighter-rouge">.bin</code> dan <code class="language-plaintext highlighter-rouge">.sh</code>.</p>
+
+<ol>
+  <li>File <code class="language-plaintext highlighter-rouge">.tar.gz</code> dan <code class="language-plaintext highlighter-rouge">.zip</code> terlebih dahulu lakukan ekstraksi file.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Cara ekstrak file tar.gz
+<span class="nb">tar </span>xvzf ~/Downloads/&lt;nama-file&gt;.tar.gz
+// Cara ekstrak file zip
+unzip ~/Downloads/&lt;nama-file&gt;.zip
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Setelah selesai diekstrak, silahkan salin (<code class="language-plaintext highlighter-rouge">cp</code>) atau pindahkan (<code class="language-plaintext highlighter-rouge">mv</code>) ke direktori di mana aplikasi akan diinstal, misalnya pada direktori <code class="language-plaintext highlighter-rouge">/opt</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo cp</span> <span class="nt">-r</span> ~/Downloads/&lt;folder-hasil-ekstrak&gt; /opt
+// atau untuk 
+<span class="nb">sudo mv</span> ~/Downloads/&lt;folder-hasil-ekstrak&gt; /opt
+</code></pre></div></div>
+
+<p>Atau untuk menggabungkan ekstraksi sekaligus menyalin folder:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar </span>xvzf ~/Downloads/&lt;nama-file&gt;.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">sudo cp</span> <span class="nt">-r</span> /opt
+// atau
+unzip ~/Downloads/&lt;nama-file&gt;.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">sudo cp</span> <span class="nt">-r</span> /opt
+</code></pre></div></div>
+
+<p>Untuk membaca lebih lanjut instalasi paket dengan <code class="language-plaintext highlighter-rouge">.tar.gz</code>, baca artikel berikut ini.</p>
+
+<p class="featured-link"> Baca <a href="Instal-Aplikasi-Intellij-IDEA-dalam-Berkas-tar-gz.html">Instal Aplikasi Intellij IDEA dalam Berkas tar.gz</a></p>
+
+<p>Pada dasarnya perintah-perintah ekstraksi dan penyalinan folder/ file ini merupakan bagian dari manajemen file di Linux, dan ini merupakan perintah-perintah dasar. Jika masih kesulitan, silahkan buka artikel yang membahas hal ini.</p>
+
+<p class="featured-link">Baca <a href="../07/Manajemen-File-di-Linux.html">Manajemen File di Linux</a></p>
+
+<p class="featured-link"> Baca juga <a href="Mengelola-File-Archive-melalui-Terminal.html">Mengelola File Archive melalui Terminal</a></p>
+
+<h3 id="paket-dalam-archive-targz-dan-tarbz2">Paket dalam Archive .tar.gz dan .tar.bz2</h3>
+
+<p>Terdapat bentuk paket lain yang ada di Linux selain yang telah disebutkan di atas. Paket ini umumnya digunakan oleh kalangan pengguna UNIX, pendahulu dari OS Linux. Paket ini disimpan dalam bentuk arsip yang umumnya dalam bentuk <code class="language-plaintext highlighter-rouge">.tar.gz</code> dan <code class="language-plaintext highlighter-rouge">.tar.bz2</code>. Tidak menutup kemungkinan ia juga disimpan dalam file arsip <code class="language-plaintext highlighter-rouge">.zip</code>. Lalu, apa bedanya dengan file arsip sebelumnya?</p>
+
+<p>Dalam file arsip ini terdapat nama file yang menunjukkan bahwa berkas arsip ini menyimpan <em>binary</em> file sebuah paket file instalasi. Nama file tersebut salah satu dari <code class="language-plaintext highlighter-rouge">.configure</code> atau <code class="language-plaintext highlighter-rouge">makefile</code>. Jika terdapat nama file ini di dalamnya, kita dapat melakukan proses instalasi dengan terlebih dahulu mengekstrak keseluruhan arsip dan masuk ke direktorinya.</p>
+
+<p>Untuk langkah instalasinya, kita bagi menjadi dua berdasarkan keberadaan nama file yang dimaksudkan di dalamnya.</p>
+
+<p>Jika di dalam file arsip terdapat file <code class="language-plaintext highlighter-rouge">configure</code> maka jalankan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure
+make
+make check
+make <span class="nb">install
+</span>make clean
+make distclean
+</code></pre></div></div>
+
+<ul>
+  <li>Perintah <code class="language-plaintext highlighter-rouge">./configure</code> melakukan konfigurasi paket ke dalam sistem, <code class="language-plaintext highlighter-rouge">./</code> menunjukkan bahwa kita menjalankan file <code class="language-plaintext highlighter-rouge">configure</code> yang ada dalam direktori yang bersangkutan. Jika hanya mengetikkan <code class="language-plaintext highlighter-rouge">configure</code>, maka perintah tersebut tidak dikenali.</li>
+  <li><code class="language-plaintext highlighter-rouge">make</code> melakukan kompilasi pada paket.</li>
+  <li><code class="language-plaintext highlighter-rouge">make check</code> menjalankan tes terhadap isi paket (langkah ini bersifat opsional).</li>
+  <li><code class="language-plaintext highlighter-rouge">make install</code> menginstal paket ke dalam sistem termasuk file data dan dokumentasi jika ada.</li>
+  <li><code class="language-plaintext highlighter-rouge">make clean</code> menghapus <em>binary</em> dan <em>object</em> program dari direktori. Langkah ini dari saya sendiri jarang dilakukan, maksudnya agar sewaktu-waktu dapat diinstal ulang pada sistem yang sama. <em>Kecuali</em> jika ingin menginstalnya di sistem yang lain, maka silahkan lakukan perintah ini.</li>
+  <li><code class="language-plaintext highlighter-rouge">make distclean</code> menghapus file-file yang dibuat oleh perintah <code class="language-plaintext highlighter-rouge">./configure</code> tadi. <code class="language-plaintext highlighter-rouge">make distclean</code> ini dilakukan agar paket yang ada dalam direktori ini dapat di-<em>compile</em> di sistem operasi lain.</li>
+</ul>
+
+<p>Dari perintah yang dilakuka di atas, beberapa perintahnya cukup memakan waktu. Di saya sendiri, kadang ada paket yang ingin diinstal, saya batalkan prosesnya (menekan tombol <code class="language-plaintext highlighter-rouge">Ctrl+C</code>) sebab sepertinya ia memperlambat sistem dan memakan <em>resource</em> yang banyak. Utamanya pada langkah <code class="language-plaintext highlighter-rouge">./configure</code> dan <code class="language-plaintext highlighter-rouge">make</code>. Namun jika menurut kita tidak mengganggu kinerja sistem yang ada, lebih baik menunggunya hingga proses selesai, agar paket yang diinginkan dapat terinstal pada sistem.</p>
+
+<p>Kemudian, bagian kedua yaitu jika arsip terdapat file <code class="language-plaintext highlighter-rouge">makefile</code> di dalamnya. Kita cukup jalankan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>Dengan perintah tersebut, paket yang diinginkan pun terinstal pada sistem operasi yang digunakan. Umumnya, paket dengan <code class="language-plaintext highlighter-rouge">configure</code> atau <code class="language-plaintext highlighter-rouge">makefile</code> di dalamnya, menghasilkan program yang berjalan melalui terminal.</p>
+
+<h3 id="kesimpulan">Kesimpulan</h3>
+
+<p>OK, itulah tadi paket-paket yang ada di sistem operasi Linux. Ada yang berupa file <em>executable</em> untuk OS tertentu yaitu <code class="language-plaintext highlighter-rouge">.deb</code>, <code class="language-plaintext highlighter-rouge">.rpm</code>, <code class="language-plaintext highlighter-rouge">.tar.xz</code> dan <code class="language-plaintext highlighter-rouge">.tar.zst</code>. Ada yang berupa file <em>binary</em> <code class="language-plaintext highlighter-rouge">.bin</code>, <code class="language-plaintext highlighter-rouge">.sh</code> dan <code class="language-plaintext highlighter-rouge">.run</code>. File <em>binary</em> ini dapat dijalankan di semua varian Linux. Dalam bentuk file arsip <code class="language-plaintext highlighter-rouge">.zip</code>, <code class="language-plaintext highlighter-rouge">.tar.gz</code>, <code class="language-plaintext highlighter-rouge">.tar.xz</code>, dan <code class="language-plaintext highlighter-rouge">.tar.bz2</code>. Bahkan, ada juga yang dalam bentuk paket portabel yaitu <code class="language-plaintext highlighter-rouge">.AppImage</code>. Ini juga dapat berjalan di semua varian Linux.</p>
+
+<p>Tentunya, setelah mengenali semua ekstensi paket ini, kita akan lebih mudah memilih paket dengan ekstensi apa yang sesuai dengan OS yang digunakan.</p>
+
+<p>Sampai di sini dulu artikel kali ini, semoga dapat dipahami langkah-langkah yang diberikan. Jika masih merasa kesulitan, silahkan baca artikel terkait seperti link yang dicantumkan di atas. Jika membutuhkan informasi lebih lanjut, silahkan hubungi kontak yang ada. Terima kasih. Sampai jumpa di artikel yang lainnya.</p>
+
+
+            <hr>
+            <div class="share">
+                <p class="text-center">
+                    Share on : <br>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux.html&title=Mengenal Ekstensi Paket di Linux&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Mengenal Ekstensi Paket di Linux%20%2D%20https://muh-fajri.github.io/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux.html&text=Mengenal Ekstensi Paket di Linux"><span class="fab fa-telegram"></span></a>
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Jika saat membaca artikel di web ini, ditemukan konten yang <em>tidak tepat</em> dan <em>perlu dibenarkan</em>, segera sampaikan melalui kontak yang disediakan dan dengan senang hati akan dikoreksi demi kebaikan bersama. <br/> Terima kasih.</p>
+    </div>
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

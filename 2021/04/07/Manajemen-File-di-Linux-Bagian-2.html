@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Manajemen File di Linux - Bagian 2</title>
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Manajemen File di Linux - Bagian 2</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Manajemen File di Linux - Bagian 2" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-07T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Manajemen File di Linux - Bagian 2" />
+<script type="application/ld+json">
+{"datePublished":"2021-04-07T00:00:00+08:00","dateModified":"2021-04-07T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Manajemen File di Linux - Bagian 2","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+    
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/blog/"><span class="fas fa-book-reader"></span> Blog</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Manajemen File di Linux - Bagian 2</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="card">
+        <div class="card-body">
+            <h2>Manajemen File di Linux - Bagian 2</h2>
+            <div class="mb-3">
+              
+                
+                    <a href="/tag/Linux" class="text-white badge"><span class="fas fa-tag"></span> Linux</a>
+<!--                    <a href="/tag/Linux" class="text-white badge"><code class="highligher-rouge"><nobr>Linux</nobr></code></a>-->
+              
+                
+                    <a href="/tag/Terminal" class="text-white badge"><span class="fas fa-tag"></span> Terminal</a>
+<!--                    <a href="/tag/Terminal" class="text-white badge"><code class="highligher-rouge"><nobr>Terminal</nobr></code></a>-->
+              
+            </div>
+            <div class="post-attribute d-sm-flex">
+                <div class="author-post">
+                    <img src="/assets/images/author.jpg" alt="author">
+                    <span class="fas fa-user"></span>
+                    <a href="/author.html">Muhammad Fajri</a>
+                </div>
+                <div class="date-post">
+                    <span class="fas fa-calendar-alt"></span>
+                    <span>Wednesday, 07 April 2021</span>
+                </div>
+            </div>
+
+            <p>Bismillahirrahmanirrahim.</p>
+
+<p>Kembali lagi kita lanjutkan artikel mengenai manajemen file di linux. Jika belum membaca artikel sebelumnya yang merupakan bagian awal dari artikel ini, silahkan kunjungi melalui link berikut ini.</p>
+
+<p class="featured-link">Baca <a href="Manajemen-File-di-Linux.html">Manajemen File di Linux</a></p>
+
+<p>Di artikel ini kita akan membahas secara singkat mengenai manajemen file di Linux termasuk membuat, mengubah, dan menghapus file dan direktori.</p>
+
+<p>Berikut ini kita masuk pada bagian pertama.</p>
+
+<h3 id="membuat-file-baru">Membuat File Baru</h3>
+
+<p>Untuk membuat file baru, ada beberapa cara yang bisa dilakukan. Kita akan membagi untuk file dan untuk direktori/ folder.</p>
+
+<p>Untuk file, kita dapat menggunakan perintah <code class="language-plaintext highlighter-rouge">touch</code> dan <code class="language-plaintext highlighter-rouge">nano</code>.</p>
+
+<p>Sebelum membuat file, pastikan kita berada dalam direktori yang dimaksudkan. Jika tidak, kita bisa menambahkan <em>path</em> dari file yang akan kita buat. Contoh kali ini misalnya kita ingin membuat sebuah file dengan nama <code class="language-plaintext highlighter-rouge">contoh-file.txt</code> di bawah direktori <code class="language-plaintext highlighter-rouge">Documents</code> dari user <code class="language-plaintext highlighter-rouge">user</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// jika sudah berada pada direktori yang dimaksud
+<span class="nb">touch </span>contoh-file.txt
+
+// jika saat ini kita berada pada direktori yang lain
+<span class="nb">touch</span> ~/Documents/contoh-file.txt
+</code></pre></div></div>
+
+<p>Kedua perintah di atas sama-sama dimaksudkan untuk membuat file yang sama di direktori yang sama. Hanya saja perintah pertama kita tidak perlu menentukan alamat absolut dari direktori tujuan jika kita sudah berada bada direktori tersebut. Lain halnya dengan yang bagian kedua, kita harus menuliskan <em>path</em>-nya secara lengkap jika kita tidak berada pada direktori tersebut.</p>
+
+<p>Contoh lain, jika kita ingin membuat file yang sama di direktori <code class="language-plaintext highlighter-rouge">opt</code>. Kita tahu bahwa direktori ini berada langsung di bawah direktori <em>root</em> (<code class="language-plaintext highlighter-rouge">/</code>). Ketikkan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo touch</span> /opt/contoh-file.txt
+</code></pre></div></div>
+
+<p>Perintah <code class="language-plaintext highlighter-rouge">sudo</code> ini kita tambahkan di depan <code class="language-plaintext highlighter-rouge">touch</code>, hal ini agar kita memiliki akses sebagai user <em>root</em> pada direktori <code class="language-plaintext highlighter-rouge">opt</code>. Karena cakupan hak akses untuk user yang sedang login (misalnya user <code class="language-plaintext highlighter-rouge">user</code>) yaitu hanya pada direktori <code class="language-plaintext highlighter-rouge">home</code>. Sehingga diluar dari direktori <code class="language-plaintext highlighter-rouge">home</code> ini <strong>kita harus menambahkan <code class="language-plaintext highlighter-rouge">sudo</code> di setiap perintah yang kita buat jika ingin melakukan perubahan pada direktori itu</strong>.</p>
+
+<p>Lain halnya jika kita mengatur hak kepemilikan atau hak akses untuk direktori tersebut. Kita bisa saja tidak menyertakan perintah <code class="language-plaintext highlighter-rouge">sudo</code> ini. Untuk yang ini kita jelaskan di bagian artikel ini.</p>
+
+<p>Perintah yang lain untuk membuat file baru:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano contoh-file.txt
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">nano</code> sendiri merupakan <em>text editor</em> di Linux yang berbasis <em>command line</em>. <em>Tool</em> ini umum digunakan saat kita berinteraksi dengan file-file sistem. Setelah menjalankan perintah tersebut, kita akan dihadapkan pada jendela <em>editor</em> nano ini. Jadi, perintah ini ketika dieksekusi selain membuat file baru juga kita dapat langsung mengisi file yang dibuat. Di dalam jendela <em>editor</em> nano, kita coba mengetikkan teks singkat misalnya <code class="language-plaintext highlighter-rouge">Ini contoh isi file</code>. Setelah mengetikkan teks ini, tutup editor dan simpan filenya dengan mengetikkan <code class="language-plaintext highlighter-rouge">Ctrl+X</code> lalu tekan tombol <code class="language-plaintext highlighter-rouge">y</code> lalu <code class="language-plaintext highlighter-rouge">Enter</code>. Dengan begitu, kita telah keluar dari jendela <em>editor</em> nano, dan file yang dibuat pun telah tersimpan.</p>
+
+<p>Kita lanjutkan untuk membuat direktori baru. Misalnya kita ingin membuat direktori di dalam direktori <code class="language-plaintext highlighter-rouge">user</code> dengan nama <code class="language-plaintext highlighter-rouge">Direktori-baru</code>. Kita gunakan perintah <code class="language-plaintext highlighter-rouge">mkdir</code> yaitu <em>make directory</em>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> ~/Direktori-baru
+</code></pre></div></div>
+
+<p>Perlakuan untuk direktori dan file sama. Jadi untuk membuat direktori baru jika sudah berada pada direktori yang dimaksudkan, path untuk direktori tersebut tidak perlu ditambahakan, kecuali jika kita berada di direktori yang lain. Contoh lain untuk membuat direktori dengan nama <code class="language-plaintext highlighter-rouge">Direktori baru</code>. Direktori ini berbeda dengan direktori sebelumnya. Untuk membuatnya, ketikkan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="s1">'Direktori baru'</span>
+
+//atau
+<span class="nb">mkdir</span> <span class="s2">"Direktori baru"</span>
+</code></pre></div></div>
+
+<p>Perlu diperhatikan di sini, bahwa saat kita ingin membuat sebuah direktori yang dipisahkan oleh spasi, kita perlu menambahkan tanda petik baik petik tunggal (<code class="language-plaintext highlighter-rouge">'..'</code>) atau pun ganda (<code class="language-plaintext highlighter-rouge">"..."</code>). Jika tidak ditambahkan petik, maka akan dibuat dua buah direktori baru dengan nama <code class="language-plaintext highlighter-rouge">Direktori</code> dan <code class="language-plaintext highlighter-rouge">baru</code>.</p>
+
+<h3 id="menyalin-dan-memindahkan-file">Menyalin dan Memindahkan File</h3>
+
+<p>Perintah untuk menyalin file yaitu <code class="language-plaintext highlighter-rouge">cp</code> singkatan dari <em>copy</em> dan untuk memindahkan file yaitu <code class="language-plaintext highlighter-rouge">mv</code> singkatan dari <em>move</em>.</p>
+
+<p>Misalnya, kita ingin menyalin file atau folder baru yang ada di direktori <code class="language-plaintext highlighter-rouge">~/Documents</code> yaitu <code class="language-plaintext highlighter-rouge">contoh-file.txt</code> ke direktori <code class="language-plaintext highlighter-rouge">/opt</code>. Jalankan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo cp</span> ~/Documents/contoh-file.txt /opt
+
+// atau
+<span class="nb">sudo cp</span> ~/Documents/Direktori-baru /opt
+</code></pre></div></div>
+
+<p>Cara yang sama jika file <code class="language-plaintext highlighter-rouge">contoh-file.txt</code> ingin dipindahkan ke folder <code class="language-plaintext highlighter-rouge">/opt</code> dengan mengganti <em>command</em> <code class="language-plaintext highlighter-rouge">cp</code> dengan <code class="language-plaintext highlighter-rouge">mv</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mv</span> ~/Documents/contoh-file.txt /opt
+
+// atau
+<span class="nb">sudo mv</span> ~/Documents/<span class="s2">"Direktori baru"</span> /opt
+</code></pre></div></div>
+
+<p>Perhatikan kembali untuk memindahkan direktori yang dipisahkan dengan spasi, maka harus menyertakan tanda petik. Sama seperti pembuatan direktori baru.</p>
+
+<p>Selanjutnya, khusus untuk perintah <code class="language-plaintext highlighter-rouge">cp</code> jika ingin memindahkan folder yang tidak kosong, maka harus menyertakan opsi <code class="language-plaintext highlighter-rouge">-r</code> (<em>recursive</em>) yaitu menyalin folder dan keseluruhan isinya. Karena perintah <code class="language-plaintext highlighter-rouge">cp</code> hanya menyalin folder kosong. Lebih jelasnya perhatikan contoh berikut. Misalnya <code class="language-plaintext highlighter-rouge">Direktori-baru</code> sudah ada isinya.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo cp</span> <span class="nt">-r</span> ~/Documents/Direktori-baru /opt
+</code></pre></div></div>
+
+<p>Jika tidak menyertakan opsi <code class="language-plaintext highlighter-rouge">-r</code> tersebut akan ditampilkan output <code class="language-plaintext highlighter-rouge">cp: -r not specified; omitting directory '~/Documents/Direktori-baru'</code>.</p>
+
+<p>Terakhir, untuk pengenalan penyalinan dan pemindahan file yaitu memindahkan file di direktori yang sama.
+Contoh menyalin file <code class="language-plaintext highlighter-rouge">contoh-file.txt</code> yang ada di direktori <code class="language-plaintext highlighter-rouge">~/Documents</code>. Maka kita harus memberikan nama baru pada file yang disalin. Jika tidak, maka akan ditampilkan pesan <em>error</em> <code class="language-plaintext highlighter-rouge">cp: 'contoh-file.txt' and 'contoh-file.txt' are the same file</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> ~/Documents/contoh-file.txt ~/Documents/contoh-file2.txt
+</code></pre></div></div>
+
+<p>Contoh terakhir di bagian ini, ada keterkaitan dengan bagian mengubah nama file berikut ini.</p>
+
+<h3 id="mengubah-nama-file">Mengubah Nama File</h3>
+
+<p>Untuk mengubah nama file atau folder, gunakan perintah <code class="language-plaintext highlighter-rouge">mv</code>. Perintah ini selain untuk memindahkan file juga dapat digunakan untuk mengubah nama file. Misalnya, kita ingin mengubah nama file <code class="language-plaintext highlighter-rouge">contoh-file.txt</code> menjadi <code class="language-plaintext highlighter-rouge">contoh-baru.txt</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv</span> ~/Documents/contoh-file.txt ~/Documents/contoh-baru.txt
+</code></pre></div></div>
+
+<p>Cara yang sama untuk mengubah nama folder/ direktori.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv</span> <span class="s2">"Direktori baru"</span> Direktori_baru
+</code></pre></div></div>
+
+<h3 id="menghapus-file">Menghapus File</h3>
+
+<p>Menghapus file atau folder memiliki sedikit perbedaan. Untuk file, gunakan perintah <code class="language-plaintext highlighter-rouge">rm</code>. Untuk folder <code class="language-plaintext highlighter-rouge">rmdir</code> untuk folder kosong dan <code class="language-plaintext highlighter-rouge">rm -r</code> untuk folder yang memiliki isi.</p>
+
+<p>Contoh perintahnya:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// untuk file
+<span class="nb">rm </span>contoh-file.txt
+
+// untuk folder
+<span class="nb">rmdir </span>Direktori_baru
+
+// atau
+<span class="nb">rm</span> <span class="nt">-r</span> Direktori_baru
+</code></pre></div></div>
+
+<p>Artikel berikutnya merupakan bagian terakhir mengenai manajemen file yang berkaitan dengan hak akses dan hak kepemilikan file. Untuk membacanya, silahkan buka link berikut ini.</p>
+
+<p class="featured-link">Baca <a href="Manajemen-File-di-Linux-Bagian-3.html">Manajemen File di Linux - Bagian 3</a></p>
+
+<h3 id="kesimpulan">Kesimpulan</h3>
+
+<p>Demikian artikel mengenai manajemen file di Linux. Sejauh ini kita sudah memahami hirarki direktori, alamat absolut dan relatif, berpindah direktori, memahami <em>parent</em> dan <em>child</em> direktori. Memahami cara membuat, menyalin/ memindahkan, mengubah nama dan menghapus file. Dan beberapa perintah lain seperti mencetak user aktif, melihat daftar folder/ direktori, dan mencetak <em>path</em> dari direktori yang sedang aktif.</p>
+
+<p>Semoga memberikan manfaat konten yang disajikan. Sampai jumpa dan terima kasih.</p>
+
+
+            <hr>
+            <div class="share">
+                <p class="text-center">
+                    Share on : <br>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html&title=Manajemen File di Linux - Bagian 2&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Manajemen File di Linux - Bagian 2%20%2D%20https://muh-fajri.github.io/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html&text=Manajemen File di Linux - Bagian 2"><span class="fab fa-telegram"></span></a>
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Jika saat membaca artikel di web ini, ditemukan konten yang <em>tidak tepat</em> dan <em>perlu dibenarkan</em>, segera sampaikan melalui kontak yang disediakan dan dengan senang hati akan dikoreksi demi kebaikan bersama. <br/> Terima kasih.</p>
+    </div>
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
