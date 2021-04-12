@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Struktur Dasar Kotlin" />
 <script type="application/ld+json">
-{"datePublished":"2021-04-04T00:00:00+08:00","dateModified":"2021-04-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-04-Struktur-Dasar-Kotlin.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Kotlin-04-Struktur-Dasar-Kotlin.html","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Struktur Dasar Kotlin","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Kotlin-04-Struktur-Dasar-Kotlin.html","headline":"Struktur Dasar Kotlin","dateModified":"2021-04-04T00:00:00+08:00","datePublished":"2021-04-04T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-04-Struktur-Dasar-Kotlin.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -177,11 +177,47 @@
   <li><em>semicolon</em>/titik koma (<code class="language-plaintext highlighter-rouge">;</code>) pada kotlin bersifat opsional.</li>
 </ul>
 
+<p>Beberapa perbandingan dapat dilihat dari program Kotlin dengan Java, yaitu:</p>
+<ul>
+  <li><strong>Tidak terdapat konstruksi <em>class</em></strong>. Kotlin tidak memerlukan <em>class</em> untuk mengeksekusi fungsi. Pada struktur program di atas, fungsi tersebut merupakan fungsi <em>top-level</em> (tingkatan paling atas). Sama seperti <code class="language-plaintext highlighter-rouge">public static void main()</code> pada Java, <code class="language-plaintext highlighter-rouge">fun main()</code> pada Kotlin merupakan <em>entry point</em> dari aplikasi. <em>Runtime</em> akan mencari fungsi ini ketika program Kotlin dijalankan.</li>
+  <li><strong>Fungsi main memiliki sedikit perbedaan sintaks</strong>. Fungsi didefinisikan dengan kata kunci <code class="language-plaintext highlighter-rouge">fun</code>. Tipe deklarasi ditempatkan setelah <em>identifier</em> <code class="language-plaintext highlighter-rouge">args</code>. Juga, Kotlin tidak memiliki sintaks khusus untuk mendefinisikan sebuah array. Array hanya merupakan tipe di Kotlin.</li>
+  <li><strong>Fungsi main tidak memiliki nilai <em>return</em> (nilai kembalian)</strong>. Sebenarnya terdapat nilai kembalian, hanya saja kita tidak menuliskannya seperti pada contoh di atas. Nilai kembalian default fungsi adalah <code class="language-plaintext highlighter-rouge">Unit</code> sama seperti <code class="language-plaintext highlighter-rouge">void</code> di Java.</li>
+</ul>
+
+<h3 id="membuat-file-dan-menjalankan-program">Membuat File dan Menjalankan Program</h3>
+
+<p>Untuk membuat program file pertama kita, kita akan mencoba membuat sebuah file baru. File Kotlin memiliki ekstensi file <code class="language-plaintext highlighter-rouge">.kt</code>. Buat sebuah file dengan nama <code class="language-plaintext highlighter-rouge">ProgramPertama.kt</code> di dalam direktori <code class="language-plaintext highlighter-rouge">home</code>. Kita coba buat melalui terminal.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">touch</span> ~/ProgramPertama.kt
+</code></pre></div></div>
+
+<p>Setelah selesai, buka filenya dengan <em>text editor</em> Nano. Kemudian isikan kode program seperti berikut.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Simpan file dan masuk ke direktori <code class="language-plaintext highlighter-rouge">home</code> (asumsi bahwa sebelumnya kita berada di direktori lain). Jalankan <em>compiler</em> Kotlin dengan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kotlinc ProgramPertama.kt <span class="nt">-include-runtime</span> <span class="nt">-d</span> ProgramPertama.jar
+</code></pre></div></div>
+
+<p>Kemudian perintah berikutnya:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kotlin ProgramPertama.jar
+</code></pre></div></div>
+
+<p>Jika berhasil, output program Kotlin pun ditampilkan pada terminal.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello world!
+</code></pre></div></div>
+
+<p>Dengan tampilnya output program yang telah dibuat, kita telah berhasil menjalankan program Kotlin melalui terminal. Jika ingin membuat program dengan langkah yang lebih sederhana, kita dapat menggunakan IDE seperti Eclipse, Intellij, atau Android Studio 3.</p>
+
+<p>Sebelumnya, kita telah memasang <em>extension</em> melalui VSCode. Kita dapat membuat program Kotlin dan menjalankan programnya di sana.</p>
+
 <p>Akhirnya kita sudah berada di akhir halaman ini. Pada pembahasan struktur dasar Kotlin ini kita sudah memahami struktur dasar sebuah program, memahami blok program dan bagaimana menampilkan sebuah nilai ke layar. Semoga kita dapat memahaminya. Semoga bermanfaat. Terima kasih.</p>
 
 <h3 id="referensi">Referensi</h3>
 <ul>
   <li>Modul Pemrograman Mobile (Mobile Programming).</li>
+  <li>Hagos, Ted. 2018. <em>Learn Android Studio 3 with Kotlin: Efficient Android App Development</em>. Apress: Manila.</li>
 </ul>
 
 
@@ -204,7 +240,7 @@
 
         <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
     <div class="attention">
-        <p><span class="fas fa-info-circle"></span> Jika saat membaca artikel di web ini, ditemukan konten yang <em>tidak tepat</em> dan <em>perlu dibenarkan</em>, segera sampaikan melalui kontak yang disediakan dan dengan senang hati akan dikoreksi demi kebaikan bersama. <br/> Terima kasih.</p>
+        <p><span class="fas fa-info-circle"></span> Menemukan konten yang <em>tidak tepat</em>? Ada saran atau yang lainnya? Silahkan sampaikan melalui kontak yang disediakan agar dapat dilakukan pembaharuan. <br/> Terima kasih.</p>
     </div>
     <ul>
         <li><a href="/contact.html">Contact</a></li>

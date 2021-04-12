@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Instalasi Kotlin" />
 <script type="application/ld+json">
-{"datePublished":"2021-04-04T00:00:00+08:00","dateModified":"2021-04-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-02-Instalasi-Kotlin.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Kotlin-02-Instalasi-Kotlin.html","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Instalasi Kotlin","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Kotlin-02-Instalasi-Kotlin.html","headline":"Instalasi Kotlin","dateModified":"2021-04-04T00:00:00+08:00","datePublished":"2021-04-04T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-02-Instalasi-Kotlin.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -118,6 +118,10 @@
 
 <p>Kotlin merupakan bahasa pemrograman modern yang banyak digunakan oleh Android developer profesional. Kotlin saat ini secara resmi digunakan dalam pengembangan aplikasi Android yang menggantikan Java sebagai pendahulunya. Namun, hingga saat ini Java pun masih banyak digunakan dalam pengembangan aplikasi termasuk desktop dan mobile.</p>
 
+<p>Untuk menginstal Kotlin, dapat dilakukan dengan cara mengunduh file zip atau instalasi melalui SDKMAN.</p>
+
+<p>Di artikel ini, kita akan lakukan instalasi Kotlin melalui SDKMAN.</p>
+
 <h3 id="instal-sdk-man">Instal SDK Man</h3>
 
 <p>Sebelum melakukan instalasi Kotlin, pertama yang harus diinstal yaitu SDK Man. Kotlin membutuhkan SDK Man agar dapat berfungsi/berjalan.</p>
@@ -205,15 +209,19 @@ Then issue the following <span class="nb">command</span>:
 </span>Enjoy!!!
 </code></pre></div></div>
 
-<p>Dari tampilan di atas, dapat dilihat bahwa instalasi SDK Man terlah berhasil.</p>
+<p>Dari tampilan di atas, dapat dilihat bahwa instalasi SDKMAN terlah berhasil.</p>
 
 <p>Setelah selesai terinstal, buka terminal baru dan jalankan perintah:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash ~/.sdkman/bin/sdkman-init.sh
 </code></pre></div></div>
 
-<p>Perintah tersebut untuk memulai (menginisialisasi) SDK Man.</p>
+<blockquote>
+  <p>Membuka tab terminal baru ditujukan agar hasil instalasi SDKMAN dapat dikenali oleh sistem.</p>
+</blockquote>
 
-<p>Buka kembali terminal baru dan periksa versi SDK Man yang terinstal pada sistem dengan menjalankan perintah:</p>
+<p>Perintah tersebut untuk memulai (menginisialisasi) SDKMAN.</p>
+
+<p>Buka kembali terminal baru dan periksa versi SDKMAN yang terinstal pada sistem dengan menjalankan perintah:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sdk version
 </code></pre></div></div>
 
@@ -285,6 +293,34 @@ WARNING: Use <span class="nt">--illegal-access</span><span class="o">=</span>war
 WARNING: All illegal access operations will be denied <span class="k">in </span>a future release
 </code></pre></div></div>
 
+<h3 id="mencoba-baris-kode-kotlin">Mencoba Baris Kode Kotlin</h3>
+
+<p>Setelah menginstal Kotlin, kita dapat mencoba beberapa baris kode singkat melalui jendela terminal untuk mengetes <em>compiler</em> Kotlin berjalan dengan baik. Jalankan perintah <code class="language-plaintext highlighter-rouge">kotlinc</code> pada terminal.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kotlinc
+</code></pre></div></div>
+
+<p>Setelah dieksekusi kita akan dihadapkan pada tampilan selamat datang dan juga baris <em>triple chevron</em> (lambang lebih dari).</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to Kotlin version 1.4.31 <span class="o">(</span>JRE 15.0.2+7<span class="o">)</span>
+Type :help <span class="k">for </span><span class="nb">help</span>, :quit <span class="k">for </span>quit
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div></div>
+
+<p>Buat sebuah baris kode singkat seperti berikut.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> println<span class="o">(</span><span class="s2">"Hai! Apa kabar?"</span><span class="o">)</span>
+Hai! Apa kabar?
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span><span class="o">(</span>i <span class="k">in </span>0..2<span class="o">)</span> <span class="o">{</span>
+...println<span class="o">(</span>i<span class="o">)</span>
+...<span class="o">}</span>
+0
+1
+2
+</code></pre></div></div>
+
+<p>Mencoba kode Kotlin seperti ini sangat berguna untuk mengetes beberapa baris kode singkat tanpa perlu satu listing kode yang utuh, tanpa membuat file dan tanpa menunggu proses kompilasi.</p>
+
+<p>Di artikel berikutnya, kita akan memahami pembuatan sintaks program utuh dengan bahasa Kotlin.</p>
+
 <h3 id="instal-ekstensi-kotlin">Instal Ekstensi Kotlin</h3>
 
 <p>Ekstensi yang dimaksudkan di sini adalah ekstensi untuk IDE VSCode. Ekstensi yang dibutuhkan oleh kotlin adalah <a href="https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.Kotlin"><strong>Kotlin Language</strong></a> dan <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner"><strong>Code Runner</strong></a>.</p>
@@ -327,6 +363,7 @@ WARNING: All illegal access operations will be denied <span class="k">in </span>
 
 <ul>
   <li><a href="https://www.petanikode.com/kotlin-vscode/">Pemrograman Kotlin dengan Visual Studio Code</a></li>
+  <li>Hagos, Ted. 2018. <em>Learn Android Studio 3 with Kotlin: Efficient Android App Development</em>. Apress: Manila.</li>
 </ul>
 
 
@@ -349,7 +386,7 @@ WARNING: All illegal access operations will be denied <span class="k">in </span>
 
         <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
     <div class="attention">
-        <p><span class="fas fa-info-circle"></span> Jika saat membaca artikel di web ini, ditemukan konten yang <em>tidak tepat</em> dan <em>perlu dibenarkan</em>, segera sampaikan melalui kontak yang disediakan dan dengan senang hati akan dikoreksi demi kebaikan bersama. <br/> Terima kasih.</p>
+        <p><span class="fas fa-info-circle"></span> Menemukan konten yang <em>tidak tepat</em>? Ada saran atau yang lainnya? Silahkan sampaikan melalui kontak yang disediakan agar dapat dilakukan pembaharuan. <br/> Terima kasih.</p>
     </div>
     <ul>
         <li><a href="/contact.html">Contact</a></li>

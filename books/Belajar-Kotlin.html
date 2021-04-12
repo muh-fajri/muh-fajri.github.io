@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Belajar Kotlin" />
 <script type="application/ld+json">
-{"datePublished":"2021-04-04T00:00:00+08:00","dateModified":"2021-04-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Belajar-Kotlin.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Belajar-Kotlin.html","@type":"BlogPosting","description":"Belajar bahasa pemrograman yang digunakan dalam pengembangan aplikasi mobile untuk perangkat Android.","headline":"Belajar Kotlin","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Belajar-Kotlin.html","headline":"Belajar Kotlin","dateModified":"2021-04-04T00:00:00+08:00","datePublished":"2021-04-04T00:00:00+08:00","@type":"BlogPosting","description":"Belajar bahasa pemrograman yang digunakan dalam pengembangan aplikasi mobile untuk perangkat Android.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Belajar-Kotlin.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -124,7 +124,9 @@
     
 </p>
 
-<p>Selain sebagai bahasa pemrograman resmi untuk pengembangan aplikasi Android, Kotlin juga merupakan bahasa yang multiplatform, dapat berjalan di desktop, enterprise bahkan web.</p>
+<p>Selain sebagai bahasa pemrograman resmi untuk pengembangan aplikasi Android, Kotlin juga merupakan bahasa yang multiplatform, dapat berjalan di desktop, enterprise, web dan IoT.</p>
+
+<p><em>Interoperable</em> dengan Java, membuatnya memberikan kemudahan bagi Java <em>developer</em> untuk beralih ke Kotlin dengan penyesuaian yang lebih mudah. Tidak hanya itu, di <em>web</em> dapat diintegrasikan dengan JavaScript dengan meng-<em>import</em> <em>library-library</em> yang diperlukan.</p>
 
 <!-- 
 - **[01 April 2021]** - [Instalasi Web Server](.html)
@@ -147,8 +149,6 @@
 
 - **[04 April 2021]** - [Struktur Dasar Kotlin](.html)
 
-- **[05 April 2021]** - [Variabel dan Tipe Data Kotlin](.html)
-
 - **[05 April 2021]** - [Struktur File Laravel](.html)
 
 - **[05 April 2021]** - [CLI Artisan Laravel](.html)
@@ -156,6 +156,20 @@
 - **[05 April 2021]** - [Merancang Database dengan Mudah dengan Migration Laravel](.html)
 
 - **[05 April 2021]** - [Mengatur Request dengan Router Laravel](.html)
+
+- **[09 April 2021]** - [Variabel dan Tipe Data Kotlin](.html)
+
+- **[11 April 2021]** - [Operator dan Simbol pada Kotlin](.html)
+
+- **[12 April 2021]** - [Komentar pada Kotlin](.html)
+
+- **[12 April 2021]** - [String dan String Template Kotlin](.html)
+
+- **[12 April 2021]** - [Percabangan pada Kotlin](.html)
+
+- **[12 April 2021]** - [Perulangan pada Kotlin](.html)
+
+- **[12 April 2021]** - [Exception Handling Kotlin](.html)
  -->
 
 <h3 id="mengenal-bahasa-kotlin">Mengenal Bahasa Kotlin</h3>
@@ -164,7 +178,19 @@
   <li><a href="Kotlin-01-Instalasi-JDK.html"><strong>[04 April 2021]</strong> - Instalasi JDK</a></li>
   <li><a href="Kotlin-02-Instalasi-Kotlin.html"><strong>[04 April 2021]</strong> - Instalasi Kotlin</a></li>
   <li><a href="Kotlin-03-Pengenalan-Kotlin.html"><strong>[04 April 2021]</strong> - Pengenalan Kotlin</a></li>
+</ul>
+
+<h3 id="dasar-dasar-kotlin">Dasar-dasar Kotlin</h3>
+
+<ul>
   <li><a href="Kotlin-04-Struktur-Dasar-Kotlin.html"><strong>[04 April 2021]</strong> - Struktur Dasar Kotlin</a></li>
+  <li><a href="Kotlin-05-Variabel-dan-Tipe-Data-Kotlin.html"><strong>[09 April 2021]</strong> - Variabel dan Tipe Data Kotlin</a></li>
+  <li><a href="Kotlin-06-Operator-dan-Simbol-pada-Kotlin.html"><strong>[11 April 2021]</strong> - Operator dan Simbol pada Kotlin</a></li>
+  <li><a href="Kotlin-07-Komentar-pada-Kotlin.html"><strong>[12 April 2021]</strong> - Komentar pada Kotlin</a></li>
+  <li><a href="Kotlin-08-String-dan-String-Template-Kotlin.html"><strong>[12 April 2021]</strong> - String dan String Template Kotlin</a></li>
+  <li><a href="Kotlin-09-Percabangan-pada-Kotlin.html"><strong>[12 April 2021]</strong> - Percabangan pada Kotlin</a></li>
+  <li><a href="Kotlin-10-Perulangan-pada-Kotlin.html"><strong>[12 April 2021]</strong> - Perulangan pada Kotlin</a></li>
+  <li><a href="Kotlin-11-Exception-Handling-Kotlin.html"><strong>[12 April 2021]</strong> - Exception Handling Kotlin</a></li>
   <li>dilanjutkan kemudian …</li>
 </ul>
 
@@ -188,7 +214,7 @@
 
         <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
     <div class="attention">
-        <p><span class="fas fa-info-circle"></span> Jika saat membaca artikel di web ini, ditemukan konten yang <em>tidak tepat</em> dan <em>perlu dibenarkan</em>, segera sampaikan melalui kontak yang disediakan dan dengan senang hati akan dikoreksi demi kebaikan bersama. <br/> Terima kasih.</p>
+        <p><span class="fas fa-info-circle"></span> Menemukan konten yang <em>tidak tepat</em>? Ada saran atau yang lainnya? Silahkan sampaikan melalui kontak yang disediakan agar dapat dilakukan pembaharuan. <br/> Terima kasih.</p>
     </div>
     <ul>
         <li><a href="/contact.html">Contact</a></li>

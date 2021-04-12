@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/tango.css">
-    <title>Pengenalan Kotlin</title>
+    <title>Komentar pada Kotlin</title>
     <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Pengenalan Kotlin</title>
+<title>Komentar pada Kotlin</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Pengenalan Kotlin" />
+<meta property="og:title" content="Komentar pada Kotlin" />
 <meta name="author" content="Muhammad Fajri" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Bismillahirrahmanirrahim." />
 <meta property="og:description" content="Bismillahirrahmanirrahim." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-04T00:00:00+08:00" />
+<meta property="article:published_time" content="2021-04-12T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Pengenalan Kotlin" />
+<meta property="twitter:title" content="Komentar pada Kotlin" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Kotlin-03-Pengenalan-Kotlin.html","headline":"Pengenalan Kotlin","dateModified":"2021-04-04T00:00:00+08:00","datePublished":"2021-04-04T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-03-Pengenalan-Kotlin.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Muhammad Fajri"},"url":"/books/Kotlin-07-Komentar-pada-Kotlin.html","headline":"Komentar pada Kotlin","dateModified":"2021-04-12T00:00:00+08:00","datePublished":"2021-04-12T00:00:00+08:00","@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-07-Komentar-pada-Kotlin.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -95,13 +95,13 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
         <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
-        <li class="text-dark breadcrumb-item active" aria-current="page">Pengenalan Kotlin</li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Komentar pada Kotlin</li>
     </ol>
 </section>
 <section id="post">
     <div class="card">
         <div class="card-body">
-            <h2>Pengenalan Kotlin</h2>
+            <h2>Komentar pada Kotlin</h2>
             <div class="post-attribute d-sm-flex">
                 <div class="author-post">
                     <img src="/assets/images/author.jpg" alt="author">
@@ -110,77 +110,92 @@
                 </div>
                 <div class="date-post">
                     <span class="fas fa-calendar-alt"></span>
-                    <span>Sunday, 04 April 2021</span>
+                    <span>Monday, 12 April 2021</span>
                 </div>
             </div>
 
             <p>Bismillahirrahmanirrahim.</p>
 
-<p>Sebelumnya kita sudah mengikuti langkah-langkah instalasi <em>extension</em> di VSCode agar dapat melakukan pemrograman dengan bahasa Kotlin.</p>
+<p>Sama seperti bahasa pemrograman lainnya, di Kotlin pun kita dapat membuat komentar. Beberapa bahasa pemrograman memiliki cara penulisan komentar yang sama.</p>
 
-<p>Kali ini kita mulai memasuki tahapan awal belajar Kotlin. Tentu alangkah baiknya kita pahami terlebih dahulu Kotlin itu sendiri sebagai pengenalan awal.</p>
+<p>Komentar digunakan untuk memberikan penjelasan pada program yang dibuat. Dengan komentar ini pula orang lain akan lebih mudah memahami saat membaca program yang kita buat.</p>
 
-<h3 id="pengenalan-kotlin">Pengenalan Kotlin</h3>
+<p>Saat menjalankan program, komentar ini tidak akan dieksekusi. Dengan kata lain, ia akan diabaikan oleh <em>compiler</em>.</p>
 
-<p>Kotlin merupakan bahasa pemrograman baru yang menargetkan platform Java. Programnya berjalan pada JVM (Java Virtual Machine), yang menempatkannya di dalam perusahaan bahasa pemrograman seperti Groovy, Scala, Jython, dan Clojure.</p>
+<h3 id="komentar-satu-baris">Komentar Satu Baris</h3>
 
-<p>Kotlin dari perusahaan JetBrains, yang menciptakan Intellij, PyCharm, WebStorm, ReSharper, dan utilitas pengembangan yang lainnya. Pada tahun 2011, JetBrains memperkenalkan Kotlin yang dalam satu tahun ke depan dilisensikan secara <em>open-source</em> di bawah lisensi Apache versi 2. Pada I/O Google pada tahun 2017, Google mengumumkan dukungan <em>class</em> pertama untuk Kotlin pada platform Android dan bahwa Kotlin bahasa pemrograman yang direkomendasikan untuk pengembangan aplikasi Android. Kotlin didesain agar terintegrasi dengan Java. Jika penasaran dari mana asal nama Kotlin, nama tersebut merupakan nama sebuah pulau di dekat St. Petersburg, Rusia, yang sebagian besar anggota tim Kotlin berada di sini. Menurut Andrey Breslav dari JetBrains, Kotlin diberi nama dari sebuah pulau, sama seperti Java yang diberi nama dari pulau Jawa yang ada di Indonesia. Meskipun begitu, harus dipahami bahwa sejarah bahasa pemrograman Java memuat referensi-referensi pemberian nama dari kopi daripada dari nama pulau tersebut.</p>
+<p>Komentar ini dibuat untuk memberikan keterangan pada suatu baris program. Ditulis dengan menggunakan simbol dua garis miring (<code class="language-plaintext highlighter-rouge">//</code>). <em>Compiler</em> akan mengabaikan semua apa yang dituliskan di sebelah kanan simbol ini hingga akhir baris tersebut. Sedangkan yang di sebelah kiri simbol ini akan tetap dieksekusi oleh <em>compiler</em>.</p>
 
-<h3 id="kenapa-belajar-kotlin">Kenapa Belajar Kotlin</h3>
-<ul>
-  <li>Kotlin merupakan bahasa yang <em>powerfull</em> tentu cocok bagi <em>developer</em> dalam membuat aplikasi Android.</li>
-  <li>Open Source, bebas digunakan tanpa adanya biaya dan dapat dikembangkan sesuai dengan kebutuhan. Lisensi yang dimiliki yaitu <strong>Apache 2.0</strong>. Silahkan menuju link <a href="http://www.apache.org/licenses/LICENSE-2.0">Lisensi Apache Versi 2.0</a> untuk membaca lebih lanjut.</li>
-  <li>Mudah dipelajari, memiliki kemiripan sintaks dengan bahasa Java.</li>
-  <li>Bahasanya sederhana dan ringkas.</li>
-  <li>Kotlin lebih ringan daripada Java.</li>
-  <li>Terintegrasi dengan Android Studio. Sejak Android Studio versi 3.0 kita tidak memerlukan <em>plugin</em> tambahan lagi untuk dapat menjalankan Kotlin.</li>
-  <li><em>Interoperable</em>, dirancang agar dapat terintegrasi dengan bahasa lain seperti bahasa Java.</li>
-  <li>Kotlin multiplatform, dapat digunakan untuk mengembangkan aplikasi <em>mobile</em> (Android), desktop, web, dan bahkan IoT (Internet of Things).</li>
-</ul>
+<p>Contoh pembuatan komentar</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Pernyataan ini akan diabaikan</span>
+<span class="kd">var</span> <span class="py">a</span> <span class="p">=</span> <span class="mi">0</span> <span class="c1">// Pernyataan ini pun akan diabaikan</span>
+</code></pre></div></div>
 
-<h3 id="perusahaan-yang-menggunakan-kotlin">Perusahaan yang Menggunakan Kotlin</h3>
+<h3 id="komentar-multi-baris">Komentar Multi Baris</h3>
 
-<p>Berikut daftar perusahaan global yang menggunakan Kotlin. Dikutip dari website resminya.</p>
+<p>Komentar multi baris juga dikenal sebagai komentar C-style. Disebut seperti itu karena komentar ini pada dasarnya dari bahasa C.</p>
 
-<p><img src="/assets/images/webtech/kotlin-company's-used.png" alt="Perusahaan Pengguna Kotlin" /></p>
+<p>Contoh:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Apapun yang ada di antara pasangan tanda
+garis miring dan asterisk akan diabaikan oleh
+compiler
+*/</span>
+</code></pre></div></div>
 
-<p>Beberapa perusahaan tersebut adalah:</p>
-<ul>
-  <li><strong>Netflix</strong>, platform <em>video streaming / TV Show</em>.</li>
-  <li><strong>Wordpress</strong>, penyedia CMS (Content Manajemen System) untuk website.</li>
-  <li><strong>Twitter</strong>, platform media sosial.</li>
-  <li><strong>We Chat</strong>, platform <em>chatting messenger</em>.</li>
-  <li><strong>Gojek</strong>, platform ojek online.</li>
-  <li><strong>Adobe</strong>, perusahaan multimedia.</li>
-</ul>
+<p>Contoh lain:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">a</span> <span class="p">=</span> <span class="mi">100</span>
+    <span class="n">a</span> <span class="p">+=</span> <span class="n">a</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="p">-=</span> <span class="n">a</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="p">*=</span> <span class="n">a</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="cm">/*    a /= a
+    println(a)
+*/</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<h3 id="kotlin-multiplatform">Kotlin Multiplatform</h3>
-<ul>
-  <li><strong>Enterprise</strong>, gunakan Kotlin untuk apapun pengembangan Enterprise Java EE.</li>
-  <li><strong>Application Server</strong>, tidak peduli apapun teknologinya, 100% kompatibel dengan semua framework JVM (Java Virtual Machine).</li>
-  <li><strong>JavaScript</strong>, tuliskan kode di Kotlin dan targetkan JavaScript untuk berjalan di Node.js atau di browser.</li>
-  <li><strong>Android Development</strong>, tidak ada kinerja yang terpengaruhi, <em>runtime</em> yang sangat kecil.</li>
-  <li><strong>Web</strong>, apakah kita ingin mengetikkan <em>builder</em> HTML, CSS atau hanya pengembangan <em>plain web</em> / web biasa.</li>
-</ul>
+<p>Dari contoh di atas, dapat lihat bahwa komentar dapat digunakan agar baris kode yang dibuat tidak dieksekusi oleh <em>compiler</em>. Alasannya apakah baris kode tersebut dapat memuat <em>error</em> jika dieksekusi atau untuk memberikan keterangan bahwa terdapat cara lain untuk membuat baris kode tersebut.</p>
 
-<p>Demikian sedikit pemaparan mengenai kotlin sebagai pengenalan, semoga kita dapat memahaminya dan bisa mengetahui alasan-alasan Kotlin menjadi bahasa pemrograman modern utamanya pada pengembangan aplikasi untuk mobile yaitu Android. Terima kasih.</p>
+<h3 id="komentar-dengan-kdoc">Komentar dengan KDoc</h3>
+
+<p>KDoc, sama seperti Javadoc pada Java, digunakan untuk membuat komentar yang diantarai oleh <code class="language-plaintext highlighter-rouge">/**</code> dan <code class="language-plaintext highlighter-rouge">*/</code>. Komentar ini mirip seperti komentar multi baris, akan tetapi komentar ini digunakan untuk menyediakan dokumentasi API pada kode Kotlin.</p>
+
+<p>Berikut contoh programnya.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+This is an example documentationusing KDoc syntax
+
+@author Muhammad Fajri
+@constructor
+*/</span>
+<span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/**
+    This is another KDoc comment
+    */</span>
+    <span class="k">fun</span> <span class="nf">foo</span><span class="p">():</span> <span class="nc">Int</span> <span class="p">{</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h3 id="referensi">Referensi</h3>
-<ul>
-  <li>Modul Pemrograman Mobile (<em>Mobile Programming</em>).</li>
+<ol>
+  <li>Modul Pemrograman Mobile (Mobile Programming).</li>
   <li>Hagos, Ted. 2018. <em>Learn Android Studio 3 with Kotlin: Efficient Android App Development</em>. Apress: Manila.</li>
-</ul>
+</ol>
 
 
             <hr>
             <div class="share">
                 <p class="text-center">
                     Share on : <br>
-                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-03-Pengenalan-Kotlin.html"><span class="fab fa-facebook"></span></a>
-                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-03-Pengenalan-Kotlin.html"><span class="fab fa-twitter"></span></a>
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-03-Pengenalan-Kotlin.html&title=Pengenalan Kotlin&summary="><span class="fab fa-linkedin"></span></a>
-                    <a href="https://api.whatsapp.com/send?text=Pengenalan Kotlin%20%2D%20https://muh-fajri.github.io/books/Kotlin-03-Pengenalan-Kotlin.html"><span class="fab fa-whatsapp"></span></a>
-                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-03-Pengenalan-Kotlin.html&text=Pengenalan Kotlin"><span class="fab fa-telegram"></span></a>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html&title=Komentar pada Kotlin&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Komentar pada Kotlin%20%2D%20https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html&text=Komentar pada Kotlin"><span class="fab fa-telegram"></span></a>
                 </p>
             </div>
             <hr>
