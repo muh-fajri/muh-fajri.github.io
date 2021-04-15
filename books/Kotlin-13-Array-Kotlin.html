@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/tango.css">
-    <title>Komentar pada Kotlin</title>
+    <title>Array Kotlin</title>
     <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Komentar pada Kotlin</title>
+<title>Array Kotlin</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Komentar pada Kotlin" />
+<meta property="og:title" content="Array Kotlin" />
 <meta name="author" content="Muhammad Fajri" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Bismillahirrahmanirrahim." />
 <meta property="og:description" content="Bismillahirrahmanirrahim." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-12T00:00:00+08:00" />
+<meta property="article:published_time" content="2021-04-14T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Komentar pada Kotlin" />
+<meta property="twitter:title" content="Array Kotlin" />
 <script type="application/ld+json">
-{"url":"/books/Kotlin-07-Komentar-pada-Kotlin.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-07-Komentar-pada-Kotlin.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Komentar pada Kotlin","dateModified":"2021-04-12T00:00:00+08:00","datePublished":"2021-04-12T00:00:00+08:00","@context":"https://schema.org"}</script>
+{"url":"/books/Kotlin-13-Array-Kotlin.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-13-Array-Kotlin.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Array Kotlin","dateModified":"2021-04-14T00:00:00+08:00","datePublished":"2021-04-14T00:00:00+08:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -95,13 +95,13 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
         <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
-        <li class="text-dark breadcrumb-item active" aria-current="page">Komentar pada Kotlin</li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Array Kotlin</li>
     </ol>
 </section>
 <section id="post">
     <div class="card">
         <div class="card-body">
-            <h2>Komentar pada Kotlin</h2>
+            <h2>Array Kotlin</h2>
             <div class="post-attribute d-sm-flex">
                 <div class="author-post">
                     <img src="/assets/images/author.jpg" alt="author">
@@ -110,80 +110,51 @@
                 </div>
                 <div class="date-post">
                     <span class="fas fa-calendar-alt"></span>
-                    <span>Monday, 12 April 2021</span>
+                    <span>Wednesday, 14 April 2021</span>
                 </div>
             </div>
 
             <p>Bismillahirrahmanirrahim.</p>
 
-<p>Sama seperti bahasa pemrograman lainnya, di Kotlin pun kita dapat membuat komentar. Beberapa bahasa pemrograman memiliki cara penulisan komentar yang sama.</p>
+<p>Array digunakan untuk menyimpan kumpulan data yang memiliki tipe data yang sama.</p>
 
-<p>Komentar digunakan untuk memberikan penjelasan pada program yang dibuat. Dengan komentar ini pula orang lain akan lebih mudah memahami saat membaca program yang kita buat.</p>
-
-<p>Saat menjalankan program, komentar ini tidak akan dieksekusi. Dengan kata lain, ia akan diabaikan oleh <em>compiler</em>.</p>
-
-<h3 id="komentar-satu-baris">Komentar Satu Baris</h3>
-
-<p>Komentar ini dibuat untuk memberikan keterangan pada suatu baris program. Ditulis dengan menggunakan simbol dua garis miring (<code class="language-plaintext highlighter-rouge">//</code>). <em>Compiler</em> akan mengabaikan semua apa yang dituliskan di sebelah kanan simbol ini hingga akhir baris tersebut. Sedangkan yang di sebelah kiri simbol ini akan tetap dieksekusi oleh <em>compiler</em>.</p>
-
-<p>Contoh pembuatan komentar</p>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Pernyataan ini akan diabaikan</span>
-<span class="kd">var</span> <span class="py">a</span> <span class="p">=</span> <span class="mi">0</span> <span class="c1">// Pernyataan ini pun akan diabaikan</span>
+<p>Untuk membuat array di Kotlin, sama seperti pembuatan variabel biasa, terdapat deklarasi dan inisialisasi. Berikut contoh pembuatan array.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">myArray</span> <span class="p">=</span> <span class="nf">arrayOf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="komentar-multi-baris">Komentar Multi Baris</h3>
+<p>Sedikit berbeda dengan variabel pembuatan variabel biasa, pembuatan array diinisialisasi dalam sebuah <em>function</em> dengan nama <code class="language-plaintext highlighter-rouge">arrayOf()</code>. Pada contoh di atas, array tersebut menampung 3 buah nilai dalam tipe data bilangan (<em>integer</em>).</p>
 
-<p>Komentar multi baris juga dikenal sebagai komentar C-style. Disebut seperti itu karena komentar ini pada dasarnya dari bahasa C.</p>
-
-<p>Contoh:</p>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Apapun yang ada di antara pasangan tanda
-garis miring dan asterisk akan diabaikan oleh
-compiler
-*/</span>
-</code></pre></div></div>
-
-<p>Contoh lain:</p>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="py">a</span> <span class="p">=</span> <span class="mi">100</span>
-    <span class="n">a</span> <span class="p">+=</span> <span class="n">a</span>
-    <span class="nf">println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">a</span> <span class="p">-=</span> <span class="n">a</span>
-    <span class="nf">println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">a</span> <span class="p">*=</span> <span class="n">a</span>
-    <span class="nf">println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="cm">/*    a /= a
-    println(a)
-*/</span>
+<p>Untuk mengakses nilai sebuah array, kita akses berdasarkan indeksnya. Berikut cara mengakses data dari contoh di atas dalam sebuah blok kode perulangan dengan <code class="language-plaintext highlighter-rouge">for</code>.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">array</span> <span class="k">in</span> <span class="n">myArray</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Dari contoh di atas, dapat lihat bahwa komentar dapat digunakan agar baris kode yang dibuat tidak dieksekusi oleh <em>compiler</em>. Alasannya apakah baris kode tersebut dapat memuat <em>error</em> jika dieksekusi atau untuk memberikan keterangan bahwa terdapat cara lain untuk membuat baris kode tersebut.</p>
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
+2
+3
+</code></pre></div></div>
 
-<h3 id="komentar-dengan-kdoc">Komentar dengan KDoc</h3>
+<p>Jika ingin mengakses data array pada indeks tertentu tanpa melalui perulangan, kita ubah menjadi:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">println</span><span class="p">(</span><span class="n">myArray</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</code></pre></div></div>
 
-<p>KDoc, sama seperti Javadoc pada Java, digunakan untuk membuat komentar yang diantarai oleh <code class="language-plaintext highlighter-rouge">/**</code> dan <code class="language-plaintext highlighter-rouge">*/</code>. Komentar ini mirip seperti komentar multi baris, akan tetapi komentar ini digunakan untuk menyediakan dokumentasi API pada kode Kotlin.</p>
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+</code></pre></div></div>
 
-<p>Berikut contoh programnya.</p>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
-This is an example documentationusing KDoc syntax
+<p>Atau dapat diakses dengan menggunakan function <code class="language-plaintext highlighter-rouge">get()</code>.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">println</span><span class="p">(</span><span class="n">myArray</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</code></pre></div></div>
 
-@author Muhammad Fajri
-@constructor
-*/</span>
-<span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/**
-    This is another KDoc comment
-    */</span>
-    <span class="k">fun</span> <span class="nf">foo</span><span class="p">():</span> <span class="nc">Int</span> <span class="p">{</span>
-        
-    <span class="p">}</span>
-<span class="p">}</span>
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
 </code></pre></div></div>
 
 <h3 id="referensi">Referensi</h3>
 <ol>
   <li>Modul Pemrograman Mobile (Mobile Programming).</li>
-  <li>Hagos, Ted. 2018. <em>Learn Android Studio 3 with Kotlin: Efficient Android App Development</em>. Apress: Manila.</li>
 </ol>
 
 
@@ -191,11 +162,11 @@ This is an example documentationusing KDoc syntax
             <div class="share">
                 <p class="text-center">
                     Share on : <br>
-                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html"><span class="fab fa-facebook"></span></a>
-                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html"><span class="fab fa-twitter"></span></a>
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html&title=Komentar pada Kotlin&summary="><span class="fab fa-linkedin"></span></a>
-                    <a href="https://api.whatsapp.com/send?text=Komentar pada Kotlin%20%2D%20https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html"><span class="fab fa-whatsapp"></span></a>
-                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-07-Komentar-pada-Kotlin.html&text=Komentar pada Kotlin"><span class="fab fa-telegram"></span></a>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-13-Array-Kotlin.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-13-Array-Kotlin.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-13-Array-Kotlin.html&title=Array Kotlin&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Array Kotlin%20%2D%20https://muh-fajri.github.io/books/Kotlin-13-Array-Kotlin.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-13-Array-Kotlin.html&text=Array Kotlin"><span class="fab fa-telegram"></span></a>
                 </p>
             </div>
             <hr>

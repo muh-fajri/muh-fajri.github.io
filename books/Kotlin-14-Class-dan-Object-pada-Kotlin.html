@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Class dan Object pada Kotlin</title>
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Class dan Object pada Kotlin</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Class dan Object pada Kotlin" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-14T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Class dan Object pada Kotlin" />
+<script type="application/ld+json">
+{"url":"/books/Kotlin-14-Class-dan-Object-pada-Kotlin.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-14-Class-dan-Object-pada-Kotlin.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Class dan Object pada Kotlin","dateModified":"2021-04-14T00:00:00+08:00","datePublished":"2021-04-14T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+    
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Class dan Object pada Kotlin</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="card">
+        <div class="card-body">
+            <h2>Class dan Object pada Kotlin</h2>
+            <div class="post-attribute d-sm-flex">
+                <div class="author-post">
+                    <img src="/assets/images/author.jpg" alt="author">
+                    <span class="fas fa-user"></span>
+                    <a href="/author.html">Muhammad Fajri</a>
+                </div>
+                <div class="date-post">
+                    <span class="fas fa-calendar-alt"></span>
+                    <span>Wednesday, 14 April 2021</span>
+                </div>
+            </div>
+
+            <p>Bismillahirrahmanirrahim.</p>
+
+<p>Kotlin merupakan salah satu bahasa Object Oriented Programming (OOP) atau pemrograman berorientasi objek. Ada beberapa istilah yang perlu dimengerti dalam OOP yaitu Object dan Class.</p>
+
+<p>Object adalah data yang berisi <em>properties</em> (<em>field</em> atau <em>attribute</em>) dan <em>function</em> (<em>method</em> atau <em>behavior</em>). Semua data di Kotlin adalah <em>object</em> (Number, Boolean, Character, String dan yang lainnya).</p>
+
+<p>Class adalah <em>blueprint</em>, <em>prototype</em> atay cetakan untuk membuat Object. Class berisikan deklarasi semua <em>propertie</em> dan <em>function</em> yang dimiliki oleh Object. Setiap Object selalu dibuat dari Class dan semua Class bisa membuat Object tanpa batas.</p>
+
+<p>Class didefinisikan menggunakan kata kunci <code class="language-plaintext highlighter-rouge">class</code>, sebuah <em>identifier</em> (sebagai nama Class), <em>header</em> (opsional), dan body(opsional). Membuat <em>class</em> di Kotlin tidak ada aturan penamaan class harus sama dengan nama filenya seperti di Java. Namun agar kodenya rapih dan mudah dimengerti, disarankan untuk membuat nama <em>class</em> dan nama file yang sama. Misalnya <em>class</em> <code class="language-plaintext highlighter-rouge">Person</code> dengan file <code class="language-plaintext highlighter-rouge">Person.kt</code>.</p>
+
+<h3 id="pembuatan-class">Pembuatan Class</h3>
+
+<p>Contoh pembuatan <em>class</em>:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span><span class="p">()</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Untuk membuat <em>instance</em> dari <em>class</em> tersebut, kita tuliskan:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">person</span> <span class="p">=</span> <span class="nc">Person</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Header merupakan pasangan tanda kurung (<code class="language-plaintext highlighter-rouge">()</code>) yang dapat berisi parameter. Tanda kurung kurawal (<code class="language-plaintext highlighter-rouge">{}</code>) merupakan <em>body</em> dari <em>class</em>. Keduanya bersifat opsional.</p>
+
+<p>Untuk membuat <em>instance</em> (membuat Object) dari sebuah <em>class</em>, kita buat seperti pembuatan variabel biasa namun diinisialisasi seperti memanggil <em>function</em> yaitu dengan menggunakan nama <em>class</em> (<code class="language-plaintext highlighter-rouge">Person()</code>). Di Kotlin, kita tidak membutuhkan kata kunci khusus untuk membuat Object, tidak seperti di Java di mana kita harus menyertakan kata kunci <code class="language-plaintext highlighter-rouge">new</code> untuk membuat Object/ <em>instance</em> sebuah <em>class</em>.</p>
+
+<p>Perhatikan kembali pembuatan <em>class</em> di atas (<code class="language-plaintext highlighter-rouge">class Person() {...}</code>). Di Kotlin, kita dapat membuat <em>header</em>. Tidak seperti di Java dimana ia tidak memiliki <em>header</em>. <em>Header</em> ini sebenarnya merupakan definisi sebuah <em>constructor</em>.</p>
+
+<h3 id="pembuatan-constructor">Pembuatan Constructor</h3>
+
+<p><em>Class</em> di Kotlin dapat memiliki lebih dari satu buah <em>constructor</em> dalam definisinya. Terdapat dua jenis <em>constructor</em> yaitu <em>primary</em> yang dibuat di bagian <em>header</em> dan <em>secondary</em> yang dibuat di dalam <em>body</em> dari <em>class</em>.</p>
+
+<p>Contoh pembuatan <em>constructor</em>:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span> <span class="k">constructor</span><span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span>
+    <span class="nf">init</span> <span class="p">{</span>
+        <span class="n">name</span> <span class="p">=</span> <span class="n">_name</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Pembuatan <em>class</em> seperti contoh di atas, sebenarnya sama dengan pembuatan <em>class</em> sebelumnya. Hanya saja di contoh <em>class</em> yang kedua ini, terdapat kata kunci <code class="language-plaintext highlighter-rouge">constructor</code> dimana ia memuat sebuah parameter. <code class="language-plaintext highlighter-rouge">var name: String</code> merupakan variabel <em>member</em> yang akan menampung nilai dari <code class="language-plaintext highlighter-rouge">_name</code>. <code class="language-plaintext highlighter-rouge">init {...}</code> merupakan blok <em>initializer</em>, sama seperti di Java. Blok ini akan dieksekusi ketika membuat <em>instance</em> dari <em>class</em>. <em>Initializer</em> ini dapat dibuat lebih dari satu, dan eksekusinya sesuai dengan urutan pembuatannya. <em>Initializer</em> dibuat dengan menggunakan kata kunci <code class="language-plaintext highlighter-rouge">init</code>. Kita akan menggunakannya jika kita hanya memiliki <em>primary constructor</em>, karena <em>primary constructor</em> tidak dapat memuat kode apapun (<em>statement</em> atau pun <em>expression</em>). <code class="language-plaintext highlighter-rouge">name: _name</code> kita dapat mengakses <em>argument</em> yang diteruskan ke nilai <em>primary constructor</em> dari blok <em>initializer</em>.</p>
+
+<p>Jika <em>primary constructor</em> tidak memerlukan <em>annotation</em> atau <em>visibility modifier</em>, kita dapat menghilangkan kata kunci <code class="language-plaintext highlighter-rouge">constructor</code> menjadi seperti:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span>
+    <span class="nf">init</span> <span class="p">{</span>
+        <span class="n">name</span> <span class="p">=</span> <span class="n">_name</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Kita bahkan dapat menyederhanakan penulisannya dengan menggabung blok <code class="language-plaintext highlighter-rouge">init</code> dan deklarasi nama variabel dalam sebuah <em>statement</em>. Kotlin sepintar itu.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="n">_name</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Berikutnya, untuk membuat <em>secondary constructor</em> dimana ia dibuat di dalam <em>body</em> dari <em>class</em>.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span>
+    <span class="k">constructor</span><span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">name</span> <span class="p">=</span> <span class="n">_name</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Membuat <em>constructor</em> di dalam <em>body</em> dari <em>class</em>, kita tidak memerlukan blok <code class="language-plaintext highlighter-rouge">init</code> karena inisialisasi nama variabel <em>member</em> diselesaikan di dalam blok <em>constructor</em>.</p>
+
+<p>Contoh lain pembuatan <em>constructor</em>:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Employee</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="kd">var</span> <span class="py">empid</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="k">constructor</span><span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">:</span> <span class="k">this</span><span class="p">(</span><span class="n">_empid</span><span class="p">,</span> <span class="s">"1001"</span><span class="p">)</span>
+    <span class="k">constructor</span><span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="n">_empid</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">name</span> <span class="p">=</span> <span class="n">_name</span>
+        <span class="n">empid</span> <span class="p">=</span> <span class="n">_empid</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Dari kode di atas, kita harus menginisialisasi variabel <em>member</em>. <em>Secondary constructor</em> membutuhkan kata kunci <code class="language-plaintext highlighter-rouge">constructor</code>.</p>
+
+<p>Kita dapat melakukan <em>overload</em> pada <em>constructor</em> di Kotlin sama seperti di Java. Kita pun dapat memanggil <em>constructor</em> yang lain menggunakan kata kunci <code class="language-plaintext highlighter-rouge">this</code>. Kata kunci ini, sama seperti di Java, mengacu pada sebuah <em>instance</em> yang dibuat. Kita harus merangkai pemanggilan <code class="language-plaintext highlighter-rouge">this</code> pada definisi <em>constructor</em> menggunakan titik dua (<code class="language-plaintext highlighter-rouge">:</code>).</p>
+
+<p>Kotlin memungkinkan kita untuk melakukan <em>parametric polymorphism</em> pada <em>constructor</em> melalui <em>overloading</em>. Ini bukanlah model Kotlin yang sebenarnya, karena Kotlin memiliki kemampuan untuk menyediakan nilai default untuk parameter <em>function</em>. Penulisan <em>class</em> di atas dapat disederhanakan menjadi:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Employee</span> <span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="n">_empid</span><span class="p">,</span> <span class="s">"1001"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">name</span> <span class="p">=</span> <span class="n">_name</span>
+    <span class="kd">val</span> <span class="py">empid</span> <span class="p">=</span> <span class="n">_empid</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Penulisan <em>class</em> ini menjadi lebih pendek dan ringkas. Selanjutnya, dengan memindahkan parameter <em>constructor</em> ke <em>primary constructor</em>, ini memungkinkan kita untuk mendeklarasikan variabel member menggunakan <code class="language-plaintext highlighter-rouge">val</code> daripada <code class="language-plaintext highlighter-rouge">var</code>. Menggunakan variabel <em>immutable</em> lebih dianjurkan di Kotlin karena ini dapat mengurangi <em>error</em> pada kode yang dibuat. Kita tidak dapat mengubah nilai properti menjadi <em>immutable</em> pada posisi yang pertama.</p>
+
+<h3 id="inheritance">Inheritance</h3>
+
+<p>Class Kotlin secara default adalah <em>final</em>, berlawanan dengan Java yaitu <em>non-final</em> (terbuka).</p>
+
+<p>Agar dapat membuat <em>inheritance</em> pada <em>class</em> Kotlin, kita harus membuatnya menjadi <em>non-final</em>. Untuk itu, kita perlu menambahkan kata kunci <code class="language-plaintext highlighter-rouge">open</code> agar <em>modifier</em> pada <em>class</em> menjadi atau bersifat <em>non-final</em> (terbuka).</p>
+
+<p>Contoh kodenya:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">open</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Employee</span> <span class="p">:</span> <span class="nc">Person</span><span class="p">()</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Perilaku <em>final</em> secara default tidak hanya pada <em>class</em>, <em>member function</em> pun seperti itu di Kotlin. Jadi, saat <em>member function</em> tidak diberikan kata kunci <code class="language-plaintext highlighter-rouge">open</code> maka ia bersifat <em>final</em>.</p>
+
+<p>Berikut contoh pembuatan <em>class</em> yang memiliki <em>function</em> bersifat <em>non-final</em> sehingga dapat dibuatkan <em>inheritance</em> melalui proses <em>overriding</em>.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">open</span> <span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">name</span> <span class="p">=</span> <span class="n">_name</span>
+
+    <span class="k">open</span> <span class="k">fun</span> <span class="nf">talk</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"${this.javaClass.simpleName} talking"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="n">_empid</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">"1001"</span><span class="p">)</span> <span class="p">:</span> <span class="nc">Person</span><span class="p">(</span><span class="n">_name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">empid</span> <span class="p">=</span> <span class="n">_empid</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">talk</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">talk</span><span class="p">()</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">toString</span><span class="p">():</span> <span class="nc">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"name: $name | id: $empid"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">empA</span> <span class="p">=</span> <span class="nc">Employee</span><span class="p">(</span><span class="s">"Lamaddu"</span><span class="p">,</span> <span class="s">"1002"</span><span class="p">)</span>
+    <span class="kd">var</span> <span class="py">empB</span> <span class="p">=</span> <span class="nc">Employee</span><span class="p">(</span><span class="s">"Lasinring"</span><span class="p">,</span> <span class="s">"1003"</span><span class="p">)</span>
+
+    <span class="nf">println</span><span class="p">(</span><span class="n">empA</span><span class="p">.</span><span class="nf">talk</span><span class="p">())</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">empA</span><span class="p">.</span><span class="nf">toString</span><span class="p">())</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">empB</span><span class="p">.</span><span class="nf">talk</span><span class="p">())</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">empB</span><span class="p">.</span><span class="nf">toString</span><span class="p">())</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">open fun talk()</code>, funtion ini dibuat <em>non-final</em> dengan menambahkan kata kunci <code class="language-plaintext highlighter-rouge">open</code> agar dapat di-<em>override</em>. <code class="language-plaintext highlighter-rouge">override fun talk()</code>, function baru yang telah bersifat <em>non-final</em> sekarang dapat dibuat kembali pada class yang baru dengan menambahkan kata kunci <code class="language-plaintext highlighter-rouge">override</code>. <code class="language-plaintext highlighter-rouge">super.talk()</code>, kita dapat memanggil <em>super behavior</em> dari sini, ini efektif untuk memanggil <em>function</em> <code class="language-plaintext highlighter-rouge">talk()</code> yang ada di <em>class</em> <code class="language-plaintext highlighter-rouge">Person</code>. <code class="language-plaintext highlighter-rouge">toString()</code>, perilaku ini di-<em>inherit</em> dari <em>class</em> <code class="language-plaintext highlighter-rouge">Person</code>.</p>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Employee talking
+Hello
+kotlin.Unit
+name: Lamaddu | <span class="nb">id</span>: 1002
+Employee talking
+Hello
+kotlin.Unit
+name: Lasinring | <span class="nb">id</span>: 1003
+</code></pre></div></div>
+
+<p>Perhatikan kembali program di atas. Pada program tersebut dibuat dua buah <em>class</em> satu sebagai <em>class</em> induk yaitu <em>class</em> <code class="language-plaintext highlighter-rouge">Person</code> yang mendefinisikan variabel <code class="language-plaintext highlighter-rouge">_name</code> dan sebuah <em>function</em> <code class="language-plaintext highlighter-rouge">talk()</code>, dan <em>class</em> anak dengan nama <code class="language-plaintext highlighter-rouge">Employee</code> yang mendefinisikan <code class="language-plaintext highlighter-rouge">_name</code> dan <code class="language-plaintext highlighter-rouge">_empid</code> diman <em>class</em> ini meng-<em>inherit</em> <em>class</em> <code class="language-plaintext highlighter-rouge">Person</code> tadi. Di <em>class</em> <code class="language-plaintext highlighter-rouge">Employee</code> meng-<em>override</em> <em>function</em> <code class="language-plaintext highlighter-rouge">talk()</code> class <code class="language-plaintext highlighter-rouge">Person</code> dan mengambil nilai <em>behavior</em>-nya dengan menggunakan <code class="language-plaintext highlighter-rouge">super.talk()</code> dan di <em>function</em> <code class="language-plaintext highlighter-rouge">talk()</code> yang baru ini pun dibuat sebuah output baru (<code class="language-plaintext highlighter-rouge">Hello</code>). Dan terakhir dibuatkan <em>function</em> yang lain yaitu <code class="language-plaintext highlighter-rouge">toString()</code> untuk mencetak nilai <code class="language-plaintext highlighter-rouge">name</code> dan <code class="language-plaintext highlighter-rouge">empid</code>.</p>
+
+<p>Pada <em>function</em> <code class="language-plaintext highlighter-rouge">main()</code>, di sana saya buatkan dua buah <em>object</em> baru dengan nama <code class="language-plaintext highlighter-rouge">empA</code> dan <code class="language-plaintext highlighter-rouge">empB</code> kemudian masing-masing saya definisikan nilai <code class="language-plaintext highlighter-rouge">_name</code> dan <code class="language-plaintext highlighter-rouge">_empid</code>-nya. Pada <em>output</em> saya coba mencetak <em>function</em> <code class="language-plaintext highlighter-rouge">talk()</code> di masing-masing <em>object</em> yang membawa nilai <em>behavior</em> (termasuk <em>behavior</em> dari <em>super class</em>) dan <em>function</em> <code class="language-plaintext highlighter-rouge">toString()</code> yang membawa nilai <em>attribute</em>.</p>
+
+<h3 id="referensi">Referensi</h3>
+<ol>
+  <li>Modul Pemrograman Mobile (Mobile Programming).</li>
+  <li>Hagos, Ted. 2018. <em>Learn Android Studio 3 with Kotlin: Efficient Android App Development</em>. Apress: Manila.</li>
+</ol>
+
+
+            <hr>
+            <div class="share">
+                <p class="text-center">
+                    Share on : <br>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-14-Class-dan-Object-pada-Kotlin.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-14-Class-dan-Object-pada-Kotlin.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-14-Class-dan-Object-pada-Kotlin.html&title=Class dan Object pada Kotlin&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Class dan Object pada Kotlin%20%2D%20https://muh-fajri.github.io/books/Kotlin-14-Class-dan-Object-pada-Kotlin.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-14-Class-dan-Object-pada-Kotlin.html&text=Class dan Object pada Kotlin"><span class="fab fa-telegram"></span></a>
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Menemukan konten yang <em>tidak tepat</em>? Ada saran atau yang lainnya? Silahkan sampaikan melalui kontak yang disediakan agar dapat dilakukan pembaharuan. <br/> Terima kasih.</p>
+    </div>
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

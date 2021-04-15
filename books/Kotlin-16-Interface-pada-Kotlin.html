@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Interface pada Kotlin</title>
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Interface pada Kotlin</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Interface pada Kotlin" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-15T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Interface pada Kotlin" />
+<script type="application/ld+json">
+{"url":"/books/Kotlin-16-Interface-pada-Kotlin.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-16-Interface-pada-Kotlin.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Interface pada Kotlin","dateModified":"2021-04-15T00:00:00+08:00","datePublished":"2021-04-15T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+    
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Interface pada Kotlin</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="card">
+        <div class="card-body">
+            <h2>Interface pada Kotlin</h2>
+            <div class="post-attribute d-sm-flex">
+                <div class="author-post">
+                    <img src="/assets/images/author.jpg" alt="author">
+                    <span class="fas fa-user"></span>
+                    <a href="/author.html">Muhammad Fajri</a>
+                </div>
+                <div class="date-post">
+                    <span class="fas fa-calendar-alt"></span>
+                    <span>Thursday, 15 April 2021</span>
+                </div>
+            </div>
+
+            <p>Bismillahirrahmanirrahim.</p>
+
+<p>Bentuk dasar <em>interface</em> di Kotlin, seperti di Java, dapat dilihat pada contoh kode berikut.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Fax</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">call</span><span class="p">(</span><span class="n">number</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"Calling $number"</span><span class="p">)</span>
+    <span class="k">fun</span> <span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"Fax:Printing $doc"</span><span class="p">)</span>
+    <span class="k">fun</span> <span class="nf">answer</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Pembuatan <em>interface</em> di Kotlin menggunakan kata kunci <code class="language-plaintext highlighter-rouge">interface</code> sama seperti di Java, dan di contoh di atas memuat <em>abstract function</em>. Yang menandakan <em>interface</em> di Kotlin yaitu, memuat properti dan memiliki <em>function</em> dengan <em>implementation</em> (<em>concrete function</em>). Untuk menerapkan <em>interface</em>, Kotlin menggunakan operator titik dua (<code class="language-plaintext highlighter-rouge">:</code>).</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MultiFunction</span><span class="p">:</span> <span class="nc">Fax</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">answer</span><span class="p">()</span> <span class="p">{</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Tanda titik dua (<code class="language-plaintext highlighter-rouge">:</code>) digunakan untuk menerapkan <em>interface</em>, berbeda dengan Java yang menggunakan kata kunci <code class="language-plaintext highlighter-rouge">implements</code>. Tanda titik dua ini juga digunakan untuk meng-<em>inherit</em> sebuah <em>class</em>. <em>Function</em> <code class="language-plaintext highlighter-rouge">answer()</code> yang tidak memiliki <em>implementation</em> pada <em>interface</em> sedangkan <em>function</em> <code class="language-plaintext highlighter-rouge">call()</code> dan <code class="language-plaintext highlighter-rouge">print()</code> tidak perlu karena ia sudah memiliki <em>implementation</em> di dalam <em>interface</em>. Kata kunci <code class="language-plaintext highlighter-rouge">override</code> digunakan untuk memberitahukan <em>compiler</em> bahwa kita tidak ingin menyembunyikan <em>function</em> <code class="language-plaintext highlighter-rouge">answer()</code> tetapi kita ingin menggantinya agar bisa menjadi <em>polymorphic</em>. Untuk function <code class="language-plaintext highlighter-rouge">answer()</code> ini kita ingin menyediakan <em>behavior</em>-nya di dalam <em>class</em>, dalam hal ini <em>class</em> <code class="language-plaintext highlighter-rouge">MultiFunction</code>.</p>
+
+<p>Jika ada yang bertanya, <em>kenapa</em> Kotlin memungkinkan kita untuk membuat <em>implementation</em> dari sebuah <em>function</em> di dalam <em>interface</em>, bukankah ia hanya dapat memuat <em>abstract function</em> dan implementasinya dilakukan di dalam <em>class</em> yang akan menggunakannya?</p>
+
+<p>Ada beberapa alasan praktis <em>kenapa</em> hal ini dibolehkan. <em>Implementation</em> default pada <em>interface</em> memungkinkan kita untuk mengembangkan <em>interface</em> sepanjang waktu. Bayangkan kita menulis <em>interface</em> <code class="language-plaintext highlighter-rouge">Foo</code> saat ini dengan <em>member function</em> <code class="language-plaintext highlighter-rouge">a()</code>, <code class="language-plaintext highlighter-rouge">b()</code>, dan <code class="language-plaintext highlighter-rouge">c()</code>, dan ini telah dirilis kepada <em>developer</em> yang lain. Suatu hari, kita mendambahkan <em>function</em> <code class="language-plaintext highlighter-rouge">d()</code> pada <em>interface</em> <code class="language-plaintext highlighter-rouge">Foo</code> maka semua kode yang menggunakan <code class="language-plaintext highlighter-rouge">Foo</code> akan rusak. Akan tetapi, jika kita menyediakan <em>default implementation</em> untuk <code class="language-plaintext highlighter-rouge">d()</code>, maka kode yang sudah ada tidak akan rusak. Ini merupakan salah satu <em>use-case</em> di mana penerapan <em>function</em> dalam <em>interface</em> akan sangat berguna.</p>
+
+<h3 id="diamond-problem">Diamond Problem</h3>
+
+<p><em>Diamond problem</em> terjadi jika <em>class</em> meng-<em>inherit</em>, katakanlah dua buah <em>super type</em> dan keduanya mengimplementasikan <em>function</em> atau <em>method</em> yang benar-benar sama. Lihat contoh berikut.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">A</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"A:foo"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span> <span class="nc">B</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"B:foo"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Child</span><span class="p">:</span> <span class="nc">A</span><span class="p">,</span> <span class="nc">B</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Kode di atas tidak akan di-<em>compile</em> karena tidak jelas <em>behavior</em> dari <em>function</em> yang mana yang akan dieksekusi, <code class="language-plaintext highlighter-rouge">foo()</code> didefinisikan di kedua <em>interface</em> (<code class="language-plaintext highlighter-rouge">A</code> dan <code class="language-plaintext highlighter-rouge">B</code>) dan keduanya menyediakan <em>default implementation</em> untuk <em>function</em>-nya. Ini dipahami sebagai “diamond problem”. Pada contoh tersebut, jika kita memanggil <em>function</em> <code class="language-plaintext highlighter-rouge">foo()</code> dari <em>instance</em> <code class="language-plaintext highlighter-rouge">Child</code>, ini akan membuat bingung <em>behavior</em> mana yang akan dicetak (“A:foo” ataukah “B:foo”). Di Koltin, untuk mengatasi hal ini kita buat <em>implementation</em> dari <em>function</em> yang mengalami konflik di dalam <em>class</em>, dari contoh ini <em>class</em> <code class="language-plaintext highlighter-rouge">Child</code>.</p>
+
+<p>Berikut merupakan penyelesaiannya.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">A</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"A:foo"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span> <span class="nc">B</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"B:foo"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Child</span><span class="p">:</span> <span class="nc">A</span><span class="p">,</span> <span class="nc">B</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"Child:foo"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">child</span><span class="p">:</span> <span class="nc">Child</span> <span class="p">=</span> <span class="nc">Child</span><span class="p">()</span>
+    <span class="n">child</span><span class="p">.</span><span class="nf">foo</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Child:foo
+</code></pre></div></div>
+
+<h3 id="invoking-super-behavior">Invoking Super Behavior</h3>
+
+<p>Seperti Java, <em>function</em> Kotlin dapat memanggil <em>function</em> dari <em>supertype</em>-nya jika memiliki <em>implementation</em>. Kata kunci yang digunakan sama dengan yang di Java yaitu <code class="language-plaintext highlighter-rouge">super</code> yang mereferensi ke <em>instance</em> dari <em>supertype</em>. Untuk memanggil <em>function</em> pada <em>supertype</em>, dibutuhkan kata kunci <code class="language-plaintext highlighter-rouge">super</code>, nama <em>supertype</em> yang berada di dalam kurung siku (<code class="language-plaintext highlighter-rouge">&lt;...&gt;</code>), dan nama <em>function</em> yang ingin dipanggil.</p>
+
+<p>Struktur kodenya seperti berikut:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">super</span><span class="p">&lt;</span><span class="nc">NameOfSuperType</span><span class="p">&gt;.</span><span class="nf">functionName</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Sebagai contoh, perhatikan program berikut.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Printable</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"Printer:Printing $doc"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span> <span class="nc">Fax</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">call</span><span class="p">(</span><span class="n">number</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"Calling $number"</span><span class="p">)</span>
+    <span class="k">fun</span> <span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"Fax:Printing $doc"</span><span class="p">)</span>
+    <span class="k">fun</span> <span class="nf">answer</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"answering"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">MultiFunction</span><span class="p">:</span> <span class="nc">Printable</span><span class="p">,</span> <span class="nc">Fax</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"Multifunction: printing"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Pada kode di atas, di dalam <em>class</em> <code class="language-plaintext highlighter-rouge">MultiFunction</code>, kita lakukan <em>override</em> pada <em>function</em> <code class="language-plaintext highlighter-rouge">print()</code>, ini harus dilakukan karena <em>function</em> ini di-<em>inherit</em> dari <em>interface</em> <code class="language-plaintext highlighter-rouge">Printable</code> dan <code class="language-plaintext highlighter-rouge">Fax</code>, dan memiliki <em>default implementation</em> di keduanya. Selanjutnya, agar dapat memanggil <em>function</em> pada <em>supertype</em>, kita ubah kode pada <em>class</em> <code class="language-plaintext highlighter-rouge">MultiFunction</code> menjadi:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MultiFunction</span><span class="p">:</span> <span class="nc">Printable</span><span class="p">,</span> <span class="nc">Fax</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">&lt;</span><span class="nc">Fax</span><span class="p">&gt;.</span><span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+        <span class="k">super</span><span class="p">&lt;</span><span class="nc">Printable</span><span class="p">&gt;.</span><span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"Multifunction: printing"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Dan untuk memanggil membuat <em>object</em> dari <em>class</em> pada <em>function</em> <code class="language-plaintext highlighter-rouge">main()</code>, kita bisa buat seperti pembuatan <em>object</em> pada biasanya.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">mfc</span> <span class="p">=</span> <span class="nc">MultiFunction</span><span class="p">()</span>
+    <span class="n">mfc</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"The quick brown fox"</span><span class="p">)</span>
+    <span class="n">mfc</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="s">"12345"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Untuk kode lengkapnya dapat dilihat pada program berikut.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Printable</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"Printer:Printing $doc"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span> <span class="nc">Fax</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">call</span><span class="p">(</span><span class="n">number</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"Calling $number"</span><span class="p">)</span>
+    <span class="k">fun</span> <span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"Fax:Printing $doc"</span><span class="p">)</span>
+    <span class="k">fun</span> <span class="nf">answer</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"answering"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">MultiFunction</span><span class="p">:</span> <span class="nc">Printable</span><span class="p">,</span> <span class="nc">Fax</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">&lt;</span><span class="nc">Fax</span><span class="p">&gt;.</span><span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+        <span class="k">super</span><span class="p">&lt;</span><span class="nc">Printable</span><span class="p">&gt;.</span><span class="nf">print</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"Multifunction: printing"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">mfc</span> <span class="p">=</span> <span class="nc">MultiFunction</span><span class="p">()</span>
+    <span class="n">mfc</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"The quick brown fox"</span><span class="p">)</span>
+    <span class="n">mfc</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="s">"12345"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fax:Printing The quick brown fox
+Printer:Printing The quick brown fox
+Multifunction: printing
+Calling 12345
+</code></pre></div></div>
+
+<h3 id="referensi">Referensi</h3>
+<ol>
+  <li>Hagos, Ted. 2018. <em>Learn Android Studio 3 with Kotlin: Efficient Android App Development</em>. Apress: Manila.</li>
+</ol>
+
+
+            <hr>
+            <div class="share">
+                <p class="text-center">
+                    Share on : <br>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-16-Interface-pada-Kotlin.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-16-Interface-pada-Kotlin.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-16-Interface-pada-Kotlin.html&title=Interface pada Kotlin&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Interface pada Kotlin%20%2D%20https://muh-fajri.github.io/books/Kotlin-16-Interface-pada-Kotlin.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-16-Interface-pada-Kotlin.html&text=Interface pada Kotlin"><span class="fab fa-telegram"></span></a>
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Menemukan konten yang <em>tidak tepat</em>? Ada saran atau yang lainnya? Silahkan sampaikan melalui kontak yang disediakan agar dapat dilakukan pembaharuan. <br/> Terima kasih.</p>
+    </div>
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

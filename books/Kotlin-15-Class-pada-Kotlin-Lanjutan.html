@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Class pada Kotlin - Lanjutan</title>
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Class pada Kotlin - Lanjutan</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Class pada Kotlin - Lanjutan" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-15T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Class pada Kotlin - Lanjutan" />
+<script type="application/ld+json">
+{"url":"/books/Kotlin-15-Class-pada-Kotlin-Lanjutan.html","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-15-Class-pada-Kotlin-Lanjutan.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Class pada Kotlin - Lanjutan","dateModified":"2021-04-15T00:00:00+08:00","datePublished":"2021-04-15T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+    
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Cari artikel blog..." aria-label="Search" id="search-box" name="query" autocomplete="off">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Class pada Kotlin - Lanjutan</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="card">
+        <div class="card-body">
+            <h2>Class pada Kotlin - Lanjutan</h2>
+            <div class="post-attribute d-sm-flex">
+                <div class="author-post">
+                    <img src="/assets/images/author.jpg" alt="author">
+                    <span class="fas fa-user"></span>
+                    <a href="/author.html">Muhammad Fajri</a>
+                </div>
+                <div class="date-post">
+                    <span class="fas fa-calendar-alt"></span>
+                    <span>Thursday, 15 April 2021</span>
+                </div>
+            </div>
+
+            <p>Bismillahirrahmanirrahim.</p>
+
+<p>Kembali lagi kita lanjutkan pembahasan mengenai OOP (<em>Object Oriented Programming</em>) dan melanjutkan pembahasan mengenai <em>class</em>.</p>
+
+<h3 id="properties">Properties</h3>
+
+<p><em>Property</em> pada <em>class</em> atau <em>object</em> dibuat dengan mendefinisikan <em>member variable</em> dan menyediakannya <em>accessor method</em>. <em>Function</em> ini mengikuti penamaan yang biasa di mana nama dari <em>member variable</em> akan diawali dengan <code class="language-plaintext highlighter-rouge">get</code> dan <code class="language-plaintext highlighter-rouge">set</code>.</p>
+
+<p>Berikut contoh program dalam Java:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">arg</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">arg</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Person</span> <span class="n">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Person</span><span class="o">();</span>
+        <span class="n">person</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"John Doe"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Ini contoh pembuatan <em>class</em> Java yang mendefinsikan sebuah <em>property</em> yaitu <code class="language-plaintext highlighter-rouge">name</code>. <code class="language-plaintext highlighter-rouge">name</code> ini ditetapkan sebagai <em>private</em> sehingga akses pada <em>state</em> ini hanya dapat dikontrol melalui <em>accessor</em> (<code class="language-plaintext highlighter-rouge">getName()</code> dan <code class="language-plaintext highlighter-rouge">setName()</code>). Ini merupakan pengungkapan kodenya dalam bahasa Java karena bahasa ini tidak memiliki cara tersendiri yang mendukung <em>properties</em>. Kita pun dapat mengikuti cara ini di Kotlin, tapi kita tidak harus karena Kotlin memiliki dukungan untuk <em>properties</em>.</p>
+
+<p>Contoh programnya:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">_name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="n">_name</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">person</span> <span class="p">=</span> <span class="nc">Person</span><span class="p">(</span><span class="s">"John Smith"</span><span class="p">)</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><em>Constructor</em> diambil di dalam parameter (<code class="language-plaintext highlighter-rouge">_name: String</code>). <code class="language-plaintext highlighter-rouge">val name: String = _name</code> kita mmiliki akses pada parameter melalui <em>constructor</em> dari sini. <code class="language-plaintext highlighter-rouge">println(person.name)</code> ini terlihat seperti kita melakukan akses secara langsung pada nama <em>member variable</em>, tetapi tidak. Ini sebenarnya memanggil <em>accessor method</em> <code class="language-plaintext highlighter-rouge">get</code>.</p>
+
+<p>Definisi <em>class</em> tadi dapat disederhanakan menjadi:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Kode di sini merupakan cara paling ringkas untuk mendefinisikan <em>property</em> di Kotlin. Catatan perubahan yang kita buat yaitu:</p>
+<ul>
+  <li>Parameter yang ada pada <em>primary constructor</em> dideklarasikan dengan <code class="language-plaintext highlighter-rouge">val</code>. Ini cara yang efektif untuk membuat <em>property</em> pada parameter <em>constructor</em>. Kita dapat menggunakan <code class="language-plaintext highlighter-rouge">var</code> dan akan berfungsi dengan baik.</li>
+  <li>Kita tidak lagi harus membedakan nama <em>identifier</em> pada parameter <em>constructor</em> dengan <em>member variable</em>, karena itu kita menghilangkan garis bawah (<code class="language-plaintext highlighter-rouge">_</code>) pada variabel.</li>
+  <li>Kita dapat menghilangkan seluruh <em>body</em> dari <em>class</em> karena kita tidak membutuhkannya lagi. <em>Body</em> hanya memuat kode untuk mengirim nilai dari parameter <em>constructor</em> menuju member variable. Karena Kotlin akan secara otomatis mendefinisikan <em>backing field</em> untuk parameter <em>constructor</em>, kita tidak harus melakukan apa-apa lagi di dalam <em>body</em> dari <em>class</em>.</li>
+</ul>
+
+<p>Definisi <em>class</em> tadi merupakan cara paling dasar untuk mendefinisikan <em>object</em> data di Kotlin (<em>programmer</em> Java mengenalnya sebagai POJO atau <em>plain old java object</em>). Hanya dengan menggunakan <code class="language-plaintext highlighter-rouge">val</code> atau <code class="language-plaintext highlighter-rouge">var</code> pada parameter <em>constructor</em>, secara otomatis kita dapat mendefinisikan <em>property</em> dengan <em>method</em> yang sesuai. Akan tetapi, akan ada keadaan di saat kita akan butuh kontrol yang lebih pada proses “getting” dan “setting” dari <em>property</em> ini, Kotlin memungkinkan kita untuk melakukannya.</p>
+
+<p>Berikut cara membuatnya:</p>
+<ul>
+  <li>Deklarasikan <em>property</em> di dalam <em>body class</em>, bukan di <em>primary constructor</em>.</li>
+  <li>Sediakan <em>method getter</em> dan <em>setter</em> di <em>body class</em>.</li>
+</ul>
+
+<p>Sintaksnya yaitu:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="err">&lt;</span><span class="py">property</span> <span class="n">name</span><span class="p">&gt;:</span> <span class="p">&lt;</span><span class="n">property</span> <span class="n">type</span><span class="p">&gt;</span> <span class="p">=</span> <span class="p">&lt;</span><span class="n">initializer</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="n">getter</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="n">setter</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+<p>Berikut contoh dasar penggunaan <em>custom accessor method</em>.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Employee</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="k">get</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nc">Log</span><span class="p">(</span><span class="s">"Getting lastname"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">field</span>
+    <span class="p">}</span>
+    <span class="k">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nc">Log</span><span class="p">(</span><span class="s">"Setting value of lastname"</span><span class="p">)</span>
+        <span class="n">field</span> <span class="p">=</span> <span class="n">value</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">fun</span> <span class="nf">Log</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">emp</span> <span class="p">=</span> <span class="nc">Employee</span><span class="p">()</span>
+    <span class="n">emp</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">"John Doe"</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">emp</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">var name: String = ""</code> kita mendefinisikan <em>property</em> di dalam body <em>class</em>, daripada kita membuatnya menjadi parameter di dalam <em>primary constructor</em> dan kita inisialisasi sebagai String kosong terlebih dahulu. Sintaks <code class="language-plaintext highlighter-rouge">get()</code> terlihat seperti sintaks untuk mendefinisikan sebuah <em>function</em>, namun tidak menuliskan kata kunci <code class="language-plaintext highlighter-rouge">fun</code> sebelumnya. <code class="language-plaintext highlighter-rouge">Log("Getting lastname")</code>, ini dimana kita menuliskan kode <em>custom</em>. <em>Statement</em> ini akan dieksekusi setiap kali seseorang mencoba untuk mengakses nama <em>property</em>-nya. Kata kunci <code class="language-plaintext highlighter-rouge">field</code> mengacu pada <em>backing field</em> yang secara otomatis disediakan oleh Kotlin ketika kita mendefinisikan sebuah <em>property</em> bernama <code class="language-plaintext highlighter-rouge">name</code>. <em>Member variable</em> <code class="language-plaintext highlighter-rouge">name</code> bukan variabel yang sederhana, Kotlin membuatkan <em>backing field</em> otomatis untuknya, tetapi kita tidak memiliki akses langsung terhadap variabel tersebut. Kita dapat mengaksesnya melalui kata kunci <code class="language-plaintext highlighter-rouge">field</code>. Parameter <code class="language-plaintext highlighter-rouge">value</code> ini sama dengan nilai yang akan di-<em>assign</em> pada <em>property</em> setelah <em>object</em> <code class="language-plaintext highlighter-rouge">Employee</code> dibuat (<code class="language-plaintext highlighter-rouge">emp.name = "John Doe"</code>). <code class="language-plaintext highlighter-rouge">field = value</code>, setelah membuat <em>custom logic</em>, sekarang kita dapat mengeset nilai dari <code class="language-plaintext highlighter-rouge">field</code>. <code class="language-plaintext highlighter-rouge">emp.name = "John Doe"</code> ini akan memicu <em>accessor method</em> <code class="language-plaintext highlighter-rouge">set()</code>. <code class="language-plaintext highlighter-rouge">println(emp.name)</code> akan memicu <em>accessor method</em> <code class="language-plaintext highlighter-rouge">get()</code>.</p>
+
+<h3 id="data-classes">Data Classes</h3>
+
+<p>Sebelumnya, kita telah melihat bagaimana dengan mudahnya kita dapat membuat POJO analog di Kotlin. Kita hanya mendefinisikan <em>property</em> di dalam <em>class</em> dan program pun akan jalan. <em>Data object</em> yang dibuat seperti itu akan cukup bagus untuk <em>use-case</em> sederhana. Tetapi di sataa kita memerlukan sesuatu seperti menyimpan nilai <em>object</em> di <em>collection</em> atau membandingkan <em>object</em> dengan yang lainnya untuk melihat kesamaan konten, maka <em>class</em> dengan property yang tadi tidaklah cukup. Hanya satu hal yang kita butuhkan di Kotlin yaitu membuatkan <em>class</em> sebuah <em>data class</em>.
+Contoh program:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">data class</span> <span class="nc">Employee</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">e1</span> <span class="p">=</span> <span class="nc">Employee</span><span class="p">(</span><span class="s">"John Doe"</span><span class="p">)</span>
+    <span class="kd">val</span> <span class="py">e2</span> <span class="p">=</span> <span class="nc">Employee</span><span class="p">(</span><span class="s">"John Doe"</span><span class="p">)</span>
+
+    <span class="nf">println</span><span class="p">(</span><span class="n">e1</span><span class="p">)</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">e1</span> <span class="p">==</span> <span class="n">e2</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Untuk membuatkan <em>data class</em> dari <em>class</em> apapun di Kotlin, kita hanya menggunakan kata kunci <code class="language-plaintext highlighter-rouge">data</code> pada deklarasi <em>class</em>. <code class="language-plaintext highlighter-rouge">println(e1)</code> akan mencetak output <code class="language-plaintext highlighter-rouge">Employee(name=John Doe)</code>. Permbandingan ini mengembalikan nilai <code class="language-plaintext highlighter-rouge">true</code>.</p>
+
+<h3 id="visibility-modifiers">Visibility Modifiers</h3>
+
+<p>Kotlin hampir semuanya menggunakan kata kunci yang sama dengan Java untuk mengontrol <em>visibility</em>. Kata kunci <code class="language-plaintext highlighter-rouge">public</code>, <code class="language-plaintext highlighter-rouge">private</code>, dan <code class="language-plaintext highlighter-rouge">protected</code> sama maksudnya di Kotlin seperti yang dilakukan di Java. Tetapi, <em>default visibility</em> yang dimiliki itulah yang membuat perbedaan. Di Kotlin, jika modifier <em>visibility</em> dihilangkan (tidak dituliskan), maka <em>default visibility</em>-nya adalah <em>public</em>. Selain <em>class</em> tersebut, membernya pun akan bersifat <em>public</em>.</p>
+
+<p>Berbeda dengan Java yang mana <em>default visibility</em> sebuah <em>class</em> merupakan <em>package-private</em>, artinya apa yang tersedia untuk <em>class</em> tersebut hanya yang berada dalam <em>package</em> yang sama. Di Kotlin, tidak memiliki <em>package-private</em> sebagai persamaan karena Kotlin tidak menggunakan <em>package</em> sebagai cara untuk mengelola <em>visibility</em>. <em>Package</em> di Kotlin hanya sebagai cara untuk mengorganisasi file.</p>
+
+<p>Sebagai ganti <em>package-private</em> di Java, Kotlin memperkenalkan kata kunci <code class="language-plaintext highlighter-rouge">internal</code> yang artinya <em>visible</em> dalam sebuah <em>module</em>. <em>Module</em> ini hanya <em>collection</em> file dapat berupa <em>module</em> atau <em>project</em> Intellij, <em>project</em> Eclipse, <em>project</em> Maven, atau <em>project</em> Gradle.</p>
+
+<p>Untuk menunjukkan <em>visibility</em> sebuah <em>modifier</em>, perhatikan contoh berikut.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">internal</span> <span class="k">open</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="k">fun</span> <span class="nf">boo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"boo"</span><span class="p">)</span>
+    <span class="k">protected</span> <span class="k">fun</span> <span class="nf">doo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"doo"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nc">Foo</span><span class="p">.</span><span class="nf">bar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">boo</span><span class="p">()</span>
+    <span class="nf">doo</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">fu</span> <span class="p">=</span> <span class="nc">Foo</span><span class="p">()</span>
+    <span class="n">fu</span><span class="p">.</span><span class="nf">bar</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Class <code class="language-plaintext highlighter-rouge">Foo</code> ditandai sebagai <code class="language-plaintext highlighter-rouge">internal</code> yang membuat <em>visibility</em>-nya hanya di dalam class dan <em>top-level function</em> yang berada dalam <em>module</em> yang sama dan <em>visibility</em>-nya juga ditandai sebagai <em>internal</em>. <code class="language-plaintext highlighter-rouge">fun Foo.bar()</code> merupakan kesalahan. <em>Extension function</em> ditandai sebagai <em>public</em> tetapi <em>receiver</em> dari <em>function</em> tersebut (<code class="language-plaintext highlighter-rouge">Foo</code>) ditandai sebagai <em>internal</em>. <em>Class</em> <code class="language-plaintext highlighter-rouge">Foo</code> sedikit tersembunyi daripada <em>extension function</em>, karenanya, Kotlin tidak mengijinkan. <code class="language-plaintext highlighter-rouge">boo()</code> dan <code class="language-plaintext highlighter-rouge">doo()</code> yang masing-masing <em>private</em> dan <em>protected</em> tidak dapat diakses dari sini (<em>function</em> <code class="language-plaintext highlighter-rouge">Foo.bar()</code>).</p>
+
+<p>Agar bisa diakses, <em>class</em> dan <em>member</em>-nya harus dibuat <em>internal</em>. Begitu pun <em>function</em> yang ingin mengakses <em>member</em> dari <em>class</em>, harus dibuat <em>internal</em>.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">internal</span> <span class="k">open</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+    <span class="k">internal</span> <span class="k">fun</span> <span class="nf">boo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"boo"</span><span class="p">)</span>
+    <span class="k">internal</span> <span class="k">fun</span> <span class="nf">doo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"doo"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">internal</span> <span class="k">fun</span> <span class="nc">Foo</span><span class="p">.</span><span class="nf">bar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">boo</span><span class="p">()</span>
+    <span class="nf">doo</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">fu</span> <span class="p">=</span> <span class="nc">Foo</span><span class="p">()</span>
+    <span class="n">fu</span><span class="p">.</span><span class="nf">bar</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>boo
+doo
+</code></pre></div></div>
+
+<h3 id="access-modifier">Access Modifier</h3>
+
+<p><em>Access modifier</em> di Kotlin yaitu <code class="language-plaintext highlighter-rouge">final</code>, <code class="language-plaintext highlighter-rouge">open</code>, <code class="language-plaintext highlighter-rouge">abstract</code>, dan <code class="language-plaintext highlighter-rouge">override</code>. Ini mempengaruhi <em>inheritance</em>. Sejauh ini, hanya kata kunci <code class="language-plaintext highlighter-rouge">abstract</code> yang belum digunakan. Kata kunci <code class="language-plaintext highlighter-rouge">abstract</code> memiliki arti yang sama di Kotlin dan di Java, diaplikasikan pada <em>class</em> dan <em>function</em>.</p>
+
+<p class="featured-link">Baca <a href="Kotlin-14-Class-dan-Object-pada-Kotlin.html">Class dan Object pada Kotlin</a></p>
+
+<p class="featured-link">Baca juga <a href="Kotlin-16-Interface-pada-Kotlin.html">Interface pada Kotlin</a></p>
+
+<p>Jika <em>class</em> ditandai sebagai <em>abstract</em> maka secara mutlak ia bersifat <em>open</em>, sehingga kita tidak memerlukan modifier <code class="language-plaintext highlighter-rouge">open</code>. <em>Interface</em> tidak perlu dideklarasikan sebagai <em>abstract</em> dan <em>open</em>, karena secara mutlak ia telah bersifat <em>abstract</em> dan <em>open</em>.</p>
+
+<h3 id="object-declaration">Object Declaration</h3>
+
+<p>Kata kunci <code class="language-plaintext highlighter-rouge">static</code> Java tidak terdaftar sebagai kata kunci di Kotlin.  Tidak ada persamaan <code class="language-plaintext highlighter-rouge">static</code> ini, sebagai gantinya, Kotlin memperkenalkan kata kunci <code class="language-plaintext highlighter-rouge">object</code> dan <code class="language-plaintext highlighter-rouge">companion</code>. Kata kunci <code class="language-plaintext highlighter-rouge">object</code> memungkinkan kita untuk mendefinisikan <em>class</em> dan <em>instance</em>-nya pada waktu yang sama. Secara lebih spesifik, ia hanya mendefinisikan satu <em>instance</em> dari <em>class</em> itu. Contoh programnya dapat dilihat berikut ini.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">object</span> <span class="nc">Util</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="s">"foo"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nc">Util</span><span class="p">.</span><span class="nf">foo</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foo
+</code></pre></div></div>
+
+<p>Kita mengganti posisi <code class="language-plaintext highlighter-rouge">class</code> dengan kata kunci <code class="language-plaintext highlighter-rouge">object</code>. Efektifnya, ini mendefinisikan <em>class</em> dengan <em>instance</em> yang dapat dibuat hanya satu. Untuk memanggil <em>function</em> yang didefinisikan di dalam <em>object</em> ini, kita gunakan gunakan <em>dot</em> (<code class="language-plaintext highlighter-rouge">.</code>) dengan nama <em>object</em>-nya –seperti memanggil <em>static method</em> di Java.</p>
+
+<p>Deklarasi <em>object</em> dapat memuat hampir semua hal yang bisa ditulis di <em>class</em>, seperti <em>initializer</em>, <em>property</em>, <em>function</em>, dan <em>member variable</em>. Hanya satu hal yang tidak bisa ditulis yaitu <em>constructor</em>. Alasannya, karena kita tidak membutuhkan <em>constructor</em>. Deklarasi <em>object</em> membuat sebuah <em>instance</em> pada saat <em>definisi</em>, jadi <em>constructor</em> tidak diperlukan.</p>
+
+<p>Contoh programnya:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">object</span> <span class="nc">Util</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="k">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">field</span> <span class="p">=</span> <span class="n">value</span>
+    <span class="p">}</span>
+    <span class="nf">init</span> <span class="p">{</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"Initializing Util"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">fun</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">=</span> <span class="nf">println</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nc">Util</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">"Bar"</span>
+    <span class="nc">Util</span><span class="p">.</span><span class="nf">foo</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bar
+</code></pre></div></div>
+
+<h3 id="referensi">Referensi</h3>
+<ol>
+  <li>Hagos, Ted. 2018. <em>Learn Android Studio 3 with Kotlin: Efficient Android App Development</em>. Apress: Manila.</li>
+</ol>
+
+
+            <hr>
+            <div class="share">
+                <p class="text-center">
+                    Share on : <br>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-15-Class-pada-Kotlin-Lanjutan.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-15-Class-pada-Kotlin-Lanjutan.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-15-Class-pada-Kotlin-Lanjutan.html&title=Class pada Kotlin - Lanjutan&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=Class pada Kotlin - Lanjutan%20%2D%20https://muh-fajri.github.io/books/Kotlin-15-Class-pada-Kotlin-Lanjutan.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-15-Class-pada-Kotlin-Lanjutan.html&text=Class pada Kotlin - Lanjutan"><span class="fab fa-telegram"></span></a>
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Menemukan konten yang <em>tidak tepat</em>? Ada saran atau yang lainnya? Silahkan sampaikan melalui kontak yang disediakan agar dapat dilakukan pembaharuan. <br/> Terima kasih.</p>
+    </div>
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
