@@ -1,4 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-04-17T00:18:41+08:00</updated><id>/feed.xml</id><entry><title type="html">Manajemen File di Linux - Bagian 2</title><link href="/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html" rel="alternate" type="text/html" title="Manajemen File di Linux - Bagian 2" /><published>2021-04-07T00:00:00+08:00</published><updated>2021-04-07T00:00:00+08:00</updated><id>/2021/04/07/Manajemen-File-di-Linux-Bagian-2</id><content type="html" xml:base="/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-04-22T14:09:36+08:00</updated><id>/feed.xml</id><entry><title type="html">Instal Java JDK di Linux</title><link href="/2021/04/22/Instal-Java-JDK-di-Linux.html" rel="alternate" type="text/html" title="Instal Java JDK di Linux" /><published>2021-04-22T00:00:00+08:00</published><updated>2021-04-22T00:00:00+08:00</updated><id>/2021/04/22/Instal-Java-JDK-di-Linux</id><content type="html" xml:base="/2021/04/22/Instal-Java-JDK-di-Linux.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;p&gt;Kembali lagi kita bertemu di web ini dengan pembahasan artikel yang baru.&lt;/p&gt;
+
+&lt;p&gt;Kali ini kita akan sama-sama mengikuti proses instalasi Java JDK (Java Development Kit) di Linux.&lt;/p&gt;
+
+&lt;p&gt;Tidak seperti di Windows–dimana instalasi dilakukan secara GUI, di Linux kita melakukan instalasi melalui Terminal, menggunakan baris perintah (&lt;em&gt;command-line&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Java JDK dibutuhkan oleh beberapa IDE (&lt;em&gt;Integrated Development Environment&lt;/em&gt;) dalam pengembangan sistem. IDE yang membutuhkan tersebut seperti Netbeans, Astah UML (&lt;em&gt;Unified Modeling Language&lt;/em&gt;), Intellij IDEA, dan Android Studio.&lt;/p&gt;
+
+&lt;p&gt;Untuk memulai, kita masuk ke bagian awal yaitu mengunduh Java JDK atau OpenJDK keduanya memiliki fungsi yang sama.&lt;/p&gt;
+
+&lt;h3 id=&quot;unduh-java-jdk&quot;&gt;Unduh Java JDK&lt;/h3&gt;
+
+&lt;p&gt;URL halaman web OpenJDK : &lt;a href=&quot;https://openjdk.java.net&quot;&gt;https://openjdk.java.net&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;URL halaman web Oracle JDK : &lt;a href=&quot;https://www.oracle.com&quot;&gt;https://www.oracle.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Di sini kita dapat memilih untuk mengunduh OpenJDK atau Oracle JDK. Untuk OpenJDK kita dapat mengunduhnya tanpa menggunakan akun, sedangkan Oracle JDK kita harus membuat akun terlebih dahulu kemudian &lt;em&gt;login&lt;/em&gt; dengan akun yang terdaftar dan barulah kita bisa mulai melakukan pengunduhan.&lt;/p&gt;
+
+&lt;p&gt;Di halaman web OpenJDK kita dapat mengunduh versi JDK yang diinginkan. Karena beberapa IDE membutuhkan minimal JDK versi 8, kita dapat memilih rentang versi minimal 8 atau yang lebih tinggi. Untuk saat ini, kita unduh versi JDK 11 (&lt;a href=&quot;https://jdk.java.net/archive/&quot;&gt;link halaman unduhan&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Untuk Oracle JDK dapat dibuka melalui halaman ini–dengan catatan telah mendaftar sebuah akun dan melakukan &lt;em&gt;login&lt;/em&gt; (&lt;a href=&quot;https://www.oracle.com/java/technologies/javase-jdk16-downloads.html&quot;&gt;link halaman unduhan&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Silahkan pilih &lt;em&gt;binary file&lt;/em&gt; yang sesuai dengan OS yang digunakan. Jika tidak menemukan file yang spesifik, unduh file dalam bentuk &lt;em&gt;archive&lt;/em&gt; dengan ekstensi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.tar.gz&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Proses pengunduhan akan berlangsung sesaat mengikuti langkah-langkah yang ada pada web masing-masing. Ini akan memakan waktu sesuai dengan kecepatan &lt;em&gt;bandwidth&lt;/em&gt; yang dimiliki dan juga dipengaruhi oleh kelancaran jaringan di area tempat kita berada.&lt;/p&gt;
+
+&lt;h3 id=&quot;instalasi-java-jdk&quot;&gt;Instalasi Java JDK&lt;/h3&gt;
+
+&lt;p&gt;Setelah berhasil mengunduh file, maka selanjutnya kita akan melakukan proses instalasi. Bergantung dari &lt;em&gt;binary file&lt;/em&gt; yang telah diunduh, jika merupakan file spesifik (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.deb&lt;/code&gt; atau &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.rpm&lt;/code&gt;) silahkan lakukan prosedur instalasi yang sesuai.&lt;/p&gt;
+
+&lt;p&gt;Jika &lt;em&gt;binary file&lt;/em&gt; yang diunduh dalam format &lt;em&gt;archive&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.tar.gz&lt;/code&gt;, maka kita lakukan instalasi secara manual. Instalasi secara manual, dapat dilakukan dengan mengekstrak file ke direktori yang diinginkan (misal pada direktori &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt&lt;/code&gt;) dan setelah selesai atur PATH melalui file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/profile&lt;/code&gt; atau &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.bashrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mari kita lakukan ekstraksi file terlebih dahulu. Kita ketahui folder &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Downloads&lt;/code&gt; adalah folder tujuan dari file yang diunduh tadi.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Downloads
+&lt;span class=&quot;nb&quot;&gt;sudo cp &lt;/span&gt;openjdk-11_linux-x64_bin.tar.gz /opt
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /opt
+&lt;span class=&quot;nb&quot;&gt;sudo tar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-xvzf&lt;/span&gt; openjdk-11_linux-x64_bin.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Setelah berhasil diekstrak, kita dapat menghapus &lt;em&gt;binary file&lt;/em&gt; dalam bentuk &lt;em&gt;archive&lt;/em&gt; tadi.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo rm &lt;/span&gt;openjdk-11_linux-x64_bin.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hasil ekstraksi file tadi adalah sebuah folder dengan nama &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jdk-11&lt;/code&gt; yang di dalamnya terdapat file-file yang dibutuhkan untuk mengintegrasikannya dengan sebuah IDE atau aplikasi yang membutuhkannya.&lt;/p&gt;
+
+&lt;p&gt;Tidak seperti instalasi paket pada umumnya, langkah seperti yang dilakukan di atas sudah dapat dikatakan kita telah melakukan instalasi paket (secara manual).&lt;/p&gt;
+
+&lt;h3 id=&quot;konfigurasi-path-java_home&quot;&gt;Konfigurasi PATH JAVA_HOME&lt;/h3&gt;
+
+&lt;p&gt;Berikutnya kita akan melakukan konfigurasi PATH &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JAVA_HOME&lt;/code&gt; agar Java JDK yang baru ini dapat dikenali sistem. Kita dapat memilih mengatur PATH melalui file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/profile&lt;/code&gt; atau &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.bashrc&lt;/code&gt;. Jika di file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;profile&lt;/code&gt; maka Java JDK yang terinstal akan bisa digunakan oleh &lt;em&gt;user&lt;/em&gt; lain pada sistem. Sedangkan pada &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.bashrc&lt;/code&gt; maka hanya &lt;em&gt;user&lt;/em&gt; yang sedang aktif saat ini saja yang dapat mengenali Java JDK yang terinstal.&lt;/p&gt;
+
+&lt;p&gt;Untuk saat ini, kita coba untuk mengatur PATH pada file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;profile&lt;/code&gt;. Buka filenya dan tambahkan baris berikut di bagian baris paling akhir.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/opt/jdk-11&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$JAVA_HOME&lt;/span&gt;/bin:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Simpan dan tutup file tersebut. Perhatikan pada &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt/jdk-11&lt;/code&gt; harus sesuai dengan nama folder yang telah diekstrak tadi.&lt;/p&gt;
+
+&lt;p&gt;Untuk menerapkan perubahan, ketikkan perintah berikut:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /etc/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Atau dapat juga dengan menutup dan membuka kembali terminal yang baru.&lt;/p&gt;
+
+&lt;p&gt;Setelah selesai, kita coba periksa Java JDK yang telah dikonfigurasi.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java &lt;span class=&quot;nt&quot;&gt;-version&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openjdk version &lt;span class=&quot;s2&quot;&gt;&quot;11&quot;&lt;/span&gt; 2018-09-25
+OpenJDK Runtime Environment 18.9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;build 11+28&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+OpenJDK 64-Bit Server VM 18.9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;build 11+28, mixed mode&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kemudian untuk &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;javac&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;javac &lt;span class=&quot;nt&quot;&gt;-version&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;javac 11
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Jika telah melihat output seperti di atas, itu artinya kita telah berhasil menginstal Java JDK pada sistem yang digunakan. Setelah itu, kita siap mengintegrasikannya dengan IDE atau aplikasi yang membutuhkan Java JDK agar dapat dijalankan/ berjalan dengan baik.&lt;/p&gt;
+
+&lt;p&gt;Sekian artikel ini, semoga apa yang dipaparkan, langkah-langkah yang ada dapat diikuti dengan baik.
+Semoga bermanfaat. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><category term="Terminal" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Manajemen File di Linux - Bagian 2</title><link href="/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html" rel="alternate" type="text/html" title="Manajemen File di Linux - Bagian 2" /><published>2021-04-07T00:00:00+08:00</published><updated>2021-04-07T00:00:00+08:00</updated><id>/2021/04/07/Manajemen-File-di-Linux-Bagian-2</id><content type="html" xml:base="/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
 
 &lt;p&gt;Kembali lagi kita lanjutkan artikel mengenai manajemen file di linux. Jika belum membaca artikel sebelumnya yang merupakan bagian awal dari artikel ini, silahkan kunjungi melalui link berikut ini.&lt;/p&gt;
 
@@ -43,13 +130,13 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Perlakuan untuk direktori dan file sama. Jadi untuk membuat direktori baru jika sudah berada pada direktori yang dimaksudkan, path untuk direktori tersebut tidak perlu ditambahakan, kecuali jika kita berada di direktori yang lain. Contoh lain untuk membuat direktori dengan nama &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Direktori baru&lt;/code&gt;. Direktori ini berbeda dengan direktori sebelumnya. Untuk membuatnya, ketikkan perintah:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Direktori baru'&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;Direktori baru&apos;&lt;/span&gt;
 
 //atau
 &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Direktori baru&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Perlu diperhatikan di sini, bahwa saat kita ingin membuat sebuah direktori yang dipisahkan oleh spasi, kita perlu menambahkan tanda petik baik petik tunggal (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'..'&lt;/code&gt;) atau pun ganda (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;...&quot;&lt;/code&gt;). Jika tidak ditambahkan petik, maka akan dibuat dua buah direktori baru dengan nama &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Direktori&lt;/code&gt; dan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baru&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Perlu diperhatikan di sini, bahwa saat kita ingin membuat sebuah direktori yang dipisahkan oleh spasi, kita perlu menambahkan tanda petik baik petik tunggal (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&apos;..&apos;&lt;/code&gt;) atau pun ganda (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;...&quot;&lt;/code&gt;). Jika tidak ditambahkan petik, maka akan dibuat dua buah direktori baru dengan nama &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Direktori&lt;/code&gt; dan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baru&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;menyalin-dan-memindahkan-file&quot;&gt;Menyalin dan Memindahkan File&lt;/h3&gt;
 
@@ -75,10 +162,10 @@
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; ~/Documents/Direktori-baru /opt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Jika tidak menyertakan opsi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-r&lt;/code&gt; tersebut akan ditampilkan output &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp: -r not specified; omitting directory '~/Documents/Direktori-baru'&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Jika tidak menyertakan opsi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-r&lt;/code&gt; tersebut akan ditampilkan output &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp: -r not specified; omitting directory &apos;~/Documents/Direktori-baru&apos;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Terakhir, untuk pengenalan penyalinan dan pemindahan file yaitu memindahkan file di direktori yang sama.
-Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contoh-file.txt&lt;/code&gt; yang ada di direktori &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents&lt;/code&gt;. Maka kita harus memberikan nama baru pada file yang disalin. Jika tidak, maka akan ditampilkan pesan &lt;em&gt;error&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp: 'contoh-file.txt' and 'contoh-file.txt' are the same file&lt;/code&gt;.&lt;/p&gt;
+Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contoh-file.txt&lt;/code&gt; yang ada di direktori &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents&lt;/code&gt;. Maka kita harus memberikan nama baru pada file yang disalin. Jika tidak, maka akan ditampilkan pesan &lt;em&gt;error&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp: &apos;contoh-file.txt&apos; and &apos;contoh-file.txt&apos; are the same file&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; ~/Documents/contoh-file.txt ~/Documents/contoh-file2.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -179,7 +266,7 @@ Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&q
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;chown &lt;/span&gt;root GitHub_Token.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Jika didapati error &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chown: changing ownership of 'GitHub_Token.txt': Operation not permitted&lt;/code&gt;, maka kita harus tambahkan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo&lt;/code&gt; di perintah paling awal.&lt;/p&gt;
+&lt;p&gt;Jika didapati error &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chown: changing ownership of &apos;GitHub_Token.txt&apos;: Operation not permitted&lt;/code&gt;, maka kita harus tambahkan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo&lt;/code&gt; di perintah paling awal.&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo chown &lt;/span&gt;root GitHub_Token.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -809,7 +896,7 @@ make distclean
     Device                Boot                       Start                End            Sectors           Size         Id Type
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;  /dev/sda1             &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;                           2048          204802047          204800000          97.7G          7 HPFS/NTFS/exFAT             
     /dev/sda2                                    204802048          573442047          368640000         175.8G          7 HPFS/NTFS/exFAT
-    /dev/sda3                                    573442110          960116735          386674626         184.4G          f W95 Ext&lt;span class=&quot;s1&quot;&gt;'d (LBA)
+    /dev/sda3                                    573442110          960116735          386674626         184.4G          f W95 Ext&lt;span class=&quot;s1&quot;&gt;&apos;d (LBA)
     ├─/dev/sda5                                  573442112          788025343          214583232         102.3G          7 HPFS/NTFS/exFAT
     ├─/dev/sda6                                  870111232          874303487            4192256             2G         82 Linux swap / Solaris
     ├─/dev/sda7                                  874305536          875300863             995328           486M         83 Linux
@@ -862,7 +949,7 @@ make distclean
     Device                Boot                       Start                End            Sectors           Size         Id Type
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;  /dev/sda1             &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;                           2048          204802047          204800000          97.7G          7 HPFS/NTFS/exFAT             
     /dev/sda2                                    204802048          573442047          368640000         175.8G          7 HPFS/NTFS/exFAT
-    /dev/sda3                                    573442110          960116735          386674626         184.4G          f W95 Ext&lt;span class=&quot;s1&quot;&gt;'d (LBA)
+    /dev/sda3                                    573442110          960116735          386674626         184.4G          f W95 Ext&lt;span class=&quot;s1&quot;&gt;&apos;d (LBA)
     ├─/dev/sda5                                  573442112          788025343          214583232         102.3G          7 HPFS/NTFS/exFAT
     ├─/dev/sda6                                  870111232          874303487            4192256             2G         82 Linux swap / Solaris
     ├─/dev/sda7                                  874305536          875300863             995328           486M         83 Linux
@@ -1023,66 +1110,4 @@ make distclean
     &lt;img src=&quot;/assets/images/Post3/Post3_13.png&quot; alt=&quot;&quot; /&gt;
     &lt;p&gt;Simpan dokumen tersebut agar dapat dilakukan pencetakan pada suatu waktu.&lt;/p&gt;
     &lt;p&gt;Akhirnya kita telah berada pada bagian akhir artikel pembuatan data &lt;em&gt;mail merge&lt;/em&gt; (surat massal), cara yang sama dapat dilakukan untuk pembuatan label seperti label undangan. Jika bermanfaat, silahkan share artikel ini. Terima kasih.&lt;/p&gt;
-&lt;/section&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><summary type="html">Bismillahirrahmanirrahim. Hal pertama yang harus diketahui pertama kali adalah mail merge itu sendiri. Mail merge atau dalam bahasa Indonesia dikenal sebagai surat massal merupakan fasilitas yang disediakan word processor untuk membuat surat massal di mana format dokumen yang dibuat hanya sekali, dan untuk pengisian bagian tertentu dalam surat seperti nama penerima dan alamatnya diisi menggunakan bantuan database yang dapat dibuat menggunakan spreadsheets atau dalam Ms. Office dapat menggunakan Ms. Excel atau Ms. Access. Dokumen surat biasa ditemui baik di instansi pendidikan, pemerintahan, maupun di perusahaan. Contoh surat seperti Surat Undangan dapat memanfaatkan fasilitas mail merge dalam pembuatannya. Kenapa? Karena surat seperti itu ditujukan ke banyak orang dengan alamat yang berbeda-beda. Membuat surat dengan mail merge, maka akan ada dua buah jenis file yang dibutuhkan, [1] Dokumen word untuk pembuatan format surat, dan [2] dokumen spreadsheets atau access untuk menampung data penerima surat. Jika menggunakan WPS Office, maka dokumen yang dibuat yaitu word dan spreadsheets. Membuat Format dan Data Mail Merge Berikut ini contoh format surat undangan, untuk bagian yang di-highlight atau yang ditandai merupakan bagian yang akan dibuatkan mail merge : Berikutnya dibuatkan data mail merge melalui program spreadsheets, dalam hal ini menggunakan WPS Spreadsheets. Data yang dibuat yaitu nama dan alamat penerima surat. Berikut contoh datanya : Membuat Mail Merge Untuk membuat mail merge, pilih menu References - Mail Merge. Setelah itu, akan muncul menu baru dengan nama Mailings. Lanjutkan untuk memilih data dengan mengklik bagian Open Data Source. Setelah data source terbuka menu-menu yang ada akan aktif. Melakukan Insert Merge Field Untuk memasukkan data yang ada pada data source ke format surat yang telah dibuat, posisikan kursor pada bagian yang ingin diisikan data lalu pilih Insert Merge Field seperti berikut. Akan tampil kotak dialog seperti berikut. Pada bagian Insert, pilih Database fields dan pada bagian Fields pilih data mail merge yang sesuai. Pada contoh pilih field untuk nama penerima. Lalu klik Insert dan Close. Lakukan langkah yang sama untuk bagian alamat penerima. Berikut hasil dari insert merge field. Contoh akhir seperti tampilan di bawah ini. Mengaktifkan Data Mail Merge Untuk mengaktifkan data dan menampilkan data yang ada dalam database, pada menu Mailings pilih View Merged Data. Hasilnya akan seperti berikut. * Warna kuning yang ada sebagai highlight dapat dihilangkan pada menu Home - Text Highlight Color. Ini dibuat sebelumnya untuk menandai bagian mail merge. Untuk melakukan navigasi dan melihat-lihat hasil dari mail merge, di menu Mailings terdapat First Record, Previous Record, Next Record dan Last Record. Dapat juga melakukan inputan langsung data yang ke berapa yang ingin dilihat. Mencetak Mail Merge Untuk memudahkan pengelolaan surat massal, lakukan Merge to New Document seperti pilihan pada gambar berikut. Pada pilihan berikut, pilih All untuk menggabungkan surat massal yang telah dibuat pada sebuah dokumen baru. Berikut tampilan surat massal pada dokumen baru pada tampilan Print Preview. Simpan dokumen tersebut agar dapat dilakukan pencetakan pada suatu waktu. Akhirnya kita telah berada pada bagian akhir artikel pembuatan data mail merge (surat massal), cara yang sama dapat dilakukan untuk pembuatan label seperti label undangan. Jika bermanfaat, silahkan share artikel ini. Terima kasih.</summary></entry><entry><title type="html">Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style</title><link href="/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html" rel="alternate" type="text/html" title="Membuat Daftar Isi Otomatis dengan Memanfaatkan TOC dan Style" /><published>2021-02-12T00:00:00+08:00</published><updated>2021-02-12T00:00:00+08:00</updated><id>/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style</id><content type="html" xml:base="/2021/02/12/Membuat-Daftar-Isi-Otomatis-dengan-Memanfaatkan-TOC-dan-Style.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
-&lt;p&gt;Di artikel kali ini akan saya berikan pemahaman mengenai penerapan daftar isi pada dokumen. Pembuatan daftar isi dimaksudkan untuk menampilkan ringkasan keseluruhan isi pada suatu karya tulis yang dibuat. Mungkin masih banyak yang belum memahami jika pembuatan daftar isi dapat dilakukan secara otomatis. Tentunya dengan cara ini akan mengefisienkan waktu yang digunakan dibandingkan dengan membuat daftar isi secara manual.&lt;/p&gt;
-&lt;p&gt;Untuk tujuan tersebut kita gunakan file yang sudah dibuat sebelumnya.&lt;/p&gt;
-&lt;p class=&quot;featured-link&quot;&gt;Baca &lt;a href=&quot;../../../2021/01/15/Membuat-Penomoran-Halaman-yang-Berbeda-dengan-Menggunakan-Section.html&quot;&gt;Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section&lt;/a&gt;&lt;/p&gt;
-
-&lt;section&gt;
-    &lt;h3&gt;Memodifikasi Style Heading&lt;/h3&gt;
-    &lt;p&gt;Pada file tersebut, seleksi judul halaman sebagai langkah awal pembuatan daftar isi. Selanjutnya, pada menu &lt;strong&gt;Home&lt;/strong&gt;, pilih referensi style yang ada dalam hal ini pilih &lt;strong&gt;Heading 1&lt;/strong&gt; .&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_1.png&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_2.png&quot; alt=&quot;&quot; /&gt;
-    &lt;p&gt;Klik kanan pada style tersebut sehingga tampil kotak dialog berikut.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_3.png&quot; alt=&quot;&quot; /&gt;
-    &lt;p&gt;Di bawah ini keterangan masing-masing Formatting.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Pict2_2.png&quot; alt=&quot;&quot; /&gt;
-
-    &lt;ol&gt;
-        &lt;li&gt;&lt;strong&gt;Font Face&lt;/strong&gt;: jenis huruf yang akan digunakan.&lt;/li&gt;
-        &lt;li&gt;&lt;strong&gt;Font Size&lt;/strong&gt;: ukuran yang akan ditetapkan pada huruf.&lt;/li&gt;
-        &lt;li&gt;&lt;strong&gt;Text Formatting&lt;/strong&gt;: format huruf yang umum digunakan seperti &lt;strong&gt;bold&lt;/strong&gt; dan &lt;strong&gt;italic&lt;/strong&gt;.&lt;/li&gt;
-        &lt;li&gt;&lt;strong&gt;Text Alignment&lt;/strong&gt;: perataan teks seperti rata kiri, rata tengah, rata kanan, dan rata kiri-kanan.&lt;/li&gt;
-        &lt;li&gt;&lt;strong&gt;Line Spacing&lt;/strong&gt;: spasi baris atau jarak antar baris dalam paragraf.&lt;/li&gt;
-        &lt;li&gt;&lt;strong&gt;Paragraf Space&lt;/strong&gt;: memberikan jarak spasi antarparagraf.&lt;/li&gt;
-        &lt;li&gt;&lt;strong&gt;Indent&lt;/strong&gt;: menambah atau mengurangi indentasi paragraf.&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;Untuk memudahkan memahami, lihat gambar di bawah ini.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Pict2_3.png&quot; alt=&quot;&quot; /&gt;
-    &lt;p&gt;Berikut hasil pengaturan style &lt;strong&gt;Heading 1&lt;/strong&gt; untuk judul halaman.&lt;/p&gt;
-    &lt;blockquote&gt;Gambar yang ditampilkan sebelumnya sengaja berbeda dengan maksud untuk memperjelas indent (left indent) paragrafnya yang mana pengaturan tersebut untuk style Heading 2.&lt;/blockquote&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_5.png&quot; alt=&quot;&quot; /&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;h3&gt;Menyisipkan Daftar Isi&lt;/h3&gt;
-    &lt;p&gt;Selanjutnya, untuk menyisipkan daftar isi pada dokumen, posisikan kursor berada pada halaman daftar isi kemudian pilih menu &lt;strong&gt;References&lt;/strong&gt; lalu pilih &lt;strong&gt;Insert TOC&lt;/strong&gt;. Kotak dialog berikut ditampilkan.&lt;/p&gt;
-    &lt;p&gt;Tampilan di bawah ini hasil yang akan diterapkan pada dokumen di mana pada bagian &lt;strong&gt;Show levels&lt;/strong&gt; diubah dari 3 menjadi 2. Dengan demikian, jumlah level heading yang ditampilkan hanya akan ada dua level yaitu &lt;strong&gt;Heading 1&lt;/strong&gt; dan &lt;strong&gt;Heading 2&lt;/strong&gt;. Klik &lt;strong&gt;OK&lt;/strong&gt;.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_6.png&quot; alt=&quot;&quot; /&gt;
-    &lt;p&gt;Daftar isi yang baru saja disisipkan ditampilkan pada dokumen.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_7.png&quot; alt=&quot;&quot; /&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;h3&gt;Mengubah Style TOC&lt;/h3&gt;
-    &lt;p&gt;Setelah menerapkan daftar isi pada dokumen bukan berarti pembuatan daftar isi selesai. Kita masih harus menyesuaikan pemformatan pada dokumen dalam hal ini style TOC seperti jenis huruf spasi baris, spasi paragraf, indentasi, dan sebagainya.&lt;/p&gt;
-    &lt;p&gt;Kembali ke menu &lt;strong&gt;Home&lt;/strong&gt;, klik kanan pada style &lt;strong&gt;TOC&lt;/strong&gt; (style yang terbentuk setelah penyisipan daftar isi), pilih &lt;strong&gt;Modify Style&lt;/strong&gt;. Langkah ini sama dengan yang dilakukan saat memodifikasi style heading.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_8.png&quot; alt=&quot;&quot; /&gt;
-    &lt;p&gt;Silahkan modifikasi pemformatan style TOC seperti yang diinginkan.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_9.png&quot; alt=&quot;&quot; /&gt;
-    &lt;p&gt;Contoh akhir seperti tampilan di bawah ini.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_10.png&quot; alt=&quot;&quot; /&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;h3&gt;Memperbaharui Daftar Isi&lt;/h3&gt;
-    &lt;p&gt;Untuk apa dilakukan pembaharuan daftar isi sedangkan pemformatan sudah dilakukan? Tunggu dulu, pembaruan daftar isi bukan terkait pemformatan daftar isi melainkan pembaharuan terhadap konten daftar isi yang terus bertambah sepanjang pengeditan dokumen. Ini termasuk penambahan heading dan subheading dokumen. Hal ini dilakukan agar isi dokumen yang termasuk heading dan subheading tampil pada daftar isi. Saya rasa kalian sudah bisa memahaminya. Baik, kita lanjutkan.&lt;/p&gt;
-    &lt;p&gt;Untuk memperbaharui daftar isi, klik menu &lt;strong&gt;References&lt;/strong&gt;, di sana ada tool &lt;strong&gt;Update TOC&lt;/strong&gt; yang bertujuan untuk memperbaharui daftar isi yang ada. Klik menu tersebut, sehingga tampil &lt;em&gt;pop-up&lt;/em&gt; seperti di bawah ini.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_11.png&quot; alt=&quot;&quot; /&gt;
-    &lt;p&gt;Dua opsi yang ada yaitu &lt;strong&gt;Update page numbers only&lt;/strong&gt; dan &lt;strong&gt;Update entire table&lt;/strong&gt;. Opsi yang pertama dipilih jika tidak ingin memperbaharui heading dan subheading pada dokumen untuk tampil di halaman TOC/daftar isi meskipun terdapat penambahan yang sudah dibuat sebelumnya dan dengan opsi ini pula hanya memperbaharui nomor halaman dari TOC yang sudah ada sebelumnya. Sedangkan opsi kedua dipilih jika ingin memperbaharui heading, subheading, dan nomor halaman yang terdapat pada TOC.&lt;/p&gt;
-    &lt;p&gt;Untuk langkah ini, dipilih opsi yang kedua yaitu Update entire table sehingga seluruh heading dan subheading dan pembaharuan halamannya ditampilkan pada daftar isi. Berikut tampilan akhir dari daftar isi yang dibuat ini.&lt;/p&gt;
-    &lt;img src=&quot;/assets/images/Post2/Post2_12.png&quot; alt=&quot;&quot; /&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;h3&gt;Kesimpulan&lt;/h3&gt;
-    &lt;p&gt;Pembuatan daftar isi secara manual boleh saja dilakukan, tetapi bayangkan jika jumlah halaman yang ada hingga memasuki angka ratusan tentu dengan cara ini menjadi tidak efisien, bukan? Nah, dengan langkah-langkah yang dilakukan sebelumnya yaitu membuat daftar isi secara otomatis akan memudahkan bagi penyusun suatu karya ilmiah termasuk di dalamnya efisiensi waktu yang digunakan. Dengan cara yang seperti ini pula akan menghadirkan makna semantik pada dokumen dan juga dokumen yang dibuat akan semakin rapi tentunya.&lt;/p&gt;
-    &lt;p&gt;Langkah-langkah pembuatan daftar isi ini tidak hanya dapat diterapkan pada &lt;em&gt;word processing&lt;/em&gt; &lt;strong&gt;Microsoft Word&lt;/strong&gt; atau &lt;strong&gt;WPS Writer&lt;/strong&gt; tetapi juga pada &lt;em&gt;word processing&lt;/em&gt; lain seperti &lt;strong&gt;LibreOffice&lt;/strong&gt; atau bahkan &lt;strong&gt;Google Document&lt;/strong&gt; yang berbasis online. Bagaimana, menarik bukan?&lt;/p&gt;
-    &lt;p&gt;Akhirnya, demikian artikel mengenai pembuatan daftar isi otomatis ini semoga memberikan manfaat. Silahkan share dengan yang lainnya supaya sama-sama mengetahui. Terima kasih.&lt;/p&gt;
-&lt;/section&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><summary type="html">Bismillahirrahmanirrahim. Di artikel kali ini akan saya berikan pemahaman mengenai penerapan daftar isi pada dokumen. Pembuatan daftar isi dimaksudkan untuk menampilkan ringkasan keseluruhan isi pada suatu karya tulis yang dibuat. Mungkin masih banyak yang belum memahami jika pembuatan daftar isi dapat dilakukan secara otomatis. Tentunya dengan cara ini akan mengefisienkan waktu yang digunakan dibandingkan dengan membuat daftar isi secara manual. Untuk tujuan tersebut kita gunakan file yang sudah dibuat sebelumnya. Baca Membuat Penomoran Halaman yang Berbeda dengan Menggunakan Section</summary></entry></feed>
+&lt;/section&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><summary type="html">Bismillahirrahmanirrahim. Hal pertama yang harus diketahui pertama kali adalah mail merge itu sendiri. Mail merge atau dalam bahasa Indonesia dikenal sebagai surat massal merupakan fasilitas yang disediakan word processor untuk membuat surat massal di mana format dokumen yang dibuat hanya sekali, dan untuk pengisian bagian tertentu dalam surat seperti nama penerima dan alamatnya diisi menggunakan bantuan database yang dapat dibuat menggunakan spreadsheets atau dalam Ms. Office dapat menggunakan Ms. Excel atau Ms. Access. Dokumen surat biasa ditemui baik di instansi pendidikan, pemerintahan, maupun di perusahaan. Contoh surat seperti Surat Undangan dapat memanfaatkan fasilitas mail merge dalam pembuatannya. Kenapa? Karena surat seperti itu ditujukan ke banyak orang dengan alamat yang berbeda-beda. Membuat surat dengan mail merge, maka akan ada dua buah jenis file yang dibutuhkan, [1] Dokumen word untuk pembuatan format surat, dan [2] dokumen spreadsheets atau access untuk menampung data penerima surat. Jika menggunakan WPS Office, maka dokumen yang dibuat yaitu word dan spreadsheets. Membuat Format dan Data Mail Merge Berikut ini contoh format surat undangan, untuk bagian yang di-highlight atau yang ditandai merupakan bagian yang akan dibuatkan mail merge : Berikutnya dibuatkan data mail merge melalui program spreadsheets, dalam hal ini menggunakan WPS Spreadsheets. Data yang dibuat yaitu nama dan alamat penerima surat. Berikut contoh datanya : Membuat Mail Merge Untuk membuat mail merge, pilih menu References - Mail Merge. Setelah itu, akan muncul menu baru dengan nama Mailings. Lanjutkan untuk memilih data dengan mengklik bagian Open Data Source. Setelah data source terbuka menu-menu yang ada akan aktif. Melakukan Insert Merge Field Untuk memasukkan data yang ada pada data source ke format surat yang telah dibuat, posisikan kursor pada bagian yang ingin diisikan data lalu pilih Insert Merge Field seperti berikut. Akan tampil kotak dialog seperti berikut. Pada bagian Insert, pilih Database fields dan pada bagian Fields pilih data mail merge yang sesuai. Pada contoh pilih field untuk nama penerima. Lalu klik Insert dan Close. Lakukan langkah yang sama untuk bagian alamat penerima. Berikut hasil dari insert merge field. Contoh akhir seperti tampilan di bawah ini. Mengaktifkan Data Mail Merge Untuk mengaktifkan data dan menampilkan data yang ada dalam database, pada menu Mailings pilih View Merged Data. Hasilnya akan seperti berikut. * Warna kuning yang ada sebagai highlight dapat dihilangkan pada menu Home - Text Highlight Color. Ini dibuat sebelumnya untuk menandai bagian mail merge. Untuk melakukan navigasi dan melihat-lihat hasil dari mail merge, di menu Mailings terdapat First Record, Previous Record, Next Record dan Last Record. Dapat juga melakukan inputan langsung data yang ke berapa yang ingin dilihat. Mencetak Mail Merge Untuk memudahkan pengelolaan surat massal, lakukan Merge to New Document seperti pilihan pada gambar berikut. Pada pilihan berikut, pilih All untuk menggabungkan surat massal yang telah dibuat pada sebuah dokumen baru. Berikut tampilan surat massal pada dokumen baru pada tampilan Print Preview. Simpan dokumen tersebut agar dapat dilakukan pencetakan pada suatu waktu. Akhirnya kita telah berada pada bagian akhir artikel pembuatan data mail merge (surat massal), cara yang sama dapat dilakukan untuk pembuatan label seperti label undangan. Jika bermanfaat, silahkan share artikel ini. Terima kasih.</summary></entry></feed>
