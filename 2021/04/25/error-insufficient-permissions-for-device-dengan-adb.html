@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/tango.css">
-    <title>Instalasi JDK</title>
+    <title>error: insufficient permissions for device dengan ADB</title>
     <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Instalasi JDK</title>
+<title>error: insufficient permissions for device dengan ADB</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Instalasi JDK" />
+<meta property="og:title" content="error: insufficient permissions for device dengan ADB" />
 <meta name="author" content="Muhammad Fajri" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Bismillahirrahmanirrahim." />
 <meta property="og:description" content="Bismillahirrahmanirrahim." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-04T00:00:00+08:00" />
+<meta property="article:published_time" content="2021-04-25T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Instalasi JDK" />
+<meta property="twitter:title" content="error: insufficient permissions for device dengan ADB" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-01-Instalasi-JDK.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"description":"Bismillahirrahmanirrahim.","url":"/books/Kotlin-01-Instalasi-JDK.html","headline":"Instalasi JDK","dateModified":"2021-04-04T00:00:00+08:00","datePublished":"2021-04-04T00:00:00+08:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2021/04/25/error-insufficient-permissions-for-device-dengan-adb.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"description":"Bismillahirrahmanirrahim.","url":"/2021/04/25/error-insufficient-permissions-for-device-dengan-adb.html","headline":"error: insufficient permissions for device dengan ADB","dateModified":"2021-04-25T00:00:00+08:00","datePublished":"2021-04-25T00:00:00+08:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -94,14 +94,25 @@
             <section aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
-        <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
-        <li class="text-dark breadcrumb-item active" aria-current="page">Instalasi JDK</li>
+        <li class="breadcrumb-item"><a href="/blog/"><span class="fas fa-book-reader"></span> Blog</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">error: insufficient permissions for device dengan ADB</li>
     </ol>
 </section>
 <section id="post">
     <div class="card">
         <div class="card-body">
-            <h2>Instalasi JDK</h2>
+            <h2>error: insufficient permissions for device dengan ADB</h2>
+            <div class="mb-3">
+              
+                
+                    <a href="/tag/Terminal" class="text-white badge"><span class="fas fa-tag"></span> Terminal</a>
+<!--                    <a href="/tag/Terminal" class="text-white badge"><code class="highligher-rouge"><nobr>Terminal</nobr></code></a>-->
+              
+                
+                    <a href="/tag/Error" class="text-white badge"><span class="fas fa-tag"></span> Error</a>
+<!--                    <a href="/tag/Error" class="text-white badge"><code class="highligher-rouge"><nobr>Error</nobr></code></a>-->
+              
+            </div>
             <div class="post-attribute d-sm-flex">
                 <div class="author-post">
                     <img src="/assets/images/author.jpg" alt="author">
@@ -110,30 +121,45 @@
                 </div>
                 <div class="date-post">
                     <span class="fas fa-calendar-alt"></span>
-                    <span>Sunday, 04 April 2021</span>
+                    <span>Sunday, 25 April 2021</span>
                 </div>
             </div>
 
             <p>Bismillahirrahmanirrahim.</p>
 
-<p>JDK (Java Development Kit) merupakan JVM (Java Virtual Machine) yang digunakan untuk menjalankan <em>library-library</em> yang dibutuhkan oleh bahasa pemrograman yang digunakan. Salah satu bahasa tersebut adalah Java. Untuk dapat melakukan pemrograman dengan java terlebih dahulu JVM ini harus diinstal. Bahasa pemrograman lain yang membutuhkan JVM ini adalah Kotlin.</p>
+<p>Saat mencoba menjalankan <em>usb debugging</em> untuk menjalankan aplikasi android dengan mode <em>debug</em>, ditemui <em>error</em>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>error: insufficient permissions <span class="k">for </span>device
+</code></pre></div></div>
 
-<p>Untuk memulai instalasi Java JDK di bawah ini saya sediakan link unduhan file untuk platform Windows dan Linux.</p>
+<p>Dari referensi yang diperoleh <a href="https://itsfoss.com/fix-error-insufficient-permissions-device/">di sini</a>, diberikan petunjuk atau langkah-langkah untuk menyelesaikannya yaitu me-<em>restart</em> adb server dalam mode <code class="language-plaintext highlighter-rouge">sudo</code>.</p>
 
-<p><a href="https://www.mediafire.com/file/5oe527docq30mzx/Instalasi+Hadoop+-+Windows.pdf/file" class="btn btn-danger text-white" target="_blank"><span class="fas fa-download"></span> Windows</a>  <a href="https://www.mediafire.com/file/3u8yljv9tyqs5gy/Instalasi+Hadoop+-+Ubuntu.pdf/file" class="btn btn-primary text-white" target="_blank"><span class="fas fa-download"></span> Linux</a></p>
+<p>Pertama, menghentikan adb server yang sedang berjalan dengan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb kill-server
+</code></pre></div></div>
 
-<p>Di dalam file tersebut, terdapat instalasi Java JDK yang merupakan bagian dari instalasi Hadoop. Semoga dapat diikuti petunjuknya dengan mudah. Terima kasih.</p>
+<p>Berikutnya, menjalankan kembali adb server dengan <em>root privileges</em>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>adb start-server
+</code></pre></div></div>
+
+<p>Output perintah tersebut kurang lebih:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">*</span> daemon not running<span class="p">;</span> starting now at tcp:5037
+<span class="k">*</span> daemon started successfully
+</code></pre></div></div>
+
+<p>Terakhir, lepas atau cabut perangkat yang tersambung melalui USB dan sambungkan kembali.</p>
+
+<p>Sekian artikel singkat ini, semoga membantu. Terima kasih.</p>
 
 
             <hr>
             <div class="share">
                 <p class="text-center">
                     Share on : <br>
-                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Kotlin-01-Instalasi-JDK.html"><span class="fab fa-facebook"></span></a>
-                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Kotlin-01-Instalasi-JDK.html"><span class="fab fa-twitter"></span></a>
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Kotlin-01-Instalasi-JDK.html&title=Instalasi JDK&summary="><span class="fab fa-linkedin"></span></a>
-                    <a href="https://api.whatsapp.com/send?text=Instalasi JDK%20%2D%20https://muh-fajri.github.io/books/Kotlin-01-Instalasi-JDK.html"><span class="fab fa-whatsapp"></span></a>
-                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Kotlin-01-Instalasi-JDK.html&text=Instalasi JDK"><span class="fab fa-telegram"></span></a>
+                    <a href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/2021/04/25/error-insufficient-permissions-for-device-dengan-adb.html"><span class="fab fa-facebook"></span></a>
+                    <a href="http://twitter.com/share?url=https://muh-fajri.github.io/2021/04/25/error-insufficient-permissions-for-device-dengan-adb.html"><span class="fab fa-twitter"></span></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/2021/04/25/error-insufficient-permissions-for-device-dengan-adb.html&title=error: insufficient permissions for device dengan ADB&summary="><span class="fab fa-linkedin"></span></a>
+                    <a href="https://api.whatsapp.com/send?text=error: insufficient permissions for device dengan ADB%20%2D%20https://muh-fajri.github.io/2021/04/25/error-insufficient-permissions-for-device-dengan-adb.html"><span class="fab fa-whatsapp"></span></a>
+                    <a href="https://telegram.me/share/url?url=https://muh-fajri.github.io/2021/04/25/error-insufficient-permissions-for-device-dengan-adb.html&text=error: insufficient permissions for device dengan ADB"><span class="fab fa-telegram"></span></a>
                 </p>
             </div>
             <hr>
