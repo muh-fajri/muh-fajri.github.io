@@ -14,8 +14,8 @@
    height="2500"
    version="1.1"
    id="svg31"
-   sodipodi:docname="kotlin-1.svg"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
+   sodipodi:docname="kotlin.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
   <metadata
      id="metadata35">
     <rdf:RDF>
@@ -42,11 +42,12 @@
      showgrid="false"
      inkscape:zoom="0.14736105"
      inkscape:cx="73.40664"
-     inkscape:cy="980.81003"
+     inkscape:cy="1283.1137"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg31" />
+     inkscape:current-layer="svg31"
+     inkscape:document-rotation="0" />
   <defs
      id="defs21">
     <linearGradient
@@ -104,7 +105,8 @@
        y1="114.925"
        x2="95.274"
        y2="-1.395"
-       gradientUnits="userSpaceOnUse">
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(20)">
       <stop
          offset=".108"
          stop-color="#c757bc"
@@ -160,19 +162,10 @@
   <g
      id="g900">
     <path
-       fill="url(#b)"
-       d="M 62.759,0 0,65.999 V 125 L 62.669,62.221 125,0 Z"
-       id="path25" />
-    <path
-       data-name="&lt;Path&gt;"
-       fill="url(#a)"
-       d="M 0,125 62.669,62.222 125,125 Z"
-       id="path27" />
-    <path
-       fill="url(#c)"
-       d="M 0,0 H 62.759 L 0,65.999 Z"
-       id="path29"
-       style="fill:url(#linearGradient870);fill-opacity:1" />
+       id="path25"
+       style="stroke-width:20;fill:#1b8efa;fill-opacity:1"
+       d="M 0 0 L 0 1319.9805 L 0 2500 L 1253.3809 1244.4199 L 2500 0 L 1255.1797 0 L 0 0 z M 0 2500 L 2500 2500 L 1253.3809 1244.4395 L 0 2500 z "
+       transform="scale(0.05)" />
   </g>
   <text
      xml:space="preserve"

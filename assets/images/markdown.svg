@@ -5,14 +5,13 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    viewBox="0 0 640 512"
    version="1.1"
    id="svg1"
    sodipodi:docname="markdown.svg"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
   <metadata
      id="metadata1">
     <rdf:RDF>
@@ -25,29 +24,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs1">
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient1">
-      <stop
-         style="stop-color:#1b8efa;stop-opacity:1"
-         offset="0"
-         id="stop1" />
-      <stop
-         style="stop-color:#00ffbf;stop-opacity:1"
-         offset="1"
-         id="stop2" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1"
-       id="linearGradient2"
-       x1="13.708984"
-       y1="134.83983"
-       x2="433.8111"
-       y2="377.38589"
-       gradientUnits="userSpaceOnUse" />
-  </defs>
+     id="defs1" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -67,9 +44,10 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1" />
-
-<path d="M593.8 59.1H46.2C20.7 59.1 0 79.8 0 105.2v301.5c0 25.5 20.7 46.2 46.2 46.2h547.7c25.5 0 46.2-20.7 46.1-46.1V105.2c0-25.4-20.7-46.1-46.2-46.1zM338.5 360.6H277v-120l-61.5 76.9-61.5-76.9v120H92.3V151.4h61.5l61.5 76.9 61.5-76.9h61.5v209.2zm135.3 3.1L381.5 256H443V151.4h61.5V256H566z"
+     inkscape:current-layer="svg1"
+     inkscape:document-rotation="0" />
+  <path
+     d="M 593.8,59.1 H 46.2 C 20.7,59.1 0,79.8 0,105.2 v 301.5 c 0,25.5 20.7,46.2 46.2,46.2 h 547.7 c 25.5,0 46.2,-20.7 46.1,-46.1 V 105.2 C 640,79.8 619.3,59.1 593.8,59.1 Z M 338.5,360.6 H 277 v -120 L 215.5,317.5 154,240.6 v 120 H 92.3 V 151.4 h 61.5 l 61.5,76.9 61.5,-76.9 h 61.5 V 360.6 Z M 473.8,363.7 381.5,256 H 443 V 151.4 h 61.5 V 256 H 566 Z"
      id="path116"
-     style="fill-opacity:1;fill:url(#linearGradient2)" />
+     style="fill:#1b8efa;fill-opacity:1;stroke-width:1" />
 </svg>

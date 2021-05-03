@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-04-28T11:02:47+08:00</updated><id>/feed.xml</id><entry><title type="html">Konversi PDF to OCR (Optical Character Recognition)</title><link href="/2021/04/28/Konversi-PDF-to-OCR.html" rel="alternate" type="text/html" title="Konversi PDF to OCR (Optical Character Recognition)" /><published>2021-04-28T00:00:00+08:00</published><updated>2021-04-28T00:00:00+08:00</updated><id>/2021/04/28/Konversi-PDF-to-OCR</id><content type="html" xml:base="/2021/04/28/Konversi-PDF-to-OCR.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-05-03T19:23:56+08:00</updated><id>/feed.xml</id><entry><title type="html">Konversi PDF to OCR (Optical Character Recognition)</title><link href="/2021/04/28/Konversi-PDF-to-OCR.html" rel="alternate" type="text/html" title="Konversi PDF to OCR (Optical Character Recognition)" /><published>2021-04-28T00:00:00+08:00</published><updated>2021-04-28T00:00:00+08:00</updated><id>/2021/04/28/Konversi-PDF-to-OCR</id><content type="html" xml:base="/2021/04/28/Konversi-PDF-to-OCR.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/pdf-to-ocr.png&quot; alt=&quot;time-synchronization&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Sebelum kita lanjutkan, harap diingat bahwa fitur ini sebaiknya dimanfaatkan secara bijak dan tidak digunakan untuk melakukan plagiasi dan tindakan yang melanggar lainnya. Terima kasih.&lt;/p&gt;
@@ -58,7 +60,9 @@
 
 &lt;p&gt;Dari fitur yang ada ini, dapat kita manfaatkan untuk tujuan seperti membuat kutipan saat menyusun suatu karya ilmiah yang sumbernya dari buku fisik atau skripsi atau bahkan jurnal digital, menyusun file PDF dari teks yang di-&lt;em&gt;scan&lt;/em&gt; (membuat salinan dari buku fisik), atau pun membuka file PDF yang telah dikonversi yang sebelumnya dibuat dari dokumen Word dengan maksud file PDF dapat diedit dan disimpan kembali dengan nama file baru, dan sebagainya.&lt;/p&gt;
 
-&lt;p&gt;Akhirnya kita sudah berada di bagian akhir artikel, semoga apa yang dipaparkan dapat dipahami dengan baik, dan tentunya diikuti dan dipraktekkan. Semoga bermanfaat. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><category term="Tips" /><category term="HowTo" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Sinkronisasi Jam di Linux dan Windows</title><link href="/2021/04/28/Sinkronisasi-Jam-di-Linux-dan-Windows.html" rel="alternate" type="text/html" title="Sinkronisasi Jam di Linux dan Windows" /><published>2021-04-28T00:00:00+08:00</published><updated>2021-04-28T00:00:00+08:00</updated><id>/2021/04/28/Sinkronisasi-Jam-di-Linux-dan-Windows</id><content type="html" xml:base="/2021/04/28/Sinkronisasi-Jam-di-Linux-dan-Windows.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+&lt;p&gt;Akhirnya kita sudah berada di bagian akhir artikel, semoga apa yang dipaparkan dapat dipahami dengan baik, dan tentunya diikuti dan dipraktekkan. Semoga bermanfaat. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Word" /><category term="Tips" /><category term="HowTo" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Sinkronisasi Waktu di Linux dan Windows</title><link href="/2021/04/28/Sinkronisasi-Waktu-di-Linux-dan-Windows.html" rel="alternate" type="text/html" title="Sinkronisasi Waktu di Linux dan Windows" /><published>2021-04-28T00:00:00+08:00</published><updated>2021-04-28T00:00:00+08:00</updated><id>/2021/04/28/Sinkronisasi-Waktu-di-Linux-dan-Windows</id><content type="html" xml:base="/2021/04/28/Sinkronisasi-Waktu-di-Linux-dan-Windows.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/time-synchronization.png&quot; alt=&quot;time-synchronization&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Saat selesai menginstal sistem operasi Linux berdampingan dengan Windows, atau dikenal sebagai &lt;em&gt;dualboot&lt;/em&gt;, ditemui bahwa waktu yang ditunjukkan di kedua OS tidak sama. Perbedaan ini terjadi dikarenakan Linux menyimpan waktu menggunakan UTC (Universal Time Coordinated) sedangkan Windows disimpan menggunakan waktu lokal.&lt;/p&gt;
 
@@ -121,6 +125,8 @@ System clock synchronized: no
 
 &lt;p&gt;Sekian artikel singkat mengenai konversi waktu UTC ke lokal ini, semoga bermanfaat. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><category term="Tips" /><category term="HowTo" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">error: insufficient permissions for device dengan ADB</title><link href="/2021/04/25/error-insufficient-permissions-for-device-dengan-adb.html" rel="alternate" type="text/html" title="error: insufficient permissions for device dengan ADB" /><published>2021-04-25T00:00:00+08:00</published><updated>2021-04-25T00:00:00+08:00</updated><id>/2021/04/25/error-insufficient-permissions-for-device-dengan-adb</id><content type="html" xml:base="/2021/04/25/error-insufficient-permissions-for-device-dengan-adb.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/insufficient-permission-adb.png&quot; alt=&quot;insufficient-permission-adb&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Saat mencoba menjalankan &lt;em&gt;usb debugging&lt;/em&gt; untuk menjalankan aplikasi android dengan mode &lt;em&gt;debug&lt;/em&gt;, ditemui &lt;em&gt;error&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;error: insufficient permissions &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;device
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -143,6 +149,8 @@ System clock synchronized: no
 &lt;p&gt;Terakhir, lepas atau cabut perangkat yang tersambung melalui USB dan sambungkan kembali.&lt;/p&gt;
 
 &lt;p&gt;Sekian artikel singkat ini, semoga membantu. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Terminal" /><category term="Error" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Instal Java JDK di Linux</title><link href="/2021/04/22/Instal-Java-JDK-di-Linux.html" rel="alternate" type="text/html" title="Instal Java JDK di Linux" /><published>2021-04-22T00:00:00+08:00</published><updated>2021-04-22T00:00:00+08:00</updated><id>/2021/04/22/Instal-Java-JDK-di-Linux</id><content type="html" xml:base="/2021/04/22/Instal-Java-JDK-di-Linux.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/install-java-jdk.png&quot; alt=&quot;install-java-jdk&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kembali lagi kita bertemu di web ini dengan pembahasan artikel yang baru.&lt;/p&gt;
 
@@ -230,6 +238,8 @@ OpenJDK 64-Bit Server VM 18.9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;buil
 
 &lt;p&gt;Sekian artikel ini, semoga apa yang dipaparkan, langkah-langkah yang ada dapat diikuti dengan baik.
 Semoga bermanfaat. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><category term="Terminal" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Manajemen File di Linux - Bagian 2</title><link href="/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html" rel="alternate" type="text/html" title="Manajemen File di Linux - Bagian 2" /><published>2021-04-07T00:00:00+08:00</published><updated>2021-04-07T00:00:00+08:00</updated><id>/2021/04/07/Manajemen-File-di-Linux-Bagian-2</id><content type="html" xml:base="/2021/04/07/Manajemen-File-di-Linux-Bagian-2.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/file-management-part2.png&quot; alt=&quot;file-management-part2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kembali lagi kita lanjutkan artikel mengenai manajemen file di linux. Jika belum membaca artikel sebelumnya yang merupakan bagian awal dari artikel ini, silahkan kunjungi melalui link berikut ini.&lt;/p&gt;
 
@@ -350,6 +360,8 @@ Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&q
 
 &lt;p&gt;Semoga memberikan manfaat konten yang disajikan. Sampai jumpa dan terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><category term="Terminal" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Manajemen File di Linux - Bagian 3</title><link href="/2021/04/07/Manajemen-File-di-Linux-Bagian-3.html" rel="alternate" type="text/html" title="Manajemen File di Linux - Bagian 3" /><published>2021-04-07T00:00:00+08:00</published><updated>2021-04-07T00:00:00+08:00</updated><id>/2021/04/07/Manajemen-File-di-Linux-Bagian-3</id><content type="html" xml:base="/2021/04/07/Manajemen-File-di-Linux-Bagian-3.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/file-management-part3.png&quot; alt=&quot;file-management-part3&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Kembali lagi kita lanjutkan artikel mengenai manajemen file di linux. Ini merupakan artikel bagian terakhir yang akan membahas mengenai hak akses dan hak kepemilikan file.&lt;/p&gt;
 
 &lt;p&gt;Seperti yang sudah kita lakukan pada bagian sebelumnya, ada beberapa hal yang kita lakukan terhadap file seperti membuat, menyalin dan memindahkan, mengubah, dan menghapus file. Dan di sini kita akan memahami hak akses sebuah file. Sehingga kita dapat membatasi siapa saja yang dapat menggunakan file kita, dan apa saja akses yang kita berikan kepada &lt;em&gt;user&lt;/em&gt; lain. Hal ini tentunya menjadi salah satu keamanan terhadap file yang kita miliki dan tidak sembarang &lt;em&gt;user&lt;/em&gt; yang dapat mengaksesnya.&lt;/p&gt;
@@ -425,6 +437,8 @@ Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&q
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Sampai di sini kita sudah memahami banyak mengenai manajemen file di Linux. Semoga memberikan manfaat. Sampai jumpa di artikel yang lainnya. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><category term="Terminal" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Manajemen File di Linux</title><link href="/2021/04/07/Manajemen-File-di-Linux.html" rel="alternate" type="text/html" title="Manajemen File di Linux" /><published>2021-04-07T00:00:00+08:00</published><updated>2021-04-07T00:00:00+08:00</updated><id>/2021/04/07/Manajemen-File-di-Linux</id><content type="html" xml:base="/2021/04/07/Manajemen-File-di-Linux.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/file-management-part1.png&quot; alt=&quot;file-management-part1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Terima kasih telah berkunjung kembali di web ini dan selamat datang bagi kalian yang baru pertama kali berkunjung.&lt;/p&gt;
 
@@ -574,6 +588,8 @@ Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&q
 
 &lt;p class=&quot;featured-link&quot;&gt;Baca &lt;a href=&quot;Manajemen-File-di-Linux-Bagian-2.html&quot;&gt;Manajemen File di Linux - Bagian 2&lt;/a&gt;&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><category term="Terminal" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Instal Aplikasi Intellij IDEA dalam Berkas tar.gz</title><link href="/2021/04/06/Instal-Aplikasi-Intellij-IDEA-dalam-Berkas-tar-gz.html" rel="alternate" type="text/html" title="Instal Aplikasi Intellij IDEA dalam Berkas tar.gz" /><published>2021-04-06T00:00:00+08:00</published><updated>2021-04-06T00:00:00+08:00</updated><id>/2021/04/06/Instal-Aplikasi-Intellij-IDEA-dalam-Berkas-tar-gz</id><content type="html" xml:base="/2021/04/06/Instal-Aplikasi-Intellij-IDEA-dalam-Berkas-tar-gz.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/intellij-idea-in-tar-gz-file.png&quot; alt=&quot;intellij-idea-tar-gz&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/images/linux/Intellij-IDEA-splash-screen.png&quot; alt=&quot;Splash Screen IDEA&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Terima kasih telah mengunjungi kembali website ini.&lt;/p&gt;
@@ -653,6 +669,8 @@ Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&q
 &lt;p&gt;Dalam proses instalasinya, utamanya di Linux, beberapa hal yang perlu diperhatikan yaitu &lt;em&gt;binary&lt;/em&gt; file (paket), kesesuaian dengan OS yang digunakan, dan bagaimana melakukan instalasi berdasarkan esktensi file yang ada.&lt;/p&gt;
 
 &lt;p&gt;Demikian artikel intalasi Intellij IDEA ini. Semoga bermanfaat. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><category term="HowTo" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Mengelola File Archive melalui Terminal</title><link href="/2021/04/06/Mengelola-File-Archive-melalui-Terminal.html" rel="alternate" type="text/html" title="Mengelola File Archive melalui Terminal" /><published>2021-04-06T00:00:00+08:00</published><updated>2021-04-06T00:00:00+08:00</updated><id>/2021/04/06/Mengelola-File-Archive-melalui-Terminal</id><content type="html" xml:base="/2021/04/06/Mengelola-File-Archive-melalui-Terminal.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/managing-archive-files-terminal.png&quot; alt=&quot;managing-archive-files&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kembali lagi kita bertemu di web ini. Kali ini kita akan membahas tentang bagaimana mengelola file &lt;em&gt;archive&lt;/em&gt;/ arsip melalui terminal Linux. Ada beragam file arsip yang biasa digunakan. Kita hanya akan membahas file arsip yang umum digunakan.&lt;/p&gt;
 
@@ -824,6 +842,8 @@ license.txt  rar        readme.txt
   &lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Archiving_and_compression&quot;&gt;Archiving and compression - Archlinux Wiki&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://oantoro.wordpress.com/2016/02/25/dibalik-configure-make-make-install&quot;&gt;Dibalik ./configure &amp;amp; make &amp;amp; make install&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Muhammad Fajri</name></author><category term="Linux" /><category term="Terminal" /><summary type="html">Bismillahirrahmanirrahim.</summary></entry><entry><title type="html">Mengenal Ekstensi Paket di Linux</title><link href="/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux.html" rel="alternate" type="text/html" title="Mengenal Ekstensi Paket di Linux" /><published>2021-04-06T00:00:00+08:00</published><updated>2021-04-06T00:00:00+08:00</updated><id>/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux</id><content type="html" xml:base="/2021/04/06/Mengenal-Ekstensi-Paket-di-Linux.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/covers/packet-extension.png&quot; alt=&quot;packet-extension&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Seiring penggunaan sebuah sistem operasi baik untuk keperluan akademik maupun pekerjaan kita akan sering menjumpai beragam jenis ekstensi file. Ekstensi-ekstensi tersebut tentunya memiliki tujuan masing-masing. Dan, pada umumnya ekstensi file tersebut menunjukkan perusahaan pembuatnya.&lt;/p&gt;
 
