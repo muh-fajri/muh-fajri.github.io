@@ -26,6 +26,8 @@ h2 { font-size: 28px !important; }
 
 h3 { font-size: 20px !important; }
 
+h4 { font-size: 18px !important; }
+
 .card { border: none; }
 
 table { width: 100%; font-size: 15px; border-bottom: 2px solid #f3f3f3; }
@@ -63,14 +65,28 @@ html { scroll-behavior: smooth; }
 
 .search section h3 span { display: inline-block; margin-right: 10px; padding: 5px 10px; background-color: #00B762; color: #fff; border-radius: 5px; }
 
-.search section a { display: inline-block; background-color: #00B762; padding: 3px 10px; font-size: 15px; border-radius: 5px; color: #fff !important; }
+.search section .search-content { display: flex; padding-bottom: 10px; }
+
+.search section .search-content img { width: 30%; margin-right: 20px; }
+
+.search section .search-content p { width: 70%; line-height: 30px; }
+
+.search section .search-content p a { display: inline-block; background-color: #00B762; padding: 3px 10px; font-size: 15px; border-radius: 5px; color: #fff !important; }
 
 /*-- Search Style --*/
+.post-content { display: flex; }
+
+.post-content .card { width: 70%; }
+
+.post-content aside { width: 30%; }
+
 /* Attention Footer */
 .attention { color: #fff; background-color: #00B762; padding: 10px 20px 0 20px; font-size: 13px; font-weight: bold; }
 
 /*-- Attention Footer --*/
-@media screen and (max-width: 990px) { #toTop { bottom: 70px; right: 20px; } }
+@media screen and (max-width: 990px) { #toTop { bottom: 70px; right: 20px; } .search-content img, .search-content p { width: 50% !important; } .post-content { flex-direction: column; } .post-content .card, .post-content aside { width: 100%; } .post-content aside h4, .post-content aside .sidebar-image { margin-right: 0; } .post-content aside .sidebar-image { display: flex; align-items: center; } .post-content aside .sidebar-image .image { width: 25%; } .post-content aside .sidebar-image .image img { width: 100% !important; } .post-content aside .sidebar-image .image-desc { width: 75%; text-align: left; padding-left: 20px; } }
+
+@media screen and (max-width: 576px) { .search section { flex-direction: column; } .search .search-content { flex-direction: column; } .search .search-content img, .search .search-content p { width: 100% !important; } .search .search-content p { margin-top: 15px; } aside .sidebar-image { flex-direction: column; } aside .sidebar-image .image { width: 40% !important; } aside .sidebar-image .image-desc { width: 100%; text-align: center !important; padding-left: 0 !important; } }
 
 body { font-family: Montserrat; background-color: #f3f3f3; }
 
@@ -225,6 +241,20 @@ article { position: relative; background-color: #f3f3f3; }
 .current-link { background-color: #113A93; }
 
 /*-- Pagination --*/
+/* Sidebar */
+aside { background-color: #fff; padding: 0 20px 30px 20px; }
+
+aside h4 { color: #113A93; background-color: #f3f3f3; padding: 5px 10px; border-radius: 7px; margin: 30px 10px 20px 0; border: 3px dotted #113A93; font-weight: bold; text-align: center; }
+
+aside .sidebar-image { margin-right: 10px; border-radius: 5px; box-shadow: 0 0 15px #f3f3f3; padding: 25px 20px; text-align: center; }
+
+aside .sidebar-image img { width: 50% !important; border-radius: 50% !important; }
+
+aside .sidebar-image .btn { border: 1px solid #00B762; border-radius: 20px; font-size: 15px; color: #00B762 !important; }
+
+aside .sidebar-image .btn:hover { border: 1px solid #113A93; color: #113A93 !important; }
+
+/*-- Sidebar --*/
 /*-- Article Contents --*/
 /* Footer Contents */
 footer { background-color: #fff; text-align: center; }

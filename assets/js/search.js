@@ -10,9 +10,12 @@
           appendString += `
             <section>
               <h3><span>${i+1}</span> ${item.title}</h3>
-              <p>${item.content.substring(0, 250)}
-              <a href="${item.url}">Lanjut Baca&nbsp;&nbsp;<span class="fas fa-angle-right"></span></a>
-              </p>
+              <div class="search-content">
+                <img src="/assets/images/covers/${item.postpict}.png" alt="${item.postpict}">
+                <p>${item.content.substring(0, 250)}
+                  <a href="${item.url}">Lanjut Baca&nbsp;&nbsp;<span class="fas fa-angle-right"></span></a>
+                </p>
+              </div>
             </section>
           `;
         }
