@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Higher Order Functions Kotlin" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Higher Order Functions Kotlin","dateModified":"2021-05-02T00:00:00+08:00","datePublished":"2021-05-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-17-Higher-Order-Functions-Kotlin.html"},"url":"/books/Kotlin-17-Higher-Order-Functions-Kotlin.html","author":{"@type":"Person","name":"Muhammad Fajri"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/books/Kotlin-17-Higher-Order-Functions-Kotlin.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"description":"Bismillahirrahmanirrahim.","url":"/books/Kotlin-17-Higher-Order-Functions-Kotlin.html","headline":"Higher Order Functions Kotlin","dateModified":"2021-05-02T00:00:00+08:00","datePublished":"2021-05-02T00:00:00+08:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -36,6 +36,7 @@
     
     
     
+    <meta name="google-site-verification" content="k0jmxk64UlIxt16jLwkah1OHRC3VvqUrLupwkE8SIrY" />
 </head>
 <body>
     <div class="container-fluid">
@@ -105,7 +106,6 @@
                 <h2>Higher Order Functions Kotlin</h2>
                 <div class="post-attribute d-sm-flex">
                     <div class="author-post">
-                        <img src="/assets/images/author.jpg" alt="author">
                         <span class="fas fa-user"></span>
                         <a href="/author.html">Muhammad Fajri</a>
                     </div>
@@ -125,10 +125,10 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Perhatikan parameter pada <em>function</em> tersebut, <code class="language-plaintext highlighter-rouge">action</code> merupakan parameter dan tipe datanya ditulis sebagai <code class="language-plaintext highlighter-rouge">() -&gt; Unit</code> yang menunjukkan bahwa tipe datanya adalah sebuah <em>function</em>. Dimana <code class="language-plaintext highlighter-rouge">Unit</code> merupakan tipe data sebagai nilai <em>return</em>, dengan kata lain tidak mengembalikan apa-apa. Dalam bahasa Kotlin, seperti bahasa yang lainnya, <em>function</em> dapat diteruskan atau mengembalikan nilai dari posisi manapun seperti variabel yang kita teruskan nilai atau kembalikan nilainya.</p>
+<p>Perhatikan parameter pada <em>function</em> tersebut, <code class="language-plaintext highlighter-rouge">action</code> merupakan parameter dan tipe datanya ditulis sebagai <code class="language-plaintext highlighter-rouge">() -&gt; Unit</code> yang menunjukkan bahwa tipe datanya adalah sebuah <em>function</em>. Dimana <code class="language-plaintext highlighter-rouge">Unit</code> merupakan tipe data sebagai nilai <em>return</em>, dengan kata lain tidak mengembalikan apa-apa. Dalam bahasa Kotlin, seperti bahasa yang lainnya, <em>function</em> dapat diteruskan atau mengembalikan nilai dari posisi manapun seperti variabel yang kita teruskan atau kembalikan nilainya.</p>
 
 <p>Untuk membuat sebuah tipe data menjadi <em>function</em>–baik sebagai parameter maupun dalam deklarasi variabel, dimana <em>function</em> tersebut memiliki 3 komponen yaitu:
-(1) menempatkan daftar tipe data dari parameter ke dalam sebuah tanda kurung, (2) operator <em>arrow</em> (tanda panah), dan (3) tipe data kembalian (<em>return type</em>).</p>
+(1) menempatkan daftar tipe data dari parameter ke dalam sebuah tanda kurung (kurung biasa), (2) operator <em>arrow</em> (tanda panah), dan (3) tipe data kembalian (<em>return type</em>).</p>
 
 <p>Contoh berikut mendeklarasikan sebuah variabel dengan tipe data <em>function</em>.</p>
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">doThis</span><span class="p">:()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span> <span class="p">=</span> <span class="p">{</span>

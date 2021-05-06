@@ -20,3 +20,9 @@ I'm express my thanks you free your time to visit this page. Hope, this website 
 - Privacy and Disclaimer
 - Google Analytics
 - Correction Message
+
+
+## Added Features - 05 May 2021
+- Author Section (in posts)
+- Menambah Indexing Google
+  - Verifikasi Kepemilikan
