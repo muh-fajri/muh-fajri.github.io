@@ -24,5 +24,6 @@ I'm express my thanks you free your time to visit this page. Hope, this website 
 
 ## Added Features - 05 May 2021
 - Author Section (in posts)
-- Menambah Indexing Google
-  - Verifikasi Kepemilikan
+- Add Indexing Google
+  - Verify Ownership
+  - Submit sitemap
