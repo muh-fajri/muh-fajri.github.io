@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://muh-fajri.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://muh-fajri.github.io/" rel="alternate" type="text/html" /><updated>2021-05-18T22:58:04+08:00</updated><id>https://muh-fajri.github.io/feed.xml</id><entry><title type="html">Konversi PDF to OCR (Optical Character Recognition)</title><link href="https://muh-fajri.github.io/2021/04/28/Konversi-PDF-to-OCR.html" rel="alternate" type="text/html" title="Konversi PDF to OCR (Optical Character Recognition)" /><published>2021-04-28T00:00:00+08:00</published><updated>2021-04-28T00:00:00+08:00</updated><id>https://muh-fajri.github.io/2021/04/28/Konversi-PDF-to-OCR</id><content type="html" xml:base="https://muh-fajri.github.io/2021/04/28/Konversi-PDF-to-OCR.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://muh-fajri.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://muh-fajri.github.io/" rel="alternate" type="text/html" /><updated>2021-08-28T23:59:49+08:00</updated><id>https://muh-fajri.github.io/feed.xml</id><entry><title type="html">Konversi PDF to OCR (Optical Character Recognition)</title><link href="https://muh-fajri.github.io/2021/04/28/Konversi-PDF-to-OCR.html" rel="alternate" type="text/html" title="Konversi PDF to OCR (Optical Character Recognition)" /><published>2021-04-28T00:00:00+08:00</published><updated>2021-04-28T00:00:00+08:00</updated><id>https://muh-fajri.github.io/2021/04/28/Konversi-PDF-to-OCR</id><content type="html" xml:base="https://muh-fajri.github.io/2021/04/28/Konversi-PDF-to-OCR.html">&lt;p&gt;Bismillahirrahmanirrahim.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/covers/pdf-to-ocr.png&quot; alt=&quot;time-synchronization&quot; /&gt;&lt;/p&gt;
 
@@ -108,7 +108,7 @@ System clock synchronized: no
          with &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;zone changes and daylight saving &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;adjustments. The RTC                                                                          
          &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;is never updated, it relies on external facilities to maintain it.                                                                       
          If at all possible, use RTC &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;UTC by calling                                                                                                 
-         &lt;span class=&quot;s1&quot;&gt;&apos;timedatectl set-local-rtc 0&apos;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;     
+         &lt;span class=&quot;s1&quot;&gt;'timedatectl set-local-rtc 0'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;     
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Jika pada bagian &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RTC in local TZ&lt;/code&gt; bernilai &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ya&lt;/code&gt;, maka waktu di Linux telah diatur menggunakan waktu lokal.&lt;/p&gt;
@@ -284,13 +284,13 @@ Semoga bermanfaat. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Perlakuan untuk direktori dan file sama. Jadi untuk membuat direktori baru jika sudah berada pada direktori yang dimaksudkan, path untuk direktori tersebut tidak perlu ditambahakan, kecuali jika kita berada di direktori yang lain. Contoh lain untuk membuat direktori dengan nama &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Direktori baru&lt;/code&gt;. Direktori ini berbeda dengan direktori sebelumnya. Untuk membuatnya, ketikkan perintah:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;Direktori baru&apos;&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Direktori baru'&lt;/span&gt;
 
 //atau
 &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Direktori baru&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Perlu diperhatikan di sini, bahwa saat kita ingin membuat sebuah direktori yang dipisahkan oleh spasi, kita perlu menambahkan tanda petik baik petik tunggal (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&apos;..&apos;&lt;/code&gt;) atau pun ganda (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;...&quot;&lt;/code&gt;). Jika tidak ditambahkan petik, maka akan dibuat dua buah direktori baru dengan nama &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Direktori&lt;/code&gt; dan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baru&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Perlu diperhatikan di sini, bahwa saat kita ingin membuat sebuah direktori yang dipisahkan oleh spasi, kita perlu menambahkan tanda petik baik petik tunggal (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'..'&lt;/code&gt;) atau pun ganda (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;...&quot;&lt;/code&gt;). Jika tidak ditambahkan petik, maka akan dibuat dua buah direktori baru dengan nama &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Direktori&lt;/code&gt; dan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baru&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;menyalin-dan-memindahkan-file&quot;&gt;Menyalin dan Memindahkan File&lt;/h3&gt;
 
@@ -316,10 +316,10 @@ Semoga bermanfaat. Terima kasih.&lt;/p&gt;</content><author><name>Muhammad Fajri
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; ~/Documents/Direktori-baru /opt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Jika tidak menyertakan opsi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-r&lt;/code&gt; tersebut akan ditampilkan output &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp: -r not specified; omitting directory &apos;~/Documents/Direktori-baru&apos;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Jika tidak menyertakan opsi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-r&lt;/code&gt; tersebut akan ditampilkan output &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp: -r not specified; omitting directory '~/Documents/Direktori-baru'&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Terakhir, untuk pengenalan penyalinan dan pemindahan file yaitu memindahkan file di direktori yang sama.
-Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contoh-file.txt&lt;/code&gt; yang ada di direktori &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents&lt;/code&gt;. Maka kita harus memberikan nama baru pada file yang disalin. Jika tidak, maka akan ditampilkan pesan &lt;em&gt;error&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp: &apos;contoh-file.txt&apos; and &apos;contoh-file.txt&apos; are the same file&lt;/code&gt;.&lt;/p&gt;
+Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contoh-file.txt&lt;/code&gt; yang ada di direktori &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents&lt;/code&gt;. Maka kita harus memberikan nama baru pada file yang disalin. Jika tidak, maka akan ditampilkan pesan &lt;em&gt;error&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp: 'contoh-file.txt' and 'contoh-file.txt' are the same file&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; ~/Documents/contoh-file.txt ~/Documents/contoh-file2.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -422,7 +422,7 @@ Contoh menyalin file &lt;code class=&quot;language-plaintext highlighter-rouge&q
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;chown &lt;/span&gt;root GitHub_Token.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Jika didapati error &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chown: changing ownership of &apos;GitHub_Token.txt&apos;: Operation not permitted&lt;/code&gt;, maka kita harus tambahkan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo&lt;/code&gt; di perintah paling awal.&lt;/p&gt;
+&lt;p&gt;Jika didapati error &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chown: changing ownership of 'GitHub_Token.txt': Operation not permitted&lt;/code&gt;, maka kita harus tambahkan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo&lt;/code&gt; di perintah paling awal.&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo chown &lt;/span&gt;root GitHub_Token.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 

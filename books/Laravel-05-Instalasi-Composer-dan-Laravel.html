@@ -25,7 +25,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Instalasi Composer dan Laravel" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Bismillahirrahmanirrahim.","headline":"Instalasi Composer dan Laravel","dateModified":"2021-04-02T00:00:00+08:00","datePublished":"2021-04-02T00:00:00+08:00","url":"https://muh-fajri.github.io/books/Laravel-05-Instalasi-Composer-dan-Laravel.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://muh-fajri.github.io/books/Laravel-05-Instalasi-Composer-dan-Laravel.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"@context":"https://schema.org"}</script>
+{"datePublished":"2021-04-02T00:00:00+08:00","url":"https://muh-fajri.github.io/books/Laravel-05-Instalasi-Composer-dan-Laravel.html","dateModified":"2021-04-02T00:00:00+08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://muh-fajri.github.io/books/Laravel-05-Instalasi-Composer-dan-Laravel.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"description":"Bismillahirrahmanirrahim.","headline":"Instalasi Composer dan Laravel","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -594,12 +594,35 @@ php artisan serve
 
 <p><img src="/assets/images/books/laravel_test.png" alt="laravel_test" /></p>
 
+<h3 id="tes-laravel-menggunakan-direktori">Tes Laravel menggunakan Direktori</h3>
+
+<p>Untuk menjalankan Laravel secara manual tanpa menggunakan <code class="language-plaintext highlighter-rouge">php artisan serve</code>, maka project laravel harus ditempatkan terlebih dahulu pada direktori server localhost yang terinstal pada sistem. Pada umumnya berada di direktori <code class="language-plaintext highlighter-rouge">htdocs</code>. Untuk OS yang saya gunakan, server localhost berada pada direktori <code class="language-plaintext highlighter-rouge">/var/www/html</code>.</p>
+
+<p>Contoh project saat ini yaitu <code class="language-plaintext highlighter-rouge">surat_masuk_keluar</code>, sehingga direktorinya menjadi <code class="language-plaintext highlighter-rouge">/var/www/html/surat_masuk_keluar</code>. Saat dijalankan, akan menampilkan error seperti berikut.</p>
+
+<p><img src="/assets/images/books/laravel_error_permission.png" alt="laravel_error_permission" /></p>
+
+<p>Untuk mengatasinya, folder <code class="language-plaintext highlighter-rouge">storage</code> yang ada di dalam <em>project</em> harus diubah kepemilikannya terlebih dahulu menjadi <code class="language-plaintext highlighter-rouge">www-data</code> baik <em>user</em> maupun <em>group</em>-nya. Gunakan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown</span> <span class="nt">-R</span> www-data:www-data storage
+</code></pre></div></div>
+
+<p>Dari referensi yang digunakan, folder <code class="language-plaintext highlighter-rouge">vendor</code> dilakukan hal yang sama.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown</span> <span class="nt">-R</span> www-data:www-data vendor
+</code></pre></div></div>
+
+<p>Jika selesai dilakukan, silahkan buka <em>browser</em> untuk menjalankan <em>project</em> yang dibuat melalui <em>localhost</em>. Arahkan pada URL <code class="language-plaintext highlighter-rouge">localhost/surat_masuk_keluar/public</code>.</p>
+
+<p><img src="/assets/images/books/laravel_test_manual.png" alt="laravel_test_manual" /></p>
+
+<p>Dan, berhasil!!! Selamat, <em>project</em> Laravel telah terinstal pada OS yang digunakan.</p>
+
 <p>Demikian langkah-langkah instalasi composer dan laravel semoga langkah-langkah yang ada mudah dipahami dan diikuti. Terima kasih.</p>
 
 <h3 id="referensi">Referensi</h3>
 
 <ul>
   <li><a href="https://jagongoding.com/web/laravel/cara-install-laravel-di-linux/#sebelum-instalasi">Cara Install Laravel di Linux [Semua Distro]</a></li>
+  <li><a href="https://stackoverflow.com/questions/30639174/how-to-set-up-file-permissions-for-laravel">How to set up file permissions for Laravel?</a></li>
 </ul>
 
 
