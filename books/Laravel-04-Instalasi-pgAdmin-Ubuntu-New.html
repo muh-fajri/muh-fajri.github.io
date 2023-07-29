@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Instalasi pgAdmin</title>
+    <link type="application/atom+xml" rel="alternate" href="https://muh-fajri.github.io/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Instalasi pgAdmin</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Instalasi pgAdmin" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<link rel="canonical" href="https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu-New.html" />
+<meta property="og:url" content="https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu-New.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-06-18T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Instalasi pgAdmin" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Instalasi pgAdmin","dateModified":"2023-06-18T00:00:00+08:00","datePublished":"2023-06-18T00:00:00+08:00","url":"https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu-New.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu-New.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"description":"Bismillahirrahmanirrahim.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+    
+    
+    <meta name="google-site-verification" content="k0jmxk64UlIxt16jLwkah1OHRC3VvqUrLupwkE8SIrY" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Typing search..." aria-label="Search" id="search-box" name="query" autocomplete="off">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Instalasi pgAdmin</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="post-content">
+        <div class="card">
+            <div class="card-body">
+                <h2>Instalasi pgAdmin</h2>
+                <div class="post-attribute d-sm-flex">
+                    <div class="author-post">
+                        <span class="fas fa-user"></span>
+                        <a href="/author.html">Muhammad Fajri</a>
+                    </div>
+                    <div class="date-post">
+                        <span class="fas fa-calendar-alt"></span>
+                        <span>Sunday, 18 June 2023</span>
+                    </div>
+                </div>
+
+                <p>Bismillahirrahmanirrahim.</p>
+
+<p>Dalam melakukan manajemen basis data, akan mudah dilakukan melalui GUI. Untuk itu, diperlukan sebuah <em>tool</em> agar pengelolaan basis data yang akan lebih nyaman dibandingkan menggunakan perintah-perintah SQL melalui CLI.</p>
+
+<p>Dalam proses kali ini akan dilakukan instalasi pgAdmin sebagai <em>tool</em> administrasi PostgreSQL berbasis web. pgAdmin merupakan platform pengembangan dan administrasi Open Source yang paling populer dan kaya fitur Open Source untuk PostgreSQL, basis data Open Source terdepan di dunia. pgAdmin dapat digunakan di Linux, Unix, macOS dan Windows untuk mengelola PostgreSQL dan EDB Advanced Server 10 ke atas.</p>
+
+<h3 id="instalasi-pgadmin4">Instalasi pgAdmin4</h3>
+
+<p>Tambahkan PPA pgAdmin4 untuk sistem Ubuntu.</p>
+
+<ol>
+  <li>Import repositori GPG key:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | <span class="nb">sudo </span>apt-key add -
+</code></pre></div>    </div>
+  </li>
+  <li>Tambahkan pgAdmin4 PPA dengan perintah:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>sh <span class="nt">-c</span> <span class="s1">'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/focal pgadmin4 main" &gt; /etc/apt/sources.list.d/pgadmin4.list'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Update cache APT sistem:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+</code></pre></div>    </div>
+  </li>
+  <li>Install package pgAdmin4:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>pgadmin4
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="konfigurasi-pgadmin4-web">Konfigurasi pgAdmin4-Web</h3>
+
+<p>Sekarang, pengaturan backend dan frontend sudah siap. Aplikasi pgAdmin dapat dijalankan sekarang.</p>
+<ol>
+  <li>Buka terminal di mana virtual environment pgAdmin python aktif.</li>
+  <li>Pindah ke direktori <code class="language-plaintext highlighter-rouge">/opt/pgAdmin4/web</code>.</li>
+  <li>Jalankan perintah <code class="language-plaintext highlighter-rouge">python3 pgAdmin4.py</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myenv<span class="o">)</span> fajri@fajri-PC:/opt/pgadmin4/web<span class="nv">$ </span>python3 pgAdmin4.py
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Terjadi error:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"pgAdmin4.py"</span>, line 49, <span class="k">in</span> &lt;module&gt;
+    import config
+  File <span class="s2">"/opt/pgadmin4/web/config.py"</span>, line 25, <span class="k">in</span> &lt;module&gt;
+    from pgadmin.utils import <span class="nb">env</span>, IS_WIN, fs_short_path
+  File <span class="s2">"/opt/pgadmin4/web/pgadmin/__init__.py"</span>, line 24, <span class="k">in</span> &lt;module&gt;
+    from flask import Flask, abort, request, current_app, session, url_for
+ModuleNotFoundError: No module named <span class="s1">'flask'</span>
+<span class="o">(</span>myenv<span class="o">)</span> fajri@fajri-PC:/opt/pgadmin4/web<span class="nv">$ </span>python3 pgAdmin4.py 
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"pgAdmin4.py"</span>, line 49, <span class="k">in</span> &lt;module&gt;
+    import config
+  File <span class="s2">"/opt/pgadmin4/web/config.py"</span>, line 25, <span class="k">in</span> &lt;module&gt;
+    from pgadmin.utils import <span class="nb">env</span>, IS_WIN, fs_short_path
+  File <span class="s2">"/opt/pgadmin4/web/pgadmin/__init__.py"</span>, line 24, <span class="k">in</span> &lt;module&gt;
+    from flask import Flask, abort, request, current_app, session, url_for
+ModuleNotFoundError: No module named <span class="s1">'flask'</span>
+</code></pre></div></div>
+
+<p>Instal <code class="language-plaintext highlighter-rouge">flask</code> dengan <code class="language-plaintext highlighter-rouge">pip</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> Flask
+// atau untuk diinstal pada environment tertentu
+<span class="nb">source</span> /opt/myenv/bin/activate
+python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> Flask
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Collecting Flask
+  Using cached Flask-2.2.5-py3-none-any.whl <span class="o">(</span>101 kB<span class="o">)</span>
+Collecting Werkzeug&gt;<span class="o">=</span>2.2.2 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading Werkzeug-2.2.3-py3-none-any.whl <span class="o">(</span>233 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.6/233.6 kB 217.8 kB/s eta 0:00:00
+Collecting Jinja2&gt;<span class="o">=</span>3.0 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading Jinja2-3.1.2-py3-none-any.whl <span class="o">(</span>133 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 148.4 kB/s eta 0:00:00
+Collecting itsdangerous&gt;<span class="o">=</span>2.0 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading itsdangerous-2.1.2-py3-none-any.whl <span class="o">(</span>15 kB<span class="o">)</span>
+Collecting click&gt;<span class="o">=</span>8.0 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading click-8.1.3-py3-none-any.whl <span class="o">(</span>96 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 485.8 kB/s eta 0:00:00
+Collecting importlib-metadata&gt;<span class="o">=</span>3.6.0 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading importlib_metadata-6.6.0-py3-none-any.whl <span class="o">(</span>22 kB<span class="o">)</span>
+Collecting zipp&gt;<span class="o">=</span>0.5 <span class="o">(</span>from importlib-metadata&gt;<span class="o">=</span>3.6.0-&gt;Flask<span class="o">)</span>
+  Downloading zipp-3.15.0-py3-none-any.whl <span class="o">(</span>6.8 kB<span class="o">)</span>
+Collecting typing-extensions&gt;<span class="o">=</span>3.6.4 <span class="o">(</span>from importlib-metadata&gt;<span class="o">=</span>3.6.0-&gt;Flask<span class="o">)</span>
+  Using cached typing_extensions-4.6.3-py3-none-any.whl <span class="o">(</span>31 kB<span class="o">)</span>
+Collecting MarkupSafe&gt;<span class="o">=</span>2.0 <span class="o">(</span>from Jinja2&gt;<span class="o">=</span>3.0-&gt;Flask<span class="o">)</span>
+  Downloading MarkupSafe-2.1.3-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <span class="o">(</span>25 kB<span class="o">)</span>
+Installing collected packages: zipp, typing-extensions, MarkupSafe, itsdangerous, Werkzeug, Jinja2, importlib-metadata, click, Flask
+Successfully installed Flask-2.2.5 Jinja2-3.1.2 MarkupSafe-2.1.3 Werkzeug-2.2.3 click-8.1.3 importlib-metadata-6.6.0 itsdangerous-2.1.2 typing-extensions-4.6.3 zipp-3.15.0
+</code></pre></div></div>
+
+<p>Jalankan ulang kembali <code class="language-plaintext highlighter-rouge">python3 pgAdmin4.py</code>.</p>
+
+<p>Terdapat error lagi:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"pgAdmin4.py"</span>, line 49, <span class="k">in</span> &lt;module&gt;
+    import config
+  File <span class="s2">"/opt/pgadmin4/web/config.py"</span>, line 25, <span class="k">in</span> &lt;module&gt;
+    from pgadmin.utils import <span class="nb">env</span>, IS_WIN, fs_short_path
+  File <span class="s2">"/opt/pgadmin4/web/pgadmin/__init__.py"</span>, line 25, <span class="k">in</span> &lt;module&gt;
+    from flask_socketio import SocketIO
+ModuleNotFoundError: No module named <span class="s1">'flask_socketio'</span>
+</code></pre></div></div>
+
+<p>Instal paket <code class="language-plaintext highlighter-rouge">flask-socketio</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-socketio
+</code></pre></div></div>
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Collecting flask-socketio
+  Using cached Flask_SocketIO-5.3.4-py3-none-any.whl <span class="o">(</span>17 kB<span class="o">)</span>
+Requirement already satisfied: Flask&gt;<span class="o">=</span>0.9 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from flask-socketio<span class="o">)</span> <span class="o">(</span>2.2.5<span class="o">)</span>
+Collecting python-socketio&gt;<span class="o">=</span>5.0.2 <span class="o">(</span>from flask-socketio<span class="o">)</span>
+  Downloading python_socketio-5.8.0-py3-none-any.whl <span class="o">(</span>56 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.0/57.0 kB 116.2 kB/s eta 0:00:00
+Requirement already satisfied: Werkzeug&gt;<span class="o">=</span>2.2.2 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>2.2.3<span class="o">)</span>
+Requirement already satisfied: Jinja2&gt;<span class="o">=</span>3.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>3.1.2<span class="o">)</span>
+Requirement already satisfied: itsdangerous&gt;<span class="o">=</span>2.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>2.1.2<span class="o">)</span>
+Requirement already satisfied: click&gt;<span class="o">=</span>8.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>8.1.3<span class="o">)</span>
+Requirement already satisfied: importlib-metadata&gt;<span class="o">=</span>3.6.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>6.6.0<span class="o">)</span>
+Collecting bidict&gt;<span class="o">=</span>0.21.0 <span class="o">(</span>from python-socketio&gt;<span class="o">=</span>5.0.2-&gt;flask-socketio<span class="o">)</span>
+  Downloading bidict-0.22.1-py3-none-any.whl <span class="o">(</span>35 kB<span class="o">)</span>
+Collecting python-engineio&gt;<span class="o">=</span>4.3.0 <span class="o">(</span>from python-socketio&gt;<span class="o">=</span>5.0.2-&gt;flask-socketio<span class="o">)</span>
+  Downloading python_engineio-4.4.1-py3-none-any.whl <span class="o">(</span>53 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.4/53.4 kB 212.4 kB/s eta 0:00:00
+Requirement already satisfied: zipp&gt;<span class="o">=</span>0.5 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from importlib-metadata&gt;<span class="o">=</span>3.6.0-&gt;Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>3.15.0<span class="o">)</span>
+Requirement already satisfied: typing-extensions&gt;<span class="o">=</span>3.6.4 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from importlib-metadata&gt;<span class="o">=</span>3.6.0-&gt;Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>4.6.3<span class="o">)</span>
+Requirement already satisfied: MarkupSafe&gt;<span class="o">=</span>2.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Jinja2&gt;<span class="o">=</span>3.0-&gt;Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>2.1.3<span class="o">)</span>
+Installing collected packages: python-engineio, bidict, python-socketio, flask-socketio
+Successfully installed bidict-0.22.1 flask-socketio-5.3.4 python-engineio-4.4.1 python-socketio-5.8.0
+</code></pre></div></div>
+
+<p>Selanjutnya akan error lagi saat menjalankan ulang perintah <code class="language-plaintext highlighter-rouge">python3 pgAdmin4.py</code>. Berturut-turut instal package yang tidak ada:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>1] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-babel
+<span class="o">[</span>2] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-login
+<span class="o">[</span>3] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-mail
+<span class="o">[</span>4] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-paranoid
+<span class="o">[</span>5] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-security
+<span class="o">[</span>6] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> email-validator
+<span class="o">[</span>7] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-sqlalchemy
+<span class="o">[</span>8] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> python-dateutil
+<span class="o">[</span>9] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-migrate
+<span class="o">[</span>10] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> keyring
+<span class="o">[</span>11] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> psycopg
+<span class="o">[</span>12] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> sshtunnel
+<span class="o">[</span>13] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> ldap3
+<span class="o">[</span>14] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> authlib
+<span class="o">[</span>14] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> requests
+<span class="o">[</span>14] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> pyotp
+<span class="o">[</span>14] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> qrcode
+</code></pre></div></div>
+
+<p>Error terakhir yaitu karena masalah permission:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR  : Failed to create the directory /var/lib/pgadmin:
+           <span class="o">[</span>Errno 13] Permission denied: <span class="s1">'/var/lib/pgadmin'</span>
+HINT :   Create the directory /var/lib/pgadmin, ensure it is writeable by
+         <span class="s1">'fajri'</span>, and try again, or, create a config_local.py file
+         and override the SQLITE_PATH setting per
+         https://www.pgadmin.org/docs/pgadmin4/7.3/config_py.html
+</code></pre></div></div>
+
+<p>Buat folder <code class="language-plaintext highlighter-rouge">pgadmin</code> pada direktori <code class="language-plaintext highlighter-rouge">/var/lib/</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mkdir</span> /var/lib/pgadmin /var/log/pgadmin
+<span class="nb">sudo chown</span> <span class="nt">-R</span> fajri:fajri /var/lib/pgadmin /var/log/pgadmin
+</code></pre></div></div>
+
+<ol>
+  <li>Saat semua paket dan direktori yang dibutuhkan sudah terinstal dan dibuat, maka jalankan perintah <code class="language-plaintext highlighter-rouge">python3 pgAdmin4.py</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myenv<span class="o">)</span> fajri@fajri-PC:/opt/pgadmin4/web<span class="nv">$ </span>python3 pgAdmin4.py
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<p>temukan baris <code class="language-plaintext highlighter-rouge">/* User used to manipulate with storage */</code>. Lalu isi pada bagian <code class="language-plaintext highlighter-rouge">controluser</code> (user mariaDB) –<code class="language-plaintext highlighter-rouge">pma</code> merupakan user khusus yang melakukan tugas administratif tertentu– dan <code class="language-plaintext highlighter-rouge">controlpass</code> (kata sandi user MariaDB). Jangan lupa hapus tanda dua garis miring yang ada pada bagian depan baris. Ini dilakukan agar tidak sembarang user yang dapat mengakses database melalui phpMyAdmin.</p>
+
+<p>/* User used to manipulate with storage */
+// $cfg[‘Servers’][$i][‘controlhost’] = ‘’;
+// $cfg[‘Servers’][$i][‘controlport’] = ‘’;
+$cfg[‘Servers’][$i][‘controluser’] = ‘root’;
+$cfg[‘Servers’][$i][‘controlpass’] = ‘password’;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Skrol ke bawah, pada bagian `/* Storage database and tables */` terdapat akses-akses administratif user database `pma`. Hilangkan tanda dua garis miring (komentar) pada tiap bagian sehingga menjadi:
+```bash
+/* Storage database and tables */
+$cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
+$cfg['Servers'][$i]['bookmarktable'] = 'pma__bookmark';
+$cfg['Servers'][$i]['relation'] = 'pma__relation';
+$cfg['Servers'][$i]['table_info'] = 'pma__table_info';
+$cfg['Servers'][$i]['table_coords'] = 'pma__table_coords';
+$cfg['Servers'][$i]['pdf_pages'] = 'pma__pdf_pages';
+$cfg['Servers'][$i]['column_info'] = 'pma__column_info';
+$cfg['Servers'][$i]['history'] = 'pma__history';
+$cfg['Servers'][$i]['table_uiprefs'] = 'pma__table_uiprefs';
+$cfg['Servers'][$i]['tracking'] = 'pma__tracking';
+$cfg['Servers'][$i]['userconfig'] = 'pma__userconfig';
+$cfg['Servers'][$i]['recent'] = 'pma__recent';
+$cfg['Servers'][$i]['favorite'] = 'pma__favorite';
+$cfg['Servers'][$i]['users'] = 'pma__users';
+$cfg['Servers'][$i]['usergroups'] = 'pma__usergroups';
+$cfg['Servers'][$i]['navigationhiding'] = 'pma__navigationhiding';
+$cfg['Servers'][$i]['savedsearches'] = 'pma__savedsearches';
+$cfg['Servers'][$i]['central_columns'] = 'pma__central_columns';
+$cfg['Servers'][$i]['designer_settings'] = 'pma__designer_settings';
+$cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
+</code></pre></div></div>
+<p>Tabel-tabel di atas ini belum ada, namun akan segera dibuat.</p>
+
+<p>Terakhir, skrol ke paling bawah dan tambahkan baris berikut. Direktori temporary akan digunakan oleh phpMyAdmin sebagai template cache agar loading halaman lebih cepat.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$cfg</span><span class="o">[</span><span class="s1">'TempDir'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'/var/lib/phpmyadmin/tmp'</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Simpan dan tutup file (<code class="language-plaintext highlighter-rouge">CTRL + X</code>, <code class="language-plaintext highlighter-rouge">Y</code>, lalu <code class="language-plaintext highlighter-rouge">ENTER</code>).</p>
+
+<p>Selanjutnya, perlu untuk membuat storage tabel dan database phpMyAdmin. Pada instalasi phpMyAdmin, terdapat file dengan nama <code class="language-plaintext highlighter-rouge">create_tables.sql</code>. File SQL ini memuat perintah-perintah yang dibutuhkan untuk membuat storage tabel dan database phpMyAdmin agar dapat berfungsi dengan baik.</p>
+
+<p>Jalankan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>mariadb &lt; /usr/share/phpmyadmin/sql/create_tables.sql
+</code></pre></div></div>
+
+<p>Selanjutnya, buat user administratif <code class="language-plaintext highlighter-rouge">pma</code>. Buka prompt MariaDB:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>mariadb
+</code></pre></div></div>
+
+<p>Buat user <code class="language-plaintext highlighter-rouge">pma</code> dsn GRANT izin yang sesuai, pastikan input <code class="language-plaintext highlighter-rouge">password</code> sesuai dengan yang ada pada dile <code class="language-plaintext highlighter-rouge">config.inc.php</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.<span class="k">*</span> TO <span class="s1">'pma'</span>@<span class="s1">'localhost'</span> IDENTIFIED BY <span class="s1">'password'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Untuk mengelola database melalui phpMyAdmin, buat user baru yang memiliki privilege terhadap semua tabel yang ada dalam database dan buat kata sandi yang kuat.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRANT ALL PRIVILEGES ON <span class="k">*</span>.<span class="k">*</span> TO <span class="s1">'root'</span>@<span class="s1">'localhost'</span> IDENTIFIED BY <span class="s1">'password'</span> WITH GRANT OPTION<span class="p">;</span>
+</code></pre></div></div>
+
+<p>Keluar dari prompt MariaDB:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">exit</span>
+</code></pre></div></div>
+
+<p>phpMyAdmin sudah sepenuhnya terinstal dan dikonfigurasi pada server. Tetapi, server Apache belum bisa men-<em>serve</em> aplikasi. Buat file konfigurasi Apache untuk mengatasinya.</p>
+
+<h3 id="konfigurasi-apache-untuk-men-serve-phpmyadmin">Konfigurasi Apache untuk Men-<em>serve</em> phpMyAdmin</h3>
+
+<p>Saat instalasi phpMyAdmin melalui repositori, proses instalasi akan membuat file konfigurasi Apache secara otomatis (<code class="language-plaintext highlighter-rouge">phpmyadmin.conf</code>) dan disimpan pada direktori <code class="language-plaintext highlighter-rouge">/etc/apache2/conf-enabled/</code>. Karena instalasi dilakukan secara manual maka harus membuat filenya sendiri.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nano /etc/apache2/conf-available/phpmyadmin.conf
+</code></pre></div></div>
+
+<p>Lalu tambahkan isi:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># phpMyAdmin default Apache configuration</span>
+
+Alias /phpmyadmin /usr/share/phpmyadmin
+
+&lt;Directory /usr/share/phpmyadmin&gt;
+    Options SymLinksIfOwnerMatch
+    DirectoryIndex index.php
+
+    &lt;IfModule mod_php5.c&gt;
+        &lt;IfModule mod_mime.c&gt;
+            AddType application/x-httpd-php .php
+        &lt;/IfModule&gt;
+        &lt;FilesMatch <span class="s2">".+</span><span class="se">\.</span><span class="s2">php$"</span><span class="o">&gt;</span>
+            SetHandler application/x-httpd-php
+        &lt;/FilesMatch&gt;
+
+        php_value include_path <span class="nb">.</span>
+        php_admin_value upload_tmp_dir /var/lib/phpmyadmin/tmp
+        php_admin_value open_basedir /usr/share/phpmyadmin/:/etc/phpmyadmin/:/var/lib/phpmyadmin/:/usr/share/php/php-gettext/:/usr/share/php/php-php-gettext/:/usr/share/javascript/:/usr/share/php/tcpdf/:/usr/share/doc/phpmyadmin/:/usr/share/php/phpseclib/
+        php_admin_value mbstring.func_overload 0
+    &lt;/IfModule&gt;
+    &lt;IfModule mod_php.c&gt;
+        &lt;IfModule mod_mime.c&gt;
+            AddType application/x-httpd-php .php
+        &lt;/IfModule&gt;
+        &lt;FilesMatch <span class="s2">".+</span><span class="se">\.</span><span class="s2">php$"</span><span class="o">&gt;</span>
+            SetHandler application/x-httpd-php
+        &lt;/FilesMatch&gt;
+
+        php_value include_path <span class="nb">.</span>
+        php_admin_value upload_tmp_dir /var/lib/phpmyadmin/tmp
+        php_admin_value open_basedir /usr/share/phpmyadmin/:/etc/phpmyadmin/:/var/lib/phpmyadmin/:/usr/share/php/php-gettext/:/usr/share/php/php-php-gettext/:/usr/share/javascript/:/usr/share/php/tcpdf/:/usr/share/doc/phpmyadmin/:/usr/share/php/phpseclib/
+        php_admin_value mbstring.func_overload 0
+    &lt;/IfModule&gt;
+
+&lt;/Directory&gt;
+
+<span class="c"># Authorize for setup</span>
+&lt;Directory /usr/share/phpmyadmin/setup&gt;
+    &lt;IfModule mod_authz_core.c&gt;
+        &lt;IfModule mod_authn_file.c&gt;
+            AuthType Basic
+            AuthName <span class="s2">"phpMyAdmin Setup"</span>
+            AuthUserFile /etc/phpmyadmin/htpasswd.setup
+        &lt;/IfModule&gt;
+        Require valid-user
+    &lt;/IfModule&gt;
+&lt;/Directory&gt;
+
+<span class="c"># Disallow web access to directories that don't need it</span>
+&lt;Directory /usr/share/phpmyadmin/templates&gt;
+    Require all denied
+&lt;/Directory&gt;
+&lt;Directory /usr/share/phpmyadmin/libraries&gt;
+    Require all denied
+&lt;/Directory&gt;
+&lt;Directory /usr/share/phpmyadmin/setup/lib&gt;
+    Require all denied
+&lt;/Directory&gt;
+</code></pre></div></div>
+
+<p>Simpan dan tutup file, lalu aktifkan dengan mengetikkan:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>a2enconf phpmyadmin.conf
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enabling conf phpmyadmin.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+</code></pre></div></div>
+
+<p>Lalu reload service <code class="language-plaintext highlighter-rouge">apache2</code> agar konfigurasi diterapkan.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl reload apache2
+</code></pre></div></div>
+
+<p>Setelah selesai, phpMyAdmin sudah dapat diakses melalui web browser.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://&lt;alamat_domain&gt;/phpmyadmin
+</code></pre></div></div>
+
+<p><img src="/assets/images/books/phpmyadmin_test_deepin.png" alt="phpmyadmin_test_deepin" /></p>
+
+<p>Berikut tampilan phpMyAdmin setelah login.</p>
+
+<p><img src="/assets/images/books/phpmyadmin_test_deepin2.png" alt="phpmyadmin_test_deepin_login" /></p>
+
+<p>Sekarang sudah dapat terkoneksi dan berinteraksi dengan phpMyAdmin, langkah terakhir yaitu memperkuat keamanan sistem agar terlindungi dari penyerang.</p>
+
+<h3 id="mengamankan-phpmyadmin-lebih-lanjut">Mengamankan phpMyAdmin Lebih Lanjut</h3>
+
+<p>Karena phpMyAdmin banyak digunakan dimana-mana sehingga sangat berpotensi menjadi target bagi penyerang, sehingga perlu untuk menambahkan perlindungan akses terautorisasi. Salah satu cara termudah yaitu menempatkan sebuah <em>gateway</em> di depan semua aplikasi menggunakan fungsionalitas autorisasi dan autentikasi Apache yaitu <code class="language-plaintext highlighter-rouge">.htaccess</code>.</p>
+
+<p>Edit file konfigurasi Apache:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nano /etc/apache2/conf-available/phpmyadmin.conf
+</code></pre></div></div>
+
+<p>Tambahkan <code class="language-plaintext highlighter-rouge">AllowOverride All</code> di bagian dalam <code class="language-plaintext highlighter-rouge">&lt;Directory /usr/share/phpmyadmin&gt;</code>, seperti ini:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Directory /usr/share/phpmyadmin&gt;
+    Options FollowSymLinks
+    DirectoryIndex index.php
+    AllowOverride All
+
+    &lt;IfModule mod_php5.c&gt;
+    ...
+</code></pre></div></div>
+
+<p>Simpan dan tutup file. Restart service Apache:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart apache2
+</code></pre></div></div>
+
+<p>Sekarang <code class="language-plaintext highlighter-rouge">.htaccess</code> sudah diaktifkan. Lanjutkan, dengan membuat file <code class="language-plaintext highlighter-rouge">.htaccess</code>. Agar berhasil, file ini harus dibuat di dalam direktori aplikasi:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nano /usr/share/phpmyadmin/.htaccess
+</code></pre></div></div>
+<p>Tambahkan baris:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AuthType Basic
+AuthName <span class="s2">"Restricted Files"</span>
+AuthUserFile /usr/share/phpmyadmin/.htpasswd
+Require valid-user
+</code></pre></div></div>
+
+<p>Lokasi yang dipilih untuk file password yaitu <code class="language-plaintext highlighter-rouge">/usr/share/phpmyadmin/.htpasswd</code>. Buat file dengan utilitas <code class="language-plaintext highlighter-rouge">htpasswd</code> dan sebuah user:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>htpasswd <span class="nt">-c</span> /usr/share/phpmyadmin/.htpasswd root
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New password: 
+Re-type new password: 
+Adding password <span class="k">for </span>user root
+</code></pre></div></div>
+
+<p>Untuk membuat user tambahan, jalankan seperti perintah di atas tanpa <code class="language-plaintext highlighter-rouge">-c</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>htpasswd /etc/phpmyadmin/.htpasswd additionaluser
+</code></pre></div></div>
+
+<p>Restart service Apache agar autentikasi tambahan diterapkan:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart apache2
+</code></pre></div></div>
+
+<p>Sekarang, saat mengakses phpMyAdmin melalui web browser, akan dihadapkan tampilan login tambahan (autentikasi Apache) sebelum dihadapkan pada halaman login phpMyAdmin. Pengaturan ini menambahkan layer keamanan tambahan yang diinginkan karena phpMyAdmin rawan terhadap kerentanan.</p>
+
+<p><img src="/assets/images/books/phpmyadmin_test_deepin2_apache_login.png" alt="phpmyadmin_test_deepin_apache_login" /></p>
+
+<p>Jika tidak dapat melakukan autentikasi dengan data yang benar, saat menekan tombol <em>Cancel</em> akan dihadapkan pada halaman error <em>Unauthorized</em>.</p>
+
+<p><img src="/assets/images/books/phpmyadmin_test_deepin2_apache_login_error.png" alt="phpmyadmin_test_deepin_apache_login_error" /></p>
+
+<p>Akhirnya sampai juga di bagian akhir artikel ini. Terima kasih sudah membaca artikel ini sampai bagian akhir.</p>
+
+<p>Demikian langkah-langkah instalasi phpMyAdmin ini. Semoga bermanfaat. Jangan lupa di-<em>share</em>.</p>
+
+<h3 id="referensi">Referensi</h3>
+
+<ul>
+  <li><a href="https://www.pgadmin.org/">Halaman Pengunduhan pgAdmin</a></li>
+  <li><a href="https://www.enterprisedb.com/blog/setup-pgadmin-dev-env">https://www.enterprisedb.com/blog/setup-pgadmin-dev-env</a></li>
+  <li><a href="https://github.com/nodejs/help/wiki/Installation">Installing Node.js via binary archive</a></li>
+  <li><a href="https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable">Install Yarn via npm</a></li>
+  <li><a href="https://www.postgresql.org/docs/current/install-post.html#id-1.6.4.9.3">Set PostgreSQL Environment Variable</a></li>
+  <li><a href="https://docs.python.org/3/library/venv.html">Creation of Virtual Environments</a></li>
+  <li><a href="https://help.dreamhost.com/hc/en-us/articles/115000695551-Installing-and-using-virtualenv-with-Python-3">Installing and using virtualenv with Python 3</a></li>
+  <li><a href="https://stephenallwright.com/no-module-named-flask/">ModuleNotFoundError: No module named flask, simple fix!</a></li>
+  <li><a href="https://github.com/miguelgrinberg/Flask-SocketIO/issues/1105">[ImportError] ModuleNotFoundError: No module named ‘socketio.exceptions’</a></li>
+</ul>
+
+
+                <hr>
+                <div class="share">
+                    <p class="text-center">
+                        Share on : <br>
+                        <a class="fb" href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu-New.html"><span class="fab fa-facebook"></span></a>
+                        <a class="twitter" href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu-New.html"><span class="fab fa-twitter"></span></a>
+                        <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu-New.html&title=Instalasi pgAdmin&summary="><span class="fab fa-linkedin"></span></a>
+                        <a class="wa" href="https://api.whatsapp.com/send?text=Instalasi pgAdmin%20%2D%20https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu-New.html"><span class="fab fa-whatsapp"></span></a>
+                        <a class="telegram" href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu-New.html&text=Instalasi pgAdmin"><span class="fab fa-telegram"></span></a>
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <aside>
+    <h4>Author</h4>
+    <section class="sidebar-image">
+        <div class="image">
+            <img class="mb-3" src="/assets/images/author.jpg" alt="Fajri">
+        </div>
+        <div class="image-desc">
+            <p>
+                Selamat datang! <br>
+                Terima kasih atas kunjungannya! <br> <br>
+                Gemar mengacaukan kode program demi kepentingan pribadi.
+            </p>
+            <a href="/author.html" class="btn">View Profile</a>
+        </div>
+    </section>
+</aside>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Menemukan konten yang <em>tidak tepat</em>? Ada saran atau yang lainnya? Silahkan sampaikan melalui kontak yang disediakan agar dapat dilakukan pembaharuan. <br/> Terima kasih.</p>
+    </div>
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

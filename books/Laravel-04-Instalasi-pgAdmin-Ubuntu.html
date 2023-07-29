@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Instalasi pgAdmin</title>
+    <link type="application/atom+xml" rel="alternate" href="https://muh-fajri.github.io/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Instalasi pgAdmin</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Instalasi pgAdmin" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<link rel="canonical" href="https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu.html" />
+<meta property="og:url" content="https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-06-18T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Instalasi pgAdmin" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Instalasi pgAdmin","dateModified":"2023-06-18T00:00:00+08:00","datePublished":"2023-06-18T00:00:00+08:00","url":"https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"description":"Bismillahirrahmanirrahim.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+    
+    
+    <meta name="google-site-verification" content="k0jmxk64UlIxt16jLwkah1OHRC3VvqUrLupwkE8SIrY" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Typing search..." aria-label="Search" id="search-box" name="query" autocomplete="off">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Instalasi pgAdmin</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="post-content">
+        <div class="card">
+            <div class="card-body">
+                <h2>Instalasi pgAdmin</h2>
+                <div class="post-attribute d-sm-flex">
+                    <div class="author-post">
+                        <span class="fas fa-user"></span>
+                        <a href="/author.html">Muhammad Fajri</a>
+                    </div>
+                    <div class="date-post">
+                        <span class="fas fa-calendar-alt"></span>
+                        <span>Sunday, 18 June 2023</span>
+                    </div>
+                </div>
+
+                <p>Bismillahirrahmanirrahim.</p>
+
+<p>Dalam melakukan manajemen basis data, akan mudah dilakukan melalui GUI. Untuk itu, diperlukan sebuah <em>tool</em> agar pengelolaan basis data yang akan lebih nyaman dibandingkan menggunakan perintah-perintah SQL melalui CLI.</p>
+
+<p>Dalam proses kali ini akan dilakukan instalasi pgAdmin sebagai <em>tool</em> administrasi PostgreSQL berbasis web. pgAdmin merupakan platform pengembangan dan administrasi Open Source yang paling populer dan kaya fitur Open Source untuk PostgreSQL, basis data Open Source terdepan di dunia. pgAdmin dapat digunakan di Linux, Unix, macOS dan Windows untuk mengelola PostgreSQL dan EDB Advanced Server 10 ke atas.</p>
+
+<h3 id="instalasi-prasyarat-dan-unduh-file-pgadmin">Instalasi Prasyarat dan Unduh File pgAdmin</h3>
+
+<p>Tools yang diperlukan:</p>
+<ul>
+  <li>git (<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>)</li>
+  <li>Node.js 16 (<a href="https://nodejs.org/en/download">https://nodejs.org/en/download</a>)</li>
+  <li>yarn (<a href="https://classic.yarnpkg.com/lang/en/docs/install">https://classic.yarnpkg.com/lang/en/docs/install</a>)</li>
+  <li>Python 3.7 ke atas (<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>)</li>
+  <li>PostgreSQL server (<a href="https://www.postgresql.org/download">https://www.postgresql.org/download</a>)</li>
+</ul>
+
+<h4 id="instalasi-nodejs-dan-yarn">Instalasi NodeJS dan Yarn</h4>
+
+<ol>
+  <li>Unduh file melalui web NodeJS.</li>
+  <li>Unzip arsip biner ke direktori yang diinginkan untuk menginstal Node, misal di <code class="language-plaintext highlighter-rouge">/usr/local/lib/nodejs</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">VERSION</span><span class="o">=</span>v18.16.0
+ <span class="nv">DISTRO</span><span class="o">=</span>linux-x64
+ <span class="nb">sudo mkdir</span> <span class="nt">-p</span> /usr/local/lib/nodejs
+ <span class="nb">sudo tar</span> <span class="nt">-xJvf</span> node-<span class="nv">$VERSION</span>-<span class="nv">$DISTRO</span>.tar.xz <span class="nt">-C</span> /usr/local/lib/nodejs
+</code></pre></div>    </div>
+  </li>
+  <li>Set variabel env <code class="language-plaintext highlighter-rouge">~/.bashrc</code>, tambahkan baris berikut di bagian akhir:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Nodejs</span>
+<span class="nv">VERSION</span><span class="o">=</span>v10.15.0
+<span class="nv">DISTRO</span><span class="o">=</span>linux-x64
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/lib/nodejs/node-<span class="nv">$VERSION</span>-<span class="nv">$DISTRO</span>/bin:<span class="nv">$PATH</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Refresh bashrc
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bashrc
+</code></pre></div>    </div>
+  </li>
+  <li>Tes instalasi, <code class="language-plaintext highlighter-rouge">node -v</code>, <code class="language-plaintext highlighter-rouge">npm version</code>, dan <code class="language-plaintext highlighter-rouge">npx -v</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fajri@fajri-PC:~<span class="nv">$ </span>node <span class="nt">-v</span>
+v18.16.0
+fajri@fajri-PC:~<span class="nv">$ </span>npm version
+<span class="o">{</span>
+  npm: <span class="s1">'9.5.1'</span>,
+  node: <span class="s1">'18.16.0'</span>,
+  acorn: <span class="s1">'8.8.2'</span>,
+  ada: <span class="s1">'1.0.4'</span>,
+  ares: <span class="s1">'1.19.0'</span>,
+  brotli: <span class="s1">'1.0.9'</span>,
+  cldr: <span class="s1">'42.0'</span>,
+  icu: <span class="s1">'72.1'</span>,
+  llhttp: <span class="s1">'6.0.10'</span>,
+  modules: <span class="s1">'108'</span>,
+  napi: <span class="s1">'8'</span>,
+  nghttp2: <span class="s1">'1.52.0'</span>,
+  nghttp3: <span class="s1">'0.7.0'</span>,
+  ngtcp2: <span class="s1">'0.8.1'</span>,
+  openssl: <span class="s1">'3.0.8+quic'</span>,
+  simdutf: <span class="s1">'3.2.2'</span>,
+  tz: <span class="s1">'2022g'</span>,
+  undici: <span class="s1">'5.21.0'</span>,
+  unicode: <span class="s1">'15.0'</span>,
+  uv: <span class="s1">'1.44.2'</span>,
+  uvwasi: <span class="s1">'0.0.15'</span>,
+  v8: <span class="s1">'10.2.154.26-node.26'</span>,
+  zlib: <span class="s1">'1.2.13'</span>
+<span class="o">}</span>
+fajri@fajri-PC:~<span class="nv">$ </span>npx <span class="nt">-v</span>
+9.5.1
+fajri@fajri-PC:~<span class="err">$</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Instal Yarn dengan package manager npm (sudah terinstal sebagai bundle Node.js).
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--global</span> yarn
+</code></pre></div>    </div>
+    <p>Cek instalasi Yarn:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn <span class="nt">--version</span>
+// output
+1.22.19
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Setelah semua tools terinstal, tentukan direktori untuk menyimpan file pgAdmin4 misalnya di direktori <code class="language-plaintext highlighter-rouge">/opt/</code> lalu jalankan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/pgadmin-org/pgadmin4.git
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cloning into <span class="s1">'pgadmin4'</span>...
+remote: Enumerating objects: 130976, <span class="k">done</span><span class="nb">.</span>
+remote: Counting objects: 100% <span class="o">(</span>9299/9299<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
+remote: Compressing objects: 100% <span class="o">(</span>699/699<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
+remote: Total 130976 <span class="o">(</span>delta 8719<span class="o">)</span>, reused 8851 <span class="o">(</span>delta 8556<span class="o">)</span>, pack-reused 121677
+Receiving objects: 100% <span class="o">(</span>130976/130976<span class="o">)</span>, 250.82 MiB | 780.00 KiB/s, <span class="k">done</span><span class="nb">.</span>
+Resolving deltas: 100% <span class="o">(</span>85327/85327<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
+fajri@fajri-PC:~<span class="nv">$ </span>
+</code></pre></div></div>
+
+<h3 id="instal-paket-paket-python">Instal Paket-paket Python</h3>
+
+<p>Backend pgAdmin dibangun dengan bahasa Python dan agar dapat berjalan harus menginstal persyaratan yang dibutuhkan Python.</p>
+
+<ol>
+  <li>Memastikan direktori <code class="language-plaintext highlighter-rouge">bin</code> PostgreSQL berada pada variabel environment PATH. Ini penting karena package <code class="language-plaintext highlighter-rouge">psycopg</code> bergantung pada binary PostgreSQL untuk proses instalasi. Pada file <code class="language-plaintext highlighter-rouge">~/.bashrc</code> tambahkan baris berikut di bagian akhir:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+<span class="c"># PostgreSQL</span>
+<span class="nv">PATH</span><span class="o">=</span>/usr/lib/postgresql/11/bin:<span class="nv">$PATH</span>
+<span class="nb">export </span>PATH
+</code></pre></div>    </div>
+    <p>Lalu, refresh bashrc:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bashrc
+</code></pre></div>    </div>
+  </li>
+  <li>Buat direktori virtual environment Python, misal pada direktori <code class="language-plaintext highlighter-rouge">/opt/</code> (harus menyertakan <code class="language-plaintext highlighter-rouge">sudo</code>):
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>python3 <span class="nt">-m</span> venv /opt/myenv
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Error saat menjalankan perintah di atas:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to <span class="nb">install </span>the python3-venv
+package using the following command.
+
+    apt-get <span class="nb">install </span>python3-venv
+
+You may need to use <span class="nb">sudo </span>with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing <span class="nb">command</span>: <span class="o">[</span><span class="s1">'/opt/myenv/bin/python3'</span>, <span class="s1">'-Im'</span>, <span class="s1">'ensurepip'</span>, <span class="s1">'--upgrade'</span>, <span class="s1">'--default-pip'</span><span class="o">]</span>
+</code></pre></div></div>
+
+<p>Jalankan instalasi <code class="language-plaintext highlighter-rouge">python3-venv</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>python3-venv
+</code></pre></div></div>
+
+<p>Jalankan ulang pembuatan virtual environment, dan ubah kepemilikan folder <code class="language-plaintext highlighter-rouge">myenv</code> ke user yang sedang aktif:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown</span> <span class="nt">-R</span> fajri:fajri myenv/
+</code></pre></div></div>
+
+<ol>
+  <li>Aktivasi virtual environment:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> /opt/myenv/bin/activate
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+</code></pre></div></div>
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Collecting pip
+  Downloading https://files.pythonhosted.org/packages/08/e3/57d4c24a050aa0bcca46b2920bff40847db79535dc78141eb83581a52eb8/pip-23.1.2-py3-none-any.whl <span class="o">(</span>2.1MB<span class="o">)</span>
+    100% |████████████████████████████████| 2.1MB 441kB/s 
+Installing collected packages: pip
+  Found existing installation: pip 18.1
+    Uninstalling pip-18.1:
+      Successfully uninstalled pip-18.1
+Successfully installed pip-23.1.2
+</code></pre></div></div>
+<ol>
+  <li>Pada terminal yang sama, pindah ke direktori pgAdmin4, lalu jalankan perintah <code class="language-plaintext highlighter-rouge">pip install -r requirements.txt</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myenv<span class="o">)</span> fajri@fajri-PC:~<span class="nv">$ </span><span class="nb">cd</span> /opt/pgadmin4/
+<span class="o">(</span>myenv<span class="o">)</span> fajri@fajri-PC:/opt/pgadmin4<span class="nv">$ </span>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ignoring pywinpty: markers <span class="s1">'sys_platform == "win32"'</span> don<span class="s1">'t match your environment
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by '</span>ReadTimeoutError<span class="o">(</span><span class="s2">"HTTPSConnectionPool(host='pypi.org', port=443): Read timed out. (read timeout=15)"</span><span class="o">)</span><span class="s1">': /simple/flask/
+Collecting Flask==2.2.* (from -r requirements.txt (line 11))                              
+  Using cached Flask-2.2.5-py3-none-any.whl (101 kB)
+Collecting Flask-Gravatar==0.* (from -r requirements.txt (line 12))
+  Using cached Flask_Gravatar-0.5.0-py2.py3-none-any.whl (7.5 kB)
+Collecting Flask-Login==0.* (from -r requirements.txt (line 13))
+  Using cached Flask_Login-0.6.2-py3-none-any.whl (17 kB)
+Collecting Flask-Mail==0.* (from -r requirements.txt (line 14))
+  Using cached Flask-Mail-0.9.1.tar.gz (45 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting Flask-Migrate==4.* (from -r requirements.txt (line 15))
+  Using cached Flask_Migrate-4.0.4-py3-none-any.whl (20 kB)
+Collecting greenlet==1.1.2 (from -r requirements.txt (line 16))
+  Downloading greenlet-1.1.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (150 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.2/150.2 kB 635.3 kB/s eta 0:00:00
+Collecting Flask-SQLAlchemy==3.0.* (from -r requirements.txt (line 17))
+  Using cached Flask_SQLAlchemy-3.0.3-py3-none-any.whl (24 kB)
+Collecting Flask-WTF==1.1.1 (from -r requirements.txt (line 18))
+  Using cached Flask_WTF-1.1.1-py3-none-any.whl (12 kB)
+Collecting Flask-Compress==1.* (from -r requirements.txt (line 19))
+  Using cached Flask_Compress-1.13-py3-none-any.whl (7.9 kB)
+Collecting Flask-Paranoid==0.* (from -r requirements.txt (line 20))
+  Using cached Flask_Paranoid-0.3.0-py3-none-any.whl (4.5 kB)
+Collecting Flask-Babel==3.1.* (from -r requirements.txt (line 21))
+  Using cached flask_babel-3.1.0-py3-none-any.whl (9.6 kB)
+Collecting Flask-Security-Too==5.1.* (from -r requirements.txt (line 22))
+  Using cached Flask_Security_Too-5.1.2-py2.py3-none-any.whl (369 kB)
+Collecting Flask-SocketIO==5.3.* (from -r requirements.txt (line 23))
+  Using cached Flask_SocketIO-5.3.4-py3-none-any.whl (17 kB)
+Collecting WTForms==3.0.* (from -r requirements.txt (line 24))
+  Using cached WTForms-3.0.1-py3-none-any.whl (136 kB)
+Collecting passlib==1.* (from -r requirements.txt (line 25))
+  Using cached passlib-1.7.4-py2.py3-none-any.whl (525 kB)
+Collecting pytz==2023.* (from -r requirements.txt (line 26))
+  Using cached pytz-2023.3-py2.py3-none-any.whl (502 kB)
+Collecting speaklater3==1.* (from -r requirements.txt (line 27))
+  Using cached speaklater3-1.4-py3-none-any.whl (5.9 kB)
+Collecting sqlparse==0.* (from -r requirements.txt (line 28))
+  Using cached sqlparse-0.4.4-py3-none-any.whl (41 kB)
+Collecting psutil==5.9.* (from -r requirements.txt (line 29))
+  Downloading psutil-5.9.5-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (282 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 282.1/282.1 kB 640.4 kB/s eta 0:00:00
+Collecting psycopg[c]==3.1.8 (from -r requirements.txt (line 30))
+  Using cached psycopg-3.1.8-py3-none-any.whl (167 kB)
+Collecting python-dateutil==2.* (from -r requirements.txt (line 31))
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting SQLAlchemy==2.* (from -r requirements.txt (line 32))
+  Downloading SQLAlchemy-2.0.16-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 1.2 MB/s eta 0:00:00
+Collecting bcrypt==4.0.* (from -r requirements.txt (line 33))
+  Downloading bcrypt-4.0.1-cp36-abi3-manylinux_2_28_x86_64.whl (593 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 593.7/593.7 kB 1.1 MB/s eta 0:00:00
+Collecting cryptography==40.0.* (from -r requirements.txt (line 34))
+  Downloading cryptography-40.0.2-cp36-abi3-manylinux_2_28_x86_64.whl (3.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 1.5 MB/s eta 0:00:00
+Collecting sshtunnel==0.* (from -r requirements.txt (line 35))
+  Downloading sshtunnel-0.4.0-py2.py3-none-any.whl (24 kB)
+Collecting ldap3==2.* (from -r requirements.txt (line 36))
+  Downloading ldap3-2.9.1-py2.py3-none-any.whl (432 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 432.2/432.2 kB 227.6 kB/s eta 0:00:00
+Collecting gssapi==1.8.* (from -r requirements.txt (line 37))
+  Downloading gssapi-1.8.2.tar.gz (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.3/94.3 kB 108.5 kB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... error
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [21 lines of output]
+      /bin/sh: 1: krb5-config: not found
+      Traceback (most recent call last):
+        File "/opt/myenv/lib/python3.7/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in &lt;module&gt;
+          main()
+        File "/opt/myenv/lib/python3.7/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['</span>return_val<span class="s1">'] = hook(**hook_input['</span>kwargs<span class="s1">'])
+        File "/opt/myenv/lib/python3.7/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-52xt6hdz/overlay/lib/python3.7/site-packages/setuptools/build_meta.py", line 341, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=['</span>wheel<span class="s1">'])
+        File "/tmp/pip-build-env-52xt6hdz/overlay/lib/python3.7/site-packages/setuptools/build_meta.py", line 323, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-52xt6hdz/overlay/lib/python3.7/site-packages/setuptools/build_meta.py", line 338, in run_setup
+          exec(code, locals())
+        File "&lt;string&gt;", line 109, in &lt;module&gt;
+        File "&lt;string&gt;", line 22, in get_output
+        File "/usr/lib/python3.7/subprocess.py", line 395, in check_output
+          **kwargs).stdout
+        File "/usr/lib/python3.7/subprocess.py", line 487, in run
+          output=stdout, stderr=stderr)
+      subprocess.CalledProcessError: Command '</span>krb5-config <span class="nt">--libs</span> gssapi<span class="s1">' returned non-zero exit status 127.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─&gt; See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+(myenv) fajri@fajri-PC:/opt/pgadmin4$ 
+</span></code></pre></div></div>
+
+<p>Jika terdapat error:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setuptools-rust&gt;<span class="o">=</span>0.11.4<span class="s2">" failed with error code 1 in None
+</span></code></pre></div></div>
+<p>jalankan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 <span class="nb">install</span> <span class="nt">--upgrade</span> setuptools
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Collecting setuptools
+  Using cached https://files.pythonhosted.org/packages/f5/2c/074ab1c5be9c7d523d8d6d69d1f46f450fe7f11713147dc9e779aa4ca4ea/setuptools-67.8.0-py3-none-any.whl
+Installing collected packages: setuptools
+  Found existing installation: setuptools 40.8.0
+    Uninstalling setuptools-40.8.0:
+      Successfully uninstalled setuptools-40.8.0
+Successfully installed setuptools-67.8.0
+</code></pre></div></div>
+
+<p>Lalu jalankan kembali perintah <code class="language-plaintext highlighter-rouge">pip install -r requirements.txt</code>.</p>
+
+<ol>
+  <li>Setelah terinstal dengan baik, server backend pgAdmin sudah siap.</li>
+</ol>
+
+<p><strong>STOP YANG BAGIAN INI</strong></p>
+
+<h3 id="mengedit-file-config-pgadmin">Mengedit file config pgAdmin</h3>
+
+<ol>
+  <li>Buka dan edit file <code class="language-plaintext highlighter-rouge">/opt/pgAdmin4/web/config_local.py</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><strong>STOP YANG BAGIAN INI</strong></p>
+
+<h3 id="instal-paket-paket-javascript-dan-bundle">Instal Paket-paket Javascript dan bundle</h3>
+
+<p>pgAdmin merupakan aplikasi web dan UI frontend-nya dibangun secara penuh dengan JavaScript. Paket-paket JavaScript perlu untuk diinstal seperti yang ada pada file <code class="language-plaintext highlighter-rouge">package.json</code>.</p>
+
+<ol>
+  <li>Pindah ke direktori web pgAdmin4 (<code class="language-plaintext highlighter-rouge">/opt/pgAdmin4/web</code>).</li>
+  <li>Jalankan perintah:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn <span class="nb">install</span>
+</code></pre></div>    </div>
+    <p>Output:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn <span class="nb">install </span>v1.22.19
+<span class="o">[</span>1/4] Resolving packages...
+warning @material-ui/core@4.12.4: Material UI v4 doesn<span class="s1">'t receive active development since September 2021. See the guide https://mui.com/material-ui/migration/migration-v4/ to upgrade to v5.
+warning @material-ui/core &gt; @material-ui/styles@4.11.5: Material UI v4 doesn'</span>t receive active development since September 2021. See the guide https://mui.com/material-ui/migration/migration-v4/ to upgrade to v5.
+warning @material-ui/lab@4.0.0-alpha.61: Material UI v4 doesn<span class="s1">'t receive active development since September 2021. See the guide https://mui.com/material-ui/migration/migration-v4/ to upgrade to v5.
+warning @material-ui/pickers@3.3.10: Material UI Pickers v3 doesn'</span>t receive active development since January 2020. See the guide https://mui.com/material-ui/guides/pickers-migration/ to upgrade.
+warning @types/classnames@2.3.1: This is a stub types definition. classnames provides its own <span class="nb">type </span>definitions, so you <span class="k">do </span>not need this installed.
+warning cssnano <span class="o">&gt;</span> cssnano-preset-default <span class="o">&gt;</span> postcss-svgo <span class="o">&gt;</span> svgo <span class="o">&gt;</span> stable@0.1.8: Modern JS already guarantees Array#sort<span class="o">()</span> is a stable <span class="nb">sort</span>, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+warning popper.js@1.16.1: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
+info There appears to be trouble with your network connection. Retrying...
+info There appears to be trouble with your network connection. Retrying...
+warning imagemin-mozjpeg <span class="o">&gt;</span> mozjpeg <span class="o">&gt;</span> bin-build <span class="o">&gt;</span> tempfile <span class="o">&gt;</span> uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random<span class="o">()</span> <span class="k">in </span>certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random <span class="k">for </span>details.
+warning istanbul-instrumenter-loader <span class="o">&gt;</span> istanbul-lib-instrument <span class="o">&gt;</span> babel-template <span class="o">&gt;</span> babel-runtime <span class="o">&gt;</span> core-js@2.6.12: core-js@&lt;3.23.3 is no longer maintained and not recommended <span class="k">for </span>usage due to the number of issues. Because of the V8 engine whims, feature detection <span class="k">in </span>old core-js versions could cause a slowdown up to 100x even <span class="k">if </span>nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+<span class="o">[</span>2/4] Fetching packages...
+info There appears to be trouble with your network connection. Retrying...
+<span class="o">[</span>3/4] Linking dependencies...
+warning <span class="s2">"@projectstorm/react-diagrams &gt; @projectstorm/react-diagrams-core@6.7.4"</span> has incorrect peer dependency <span class="s2">"react@18.*"</span><span class="nb">.</span>
+warning <span class="s2">"@projectstorm/react-diagrams &gt; @projectstorm/react-diagrams-routing@6.7.4"</span> has incorrect peer dependency <span class="s2">"react@18.*"</span><span class="nb">.</span>
+warning <span class="s2">"@projectstorm/react-diagrams &gt; @projectstorm/react-diagrams-defaults@6.7.4"</span> has incorrect peer dependency <span class="s2">"react@18.*"</span><span class="nb">.</span>
+warning <span class="s2">" &gt; aspen-decorations@1.1.1"</span> has unmet peer dependency <span class="s2">"aspen-core@^1.0.4"</span><span class="nb">.</span>
+warning <span class="s2">" &gt; react-aspen@1.2.0"</span> has incorrect peer dependency <span class="s2">"react@^16.0.0"</span><span class="nb">.</span>
+warning <span class="s2">" &gt; react-aspen@1.2.0"</span> has incorrect peer dependency <span class="s2">"react-dom@^16.0.0"</span><span class="nb">.</span>
+warning <span class="s2">" &gt; snapsvg-cjs@0.0.6"</span> has unmet peer dependency <span class="s2">"eve@~0.5.1"</span><span class="nb">.</span>
+warning <span class="s2">" &gt; styled-components@5.3.11"</span> has unmet peer dependency <span class="s2">"react-is@&gt;= 16.8.0"</span><span class="nb">.</span>
+warning <span class="s2">" &gt; istanbul-instrumenter-loader@3.0.1"</span> has incorrect peer dependency <span class="s2">"webpack@^2.0.0 || ^3.0.0 || ^4.0.0"</span><span class="nb">.</span>
+warning <span class="s2">" &gt; karma-browserify@8.1.0"</span> has unmet peer dependency <span class="s2">"watchify@&gt;=3 &lt;5"</span><span class="nb">.</span>
+warning <span class="s2">" &gt; karma-requirejs@1.1.0"</span> has unmet peer dependency <span class="s2">"requirejs@^2.1.0"</span><span class="nb">.</span>
+warning <span class="s2">" &gt; svgo-loader@2.2.2"</span> has incorrect peer dependency <span class="s2">"svgo@^1.0.0"</span><span class="nb">.</span>
+<span class="o">[</span>4/4] Building fresh packages...
+success Saved lockfile.
+Done <span class="k">in </span>1235.02s.
+</code></pre></div>    </div>
+  </li>
+  <li>Compile dan bundle file pgAdmin JS menggunakan perintah:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn run webpacker
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn run v1.22.19
+<span class="nv">$ </span>yarn run webpack <span class="nt">--config</span> webpack.config.js <span class="nt">--progress</span>
+<span class="nv">$ </span>/opt/pgadmin4/web/node_modules/.bin/webpack <span class="nt">--config</span> webpack.config.js <span class="nt">--progress</span>
+assets by chunk 2.83 MiB <span class="o">(</span>auxiliary name: style<span class="o">)</span> 20 assets
+assets by path <span class="k">*</span>.js 35.3 MiB
+  asset vendor.others.js 15.3 MiB <span class="o">[</span>emitted] <span class="o">(</span>name: vendor_others<span class="o">)</span> <span class="o">(</span><span class="nb">id </span>hint: vendor_others<span class="o">)</span>
+  + 13 assets
+assets by chunk 691 KiB <span class="o">(</span>auxiliary name: pgadmin.style<span class="o">)</span>
+  asset fonts/SourceCodePro-Regular..ttf 188 KiB <span class="o">[</span>emitted] <span class="o">[</span>from: pgadmin/static/fonts/SourceCodePro-Regular.ttf] <span class="o">(</span>auxiliary name: pgadmin.style<span class="o">)</span>
+  + 3 assets
+assets by path <span class="k">*</span>.css 670 KiB
+  asset pgadmin.css 328 KiB <span class="o">[</span>emitted] <span class="o">(</span>name: pgadmin<span class="o">)</span> 1 related asset
+  + 2 assets
+assets by path img/<span class="k">*</span>.png 84.3 KiB
+  asset img/dark_preview.png 37.1 KiB <span class="o">[</span>emitted] <span class="o">[</span>from: pgadmin/static/scss/resources/dark/dark_preview.png] <span class="o">[</span>copied]
+  + 2 assets
+asset pgadmin.themes.json 304 bytes <span class="o">[</span>emitted] <span class="o">[</span>from: pgadmin/misc/themes/pgadmin.themes.json] <span class="o">[</span>copied]
+chunk <span class="o">(</span>runtime: app.bundle<span class="o">)</span> app.bundle.js <span class="o">(</span>app.bundle<span class="o">)</span> 4.7 MiB <span class="o">(</span>javascript<span class="o">)</span> 4.77 KiB <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]
+  dependent modules 3.98 MiB <span class="o">[</span>dependent] 315 modules
+  runtime modules 4.77 KiB 10 modules
+  cacheable modules 737 KiB
+    modules by path ./pgadmin/browser/server_groups/servers/databases/ 626 KiB 40 modules
+    modules by path ./pgadmin/browser/server_groups/servers/roles/static/js/<span class="k">*</span>.js 31.2 KiB 2 modules
+    modules by path ./pgadmin/browser/server_groups/servers/static/js/<span class="k">*</span>.js 37.6 KiB 2 modules
+    modules by path ./pgadmin/browser/static/js/ 14.9 KiB 2 modules
+    + 5 modules
+chunk <span class="o">(</span>runtime: app.bundle, sqleditor<span class="o">)</span> browser_nodes.js <span class="o">(</span>browser_nodes<span class="o">)</span> <span class="o">(</span><span class="nb">id </span>hint: browser_nodes<span class="o">)</span> 321 KiB <span class="o">[</span>initial] <span class="o">[</span>rendered] <span class="nb">split </span>chunk <span class="o">(</span>cache group: browser_nodes<span class="o">)</span> <span class="o">(</span>name: browser_nodes<span class="o">)</span>                                                                                  
+  dependent modules 45.8 KiB <span class="o">[</span>dependent] 10 modules
+  modules by path ./pgadmin/browser/server_groups/servers/databases/ 227 KiB
+    modules by path ./pgadmin/browser/server_groups/servers/databases/schemas/ 167 KiB 32 modules
+    modules by path ./pgadmin/browser/server_groups/servers/databases/foreign_data_wrappers/ 11.7 KiB 3 modules
+    + 7 modules
+  ./pgadmin/browser/server_groups/servers/resource_groups/static/js/res...<span class="o">(</span>truncated<span class="o">)</span> 3.6 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+  ./pgadmin/browser/server_groups/servers/roles/static/js/role.js 5.51 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]                                                                                 
+  ./pgadmin/browser/server_groups/servers/static/js/server.js 33 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]                                                                                       
+  ./pgadmin/browser/server_groups/servers/tablespaces/static/js/tablespace.js 4.04 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]                                                                     
+  ./pgadmin/browser/server_groups/static/js/server_group.js 2.23 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]                                                                                       
+chunk <span class="o">(</span>runtime: codemirror<span class="o">)</span> codemirror.js <span class="o">(</span>codemirror<span class="o">)</span> 8.91 KiB <span class="o">(</span>javascript<span class="o">)</span> 4.74 KiB <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]
+  runtime modules 4.74 KiB 9 modules
+  dependent modules 6.54 KiB <span class="o">[</span>dependent] 2 modules
+  ./pgadmin/static/bundle/codemirror.js 2.37 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+chunk <span class="o">(</span>runtime: debugger<span class="o">)</span> debugger.js <span class="o">(</span>debugger<span class="o">)</span> 1.83 MiB <span class="o">(</span>javascript<span class="o">)</span> 4.77 KiB <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]                                                                        
+  dependent modules 1.82 MiB <span class="o">[</span>dependent] 158 modules
+  runtime modules 4.77 KiB 10 modules
+  cacheable modules 15.7 KiB
+    modules by path ./pgadmin/browser/static/js/ 14.9 KiB
+      ./pgadmin/browser/static/js/node_view.jsx 9.03 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+      ./pgadmin/browser/static/js/panel_view.jsx 5.84 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    ./pgadmin/tools/debugger/static/js/index.js 869 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+    fs <span class="o">(</span>ignored<span class="o">)</span> 15 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+chunk <span class="o">(</span>runtime: erd_tool<span class="o">)</span> erd_tool.js <span class="o">(</span>erd_tool<span class="o">)</span> 2.16 MiB <span class="o">(</span>javascript<span class="o">)</span> 4.77 KiB <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]                                                                        
+  dependent modules 2.15 MiB <span class="o">[</span>dependent] 181 modules
+  runtime modules 4.77 KiB 10 modules
+  cacheable modules 15.8 KiB
+    modules by path ./pgadmin/browser/ 14.9 KiB
+      ./pgadmin/browser/static/js/node_view.jsx 9.03 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+      ./pgadmin/browser/static/js/panel_view.jsx 5.84 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    ./pgadmin/tools/erd/static/js/index.js 886 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+    fs <span class="o">(</span>ignored<span class="o">)</span> 15 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+chunk <span class="o">(</span>runtime: pgadmin<span class="o">)</span> pgadmin.css, pgadmin.js <span class="o">(</span>pgadmin<span class="o">)</span> 550 bytes <span class="o">(</span>javascript<span class="o">)</span> 317 KiB <span class="o">(</span>css/mini-extract<span class="o">)</span> 274 bytes <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]
+  dependent modules 317 KiB <span class="o">[</span>dependent] 13 modules
+  runtime modules 274 bytes 1 module
+  cacheable modules 550 bytes
+    modules by path ./pgadmin/browser/ 200 bytes 4 modules
+    modules by path ./pgadmin/tools/ 150 bytes 3 modules
+    modules by path ./pgadmin/static/ 100 bytes
+      ./pgadmin/static/js/components/PgTree/scss/styles.scss 50 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]                                                                                      
+      ./pgadmin/static/scss/pgadmin.scss 50 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+    ./pgadmin/dashboard/static/scss/_dashboard.scss 50 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+    ./pgadmin/preferences/static/scss/_preferences.scss 50 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+chunk <span class="o">(</span>runtime: pgadmin.style<span class="o">)</span> pgadmin.style.css, pgadmin.style.js <span class="o">(</span>pgadmin.style<span class="o">)</span> 700 bytes <span class="o">(</span>javascript<span class="o">)</span> 156 KiB <span class="o">(</span>css/mini-extract<span class="o">)</span> 274 bytes <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]
+  dependent modules 156 KiB <span class="o">[</span>dependent] 14 modules
+  runtime modules 274 bytes 1 module
+  cacheable modules 700 bytes
+    modules by path ./pgadmin/browser/ 400 bytes
+      modules by path ./pgadmin/browser/server_groups/servers/ 300 bytes 6 modules
+      modules by path ./pgadmin/browser/static/css/<span class="k">*</span>.css 100 bytes 2 modules
+    modules by path ./pgadmin/static/ 100 bytes
+      ./pgadmin/static/css/pgadmin.css 50 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+      ./pgadmin/static/js/pgadmin.fonticon.js 50 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+    + 4 modules
+chunk <span class="o">(</span>runtime: app.bundle, debugger, erd_tool, psql_tool, schema_diff, sqleditor<span class="o">)</span> pgadmin_commons.js <span class="o">(</span>pgadmin_commons<span class="o">)</span> <span class="o">(</span><span class="nb">id </span>hint: secondary<span class="o">)</span> 65.4 KiB <span class="o">[</span>initial] <span class="o">[</span>rendered] <span class="nb">split </span>chunk <span class="o">(</span>cache group: secondary<span class="o">)</span> <span class="o">(</span>name: pgadmin_commons<span class="o">)</span>                                       
+  dependent modules 47.1 KiB <span class="o">[</span>dependent] 2 modules
+  cacheable modules 18.3 KiB
+    ./pgadmin/browser/static/js/collection.js 5 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    ./pgadmin/browser/static/js/frame.js 4.67 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    ./pgadmin/browser/static/js/panel.js 8.67 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+chunk <span class="o">(</span>runtime: psql_tool<span class="o">)</span> psql_tool.js <span class="o">(</span>psql_tool<span class="o">)</span> 1.64 MiB <span class="o">(</span>javascript<span class="o">)</span> 4.77 KiB <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]
+  dependent modules 1.63 MiB <span class="o">[</span>dependent] 147 modules
+  runtime modules 4.77 KiB 10 modules
+  cacheable modules 17.9 KiB
+    modules by path ./pgadmin/browser/static/js/ 14.9 KiB
+      ./pgadmin/browser/static/js/node_view.jsx 9.03 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+      ./pgadmin/browser/static/js/panel_view.jsx 5.84 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    ./pgadmin/tools/psql/static/js/index.js 2.99 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    fs <span class="o">(</span>ignored<span class="o">)</span> 15 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+chunk <span class="o">(</span>runtime: schema_diff<span class="o">)</span> schema_diff.js <span class="o">(</span>schema_diff<span class="o">)</span> 1.77 MiB <span class="o">(</span>javascript<span class="o">)</span> 4.77 KiB <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]
+  dependent modules 1.76 MiB <span class="o">[</span>dependent] 154 modules
+  runtime modules 4.77 KiB 10 modules
+  cacheable modules 15.7 KiB
+    modules by path ./pgadmin/browser/static/js/ 14.9 KiB
+      ./pgadmin/browser/static/js/node_view.jsx 9.03 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+      ./pgadmin/browser/static/js/panel_view.jsx 5.84 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    ./pgadmin/tools/schema_diff/static/js/index.js 881 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+    fs <span class="o">(</span>ignored<span class="o">)</span> 15 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+chunk <span class="o">(</span>runtime: sqleditor<span class="o">)</span> sqleditor.js <span class="o">(</span>sqleditor<span class="o">)</span> 3.34 MiB <span class="o">(</span>javascript<span class="o">)</span> 4.77 KiB <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]
+  dependent modules 2.62 MiB <span class="o">[</span>dependent] 195 modules
+  runtime modules 4.77 KiB 10 modules
+  cacheable modules 738 KiB
+    modules by path ./pgadmin/browser/server_groups/servers/databases/ 626 KiB 40 modules
+    modules by path ./pgadmin/browser/server_groups/servers/roles/static/js/<span class="k">*</span>.js 31.2 KiB 2 modules
+    modules by path ./pgadmin/browser/server_groups/servers/static/js/<span class="k">*</span>.js 37.6 KiB 2 modules
+    modules by path ./pgadmin/browser/static/js/ 14.9 KiB 2 modules
+    + 5 modules
+chunk <span class="o">(</span>runtime: style<span class="o">)</span> style.css, style.js <span class="o">(</span>style<span class="o">)</span> 50 bytes <span class="o">(</span>javascript<span class="o">)</span> 175 KiB <span class="o">(</span>css/mini-extract<span class="o">)</span> 274 bytes <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>entry] <span class="o">[</span>rendered]
+  dependent modules 175 KiB <span class="o">[</span>dependent] 13 modules
+  runtime modules 274 bytes 1 module
+  ./pgadmin/static/css/style.css 50 bytes <span class="o">[</span>built] <span class="o">[</span>code generated]
+chunk <span class="o">(</span>runtime: app.bundle, debugger, erd_tool, psql_tool, schema_diff, sqleditor<span class="o">)</span> vendor.main.js <span class="o">(</span>vendor_main<span class="o">)</span> <span class="o">(</span><span class="nb">id </span>hint: vendor_main<span class="o">)</span> 894 KiB <span class="o">[</span>initial] <span class="o">[</span>rendered] <span class="nb">split </span>chunk <span class="o">(</span>cache group: vendor_main<span class="o">)</span> <span class="o">(</span>name: vendor_main<span class="o">)</span>                                                
+  dependent modules 365 KiB <span class="o">[</span>dependent] 2 modules
+  cacheable modules 529 KiB
+    ./node_modules/bootstrap/dist/js/bootstrap.js 134 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    ./node_modules/jquery-contextmenu/dist/jquery.contextMenu.js 91.4 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]                                                                                  
+    ./node_modules/webcabin-docker/Build/wcDocker.min.js 303 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+chunk <span class="o">(</span>runtime: app.bundle, codemirror, debugger, erd_tool, psql_tool, schema_diff, sqleditor<span class="o">)</span> vendor.others.js <span class="o">(</span>vendor_others<span class="o">)</span> <span class="o">(</span><span class="nb">id </span>hint: vendor_others<span class="o">)</span> 12.1 MiB <span class="o">[</span>initial] <span class="o">[</span>rendered] <span class="nb">split </span>chunk <span class="o">(</span>cache group: vendor_others<span class="o">)</span> <span class="o">(</span>name: vendor_others<span class="o">)</span>                         
+  dependent modules 8.24 MiB <span class="o">[</span>dependent] 2016 modules
+  cacheable modules 3.85 MiB
+    modules by path ./node_modules/@material-ui/ 98.9 KiB 101 modules
+    modules by path ./node_modules/core-js/ 92.7 KiB 101 modules
+    modules by path ./node_modules/codemirror/addon/ 82 KiB 11 modules
+    modules by path ./node_modules/react-select/ 3.32 KiB
+      ./node_modules/react-select/creatable/dist/react-select-creatable.esm.js 1.44 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]                                                                    
+      ./node_modules/react-select/dist/react-select.esm.js 1.88 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]                                                                                        
+    + 40 modules
+2023-06-18 15:11:41: webpack 5.87.0 compiled successfully <span class="k">in </span>34009 ms
+
+asset pgadmin.theme.dark.css 226 KiB <span class="o">[</span>emitted] <span class="o">[</span>minimized] <span class="o">(</span>name: pgadmin.theme.dark<span class="o">)</span>
+asset pgadmin.theme.dark.js 8.62 KiB <span class="o">[</span>emitted] <span class="o">(</span>name: pgadmin.theme.dark<span class="o">)</span>
+Entrypoint pgadmin.theme.dark 234 KiB <span class="o">=</span> pgadmin.theme.dark.css 226 KiB pgadmin.theme.dark.js 8.62 KiB                                                                               
+runtime modules 10.3 KiB 45 modules
+orphan modules 1.02 MiB <span class="o">[</span>orphan] 15 modules
+cacheable modules 550 bytes <span class="o">(</span>javascript<span class="o">)</span> 317 KiB <span class="o">(</span>css/mini-extract<span class="o">)</span>
+  modules by path ./pgadmin/ 550 bytes <span class="o">(</span>javascript<span class="o">)</span> 299 KiB <span class="o">(</span>css/mini-extract<span class="o">)</span>
+    javascript modules 550 bytes 11 modules
+    css modules 299 KiB
+      modules by path ./pgadmin/browser/ 18.3 KiB 4 modules
+      modules by path ./pgadmin/tools/ 11.4 KiB 3 modules
+      modules by path ./pgadmin/static/ 262 KiB 2 modules
+      + 2 modules
+  modules by path ./node_modules/ 17.9 KiB
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/rc-dock/dist/rc-dock.css 15 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/@szhsin/react-menu/dist/index.css 2.91 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+webpack 5.87.0 compiled successfully <span class="k">in </span>22076 ms
+
+asset pgadmin.theme.high_contrast.css 225 KiB <span class="o">[</span>emitted] <span class="o">[</span>minimized] <span class="o">(</span>name: pgadmin.theme.high_contrast<span class="o">)</span>
+asset pgadmin.theme.high_contrast.js 8.62 KiB <span class="o">[</span>emitted] <span class="o">(</span>name: pgadmin.theme.high_contrast<span class="o">)</span>
+Entrypoint pgadmin.theme.high_contrast 234 KiB <span class="o">=</span> pgadmin.theme.high_contrast.css 225 KiB pgadmin.theme.high_contrast.js 8.62 KiB                                                    
+runtime modules 10.3 KiB 45 modules
+orphan modules 1.04 MiB <span class="o">[</span>orphan] 15 modules
+cacheable modules 550 bytes <span class="o">(</span>javascript<span class="o">)</span> 317 KiB <span class="o">(</span>css/mini-extract<span class="o">)</span>
+  modules by path ./pgadmin/ 550 bytes <span class="o">(</span>javascript<span class="o">)</span> 299 KiB <span class="o">(</span>css/mini-extract<span class="o">)</span>
+    javascript modules 550 bytes 11 modules
+    css modules 299 KiB
+      modules by path ./pgadmin/browser/ 18.3 KiB 4 modules
+      modules by path ./pgadmin/tools/ 11.4 KiB 3 modules
+      modules by path ./pgadmin/static/ 262 KiB 2 modules
+      + 2 modules
+  modules by path ./node_modules/ 17.9 KiB
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/rc-dock/dist/rc-dock.css 15 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/@szhsin/react-menu/dist/index.css 2.91 KiB <span class="o">[</span>built] <span class="o">[</span>code generated]
+webpack 5.87.0 compiled successfully <span class="k">in </span>22071 ms
+Done <span class="k">in </span>35.07s.
+</code></pre></div></div>
+<ol>
+  <li>Perintah di atas hanya meng-compile sekali. Ketika bekerja dengan frontend pgAdmin, JS perlu untuk meng-compile terus-menerus. Untuk itu, jalankan webpacker dalam mode watch:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn run webpacker <span class="nt">--watch</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Untuk mem-bundle file untuk produksi, gunakan perintah:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn run bundle
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="memulai-aplikasi-pgadmin">Memulai Aplikasi pgAdmin</h3>
+
+<p>Sekarang, pengaturan backend dan frontend sudah siap. Aplikasi pgAdmin dapat dijalankan sekarang.</p>
+<ol>
+  <li>Buka terminal di mana virtual environment pgAdmin python aktif.</li>
+  <li>Pindah ke direktori <code class="language-plaintext highlighter-rouge">/opt/pgAdmin4/web</code>.</li>
+  <li>Jalankan perintah <code class="language-plaintext highlighter-rouge">python3 pgAdmin4.py</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myenv<span class="o">)</span> fajri@fajri-PC:/opt/pgadmin4/web<span class="nv">$ </span>python3 pgAdmin4.py
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Terjadi error:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"pgAdmin4.py"</span>, line 49, <span class="k">in</span> &lt;module&gt;
+    import config
+  File <span class="s2">"/opt/pgadmin4/web/config.py"</span>, line 25, <span class="k">in</span> &lt;module&gt;
+    from pgadmin.utils import <span class="nb">env</span>, IS_WIN, fs_short_path
+  File <span class="s2">"/opt/pgadmin4/web/pgadmin/__init__.py"</span>, line 24, <span class="k">in</span> &lt;module&gt;
+    from flask import Flask, abort, request, current_app, session, url_for
+ModuleNotFoundError: No module named <span class="s1">'flask'</span>
+<span class="o">(</span>myenv<span class="o">)</span> fajri@fajri-PC:/opt/pgadmin4/web<span class="nv">$ </span>python3 pgAdmin4.py 
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"pgAdmin4.py"</span>, line 49, <span class="k">in</span> &lt;module&gt;
+    import config
+  File <span class="s2">"/opt/pgadmin4/web/config.py"</span>, line 25, <span class="k">in</span> &lt;module&gt;
+    from pgadmin.utils import <span class="nb">env</span>, IS_WIN, fs_short_path
+  File <span class="s2">"/opt/pgadmin4/web/pgadmin/__init__.py"</span>, line 24, <span class="k">in</span> &lt;module&gt;
+    from flask import Flask, abort, request, current_app, session, url_for
+ModuleNotFoundError: No module named <span class="s1">'flask'</span>
+</code></pre></div></div>
+
+<p>Instal <code class="language-plaintext highlighter-rouge">flask</code> dengan <code class="language-plaintext highlighter-rouge">pip</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> Flask
+// atau untuk diinstal pada environment tertentu
+<span class="nb">source</span> /opt/myenv/bin/activate
+python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> Flask
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Collecting Flask
+  Using cached Flask-2.2.5-py3-none-any.whl <span class="o">(</span>101 kB<span class="o">)</span>
+Collecting Werkzeug&gt;<span class="o">=</span>2.2.2 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading Werkzeug-2.2.3-py3-none-any.whl <span class="o">(</span>233 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.6/233.6 kB 217.8 kB/s eta 0:00:00
+Collecting Jinja2&gt;<span class="o">=</span>3.0 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading Jinja2-3.1.2-py3-none-any.whl <span class="o">(</span>133 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 148.4 kB/s eta 0:00:00
+Collecting itsdangerous&gt;<span class="o">=</span>2.0 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading itsdangerous-2.1.2-py3-none-any.whl <span class="o">(</span>15 kB<span class="o">)</span>
+Collecting click&gt;<span class="o">=</span>8.0 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading click-8.1.3-py3-none-any.whl <span class="o">(</span>96 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 485.8 kB/s eta 0:00:00
+Collecting importlib-metadata&gt;<span class="o">=</span>3.6.0 <span class="o">(</span>from Flask<span class="o">)</span>
+  Downloading importlib_metadata-6.6.0-py3-none-any.whl <span class="o">(</span>22 kB<span class="o">)</span>
+Collecting zipp&gt;<span class="o">=</span>0.5 <span class="o">(</span>from importlib-metadata&gt;<span class="o">=</span>3.6.0-&gt;Flask<span class="o">)</span>
+  Downloading zipp-3.15.0-py3-none-any.whl <span class="o">(</span>6.8 kB<span class="o">)</span>
+Collecting typing-extensions&gt;<span class="o">=</span>3.6.4 <span class="o">(</span>from importlib-metadata&gt;<span class="o">=</span>3.6.0-&gt;Flask<span class="o">)</span>
+  Using cached typing_extensions-4.6.3-py3-none-any.whl <span class="o">(</span>31 kB<span class="o">)</span>
+Collecting MarkupSafe&gt;<span class="o">=</span>2.0 <span class="o">(</span>from Jinja2&gt;<span class="o">=</span>3.0-&gt;Flask<span class="o">)</span>
+  Downloading MarkupSafe-2.1.3-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <span class="o">(</span>25 kB<span class="o">)</span>
+Installing collected packages: zipp, typing-extensions, MarkupSafe, itsdangerous, Werkzeug, Jinja2, importlib-metadata, click, Flask
+Successfully installed Flask-2.2.5 Jinja2-3.1.2 MarkupSafe-2.1.3 Werkzeug-2.2.3 click-8.1.3 importlib-metadata-6.6.0 itsdangerous-2.1.2 typing-extensions-4.6.3 zipp-3.15.0
+</code></pre></div></div>
+
+<p>Jalankan ulang kembali <code class="language-plaintext highlighter-rouge">python3 pgAdmin4.py</code>.</p>
+
+<p>Terdapat error lagi:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"pgAdmin4.py"</span>, line 49, <span class="k">in</span> &lt;module&gt;
+    import config
+  File <span class="s2">"/opt/pgadmin4/web/config.py"</span>, line 25, <span class="k">in</span> &lt;module&gt;
+    from pgadmin.utils import <span class="nb">env</span>, IS_WIN, fs_short_path
+  File <span class="s2">"/opt/pgadmin4/web/pgadmin/__init__.py"</span>, line 25, <span class="k">in</span> &lt;module&gt;
+    from flask_socketio import SocketIO
+ModuleNotFoundError: No module named <span class="s1">'flask_socketio'</span>
+</code></pre></div></div>
+
+<p>Instal paket <code class="language-plaintext highlighter-rouge">flask-socketio</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-socketio
+</code></pre></div></div>
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Collecting flask-socketio
+  Using cached Flask_SocketIO-5.3.4-py3-none-any.whl <span class="o">(</span>17 kB<span class="o">)</span>
+Requirement already satisfied: Flask&gt;<span class="o">=</span>0.9 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from flask-socketio<span class="o">)</span> <span class="o">(</span>2.2.5<span class="o">)</span>
+Collecting python-socketio&gt;<span class="o">=</span>5.0.2 <span class="o">(</span>from flask-socketio<span class="o">)</span>
+  Downloading python_socketio-5.8.0-py3-none-any.whl <span class="o">(</span>56 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.0/57.0 kB 116.2 kB/s eta 0:00:00
+Requirement already satisfied: Werkzeug&gt;<span class="o">=</span>2.2.2 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>2.2.3<span class="o">)</span>
+Requirement already satisfied: Jinja2&gt;<span class="o">=</span>3.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>3.1.2<span class="o">)</span>
+Requirement already satisfied: itsdangerous&gt;<span class="o">=</span>2.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>2.1.2<span class="o">)</span>
+Requirement already satisfied: click&gt;<span class="o">=</span>8.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>8.1.3<span class="o">)</span>
+Requirement already satisfied: importlib-metadata&gt;<span class="o">=</span>3.6.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>6.6.0<span class="o">)</span>
+Collecting bidict&gt;<span class="o">=</span>0.21.0 <span class="o">(</span>from python-socketio&gt;<span class="o">=</span>5.0.2-&gt;flask-socketio<span class="o">)</span>
+  Downloading bidict-0.22.1-py3-none-any.whl <span class="o">(</span>35 kB<span class="o">)</span>
+Collecting python-engineio&gt;<span class="o">=</span>4.3.0 <span class="o">(</span>from python-socketio&gt;<span class="o">=</span>5.0.2-&gt;flask-socketio<span class="o">)</span>
+  Downloading python_engineio-4.4.1-py3-none-any.whl <span class="o">(</span>53 kB<span class="o">)</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.4/53.4 kB 212.4 kB/s eta 0:00:00
+Requirement already satisfied: zipp&gt;<span class="o">=</span>0.5 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from importlib-metadata&gt;<span class="o">=</span>3.6.0-&gt;Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>3.15.0<span class="o">)</span>
+Requirement already satisfied: typing-extensions&gt;<span class="o">=</span>3.6.4 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from importlib-metadata&gt;<span class="o">=</span>3.6.0-&gt;Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>4.6.3<span class="o">)</span>
+Requirement already satisfied: MarkupSafe&gt;<span class="o">=</span>2.0 <span class="k">in</span> /opt/myenv/lib/python3.7/site-packages <span class="o">(</span>from Jinja2&gt;<span class="o">=</span>3.0-&gt;Flask&gt;<span class="o">=</span>0.9-&gt;flask-socketio<span class="o">)</span> <span class="o">(</span>2.1.3<span class="o">)</span>
+Installing collected packages: python-engineio, bidict, python-socketio, flask-socketio
+Successfully installed bidict-0.22.1 flask-socketio-5.3.4 python-engineio-4.4.1 python-socketio-5.8.0
+</code></pre></div></div>
+
+<p>Selanjutnya akan error lagi saat menjalankan ulang perintah <code class="language-plaintext highlighter-rouge">python3 pgAdmin4.py</code>. Berturut-turut instal package yang tidak ada:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>1] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-babel
+<span class="o">[</span>2] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-login
+<span class="o">[</span>3] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-mail
+<span class="o">[</span>4] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-paranoid
+<span class="o">[</span>5] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-security
+<span class="o">[</span>6] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> email-validator
+<span class="o">[</span>7] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-sqlalchemy
+<span class="o">[</span>8] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> python-dateutil
+<span class="o">[</span>9] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> flask-migrate
+<span class="o">[</span>10] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> keyring
+<span class="o">[</span>11] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> psycopg
+<span class="o">[</span>12] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> sshtunnel
+<span class="o">[</span>13] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> ldap3
+<span class="o">[</span>14] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> authlib
+<span class="o">[</span>14] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> requests
+<span class="o">[</span>14] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> pyotp
+<span class="o">[</span>14] python3 <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> qrcode
+</code></pre></div></div>
+
+<p>Error terakhir yaitu karena masalah permission:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR  : Failed to create the directory /var/lib/pgadmin:
+           <span class="o">[</span>Errno 13] Permission denied: <span class="s1">'/var/lib/pgadmin'</span>
+HINT :   Create the directory /var/lib/pgadmin, ensure it is writeable by
+         <span class="s1">'fajri'</span>, and try again, or, create a config_local.py file
+         and override the SQLITE_PATH setting per
+         https://www.pgadmin.org/docs/pgadmin4/7.3/config_py.html
+</code></pre></div></div>
+
+<p>Buat folder <code class="language-plaintext highlighter-rouge">pgadmin</code> pada direktori <code class="language-plaintext highlighter-rouge">/var/lib/</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mkdir</span> /var/lib/pgadmin /var/log/pgadmin
+<span class="nb">sudo chown</span> <span class="nt">-R</span> fajri:fajri /var/lib/pgadmin /var/log/pgadmin
+</code></pre></div></div>
+
+<ol>
+  <li>Saat semua paket dan direktori yang dibutuhkan sudah terinstal dan dibuat, maka jalankan perintah <code class="language-plaintext highlighter-rouge">python3 pgAdmin4.py</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myenv<span class="o">)</span> fajri@fajri-PC:/opt/pgadmin4/web<span class="nv">$ </span>python3 pgAdmin4.py
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<p>temukan baris <code class="language-plaintext highlighter-rouge">/* User used to manipulate with storage */</code>. Lalu isi pada bagian <code class="language-plaintext highlighter-rouge">controluser</code> (user mariaDB) –<code class="language-plaintext highlighter-rouge">pma</code> merupakan user khusus yang melakukan tugas administratif tertentu– dan <code class="language-plaintext highlighter-rouge">controlpass</code> (kata sandi user MariaDB). Jangan lupa hapus tanda dua garis miring yang ada pada bagian depan baris. Ini dilakukan agar tidak sembarang user yang dapat mengakses database melalui phpMyAdmin.</p>
+
+<p>/* User used to manipulate with storage */
+// $cfg[‘Servers’][$i][‘controlhost’] = ‘’;
+// $cfg[‘Servers’][$i][‘controlport’] = ‘’;
+$cfg[‘Servers’][$i][‘controluser’] = ‘root’;
+$cfg[‘Servers’][$i][‘controlpass’] = ‘password’;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Skrol ke bawah, pada bagian `/* Storage database and tables */` terdapat akses-akses administratif user database `pma`. Hilangkan tanda dua garis miring (komentar) pada tiap bagian sehingga menjadi:
+```bash
+/* Storage database and tables */
+$cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
+$cfg['Servers'][$i]['bookmarktable'] = 'pma__bookmark';
+$cfg['Servers'][$i]['relation'] = 'pma__relation';
+$cfg['Servers'][$i]['table_info'] = 'pma__table_info';
+$cfg['Servers'][$i]['table_coords'] = 'pma__table_coords';
+$cfg['Servers'][$i]['pdf_pages'] = 'pma__pdf_pages';
+$cfg['Servers'][$i]['column_info'] = 'pma__column_info';
+$cfg['Servers'][$i]['history'] = 'pma__history';
+$cfg['Servers'][$i]['table_uiprefs'] = 'pma__table_uiprefs';
+$cfg['Servers'][$i]['tracking'] = 'pma__tracking';
+$cfg['Servers'][$i]['userconfig'] = 'pma__userconfig';
+$cfg['Servers'][$i]['recent'] = 'pma__recent';
+$cfg['Servers'][$i]['favorite'] = 'pma__favorite';
+$cfg['Servers'][$i]['users'] = 'pma__users';
+$cfg['Servers'][$i]['usergroups'] = 'pma__usergroups';
+$cfg['Servers'][$i]['navigationhiding'] = 'pma__navigationhiding';
+$cfg['Servers'][$i]['savedsearches'] = 'pma__savedsearches';
+$cfg['Servers'][$i]['central_columns'] = 'pma__central_columns';
+$cfg['Servers'][$i]['designer_settings'] = 'pma__designer_settings';
+$cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
+</code></pre></div></div>
+<p>Tabel-tabel di atas ini belum ada, namun akan segera dibuat.</p>
+
+<p>Terakhir, skrol ke paling bawah dan tambahkan baris berikut. Direktori temporary akan digunakan oleh phpMyAdmin sebagai template cache agar loading halaman lebih cepat.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$cfg</span><span class="o">[</span><span class="s1">'TempDir'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'/var/lib/phpmyadmin/tmp'</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Simpan dan tutup file (<code class="language-plaintext highlighter-rouge">CTRL + X</code>, <code class="language-plaintext highlighter-rouge">Y</code>, lalu <code class="language-plaintext highlighter-rouge">ENTER</code>).</p>
+
+<p>Selanjutnya, perlu untuk membuat storage tabel dan database phpMyAdmin. Pada instalasi phpMyAdmin, terdapat file dengan nama <code class="language-plaintext highlighter-rouge">create_tables.sql</code>. File SQL ini memuat perintah-perintah yang dibutuhkan untuk membuat storage tabel dan database phpMyAdmin agar dapat berfungsi dengan baik.</p>
+
+<p>Jalankan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>mariadb &lt; /usr/share/phpmyadmin/sql/create_tables.sql
+</code></pre></div></div>
+
+<p>Selanjutnya, buat user administratif <code class="language-plaintext highlighter-rouge">pma</code>. Buka prompt MariaDB:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>mariadb
+</code></pre></div></div>
+
+<p>Buat user <code class="language-plaintext highlighter-rouge">pma</code> dsn GRANT izin yang sesuai, pastikan input <code class="language-plaintext highlighter-rouge">password</code> sesuai dengan yang ada pada dile <code class="language-plaintext highlighter-rouge">config.inc.php</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.<span class="k">*</span> TO <span class="s1">'pma'</span>@<span class="s1">'localhost'</span> IDENTIFIED BY <span class="s1">'password'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Untuk mengelola database melalui phpMyAdmin, buat user baru yang memiliki privilege terhadap semua tabel yang ada dalam database dan buat kata sandi yang kuat.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRANT ALL PRIVILEGES ON <span class="k">*</span>.<span class="k">*</span> TO <span class="s1">'root'</span>@<span class="s1">'localhost'</span> IDENTIFIED BY <span class="s1">'password'</span> WITH GRANT OPTION<span class="p">;</span>
+</code></pre></div></div>
+
+<p>Keluar dari prompt MariaDB:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">exit</span>
+</code></pre></div></div>
+
+<p>phpMyAdmin sudah sepenuhnya terinstal dan dikonfigurasi pada server. Tetapi, server Apache belum bisa men-<em>serve</em> aplikasi. Buat file konfigurasi Apache untuk mengatasinya.</p>
+
+<h3 id="konfigurasi-apache-untuk-men-serve-phpmyadmin">Konfigurasi Apache untuk Men-<em>serve</em> phpMyAdmin</h3>
+
+<p>Saat instalasi phpMyAdmin melalui repositori, proses instalasi akan membuat file konfigurasi Apache secara otomatis (<code class="language-plaintext highlighter-rouge">phpmyadmin.conf</code>) dan disimpan pada direktori <code class="language-plaintext highlighter-rouge">/etc/apache2/conf-enabled/</code>. Karena instalasi dilakukan secara manual maka harus membuat filenya sendiri.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nano /etc/apache2/conf-available/phpmyadmin.conf
+</code></pre></div></div>
+
+<p>Lalu tambahkan isi:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># phpMyAdmin default Apache configuration</span>
+
+Alias /phpmyadmin /usr/share/phpmyadmin
+
+&lt;Directory /usr/share/phpmyadmin&gt;
+    Options SymLinksIfOwnerMatch
+    DirectoryIndex index.php
+
+    &lt;IfModule mod_php5.c&gt;
+        &lt;IfModule mod_mime.c&gt;
+            AddType application/x-httpd-php .php
+        &lt;/IfModule&gt;
+        &lt;FilesMatch <span class="s2">".+</span><span class="se">\.</span><span class="s2">php$"</span><span class="o">&gt;</span>
+            SetHandler application/x-httpd-php
+        &lt;/FilesMatch&gt;
+
+        php_value include_path <span class="nb">.</span>
+        php_admin_value upload_tmp_dir /var/lib/phpmyadmin/tmp
+        php_admin_value open_basedir /usr/share/phpmyadmin/:/etc/phpmyadmin/:/var/lib/phpmyadmin/:/usr/share/php/php-gettext/:/usr/share/php/php-php-gettext/:/usr/share/javascript/:/usr/share/php/tcpdf/:/usr/share/doc/phpmyadmin/:/usr/share/php/phpseclib/
+        php_admin_value mbstring.func_overload 0
+    &lt;/IfModule&gt;
+    &lt;IfModule mod_php.c&gt;
+        &lt;IfModule mod_mime.c&gt;
+            AddType application/x-httpd-php .php
+        &lt;/IfModule&gt;
+        &lt;FilesMatch <span class="s2">".+</span><span class="se">\.</span><span class="s2">php$"</span><span class="o">&gt;</span>
+            SetHandler application/x-httpd-php
+        &lt;/FilesMatch&gt;
+
+        php_value include_path <span class="nb">.</span>
+        php_admin_value upload_tmp_dir /var/lib/phpmyadmin/tmp
+        php_admin_value open_basedir /usr/share/phpmyadmin/:/etc/phpmyadmin/:/var/lib/phpmyadmin/:/usr/share/php/php-gettext/:/usr/share/php/php-php-gettext/:/usr/share/javascript/:/usr/share/php/tcpdf/:/usr/share/doc/phpmyadmin/:/usr/share/php/phpseclib/
+        php_admin_value mbstring.func_overload 0
+    &lt;/IfModule&gt;
+
+&lt;/Directory&gt;
+
+<span class="c"># Authorize for setup</span>
+&lt;Directory /usr/share/phpmyadmin/setup&gt;
+    &lt;IfModule mod_authz_core.c&gt;
+        &lt;IfModule mod_authn_file.c&gt;
+            AuthType Basic
+            AuthName <span class="s2">"phpMyAdmin Setup"</span>
+            AuthUserFile /etc/phpmyadmin/htpasswd.setup
+        &lt;/IfModule&gt;
+        Require valid-user
+    &lt;/IfModule&gt;
+&lt;/Directory&gt;
+
+<span class="c"># Disallow web access to directories that don't need it</span>
+&lt;Directory /usr/share/phpmyadmin/templates&gt;
+    Require all denied
+&lt;/Directory&gt;
+&lt;Directory /usr/share/phpmyadmin/libraries&gt;
+    Require all denied
+&lt;/Directory&gt;
+&lt;Directory /usr/share/phpmyadmin/setup/lib&gt;
+    Require all denied
+&lt;/Directory&gt;
+</code></pre></div></div>
+
+<p>Simpan dan tutup file, lalu aktifkan dengan mengetikkan:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>a2enconf phpmyadmin.conf
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enabling conf phpmyadmin.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+</code></pre></div></div>
+
+<p>Lalu reload service <code class="language-plaintext highlighter-rouge">apache2</code> agar konfigurasi diterapkan.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl reload apache2
+</code></pre></div></div>
+
+<p>Setelah selesai, phpMyAdmin sudah dapat diakses melalui web browser.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://&lt;alamat_domain&gt;/phpmyadmin
+</code></pre></div></div>
+
+<p><img src="/assets/images/books/phpmyadmin_test_deepin.png" alt="phpmyadmin_test_deepin" /></p>
+
+<p>Berikut tampilan phpMyAdmin setelah login.</p>
+
+<p><img src="/assets/images/books/phpmyadmin_test_deepin2.png" alt="phpmyadmin_test_deepin_login" /></p>
+
+<p>Sekarang sudah dapat terkoneksi dan berinteraksi dengan phpMyAdmin, langkah terakhir yaitu memperkuat keamanan sistem agar terlindungi dari penyerang.</p>
+
+<h3 id="mengamankan-phpmyadmin-lebih-lanjut">Mengamankan phpMyAdmin Lebih Lanjut</h3>
+
+<p>Karena phpMyAdmin banyak digunakan dimana-mana sehingga sangat berpotensi menjadi target bagi penyerang, sehingga perlu untuk menambahkan perlindungan akses terautorisasi. Salah satu cara termudah yaitu menempatkan sebuah <em>gateway</em> di depan semua aplikasi menggunakan fungsionalitas autorisasi dan autentikasi Apache yaitu <code class="language-plaintext highlighter-rouge">.htaccess</code>.</p>
+
+<p>Edit file konfigurasi Apache:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nano /etc/apache2/conf-available/phpmyadmin.conf
+</code></pre></div></div>
+
+<p>Tambahkan <code class="language-plaintext highlighter-rouge">AllowOverride All</code> di bagian dalam <code class="language-plaintext highlighter-rouge">&lt;Directory /usr/share/phpmyadmin&gt;</code>, seperti ini:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Directory /usr/share/phpmyadmin&gt;
+    Options FollowSymLinks
+    DirectoryIndex index.php
+    AllowOverride All
+
+    &lt;IfModule mod_php5.c&gt;
+    ...
+</code></pre></div></div>
+
+<p>Simpan dan tutup file. Restart service Apache:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart apache2
+</code></pre></div></div>
+
+<p>Sekarang <code class="language-plaintext highlighter-rouge">.htaccess</code> sudah diaktifkan. Lanjutkan, dengan membuat file <code class="language-plaintext highlighter-rouge">.htaccess</code>. Agar berhasil, file ini harus dibuat di dalam direktori aplikasi:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nano /usr/share/phpmyadmin/.htaccess
+</code></pre></div></div>
+<p>Tambahkan baris:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AuthType Basic
+AuthName <span class="s2">"Restricted Files"</span>
+AuthUserFile /usr/share/phpmyadmin/.htpasswd
+Require valid-user
+</code></pre></div></div>
+
+<p>Lokasi yang dipilih untuk file password yaitu <code class="language-plaintext highlighter-rouge">/usr/share/phpmyadmin/.htpasswd</code>. Buat file dengan utilitas <code class="language-plaintext highlighter-rouge">htpasswd</code> dan sebuah user:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>htpasswd <span class="nt">-c</span> /usr/share/phpmyadmin/.htpasswd root
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New password: 
+Re-type new password: 
+Adding password <span class="k">for </span>user root
+</code></pre></div></div>
+
+<p>Untuk membuat user tambahan, jalankan seperti perintah di atas tanpa <code class="language-plaintext highlighter-rouge">-c</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>htpasswd /etc/phpmyadmin/.htpasswd additionaluser
+</code></pre></div></div>
+
+<p>Restart service Apache agar autentikasi tambahan diterapkan:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart apache2
+</code></pre></div></div>
+
+<p>Sekarang, saat mengakses phpMyAdmin melalui web browser, akan dihadapkan tampilan login tambahan (autentikasi Apache) sebelum dihadapkan pada halaman login phpMyAdmin. Pengaturan ini menambahkan layer keamanan tambahan yang diinginkan karena phpMyAdmin rawan terhadap kerentanan.</p>
+
+<p><img src="/assets/images/books/phpmyadmin_test_deepin2_apache_login.png" alt="phpmyadmin_test_deepin_apache_login" /></p>
+
+<p>Jika tidak dapat melakukan autentikasi dengan data yang benar, saat menekan tombol <em>Cancel</em> akan dihadapkan pada halaman error <em>Unauthorized</em>.</p>
+
+<p><img src="/assets/images/books/phpmyadmin_test_deepin2_apache_login_error.png" alt="phpmyadmin_test_deepin_apache_login_error" /></p>
+
+<p>Akhirnya sampai juga di bagian akhir artikel ini. Terima kasih sudah membaca artikel ini sampai bagian akhir.</p>
+
+<p>Demikian langkah-langkah instalasi phpMyAdmin ini. Semoga bermanfaat. Jangan lupa di-<em>share</em>.</p>
+
+<h3 id="referensi">Referensi</h3>
+
+<ul>
+  <li><a href="https://www.pgadmin.org/">Halaman Pengunduhan pgAdmin</a></li>
+  <li><a href="https://www.enterprisedb.com/blog/setup-pgadmin-dev-env">https://www.enterprisedb.com/blog/setup-pgadmin-dev-env</a></li>
+  <li><a href="https://github.com/nodejs/help/wiki/Installation">Installing Node.js via binary archive</a></li>
+  <li><a href="https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable">Install Yarn via npm</a></li>
+  <li><a href="https://www.postgresql.org/docs/current/install-post.html#id-1.6.4.9.3">Set PostgreSQL Environment Variable</a></li>
+  <li><a href="https://docs.python.org/3/library/venv.html">Creation of Virtual Environments</a></li>
+  <li><a href="https://help.dreamhost.com/hc/en-us/articles/115000695551-Installing-and-using-virtualenv-with-Python-3">Installing and using virtualenv with Python 3</a></li>
+  <li><a href="https://stephenallwright.com/no-module-named-flask/">ModuleNotFoundError: No module named flask, simple fix!</a></li>
+  <li><a href="https://github.com/miguelgrinberg/Flask-SocketIO/issues/1105">[ImportError] ModuleNotFoundError: No module named ‘socketio.exceptions’</a></li>
+</ul>
+
+
+                <hr>
+                <div class="share">
+                    <p class="text-center">
+                        Share on : <br>
+                        <a class="fb" href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu.html"><span class="fab fa-facebook"></span></a>
+                        <a class="twitter" href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu.html"><span class="fab fa-twitter"></span></a>
+                        <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu.html&title=Instalasi pgAdmin&summary="><span class="fab fa-linkedin"></span></a>
+                        <a class="wa" href="https://api.whatsapp.com/send?text=Instalasi pgAdmin%20%2D%20https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu.html"><span class="fab fa-whatsapp"></span></a>
+                        <a class="telegram" href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Laravel-04-Instalasi-pgAdmin-Ubuntu.html&text=Instalasi pgAdmin"><span class="fab fa-telegram"></span></a>
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <aside>
+    <h4>Author</h4>
+    <section class="sidebar-image">
+        <div class="image">
+            <img class="mb-3" src="/assets/images/author.jpg" alt="Fajri">
+        </div>
+        <div class="image-desc">
+            <p>
+                Selamat datang! <br>
+                Terima kasih atas kunjungannya! <br> <br>
+                Gemar mengacaukan kode program demi kepentingan pribadi.
+            </p>
+            <a href="/author.html" class="btn">View Profile</a>
+        </div>
+    </section>
+</aside>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Menemukan konten yang <em>tidak tepat</em>? Ada saran atau yang lainnya? Silahkan sampaikan melalui kontak yang disediakan agar dapat dilakukan pembaharuan. <br/> Terima kasih.</p>
+    </div>
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
