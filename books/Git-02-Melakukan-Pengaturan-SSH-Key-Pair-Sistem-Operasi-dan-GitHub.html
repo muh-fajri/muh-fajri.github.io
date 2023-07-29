@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tango.css">
+    <title>Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)</title>
+    <link type="application/atom+xml" rel="alternate" href="https://muh-fajri.github.io/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)" />
+<meta name="author" content="Muhammad Fajri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bismillahirrahmanirrahim." />
+<meta property="og:description" content="Bismillahirrahmanirrahim." />
+<link rel="canonical" href="https://muh-fajri.github.io/books/Git-02-Melakukan-Pengaturan-SSH-Key-Pair-Sistem-Operasi-dan-GitHub.html" />
+<meta property="og:url" content="https://muh-fajri.github.io/books/Git-02-Melakukan-Pengaturan-SSH-Key-Pair-Sistem-Operasi-dan-GitHub.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-07-29T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)","dateModified":"2023-07-29T00:00:00+08:00","datePublished":"2023-07-29T00:00:00+08:00","url":"https://muh-fajri.github.io/books/Git-02-Melakukan-Pengaturan-SSH-Key-Pair-Sistem-Operasi-dan-GitHub.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://muh-fajri.github.io/books/Git-02-Melakukan-Pengaturan-SSH-Key-Pair-Sistem-Operasi-dan-GitHub.html"},"author":{"@type":"Person","name":"Muhammad Fajri"},"description":"Bismillahirrahmanirrahim.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+        
+
+
+
+
+
+    
+    
+    
+    <meta name="google-site-verification" content="k0jmxk64UlIxt16jLwkah1OHRC3VvqUrLupwkE8SIrY" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="toTop" onclick="gotoTop()"><span class="fas fa-angle-up"></span></div>
+
+        <header class="jumbotron p-sm-3 mb-0">
+    <h1 class="display-4"><a href="/">Fajri CodeOS<small class="lead d-block mt-2">Learn Basic Technology</small></a></h1>
+</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand d-lg-none">Menu</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/"> <span class="fas fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/blog/"> <span class="fas fa-book-reader"></span> Blog <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/book.html"> <span class="fas fa-book-open"></span> Books <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/contact.html"> <span class="fas fa-phone-alt"></span> Contact <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="mt-2 mb-1 mt-sm-2 mb-sm-1 m-lg-0 nav-item">
+                <a class=" mr-lg-2 px-3 rounded nav-link" href="/about.html"> <span class="fas fa-info-circle"></span> About <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+        <form action="/search.html" method="GET" class="d-flex mt-2">
+            <input class="form-control mr-2" type="text" placeholder="Typing search..." aria-label="Search" id="search-box" name="query" autocomplete="off">
+            <button class="btn" type="submit"><span class="fas fa-search"></span></button>
+        </form>
+    </div>
+</nav>
+        
+        <article class="ml-lg-5 mr-lg-3">
+            <div class="social-btn">
+                <a class="fb" href="https://www.facebook.com/fajri.codeOS/"><span class="fab fa-facebook"></span></a>
+                <a class="ig" href="https://www.instagram.com/mhd_fajri15/"><span class="fab fa-instagram"></span></a>
+                <a class="github" href="https://www.github.com/muh-fajri/"><span class="fab fa-github"></span></a>
+                <a class="linkedin" href="https://linkedin.com/in/muhammadfajri/"><span class="fab fa-linkedin"></span></a>
+                <a class="email" href="mailto:muhammadfajriw@gmail.com"><span class="fas fa-envelope"></span></a>
+            </div>
+            <section id="date-time">
+                <p><!-- Don't make change here --></p>
+            </section>
+            <section aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="fas fa-home"></span> Home</a></li>
+        <li class="breadcrumb-item"><a href="/book.html"><span class="fas fa-book-open"></span> Books</a></li>
+        <li class="text-dark breadcrumb-item active" aria-current="page">Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)</li>
+    </ol>
+</section>
+<section id="post">
+    <div class="post-content">
+        <div class="card">
+            <div class="card-body">
+                <h2>Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)</h2>
+                <div class="post-attribute d-sm-flex">
+                    <div class="author-post">
+                        <span class="fas fa-user"></span>
+                        <a href="/author.html">Muhammad Fajri</a>
+                    </div>
+                    <div class="date-post">
+                        <span class="fas fa-calendar-alt"></span>
+                        <span>Saturday, 29 July 2023</span>
+                    </div>
+                </div>
+
+                <p>Bismillahirrahmanirrahim.</p>
+
+<p>Agar dapat melakukan push dengan SSH pada repositori lokal ke GitHub, maka perlu dilakukan pengaturan SSH Key Pair yakni pembuatan kunci privat dan kunci publik antara sistem operasi dan GitHub. Ini dilakukan agar sistem operasi dan GitHub dapat berkomunikasi salah satunya melakukan push.</p>
+
+<h3 id="memeriksa-adanya-kunci-ssh">Memeriksa Adanya Kunci SSH</h3>
+
+<p>Sebelum membuat kunci SSH baru, pastikan di sistem belum tersimpan kunci SSH yang sebelumnya sudah dibuat. Jika ada, maka tidak perlu lagi membuat kunci SSH baru.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-al</span> ~/.ssh
+</code></pre></div></div>
+<p>Pada sistem yang saya gunakan, berikut ini outputnya.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>total 20
+drwx------  2 fajri fajri 4096 May 31 13:15 <span class="nb">.</span>
+drwxr-x--- 50 fajri fajri 4096 Jul 29 19:51 ..
+<span class="nt">-r--------</span>  1 fajri fajri 1831 May 31 13:15 id_rsa
+<span class="nt">-rw-r--r--</span>  1 fajri fajri  402 May 31 13:15 id_rsa.pub
+<span class="nt">-rw-r--r--</span>  1 fajri fajri  667 Jul 26 12:51 known_hosts
+</code></pre></div></div>
+
+<p>Jika perintah di atas dieksekusi dan menampilkan adanya direktori <code class="language-plaintext highlighter-rouge">.ssh</code> dan file-file di dalamnya, artinya sistem yang digunakan sudah ada kunci SSH. Maka, langkah <strong>Membuat Kunci SSH Baru</strong> dapat dilewati.</p>
+
+<h3 id="membuat-kunci-ssh-baru">Membuat Kunci SSH Baru</h3>
+
+<p>Kunci SSH dapat dibuat melalui mesin lokal (sistem operasi), setelah itu kunci publik dapat ditambahkan ke akun GitHub untuk mengaktifkan autentikasi melalui SSH.</p>
+
+<p>Untuk membuat kunci SSH, dapat dilakukan melalui terminal. Untuk algoritma yang digunakan yaitu <em>ed25519</em> dan <em>rsa</em>. <em>rsa</em> digunakan jika sistem operasi tidak mendukung algoritma <em>ed25519</em>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen <span class="nt">-t</span> rsa <span class="nt">-b</span> 4096 <span class="nt">-C</span> <span class="s2">"your_email@example.com
+</span></code></pre></div></div>
+
+<p>Untuk format email github yaitu <em>&lt;username&gt;@github.com</em>.</p>
+
+<p>Output dari perintah di atas yaitu:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> Generating public/private &lt;ALGORITHM&gt; key pair.
+</code></pre></div></div>
+
+<p>Selanjutnya diminta untuk mengonfirmasi lokasi penyimpanan SSH Key Pair.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> Enter a file <span class="k">in </span>which to save the key <span class="o">(</span>/home/YOU/.ssh/&lt;ALGORITHM&gt;<span class="o">)</span>:[Press enter]
+</code></pre></div></div>
+
+<p>Berikutnya konfirmasi untuk menginput frasa sandi (kata sandi).</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> Enter passphrase <span class="o">(</span>empty <span class="k">for </span>no passphrase<span class="o">)</span>: <span class="o">[</span>Type a passphrase]
+<span class="o">&gt;</span> Enter same passphrase again: <span class="o">[</span>Type passphrase again]
+</code></pre></div></div>
+
+<h3 id="menyalin-kunci-ssh">Menyalin Kunci SSH</h3>
+
+<p>Menambahkan kunci SSH ke akun GitHub perlu dilakukan agar dapat melakukan perubahan repo di akun GitHub melalui sistem operasi yang digunakan yang terdapat repo lokal di dalamnya.</p>
+
+<p>Salin kunci publik SSH yang ada pada sistem. File ini ditandai dengan ekstensi <code class="language-plaintext highlighter-rouge">.pub</code>. Gunakan perintah berikut untuk melihat file yang ada.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> ~/.ssh
+</code></pre></div></div>
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id_rsa  id_rsa.pub  known_hosts
+</code></pre></div></div>
+
+<p>Salin isi file <code class="language-plaintext highlighter-rouge">id_rsa.pub</code> dengan perintah:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat </span>id_rsa.pub
+<span class="c"># atau</span>
+less id_rsa.pub
+<span class="c"># atau</span>
+more id_rsa.pub
+</code></pre></div></div>
+
+<h3 id="menambahkan-kunci-ssh-ke-akun-github">Menambahkan Kunci SSH ke Akun GitHub</h3>
+
+<ol>
+  <li>Login ke akun GitHub dengan tampilan desktop.</li>
+  <li>Lalu pada bagian kanan atas, klik foto profil, kemudian klik <strong>Settings</strong>.</li>
+  <li>Pada bagian sidebar, pilih <strong>SSH and GPG keys</strong>.</li>
+  <li>Klik <strong>New SSH key</strong> atau <strong>Add SSH key</strong>.</li>
+  <li>Pada bagian “Title”, tambahkan label deskriptif untuk kunci baru ini. Misalnya diisi dengan nama PC dan OS yang digunakan.</li>
+  <li>Pilih jenis kunci, “authentication” atau “signing”.</li>
+  <li>Pada bagian “Key”, paste kunci publik yang disalin sebelumnya.</li>
+  <li>Klik <strong>Add SSH key</strong>.</li>
+</ol>
+
+<p><img src="/assets/images/books/ssh_new_key_pair.png" alt="ssh_new_key_pair" /></p>
+
+<p>Itulah langkah-langkah mengecek dan membuat SSH Key Pair, dan menambahkan Kunci Publik SSH di akun GitHub. Semoga bermanfaat.</p>
+
+<h3 id="referensi">Referensi</h3>
+<ol>
+  <li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys">Checking for existing SSH keys</a></li>
+  <li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating a new SSH key and adding it to the ssh-agent</a></li>
+  <li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux">Adding a new SSH key to your GitHub account</a></li>
+</ol>
+
+
+                <hr>
+                <div class="share">
+                    <p class="text-center">
+                        Share on : <br>
+                        <a class="fb" href="http://www.facebook.com/sharer.php?u=https://muh-fajri.github.io/books/Git-02-Melakukan-Pengaturan-SSH-Key-Pair-Sistem-Operasi-dan-GitHub.html"><span class="fab fa-facebook"></span></a>
+                        <a class="twitter" href="http://twitter.com/share?url=https://muh-fajri.github.io/books/Git-02-Melakukan-Pengaturan-SSH-Key-Pair-Sistem-Operasi-dan-GitHub.html"><span class="fab fa-twitter"></span></a>
+                        <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=https://muh-fajri.github.io/books/Git-02-Melakukan-Pengaturan-SSH-Key-Pair-Sistem-Operasi-dan-GitHub.html&title=Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)&summary="><span class="fab fa-linkedin"></span></a>
+                        <a class="wa" href="https://api.whatsapp.com/send?text=Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)%20%2D%20https://muh-fajri.github.io/books/Git-02-Melakukan-Pengaturan-SSH-Key-Pair-Sistem-Operasi-dan-GitHub.html"><span class="fab fa-whatsapp"></span></a>
+                        <a class="telegram" href="https://telegram.me/share/url?url=https://muh-fajri.github.io/books/Git-02-Melakukan-Pengaturan-SSH-Key-Pair-Sistem-Operasi-dan-GitHub.html&text=Melakukan Pengaturan SSH Key Pair (Sistem Operasi dan GitHub)"><span class="fab fa-telegram"></span></a>
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <aside>
+    <h4>Author</h4>
+    <section class="sidebar-image">
+        <div class="image">
+            <img class="mb-3" src="/assets/images/author.jpg" alt="Fajri">
+        </div>
+        <div class="image-desc">
+            <p>
+                Selamat datang! <br>
+                Terima kasih atas kunjungannya! <br> <br>
+                Gemar mengacaukan kode program demi kepentingan pribadi.
+            </p>
+            <a href="/author.html" class="btn">View Profile</a>
+        </div>
+    </section>
+</aside>
+    </div>
+</section>
+        </article>
+
+        <footer class="d-flex flex-column mb-5 mb-sm-5 mb-lg-0 mt-lg-5">
+    <div class="attention">
+        <p><span class="fas fa-info-circle"></span> Menemukan konten yang <em>tidak tepat</em>? Ada saran atau yang lainnya? Silahkan sampaikan melalui kontak yang disediakan agar dapat dilakukan pembaharuan. <br/> Terima kasih.</p>
+    </div>
+    <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul>
+    <div class="credit">
+        <p class="mb-0">&copy; 2021 - <a class="p-0" href="/author.html">Muhammad Fajri</a></p>
+    </div>
+</footer>
+    
+    </div>
+
+    <script src="/assets/js/fontawesome-all.js"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
